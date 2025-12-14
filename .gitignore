@@ -1,0 +1,20 @@
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Oo]bj/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# IDE / Editor
+.vs/
+.idea/
+*.csproj
+*.sln
+*.slnx
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
