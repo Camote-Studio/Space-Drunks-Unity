@@ -10,6 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8339925386666340661}
   - component: {fileID: 1479128494756461220}
+  - component: {fileID: 5051499780932441046}
+  - component: {fileID: 6759179734215920850}
+  - component: {fileID: 342016861043513959}
+  - component: {fileID: 6033650149594648942}
+  - component: {fileID: 1541772482542336846}
   m_Layer: 0
   m_Name: enemigo_pato_1
   m_TagString: Untagged
@@ -26,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 48201338815403972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.73561, y: -1.55115, z: 0}
+  m_LocalPosition: {x: -5.411136, y: -2.0409124, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -41,7 +46,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48201338815403972}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -60,6 +65,108 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!111 &5051499780932441046
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48201338815403972}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!114 &6759179734215920850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48201338815403972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2171900ebf12e84dbede79a7c52ae61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemigo_ataque
+  rangoAtaque: 1.3
+  "da\xF1o": 10
+  enfriamiento: 1
+--- !u!114 &342016861043513959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48201338815403972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c52ba8ec482f343b71a4f6d8d2b7c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemigo_animacion
+--- !u!70 &6033650149594648942
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48201338815403972}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.16, y: 0}
+  m_Size: {x: 1.7727612, y: 1.9862056}
+  m_Direction: 0
+--- !u!114 &1541772482542336846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48201338815403972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be5f54f9aaaa4c4fb0d50c3bbfeb89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemigo_pato_1
+  distanciaParada: 1.2
+  vidaMaxima: 200
+  velocidad: 3
+  aceleracion: 8
+  estaMuerto: 0
+  estaAtacando: 0
+  fuerzaRetroceso: 10
+  tiempoRetroceso: 0.2
+  probDefensa1: 0.4
+  probDefensa2: 0.6
 --- !u!1 &6536563081218521080
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,6 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3589980433608255396}
   - component: {fileID: 7043975348018534453}
+  - component: {fileID: 8644665774928700168}
   m_Layer: 0
   m_Name: DukaLIEN_1_0
   m_TagString: Untagged
@@ -86,8 +194,8 @@ Transform:
   m_GameObject: {fileID: 6536563081218521080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 2.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.403909, y: 0.8845239, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2268304114765439746}
@@ -151,6 +259,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &8644665774928700168
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536563081218521080}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d86d6c30ff94864695825f22523e701, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7121988648966532167
 GameObject:
   m_ObjectHideFlags: 0
