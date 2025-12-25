@@ -27,6 +27,10 @@ public abstract class enemigo_base : MonoBehaviour
         if (estaMuerto || objetivo == null || estaAtacando)
             return;
 
+        VidaJugador vida = objetivo.GetComponent<VidaJugador>();
+
+        if (vida != null && vida.flotando)
+            return;
         MoverHaciaObjetivo();
     }
 

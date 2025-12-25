@@ -1,23 +1,19 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(enemigo_base))]
 public class enemigo_ataque : MonoBehaviour
 {
     [Header("Ataque Melee")]
     public float rangoAtaque = 1.5f;
     public float daño = 10f;
     public float enfriamiento = 3f;
-
     private float temporizadorAtaque;
     private enemigo_base enemigo;
     private Transform objetivo;
-
     void Awake()
     {
         enemigo = GetComponent<enemigo_base>();
         objetivo = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
-
     void Update()
     {
         if (enemigo == null || objetivo == null) return;
@@ -34,14 +30,12 @@ public class enemigo_ataque : MonoBehaviour
             Atacar();
         }
     }
-
     void Atacar()
     {
         enemigo.estaAtacando = true;
         temporizadorAtaque = enfriamiento;
-
         GetComponent<enemigo_animacion>()?.SetAtacando(true);
-        objetivo.GetComponent<VidaJugador>()?.RecibirDaño(daño);
+        objetivo.GetComponent<VidaJugador>()?.RecibirDaño(daño,"");
 
         Invoke(nameof(FinAtaque), 0.4f);
     }

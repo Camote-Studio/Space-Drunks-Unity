@@ -5,19 +5,20 @@ public class bala : MonoBehaviour
     public float danio = 10f;
     public float tiempoVida = 15f;
 
+    [Header("Tipo de Bala")]
+    public string tipo_bala = "bala_gravedad";
+
     void Start()
     {
-        // 🧹 Se destruye sola
         Destroy(gameObject, tiempoVida);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // 💥 SOLO daña al jugador
         VidaJugador vida = other.GetComponent<VidaJugador>();
         if (vida != null)
         {
-            vida.RecibirDaño(danio);
+                vida.RecibirDaño(danio, tipo_bala);
             Destroy(gameObject);
         }
     }
