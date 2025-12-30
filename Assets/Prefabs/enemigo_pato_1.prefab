@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 342016861043513959}
   - component: {fileID: 6033650149594648942}
   - component: {fileID: 1541772482542336846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemigo_pato_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 3589980433608255396}
   - component: {fileID: 7043975348018534453}
   - component: {fileID: 8644665774928700168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DukaLIEN_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3210067631431054936, guid: 41cb452a50a6fb049a020a2268c850d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2268304114765439746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: visuales
   m_TagString: Untagged
   m_Icon: {fileID: 0}

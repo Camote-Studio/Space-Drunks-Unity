@@ -1,23 +1,34 @@
-using UnityEngine;
+﻿using UnityEngine;
+using System;
+
 public class VidaJugador : MonoBehaviour
 {
+    [Header("Vida")]
     public float vidaMaxima = 100f;
     public float vidaActual;
-    void Awake()
+
+    public event Action OnDamaged;
+
+    private void Awake()
     {
         vidaActual = vidaMaxima;
     }
-    public void RecibirDa�o(float cantidad)
+
+    public void RecibirDaño(float cantidad)
     {
         vidaActual -= cantidad;
-        if (vidaActual <= 0)
+
+        OnDamaged?.Invoke();    
+
+        if (vidaActual <= 0f)
         {
+            vidaActual = 0f;
             Morir();
         }
     }
-    void Morir()
+
+    private void Morir()
     {
-        Destroy(gameObject);
-        Debug.Log("Jugador muerto");
+        Debug.Log("Player muerto");
     }
 }

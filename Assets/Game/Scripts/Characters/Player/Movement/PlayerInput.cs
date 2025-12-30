@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         bool jumpPressed = Input.GetButtonDown("Jump");
-        movement.SetInput(horizontal, vertical, jumpPressed);
+        bool dashPressed = Input.GetButtonDown("Dash");
+        movement.SetInput(horizontal, vertical, jumpPressed, dashPressed);
     }
 }

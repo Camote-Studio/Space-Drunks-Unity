@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerGroundChecker))]
@@ -13,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpDuration = 0.4f;
     [SerializeField] private string jumpableLayerName = "JumpableObstacle";
 
+    [Header("Dash")]
+    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float dashWidth = 1.2f;
+    [SerializeField] private float dashDuration = 0.2f;
+
     private Rigidbody2D rb;
     private PlayerGroundChecker groundChecker;
 
@@ -23,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private float jumpTime;
     private float baseVisualY;
+
+    private bool isDashing;
+    private float dashTime;
+    private bool dashPressedThisFrame;
+    private Vector2 dashDir;
 
     private int playerLayer;
     private int jumpableLayer;
@@ -48,13 +59,15 @@ public class PlayerMovement : MonoBehaviour
         jumpableLayer = LayerMask.NameToLayer(jumpableLayerName);
     }
 
-    public void SetInput(float horizontal, float vertical, bool jumpPressed)
+    public void SetInput(float horizontal, float vertical, bool jumpPressed, bool dashPressed)
     {
         inputX = horizontal;
         inputY = vertical;
 
         if (jumpPressed && !isJumping /* && groundChecker.IsGrounded */)
             jumpPressedThisFrame = true;
+        if(dashPressed && !isDashing)
+            dashPressedThisFrame = true;
     }
 
     private void Update()
@@ -67,12 +80,20 @@ public class PlayerMovement : MonoBehaviour
         }
 
         HandleJump();
+        Handledash();
     }
 
     private void FixedUpdate()
     {
-        Vector2 dir = new Vector2(inputX, inputY).normalized;
-        rb.linearVelocity = dir * moveSpeed;
+        if (isDashing)
+        {
+            rb.linearVelocity = dashDir * dashSpeed;
+        }
+        else
+        {
+            Vector2 dir = new Vector2(inputX, inputY).normalized;
+            rb.linearVelocity = dir * moveSpeed;
+        }
     }
 
     private void HandleJump()
@@ -117,4 +138,33 @@ public class PlayerMovement : MonoBehaviour
                 Physics2D.IgnoreLayerCollision(playerLayer, jumpableLayer, false);
         }
     }
+    private void Handledash()
+    {
+        if (dashPressedThisFrame)
+        {
+            dashPressedThisFrame = false;
+            isDashing = true;
+            dashTime = 0f;
+            
+            dashDir = new Vector2(inputX, inputY);
+
+            if(dashDir.sqrMagnitude < 0.01f && visual != null)
+            {
+                dashDir = new Vector2(Mathf.Sign(visual.localScale.x), 0f);
+            }
+            dashDir = dashDir.normalized;
+        }
+        if (!isDashing)
+            return;
+        dashTime += Time.deltaTime;
+        if(dashTime >= dashDuration)
+        {
+            isDashing = false;
+        }
+
+    }
+
+    public bool IsMovingHorizontally => Mathf.Abs(inputX) > 0.01f;
+
+    public Vector2 MoveInput => new Vector2(inputX, inputY);
 }
