@@ -92,8 +92,8 @@ public class Mine : MonoBehaviour
             enemigo_base enemy = hit.GetComponentInParent<enemigo_base>();
             if (enemy != null)
             {
-                // da�o
-                enemy.RecibirDa�o(baseDamage);
+                // daño
+                enemy.RecibirDaño(baseDamage);
 
                 // empuje
                 Rigidbody2D er = enemy.GetComponent<Rigidbody2D>();
