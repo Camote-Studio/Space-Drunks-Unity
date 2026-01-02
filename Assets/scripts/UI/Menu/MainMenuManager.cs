@@ -6,7 +6,8 @@ public class MainMenuManager : MonoBehaviour
     //static significa que es compartido entre todas las instancias de la clase
     public static MainMenuManager _; //Singleton instance
     [SerializeField] private bool _debugMode;
-    public enum MainMenuButtons { StoryMode, VersuMode, Shop, Medals, Options, Quit }
+    public enum MainMenuButtons { StoryMode, VersuMode, Shop, Medals, Options, Quit };
+    public enum SocialButtons {Instagram, ItchIO};
     [SerializeField] private string _sceneToLoadAfterClickingPlay; //Nombre de la escena a cargar al hacer click en Play
 
     public void Awake()
@@ -59,6 +60,28 @@ public class MainMenuManager : MonoBehaviour
         
     }
 
+    public void SocialButtonClicked(SocialButtons buttonClicked)
+    {
+        string websiteLink = "";
+        switch (buttonClicked)
+        {
+            case SocialButtons.Instagram:
+                websiteLink = "https://www.instagram.com/camotestudiogames/"; 
+                break;
+            case SocialButtons.ItchIO:
+                websiteLink = "https://unlucky-alpaca.itch.io/space-drunks";
+                break;
+            default: 
+                Debug.Log("Botón de red social no implementado en SocialButtonClicked method");
+                break; 
+        }
+
+        if (websiteLink != "")
+        {
+            Application.OpenURL(websiteLink);
+        }
+    }
+    
     private void DebugMessage(string message)
     {
         if (_debugMode)
