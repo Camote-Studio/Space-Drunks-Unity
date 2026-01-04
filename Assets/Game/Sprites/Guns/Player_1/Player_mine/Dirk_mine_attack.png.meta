@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: c061a37896b60b842a2b2c787ae0bab3
+guid: c1a07966b84a1e146805421732c8d2c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1028661302815839189
-    second: gUN1_0
+      213: -6928158366117835603
+    second: Dirk_mine_attack_0
+  - first:
+      213: -347514986826403146
+    second: Dirk_mine_attack_1
+  - first:
+      213: 8434165411224495269
+    second: Dirk_mine_attack_2
+  - first:
+      213: -3371860109019987059
+    second: Dirk_mine_attack_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gUN1_0
+      name: Dirk_mine_attack_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 8
-        width: 234
-        height: 176
+        x: 4
+        y: 1
+        width: 205
+        height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2ca873cef579b1f0800000000000000
-      internalID: -1028661302815839189
+      spriteID: dac45e74cac3adf90800000000000000
+      internalID: -6928158366117835603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirk_mine_attack_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 197
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b27610f5f06d2bf0800000000000000
+      internalID: -347514986826403146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirk_mine_attack_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a42ce061cc2c0570800000000000000
+      internalID: 8434165411224495269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirk_mine_attack_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83cd81881fb431d0800000000000000
+      internalID: -3371860109019987059
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gUN1_0: -1028661302815839189
+      Dirk_mine_attack_0: -6928158366117835603
+      Dirk_mine_attack_1: -347514986826403146
+      Dirk_mine_attack_2: 8434165411224495269
+      Dirk_mine_attack_3: -3371860109019987059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
