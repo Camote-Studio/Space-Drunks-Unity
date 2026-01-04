@@ -481,6 +481,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   distancia: 50
   velocidad: 1
+  _rectTransform: {fileID: 0}
+  _posicionInicial: {x: 0, y: 0}
 --- !u!1 &255525596
 GameObject:
   m_ObjectHideFlags: 0
