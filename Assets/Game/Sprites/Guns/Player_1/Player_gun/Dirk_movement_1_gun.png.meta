@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4f28aa4f09c73eb4893e1b46c88112b8
+guid: 2ddfbbb3a79e95b4c85e461f1da106e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8647823593821616703
-    second: Bat_0
+      213: -5144017988149769887
+    second: Dirk_movement_1_gun_0
+  - first:
+      213: 8414789553344978391
+    second: Dirk_movement_1_gun_1
+  - first:
+      213: 8378548818879285315
+    second: Dirk_movement_1_gun_2
+  - first:
+      213: 8759550580593056894
+    second: Dirk_movement_1_gun_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bat_0
+      name: Dirk_movement_1_gun_0
       rect:
         serializedVersion: 2
-        x: 207
-        y: 50
-        width: 253
-        height: 254
+        x: 4
+        y: 5
+        width: 205
+        height: 275
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3abafd8dbd330870800000000000000
-      internalID: 8647823593821616703
+      spriteID: 1690d1ad4e6cc98b0800000000000000
+      internalID: -5144017988149769887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirk_movement_1_gun_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 192
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd9bcae38657c470800000000000000
+      internalID: 8414789553344978391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirk_movement_1_gun_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 173
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348819262c5964470800000000000000
+      internalID: 8378548818879285315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirk_movement_1_gun_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cd05cc7dc209970800000000000000
+      internalID: 8759550580593056894
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bat_0: 8647823593821616703
+      Dirk_movement_1_gun_0: -5144017988149769887
+      Dirk_movement_1_gun_1: 8414789553344978391
+      Dirk_movement_1_gun_2: 8378548818879285315
+      Dirk_movement_1_gun_3: 8759550580593056894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

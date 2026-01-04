@@ -3,9 +3,9 @@ using UnityEngine;
 public class GunWeapon : WeaponBase
 {
     [Header("Refs")]
-    [SerializeField] private Transform visual;       
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject gunVisual;
 
     [Header("Normal Bullet")]
     [SerializeField] private int maxBullets = 20;
@@ -32,40 +32,38 @@ public class GunWeapon : WeaponBase
     private bool isChargingBig;
     private float bigChargeTimer;
 
+    private PlayerMovement movement;
+    private PlayerAnimation playerAnim;
+
     private void Awake()
     {
+        movement = GetComponentInParent<PlayerMovement>();
+        playerAnim = GetComponentInParent<PlayerAnimation>();
+
         normalBullets = maxBullets;
         bigBullets = maxBigBullets;
     }
 
     public override void OnSelected()
     {
-        base.OnSelected();
+        if (gunVisual != null) gunVisual.SetActive(true);
+        isChargingBig = false;
+        bigChargeTimer = 0f;
     }
 
     public override void OnDeselected()
     {
-        base.OnDeselected();
+        if (gunVisual != null) gunVisual.SetActive(false);
         isChargingBig = false;
         bigChargeTimer = 0f;
     }
 
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
+
         if (normalCooldown > 0f) normalCooldown -= Time.deltaTime;
         if (bigCooldown > 0f) bigCooldown -= Time.deltaTime;
 
-        HandleNormalReload();
-        HandleBigReload();
-
-        if (isReloadingNormal && normalBullets <= 0)
-            return;
-
-        HandleFireInput(fireDown, fireHeld, fireUp);
-    }
-
-    private void HandleNormalReload()
-    {
         if (isReloadingNormal)
         {
             reloadNormalTimer -= Time.deltaTime;
@@ -80,10 +78,7 @@ public class GunWeapon : WeaponBase
             isReloadingNormal = true;
             reloadNormalTimer = reloadTime;
         }
-    }
 
-    private void HandleBigReload()
-    {
         if (isReloadingBig)
         {
             reloadBigTimer -= Time.deltaTime;
@@ -98,10 +93,7 @@ public class GunWeapon : WeaponBase
             isReloadingBig = true;
             reloadBigTimer = reloadBigTime;
         }
-    }
 
-    private void HandleFireInput(bool fireDown, bool fireHeld, bool fireUp)
-    {
         if (fireDown)
         {
             isChargingBig = true;
@@ -109,20 +101,32 @@ public class GunWeapon : WeaponBase
         }
 
         if (isChargingBig && fireHeld)
+        {
             bigChargeTimer += Time.deltaTime;
+        }
 
         if (isChargingBig && fireUp)
         {
+            bool fired = false;
+
             if (bigChargeTimer >= bigChargeDuration &&
                 bigBullets > 0 &&
-                bigCooldown <= 0f)
+                bigCooldown <= 0f &&
+                !isReloadingBig)
             {
                 FireBig();
+                fired = true;
             }
-            else if (normalBullets > 0 && normalCooldown <= 0f)
+            else if (normalBullets > 0 &&
+                     normalCooldown <= 0f &&
+                     !isReloadingNormal)
             {
                 FireNormal();
+                fired = true;
             }
+
+            if (fired)
+                playerAnim?.PlayShoot();  
 
             isChargingBig = false;
             bigChargeTimer = 0f;
@@ -145,12 +149,12 @@ public class GunWeapon : WeaponBase
 
     private void SpawnBullet(bool isBig)
     {
-        if (bulletPrefab == null || firePoint == null)
-            return;
+        if (bulletPrefab == null || firePoint == null) return;
 
+        Transform body = movement != null ? movement.transform : transform;
         float facingX = 1f;
-        if (visual != null && Mathf.Abs(visual.localScale.x) > 0.01f)
-            facingX = Mathf.Sign(visual.localScale.x);
+        if (body != null && body.localScale.x != 0f)
+            facingX = Mathf.Sign(body.localScale.x);
 
         Vector2 dir = new Vector2(facingX, 0f);
 
