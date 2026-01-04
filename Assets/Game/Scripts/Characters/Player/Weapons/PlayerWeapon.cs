@@ -4,12 +4,12 @@ public class PlayerWeapon : MonoBehaviour
 {
     [Header("Refs")]
     [SerializeField] private PlayerMovement movement;
+    [SerializeField] private MineWeapon mineWeapon;
+    [SerializeField] private MachineWeapon machineWeapon;
 
     [Header("Weapons")]
     [SerializeField] private WeaponBase gunWeapon;
     [SerializeField] private WeaponBase batWeapon;
-    [SerializeField] private MineWeapon mineWeapon;
-    [SerializeField] private MachineWeapon machineWeapon;
 
     private WeaponBase currentWeapon;
 
@@ -19,10 +19,10 @@ public class PlayerWeapon : MonoBehaviour
             movement = GetComponent<PlayerMovement>();
 
         if (mineWeapon == null)
-            mineWeapon = GetComponent<MineWeapon>();
+            mineWeapon = GetComponentInChildren<MineWeapon>();
 
         if (machineWeapon == null)
-            machineWeapon = GetComponent<MachineWeapon>();
+            machineWeapon = GetComponentInChildren<MachineWeapon>();
     }
 
     private void Start()
@@ -33,6 +33,8 @@ public class PlayerWeapon : MonoBehaviour
     private void Update()
     {
         bool movingHoriz = movement != null && movement.IsMovingHorizontally;
+
+        // Cambio Gun/Bat según se mueva o no
         WeaponBase target = movingHoriz ? batWeapon : gunWeapon;
         if (target != currentWeapon)
             EquipWeapon(target);
@@ -44,6 +46,7 @@ public class PlayerWeapon : MonoBehaviour
         if (currentWeapon != null)
             currentWeapon.Tick(fireDown, fireHeld, fireUp);
 
+        // Minas (tecla E, como ya lo tenías)
         if (mineWeapon != null)
         {
             mineWeapon.Tick();
@@ -52,12 +55,10 @@ public class PlayerWeapon : MonoBehaviour
                 mineWeapon.TryPlaceMine();
         }
 
-        if (machineWeapon != null)
+        // Máquina / torreta pegada (tecla G)
+        if (machineWeapon != null && Input.GetKeyDown(KeyCode.G))
         {
-            machineWeapon.Tick();
-
-            if (Input.GetKeyDown(KeyCode.G))
-                machineWeapon.TryUseMachineGun();
+            machineWeapon.TryActivate();
         }
     }
 

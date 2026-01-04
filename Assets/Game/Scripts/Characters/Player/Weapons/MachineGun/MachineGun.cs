@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -9,76 +10,60 @@ public class MachineGun : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
 
     [Header("Drop")]
-    [SerializeField] private float dropHeight = 6f;     // cuánto arriba aparece
-    [SerializeField] private float fallSpeed = 12f;    // velocidad al caer
-    [SerializeField] private float groundOffsetY = 0f;  // ajuste fino en Y
-
-    // Exponer DropHeight para que lo use MachineWeapon
-    public float DropHeight => dropHeight;
+    [SerializeField] private float dropHeight = 6f;
+    [SerializeField] private float fallSpeed = 12f;
+    [SerializeField] private float groundOffsetY = 0f;
 
     [Header("Vida / Overheat")]
-    [SerializeField] private float maxHp = 40f;  // 35–45
-    [SerializeField] private float maxLifetime = 18f;  // vida útil total
-    [SerializeField] private float idleDrainPerSecond = 0.5f; // bajada estando idle
-    [SerializeField] private float firingDrainPerShot = 1.0f; // bajada extra por disparo
-
-    [Header("Detección")]
-    [SerializeField] private float detectionRadius = 14f;
-    [SerializeField] private float detectionAngle = 120f; // cono 120°
+    [SerializeField] private float maxHp = 40f;
+    [SerializeField] private float maxLifetime = 18f;
+    [SerializeField] private float idleDrainPerSecond = 0.5f;
+    [SerializeField] private float firingDrainPerShot = 1.0f;
 
     [Header("Disparo")]
-    [SerializeField] private int bulletsPerBurst = 3;    // 3 balas
-    [SerializeField] private float timeBetweenBullets = 0.2f; // dentro de la ráfaga
-    [SerializeField] private float burstCooldown = 1.6f; // entre ráfagas
+    [SerializeField] private float detectionRadius = 14f;
+    [SerializeField] private float detectionAngle = 120f;
+    [SerializeField] private int bulletsPerBurst = 3;
+    [SerializeField] private float timeBetweenBullets = 0.2f;
+    [SerializeField] private float burstCooldown = 1.6f;
+
+    public event Action<MachineGun> OnMachineGunEnded;
 
     private float hp;
     private float lifeRemaining;
-
     private bool isDropping;
     private bool isActive;
-
     private Vector2 groundPos;
 
     private float fireTimer;
     private int bulletsLeftInBurst;
 
     private Animator animator;
-    private MachineWeapon owner; // para avisar cuando termine
 
-
-    public event System.Action<MachineGun> OnTurretEnd;
-
-    void ExplodeOrDie()
+    // Llamado justo después de instanciar la torreta
+    public void Init(Vector2 groundPosition)
     {
-        OnTurretEnd?.Invoke(this);
-        Destroy(gameObject);
-    }
-
-    public void Init(Vector2 groundPosition, MachineWeapon owner)
-    {
-        this.owner = owner;
-        groundPos = groundPosition;
-
         animator = GetComponentInChildren<Animator>();
 
         hp = maxHp;
         lifeRemaining = maxLifetime;
 
-        // aparece arriba y cae
-        transform.position = new Vector3(
-            groundPos.x,
-            groundPos.y + dropHeight,
-            transform.position.z
-        );
-
+        groundPos = groundPosition;
         isDropping = true;
         isActive = false;
 
-        fireTimer = 0f;
-        bulletsLeftInBurst = 0;
+        // la posición X/Y inicial ya la define el prefab al instanciarlo
+    }
 
-        // si tienes anim de “spawn”
-        animator?.SetTrigger("TurretSpawn");
+    private void Start()
+    {
+        // Por si se instanció sin llamar Init, al menos no crashea
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+        if (lifeRemaining <= 0f)
+            lifeRemaining = maxLifetime;
+        if (hp <= 0f)
+            hp = maxHp;
     }
 
     private void Update()
@@ -92,12 +77,12 @@ public class MachineGun : MonoBehaviour
         if (!isActive)
             return;
 
-        // overheat / vida útil base
+        // vida útil / sobrecarga base
         lifeRemaining -= idleDrainPerSecond * Time.deltaTime;
         if (lifeRemaining <= 0f)
         {
             lifeRemaining = 0f;
-            Explode();
+            EndMachine();
             return;
         }
 
@@ -126,7 +111,8 @@ public class MachineGun : MonoBehaviour
         {
             isDropping = false;
             isActive = true;
-            animator?.SetTrigger("TurretLand");
+
+            animator?.SetTrigger("Machine_Land");
         }
     }
 
@@ -138,28 +124,21 @@ public class MachineGun : MonoBehaviour
             enemyMask
         );
 
-        if (hits.Length == 0)
-            return null;
-
         Transform best = null;
-        float bestDist = Mathf.Infinity;
-
-        // “forward” = derecha según escala
-        float facingX = transform.localScale.x >= 0 ? 1f : -1f;
-        Vector2 forward = new Vector2(facingX, 0f);
+        float bestDistSq = Mathf.Infinity;
+        Vector2 forward = Vector2.right; // mira a la derecha
 
         foreach (var h in hits)
         {
             Vector2 to = (Vector2)h.transform.position - (Vector2)transform.position;
             float angle = Vector2.Angle(forward, to);
-
             if (angle > detectionAngle * 0.5f)
                 continue;
 
-            float d = to.sqrMagnitude;
-            if (d < bestDist)
+            float dSq = to.sqrMagnitude;
+            if (dSq < bestDistSq)
             {
-                bestDist = d;
+                bestDistSq = dSq;
                 best = h.transform;
             }
         }
@@ -181,18 +160,19 @@ public class MachineGun : MonoBehaviour
         FireOnce(target);
 
         bulletsLeftInBurst--;
-        lifeRemaining -= firingDrainPerShot;
+        lifeRemaining -= firingDrainPerShot;  // se calienta más al disparar
 
         if (lifeRemaining <= 0f)
         {
             lifeRemaining = 0f;
-            Explode();
+            EndMachine();
             return;
         }
 
-        fireTimer = (bulletsLeftInBurst > 0)
-            ? timeBetweenBullets
-            : burstCooldown;
+        if (bulletsLeftInBurst > 0)
+            fireTimer = timeBetweenBullets;
+        else
+            fireTimer = burstCooldown;
     }
 
     private void FireOnce(Transform target)
@@ -200,20 +180,14 @@ public class MachineGun : MonoBehaviour
         if (bulletPrefab == null || firePoint == null)
             return;
 
-        // mirar hacia el objetivo
-        float dirX = Mathf.Sign(target.position.x - transform.position.x);
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * dirX;
-        transform.localScale = scale;
-
         Vector2 dir = ((Vector2)target.position - (Vector2)firePoint.position).normalized;
 
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
-            bullet.Initialize(dir, false); // bala normal
+            bullet.Initialize(dir, false);   // bala normal
 
-        animator?.SetTrigger("TurretShoot");
+        animator?.SetTrigger("Machine_Shoot");
     }
 
     public void RecibirDaño(float cantidad)
@@ -222,20 +196,19 @@ public class MachineGun : MonoBehaviour
 
         hp -= cantidad;
         if (hp <= 0f)
-            Explode();
+            EndMachine();
     }
 
-    private void Explode()
+    private void EndMachine()
     {
         if (!gameObject.activeInHierarchy)
             return;
 
         isActive = false;
 
-        animator?.SetTrigger("TurretExplode");
+        animator?.SetTrigger("Machine_Destroy");
 
-        // avisar al owner para liberar el slot
-        owner?.OnMachineGunEnded(this);
+        OnMachineGunEnded?.Invoke(this);
 
         Destroy(gameObject, 0.4f);
     }

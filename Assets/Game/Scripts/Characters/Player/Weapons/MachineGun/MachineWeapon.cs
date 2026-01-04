@@ -3,79 +3,161 @@ using UnityEngine;
 public class MachineWeapon : MonoBehaviour
 {
     [Header("Refs")]
-    [SerializeField] private Transform placeOrigin;        // por ejemplo: MachineVisual/FirePoint
-    [SerializeField] private MachineGun machineGunPrefab;  // prefab de la torreta
+    [SerializeField] private Transform firePoint;       
+    [SerializeField] private GameObject bulletPrefab;  
     [SerializeField] private PlayerAnimation playerAnimation;
+    [SerializeField] private PlayerMovement movement;
 
-    [Header("Colocación")]
-    [SerializeField] private float placeDistance = 5.5f;   // distancia delante del player
-    [SerializeField] private float preSpawnDelay = 0.8f;   // retardo antes de que caiga
+    [Header("Lógica de máquina")]
+    [SerializeField] private float activeDuration   = 18f; 
+    [SerializeField] private float cooldownDuration = 24f; 
 
-    [Header("Cooldown")]
-    [SerializeField] private float cooldownDuration = 24f;
+    [Header("Disparo automático")]
+    [SerializeField] private float detectionRadius = 14f;   
+    [SerializeField] private float detectionAngle  = 120f;  
+    [SerializeField] private int   bulletsPerBurst = 3;     
+    [SerializeField] private float timeBetweenBullets = 0.2f; 
+    [SerializeField] private float burstCooldown = 1.6f;     
 
+    private bool  isActive;
+    private float activeTimer;
     private float cooldownTimer;
-    private bool isPlacing;
-    private float placingTimer;
-    private Vector2 cachedPlacePos;
 
-    private MachineGun activeMachineGun;
+    private int   bulletsLeftInBurst;
+    private float shotTimer;
 
     private void Awake()
     {
         if (playerAnimation == null)
-            playerAnimation = GetComponent<PlayerAnimation>();
+            playerAnimation = GetComponentInParent<PlayerAnimation>();
 
-        if (placeOrigin == null)
-            placeOrigin = transform; // por si acaso
+        if (movement == null)
+            movement = GetComponentInParent<PlayerMovement>();
     }
 
-    public void Tick()
+    public bool IsReady => !isActive && cooldownTimer <= 0f;
+
+    public void TryActivate()
+    {
+        if (!IsReady) return;
+
+        isActive     = true;
+        activeTimer  = activeDuration;
+        bulletsLeftInBurst = 0;
+        shotTimer    = 0f;
+
+        if (playerAnimation != null)
+            playerAnimation.PlayMachineStart();
+    }
+
+    private void Update()
     {
         if (cooldownTimer > 0f)
             cooldownTimer -= Time.deltaTime;
 
-        if (isPlacing)
+        if (!isActive)
+            return;
+
+        activeTimer -= Time.deltaTime;
+        if (activeTimer <= 0f)
         {
-            placingTimer -= Time.deltaTime;
-            if (placingTimer <= 0f)
-                FinishPlace();
+            EndMachine();
+            return;
         }
+
+        if (shotTimer > 0f)
+        {
+            shotTimer -= Time.deltaTime;
+            return;
+        }
+
+        Transform target = FindTarget();
+        if (target == null)
+        {
+            bulletsLeftInBurst = 0; 
+            return;
+        }
+
+        if (bulletsLeftInBurst <= 0)
+            bulletsLeftInBurst = bulletsPerBurst;
+
+        FireOnce(target);
+
+        bulletsLeftInBurst--;
+
+        if (bulletsLeftInBurst > 0)
+            shotTimer = timeBetweenBullets; 
+        else
+            shotTimer = burstCooldown;      
     }
 
-    public void TryUseMachine()
+    private void EndMachine()
     {
-        if (cooldownTimer > 0f) return;
-        if (isPlacing) return;
-        if (activeMachineGun != null) return; // solo una activa
-
-        // dirección: usamos el right del placeOrigin para respetar hacia dónde mira
-        Vector2 dir = placeOrigin.right.normalized;
-        cachedPlacePos = (Vector2)placeOrigin.position + dir * placeDistance;
-
-        // anim del player con el control
-        playerAnimation?.PlayMachineShoot();
-
-        isPlacing = true;
-        placingTimer = preSpawnDelay;
-    }
-
-    private void FinishPlace()
-    {
-        isPlacing = false;
-
-        if (machineGunPrefab == null) return;
-
-        MachineGun mg = Instantiate(machineGunPrefab, cachedPlacePos, Quaternion.identity);
-        activeMachineGun = mg;
-        mg.OnTurretEnd += HandleTurretEnd; // la torreta avisa cuando muere / explota
-    }
-
-    private void HandleTurretEnd(MachineGun mg)
-    {
-        if (mg == activeMachineGun)
-            activeMachineGun = null;
-
+        isActive = false;
         cooldownTimer = cooldownDuration;
+        bulletsLeftInBurst = 0;
+
+        if (playerAnimation != null)
+            playerAnimation.PlayMachineEnd();
+    }
+
+    private Transform FindTarget()
+    {
+        if (firePoint == null) return null;
+
+        Collider2D[] hits = Physics2D.OverlapCircleAll(firePoint.position, detectionRadius);
+
+        Transform best = null;
+        float bestDistSq = Mathf.Infinity;
+
+        Vector2 forward = Vector2.right;
+        if (movement != null && movement.MoveInput.x < 0f)
+            forward = Vector2.left;
+
+        foreach (var h in hits)
+        {
+            var enemy = h.GetComponentInParent<enemigo_base>();
+            if (enemy == null || enemy.estaMuerto) continue;
+
+            Vector2 to = (Vector2)h.transform.position - (Vector2)firePoint.position;
+            float angle = Vector2.Angle(forward, to);
+            if (angle > detectionAngle * 0.5f)
+                continue;
+
+            float dSq = to.sqrMagnitude;
+            if (dSq < bestDistSq)
+            {
+                bestDistSq = dSq;
+                best = h.transform;
+            }
+        }
+
+        return best;
+    }
+
+    private void FireOnce(Transform target)
+    {
+        if (bulletPrefab == null || firePoint == null)
+            return;
+
+        Vector2 dir = ((Vector2)target.position - (Vector2)firePoint.position).normalized;
+
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+
+            bullet.Initialize(dir, false);
+        }
+        if (playerAnimation != null)
+            playerAnimation.PlayMachineShoot();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (firePoint == null) return;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(firePoint.position, detectionRadius);
     }
 }
