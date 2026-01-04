@@ -5,65 +5,80 @@ public class Mine : MonoBehaviour
 {
     [Header("Movimiento")]
     [SerializeField] private float launchSpeed = 8f;
+    [SerializeField] private float travelTime = 0.4f;  
     [SerializeField] private float maxLifetime = 25f;
 
-    [Header("Arme y explosi�n")]
+    [Header("Arme y explosión")]
     [SerializeField] private float armTime = 0.6f;
     [SerializeField] private float explosionRadius = 2f;
     [SerializeField] private float baseDamage = 12f;
     [SerializeField] private float knockbackForce = 6f;
 
     private Rigidbody2D rb;
-    private float timer;
-    private bool isArmed;
+    private float timer;        
+    private float travelTimer;    
+    private float armTimer;      
+
     private bool hasLanded;
+    private bool isArmed;
+
+    private Vector2 moveDir;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // Configura el rigidbody para que caiga pero no se gire loco
-        rb.gravityScale = 1f;
+        rb.gravityScale = 0f;
         rb.freezeRotation = true;
 
-        // Asegura que el collider es trigger
         var col = GetComponent<Collider2D>();
         col.isTrigger = true;
     }
 
     public void Launch(Vector2 dir)
     {
-        dir = dir.normalized;
+        moveDir = dir.normalized;
+
         timer = 0f;
-        isArmed = false;
+        travelTimer = 0f;
+        armTimer = 0f;
+
         hasLanded = false;
+        isArmed = false;
 
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.linearVelocity = dir * launchSpeed;
+        rb.bodyType = RigidbodyType2D.Kinematic; // nos movemos a mano, no con fuerzas
 
-        Debug.Log("Mine: lanzada en direcci�n " + dir);
+        Debug.Log("Mine: lanzada en dirección " + moveDir);
     }
 
     private void Update()
     {
         timer += Time.deltaTime;
 
-        // Detectamos cuando ya �aterriz�
-        if (!hasLanded && rb.linearVelocity.magnitude < 0.1f)
+        // 1) Vuelo recto
+        if (!hasLanded)
         {
-            hasLanded = true;
-            rb.linearVelocity = Vector2.zero;
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            travelTimer += Time.deltaTime;
+            transform.position += (Vector3)(moveDir * launchSpeed * Time.deltaTime);
+
+            if (travelTimer >= travelTime)
+            {
+                hasLanded = true;   // se planta
+                Debug.Log("Mine: plantada");
+            }
+        }
+        // 2) Plantada → se arma después de armTime
+        else if (!isArmed)
+        {
+            armTimer += Time.deltaTime;
+            if (armTimer >= armTime)
+            {
+                isArmed = true;
+                Debug.Log("Mine: armada (lista para explotar)");
+            }
         }
 
-        // Se arma despu�s de cierto tiempo en el suelo
-        if (hasLanded && !isArmed && timer >= armTime)
-        {
-            isArmed = true;
-            Debug.Log("Mine: armada (lista para explotar)");
-        }
-
-        // Caduca si pasa demasiado tiempo
+        // 3) Vida máxima
         if (timer >= maxLifetime)
         {
             Destroy(gameObject);
@@ -72,7 +87,7 @@ public class Mine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Si a�n no est� armada, ignoramos
+        // Solo explota si ya está armada
         if (!isArmed) return;
 
         enemigo_base enemy = other.GetComponentInParent<enemigo_base>();
@@ -84,7 +99,7 @@ public class Mine : MonoBehaviour
 
     private void Explode()
     {
-        Debug.Log("Mine: �BOOM! Explosi�n");
+        Debug.Log("Mine: ¡BOOM! Explosión");
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         foreach (var hit in hits)
@@ -92,10 +107,8 @@ public class Mine : MonoBehaviour
             enemigo_base enemy = hit.GetComponentInParent<enemigo_base>();
             if (enemy != null)
             {
-                // da�o
-                enemy.RecibirDa�o(baseDamage);
+                enemy.RecibirDaño(baseDamage);
 
-                // empuje
                 Rigidbody2D er = enemy.GetComponent<Rigidbody2D>();
                 if (er != null)
                 {
@@ -108,7 +121,6 @@ public class Mine : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Solo para ver en el editor el radio de explosi�n
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -4,11 +4,12 @@ public class PlayerWeapon : MonoBehaviour
 {
     [Header("Refs")]
     [SerializeField] private PlayerMovement movement;
-    [SerializeField] private MineWeapon mineWeapon;
 
     [Header("Weapons")]
     [SerializeField] private WeaponBase gunWeapon;
     [SerializeField] private WeaponBase batWeapon;
+    [SerializeField] private MineWeapon mineWeapon;
+    [SerializeField] private MachineWeapon machineWeapon;
 
     private WeaponBase currentWeapon;
 
@@ -19,6 +20,9 @@ public class PlayerWeapon : MonoBehaviour
 
         if (mineWeapon == null)
             mineWeapon = GetComponent<MineWeapon>();
+
+        if (machineWeapon == null)
+            machineWeapon = GetComponent<MachineWeapon>();
     }
 
     private void Start()
@@ -29,7 +33,6 @@ public class PlayerWeapon : MonoBehaviour
     private void Update()
     {
         bool movingHoriz = movement != null && movement.IsMovingHorizontally;
-
         WeaponBase target = movingHoriz ? batWeapon : gunWeapon;
         if (target != currentWeapon)
             EquipWeapon(target);
@@ -46,9 +49,15 @@ public class PlayerWeapon : MonoBehaviour
             mineWeapon.Tick();
 
             if (Input.GetKeyDown(KeyCode.E))
-            {
                 mineWeapon.TryPlaceMine();
-            }
+        }
+
+        if (machineWeapon != null)
+        {
+            machineWeapon.Tick();
+
+            if (Input.GetKeyDown(KeyCode.G))
+                machineWeapon.TryUseMachineGun();
         }
     }
 

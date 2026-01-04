@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -9,6 +9,10 @@ public class PlayerAnimation : MonoBehaviour
 
     private int hashSpeed;
     private int hashHit;
+    private int hashShoot;
+    private int hashBatAttack;
+    private int hashPlaceMine;
+    private int hashMachineShoot;   
 
     private void Reset()
     {
@@ -28,6 +32,10 @@ public class PlayerAnimation : MonoBehaviour
 
         hashSpeed = Animator.StringToHash("Speed");
         hashHit = Animator.StringToHash("Hit");
+        hashShoot = Animator.StringToHash("Shoot");
+        hashBatAttack = Animator.StringToHash("BatAttack");
+        hashPlaceMine = Animator.StringToHash("PlaceMine");
+        hashMachineShoot = Animator.StringToHash("MachineShoot"); 
     }
 
     private void OnEnable()
@@ -55,7 +63,30 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (animator == null) return;
 
-        Debug.Log("PlayerAnimation: disparo trigger HIT");
         animator.SetTrigger(hashHit);
+    }
+
+    public void PlayShoot()          
+    {
+        if (animator == null) return;
+        animator.SetTrigger(hashShoot);
+    }
+
+    public void PlayBatAttack()      
+    {
+        if (animator == null) return;
+        animator.SetTrigger(hashBatAttack);
+    }
+
+    public void PlayPlaceMine()     
+    {
+        if (animator == null) return;
+        animator.SetTrigger(hashPlaceMine);
+    }
+
+    public void PlayMachineShoot()  
+    {
+        if (animator == null) return;
+        animator.SetTrigger(hashMachineShoot);
     }
 }

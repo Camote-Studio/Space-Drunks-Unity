@@ -3,45 +3,40 @@ using UnityEngine;
 public class MineWeapon : MonoBehaviour
 {
     [Header("Refs")]
-    [SerializeField] private Transform visual;          
-    [SerializeField] private Transform mineSpawnPoint;  
-    [SerializeField] private GameObject minePrefab;     
+    [SerializeField] private Transform mineSpawnPoint;
+    [SerializeField] private GameObject minePrefab;
 
-    [Header("Stock de minas")]
+    [Header("Stock")]
     [SerializeField] private int maxMines = 3;
-    [SerializeField] private float regenInterval = 8f;  
+    [SerializeField] private float rechargeTime = 8f;
 
     private int currentMines;
-    private float regenTimer;
+    private float rechargeTimer;
+
+    private PlayerAnimation playerAnim;
+
+    private void Reset()
+    {
+        playerAnim = GetComponentInParent<PlayerAnimation>();
+    }
 
     private void Awake()
     {
-        if (visual == null)
-        {
-            var sr = GetComponentInChildren<SpriteRenderer>();
-            if (sr != null)
-                visual = sr.transform;
-        }
-
-        if (mineSpawnPoint == null && visual != null)
-            mineSpawnPoint = visual; 
+        if (playerAnim == null)
+            playerAnim = GetComponentInParent<PlayerAnimation>();
 
         currentMines = maxMines;
     }
+
     public void Tick()
     {
-        RegenerarStock();
-    }
 
-    private void RegenerarStock()
-    {
-        if (currentMines >= maxMines)
-            return;
+        if (currentMines >= maxMines) return;
 
-        regenTimer += Time.deltaTime;
-        if (regenTimer >= regenInterval)
+        rechargeTimer += Time.deltaTime;
+        if (rechargeTimer >= rechargeTime)
         {
-            regenTimer -= regenInterval;
+            rechargeTimer = 0f;
             currentMines++;
         }
     }
@@ -51,18 +46,25 @@ public class MineWeapon : MonoBehaviour
         if (currentMines <= 0) return;
         if (minePrefab == null || mineSpawnPoint == null) return;
 
-        float facingX = 1f;
-        if (visual != null && Mathf.Abs(visual.localScale.x) > 0.01f)
-            facingX = Mathf.Sign(visual.localScale.x);
+        GameObject mineGO = Instantiate(
+            minePrefab,
+            mineSpawnPoint.position,
+            Quaternion.identity
+        );
 
-        Vector2 dir = new Vector2(1f * facingX, 0.8f); 
-
-        GameObject mineGO = Instantiate(minePrefab, mineSpawnPoint.position, Quaternion.identity);
+        Vector2 dir = Vector2.right;
+        if (playerAnim != null)
+        {
+            float facingX = playerAnim.transform.localScale.x;
+            if (Mathf.Abs(facingX) < 0.01f) facingX = 1f;
+            dir = new Vector2(Mathf.Sign(facingX), 0f);
+        }
 
         Mine mine = mineGO.GetComponent<Mine>();
         if (mine != null)
             mine.Launch(dir);
 
         currentMines--;
+        playerAnim?.PlayPlaceMine();   
     }
 }

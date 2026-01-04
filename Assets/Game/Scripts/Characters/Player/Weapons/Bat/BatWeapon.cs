@@ -1,7 +1,11 @@
 using UnityEngine;
 
-public class BatWeapon : WeaponBase 
+public class BatWeapon : WeaponBase
 {
+    [Header("Visual")]
+    [SerializeField] private GameObject batVisual;
+
+    [Header("Hitbox")]
     [SerializeField] private GameObject batHitbox;
     [SerializeField] private float batActiveTime = 0.15f;
     [SerializeField] private float batAttackCooldown = 0.3f;
@@ -9,10 +13,32 @@ public class BatWeapon : WeaponBase
     private float batCooldown;
     private float batTimer;
 
-    private void Start()
+    private PlayerAnimation playerAnim;
+
+    private void Awake()
     {
+        playerAnim = GetComponentInParent<PlayerAnimation>();
+
         if (batHitbox != null)
             batHitbox.SetActive(false);
+    }
+
+    public override void OnSelected()
+    {
+        if (batVisual != null)
+            batVisual.SetActive(true);
+    }
+
+    public override void OnDeselected()
+    {
+        if (batVisual != null)
+            batVisual.SetActive(false);
+
+        if (batHitbox != null)
+            batHitbox.SetActive(false);
+
+        batCooldown = 0f;
+        batTimer = 0f;
     }
 
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
@@ -27,33 +53,17 @@ public class BatWeapon : WeaponBase
                 batHitbox.SetActive(false);
         }
 
-        if (batCooldown > 0f)
+        if (!fireDown || batCooldown > 0f)
             return;
 
-        if (fireDown)
+        // Activamos hitbox un momento
+        if (batHitbox != null)
         {
-            if (batHitbox != null)
-            {
-                batHitbox.SetActive(true);
-                batTimer = batActiveTime;
-            }
-
-            batCooldown = batAttackCooldown;
+            batHitbox.SetActive(true);
+            batTimer = batActiveTime;
         }
-    }
 
-    public override void OnSelected()
-    {
-        base.OnSelected();
-        if (batHitbox != null)
-            batHitbox.SetActive(false);
-    }
-
-    public override void OnDeselected()
-    {
-        base.OnDeselected();
-        if (batHitbox != null)
-            batHitbox.SetActive(false);
+        batCooldown = batAttackCooldown;
+        playerAnim?.PlayBatAttack();  
     }
 }
- 
