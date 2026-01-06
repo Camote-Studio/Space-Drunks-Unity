@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8389729861694333524}
   - component: {fileID: 877952091321846806}
   - component: {fileID: 221330567490770254}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemigo_gato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +110,8 @@ MonoBehaviour:
   vidaMaxima: 100
   velocidad: 5
   aceleracion: 8
+  estaMuerto: 0
+  estaAtacando: 0
   distanciaMin: 3
   distanciaMax: 4.5
   velocidadOrbita: 3

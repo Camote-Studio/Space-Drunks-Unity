@@ -3,48 +3,67 @@ using UnityEngine;
 public class MachineWeapon : MonoBehaviour
 {
     [Header("Refs")]
-    [SerializeField] private Transform firePoint;       
-    [SerializeField] private GameObject bulletPrefab;  
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private PlayerAnimation playerAnimation;
     [SerializeField] private PlayerMovement movement;
 
     [Header("Lógica de máquina")]
-    [SerializeField] private float activeDuration   = 18f; 
-    [SerializeField] private float cooldownDuration = 24f; 
+    [SerializeField] private float activeDuration = 18f;
+    [SerializeField] private float cooldownDuration = 24f;
 
-    [Header("Disparo automático")]
-    [SerializeField] private float detectionRadius = 14f;   
-    [SerializeField] private float detectionAngle  = 120f;  
-    [SerializeField] private int   bulletsPerBurst = 3;     
-    [SerializeField] private float timeBetweenBullets = 0.2f; 
-    [SerializeField] private float burstCooldown = 1.6f;     
+    [Header("Disparo")]
+    [SerializeField] private int bulletsPerBurst = 8;
+    [SerializeField] private float timeBetweenBullets = 0.2f;
+    [SerializeField] private float burstCooldown = 1.6f;
 
-    private bool  isActive;
+    [Header("Apuntado")]
+    [SerializeField] private bool useGamepadAim = false;
+    [SerializeField] private string aimHorizontalAxis = "AimHorizontal";
+    [SerializeField] private string aimVerticalAxis = "AimVertical";
+
+    private bool isActive;
     private float activeTimer;
     private float cooldownTimer;
 
-    private int   bulletsLeftInBurst;
+    private int bulletsLeftInBurst;
     private float shotTimer;
+    private bool burstInProgress;
+    private bool shootRequested;
+
+    private Vector2 lastShootDirection = Vector2.right;
 
     private void Awake()
     {
         if (playerAnimation == null)
             playerAnimation = GetComponentInParent<PlayerAnimation>();
-
         if (movement == null)
             movement = GetComponentInParent<PlayerMovement>();
     }
 
     public bool IsReady => !isActive && cooldownTimer <= 0f;
+    public bool IsActive => isActive;
+
+    public void SetShootInput(bool fireDown)
+    {
+        if (!isActive)
+            return;
+
+        if (fireDown && !burstInProgress)
+            shootRequested = true;
+    }
 
     public void TryActivate()
     {
-        if (!IsReady) return;
+        if (!IsReady)
+            return;
 
-        isActive     = true;
-        activeTimer  = activeDuration;
+        isActive = true;
+        activeTimer = activeDuration;
         bulletsLeftInBurst = 0;
-        shotTimer    = 0f;
+        shotTimer = 0f;
+        burstInProgress = false;
+        shootRequested = false;
 
         if (playerAnimation != null)
             playerAnimation.PlayMachineStart();
@@ -65,30 +84,42 @@ public class MachineWeapon : MonoBehaviour
             return;
         }
 
+        if (!burstInProgress)
+        {
+            if (!shootRequested)
+                return;
+
+            if (shotTimer > 0f)
+            {
+                shotTimer -= Time.deltaTime;
+                return;
+            }
+
+            bulletsLeftInBurst = bulletsPerBurst;
+            burstInProgress = true;
+            shootRequested = false;
+        }
+
         if (shotTimer > 0f)
         {
             shotTimer -= Time.deltaTime;
             return;
         }
 
-        Transform target = FindTarget();
-        if (target == null)
-        {
-            bulletsLeftInBurst = 0; 
-            return;
-        }
-
-        if (bulletsLeftInBurst <= 0)
-            bulletsLeftInBurst = bulletsPerBurst;
-
-        FireOnce(target);
+        Vector2 dir = GetAimDirection();
+        FireOnce(dir);
+        lastShootDirection = dir;
 
         bulletsLeftInBurst--;
-
         if (bulletsLeftInBurst > 0)
-            shotTimer = timeBetweenBullets; 
+        {
+            shotTimer = timeBetweenBullets;
+        }
         else
-            shotTimer = burstCooldown;      
+        {
+            shotTimer = burstCooldown;
+            burstInProgress = false;
+        }
     }
 
     private void EndMachine()
@@ -96,68 +127,65 @@ public class MachineWeapon : MonoBehaviour
         isActive = false;
         cooldownTimer = cooldownDuration;
         bulletsLeftInBurst = 0;
+        burstInProgress = false;
+        shootRequested = false;
 
         if (playerAnimation != null)
             playerAnimation.PlayMachineEnd();
     }
 
-    private Transform FindTarget()
+    private Vector2 GetAimDirection()
     {
-        if (firePoint == null) return null;
+        Vector2 dir = Vector2.zero;
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(firePoint.position, detectionRadius);
-
-        Transform best = null;
-        float bestDistSq = Mathf.Infinity;
-
-        Vector2 forward = Vector2.right;
-        if (movement != null && movement.MoveInput.x < 0f)
-            forward = Vector2.left;
-
-        foreach (var h in hits)
+        if (useGamepadAim)
         {
-            var enemy = h.GetComponentInParent<enemigo_base>();
-            if (enemy == null || enemy.estaMuerto) continue;
+            float ax = Input.GetAxis(aimHorizontalAxis);
+            float ay = Input.GetAxis(aimVerticalAxis);
+            dir = new Vector2(ax, ay);
+        }
 
-            Vector2 to = (Vector2)h.transform.position - (Vector2)firePoint.position;
-            float angle = Vector2.Angle(forward, to);
-            if (angle > detectionAngle * 0.5f)
-                continue;
-
-            float dSq = to.sqrMagnitude;
-            if (dSq < bestDistSq)
+        if (dir.sqrMagnitude < 0.01f)
+        {
+            if (Camera.main != null && firePoint != null)
             {
-                bestDistSq = dSq;
-                best = h.transform;
+                Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 to = mouseWorld - firePoint.position;
+                to.z = 0f;
+                dir = new Vector2(to.x, to.y);
             }
         }
 
-        return best;
+        if (dir.sqrMagnitude < 0.01f)
+            dir = lastShootDirection.sqrMagnitude > 0.01f ? lastShootDirection : Vector2.right;
+
+        return dir.normalized;
     }
 
-    private void FireOnce(Transform target)
+    private void FireOnce(Vector2 dir)
     {
         if (bulletPrefab == null || firePoint == null)
             return;
 
-        Vector2 dir = ((Vector2)target.position - (Vector2)firePoint.position).normalized;
+        dir = dir.normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        firePoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
-        {
-
             bullet.Initialize(dir, false);
-        }
+
         if (playerAnimation != null)
             playerAnimation.PlayMachineShoot();
     }
 
     private void OnDrawGizmosSelected()
     {
-        if (firePoint == null) return;
+        if (firePoint == null)
+            return;
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(firePoint.position, detectionRadius);
+        Gizmos.DrawLine(firePoint.position, firePoint.position + firePoint.right * 2f);
     }
 }
