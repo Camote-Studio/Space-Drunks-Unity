@@ -32,6 +32,8 @@ public class GunWeapon : WeaponBase
     private bool isChargingBig;
     private float bigChargeTimer;
 
+    private float lastFacingX = 1f;
+
     private PlayerMovement movement;
     private PlayerAnimation playerAnim;
 
@@ -60,7 +62,6 @@ public class GunWeapon : WeaponBase
 
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
-
         if (normalCooldown > 0f) normalCooldown -= Time.deltaTime;
         if (bigCooldown > 0f) bigCooldown -= Time.deltaTime;
 
@@ -126,7 +127,7 @@ public class GunWeapon : WeaponBase
             }
 
             if (fired)
-                playerAnim?.PlayShoot();  
+                playerAnim?.PlayShoot();
 
             isChargingBig = false;
             bigChargeTimer = 0f;
@@ -149,12 +150,17 @@ public class GunWeapon : WeaponBase
 
     private void SpawnBullet(bool isBig)
     {
-        if (bulletPrefab == null || firePoint == null) return;
+        if (bulletPrefab == null || firePoint == null)
+            return;
 
-        Transform body = movement != null ? movement.transform : transform;
-        float facingX = 1f;
-        if (body != null && body.localScale.x != 0f)
-            facingX = Mathf.Sign(body.localScale.x);
+        float facingX = lastFacingX;
+
+        if (movement != null)
+        {
+            facingX = Mathf.Sign(movement.FacingX == 0f ? 1f : movement.FacingX);
+        }
+
+        lastFacingX = facingX;
 
         Vector2 dir = new Vector2(facingX, 0f);
 

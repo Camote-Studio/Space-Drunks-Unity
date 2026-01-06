@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 133525890851928025}
   - component: {fileID: 8434568376785761775}
   - component: {fileID: 5660740645522308759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemigo_verde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5090770402672660144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 4634934875290950594}
   - component: {fileID: 2676589545482400236}
   - component: {fileID: 8701829635447478371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fotograma0000_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

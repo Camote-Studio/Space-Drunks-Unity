@@ -4,67 +4,108 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     [Header("Movimiento")]
-    [SerializeField] private float launchSpeed = 8f;
+    [SerializeField] private float travelDuration = 0.35f;
+    [SerializeField] private float travelDistance = 3f;
+    [SerializeField] private float arcHeight = 0.7f;
     [SerializeField] private float maxLifetime = 25f;
 
-    [Header("Arme y explosi�n")]
+    [Header("Arme y explosion")]
     [SerializeField] private float armTime = 0.6f;
     [SerializeField] private float explosionRadius = 2f;
     [SerializeField] private float baseDamage = 12f;
     [SerializeField] private float knockbackForce = 6f;
 
+    [SerializeField] private Transform visual;
+
     private Rigidbody2D rb;
-    private float timer;
+    private float lifeTimer;
+    private float travelTimer;
+    private bool isMoving;
     private bool isArmed;
     private bool hasLanded;
+
+    private Vector2 moveDir;
+    private Vector3 startPos;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
+        rb.bodyType = RigidbodyType2D.Kinematic;
 
-        // Configura el rigidbody para que caiga pero no se gire loco
-        rb.gravityScale = 1f;
-        rb.freezeRotation = true;
-
-        // Asegura que el collider es trigger
         var col = GetComponent<Collider2D>();
         col.isTrigger = true;
+
+        if (visual == null)
+        {
+            SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+            if (sr != null)
+                visual = sr.transform;
+        }
     }
 
     public void Launch(Vector2 dir)
     {
-        dir = dir.normalized;
-        timer = 0f;
-        isArmed = false;
+        moveDir = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector2.right;
+        startPos = transform.position;
+
+        lifeTimer = 0f;
+        travelTimer = 0f;
+        isMoving = true;
         hasLanded = false;
+        isArmed = false;
 
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.linearVelocity = dir * launchSpeed;
-
-        Debug.Log("Mine: lanzada en direcci�n " + dir);
+        if (visual != null)
+        {
+            var lp = visual.localPosition;
+            lp.y = 0f;
+            visual.localPosition = lp;
+        }
     }
 
     private void Update()
     {
-        timer += Time.deltaTime;
+        lifeTimer += Time.deltaTime;
 
-        // Detectamos cuando ya �aterriz�
-        if (!hasLanded && rb.linearVelocity.magnitude < 0.1f)
+        if (isMoving)
         {
-            hasLanded = true;
-            rb.linearVelocity = Vector2.zero;
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            travelTimer += Time.deltaTime;
+            float t = Mathf.Clamp01(travelTimer / travelDuration);
+
+            float dist = travelDistance * t;
+            Vector3 planePos = startPos + (Vector3)(moveDir * dist);
+
+            float h = 4f * arcHeight * t * (1f - t);
+
+            transform.position = planePos;
+
+            if (visual != null)
+            {
+                var lp = visual.localPosition;
+                lp.y = h;
+                visual.localPosition = lp;
+            }
+
+            if (t >= 1f)
+            {
+                isMoving = false;
+                hasLanded = true;
+
+                if (visual != null)
+                {
+                    var lp = visual.localPosition;
+                    lp.y = 0f;
+                    visual.localPosition = lp;
+                }
+            }
         }
 
-        // Se arma despu�s de cierto tiempo en el suelo
-        if (hasLanded && !isArmed && timer >= armTime)
+        if (hasLanded && !isArmed && lifeTimer >= armTime)
         {
             isArmed = true;
-            Debug.Log("Mine: armada (lista para explotar)");
         }
 
-        // Caduca si pasa demasiado tiempo
-        if (timer >= maxLifetime)
+        if (lifeTimer >= maxLifetime)
         {
             Destroy(gameObject);
         }
@@ -72,7 +113,6 @@ public class Mine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Si a�n no est� armada, ignoramos
         if (!isArmed) return;
 
         enemigo_base enemy = other.GetComponentInParent<enemigo_base>();
@@ -84,18 +124,14 @@ public class Mine : MonoBehaviour
 
     private void Explode()
     {
-        Debug.Log("Mine: �BOOM! Explosi�n");
-
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         foreach (var hit in hits)
         {
             enemigo_base enemy = hit.GetComponentInParent<enemigo_base>();
             if (enemy != null)
             {
-                // daño
                 enemy.RecibirDaño(baseDamage);
 
-                // empuje
                 Rigidbody2D er = enemy.GetComponent<Rigidbody2D>();
                 if (er != null)
                 {
@@ -108,7 +144,6 @@ public class Mine : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Solo para ver en el editor el radio de explosi�n
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
