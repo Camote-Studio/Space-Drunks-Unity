@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     private bool dashPressedThisFrame;
     private Vector2 dashDir;
 
+    private bool movementLocked = false;
+
     private int playerLayer;
     private int jumpableLayer;
 
@@ -61,6 +63,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetInput(float horizontal, float vertical, bool jumpPressed, bool dashPressed)
     {
+        if (movementLocked)
+            return;
+
         inputX = horizontal;
         inputY = vertical;
 
@@ -162,6 +167,18 @@ public class PlayerMovement : MonoBehaviour
             isDashing = false;
         }
 
+    }
+
+    public void SetMovementLocked(bool locked)
+    {
+        movementLocked = locked;
+        if (locked)
+        {
+            inputX = 0;
+            inputY = 0;
+            jumpPressedThisFrame = false;
+            rb.linearVelocity = Vector2.zero;
+        }
     }
 
     public bool IsMovingHorizontally => Mathf.Abs(inputX) > 0.01f;
