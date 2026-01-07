@@ -366,10 +366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
   movement: {fileID: 493922816}
-  gunWeapon: {fileID: 497623925}
-  batWeapon: {fileID: 329855847}
   mineWeapon: {fileID: 676634261}
   machineWeapon: {fileID: 1813658626}
+  gunWeapon: {fileID: 497623925}
+  batWeapon: {fileID: 329855847}
 --- !u!114 &493922823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,11 +1245,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e5f5076e2ee1c45ae0265ec3fdcb01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MachineWeapon
-  machineGunPrefab: {fileID: 8266215150327316025, guid: c37e6809634daae43bb4b33487c88052, type: 3}
-  indicatorVisual: {fileID: 271384621}
-  placeDistance: 5.5
-  preSpawnDelay: 0.8
+  firePoint: {fileID: 271384621}
+  bulletPrefab: {fileID: 7781194408997046336, guid: f820158aad118c145b261ac037491af8, type: 3}
+  playerAnimation: {fileID: 0}
+  movement: {fileID: 0}
+  activeDuration: 18
   cooldownDuration: 24
+  detectionRadius: 14
+  detectionAngle: 120
+  bulletsPerBurst: 3
+  timeBetweenBullets: 0.2
+  burstCooldown: 1.6
 --- !u!4 &1813658627
 Transform:
   m_ObjectHideFlags: 0
