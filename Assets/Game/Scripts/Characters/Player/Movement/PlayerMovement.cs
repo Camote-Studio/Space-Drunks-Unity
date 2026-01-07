@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Dash")]
     [SerializeField] private float dashSpeed = 10f;
-    [SerializeField] private float dashWidth = 1.2f;
     [SerializeField] private float dashDuration = 0.2f;
 
     private Rigidbody2D rb;
@@ -34,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
     private float dashTime;
     private bool dashPressedThisFrame;
     private Vector2 dashDir;
+
+    private bool movementLocked = false;
+    private float facingX = 1f;
+    public float FacingX => facingX;
 
     private int playerLayer;
     private int jumpableLayer;
@@ -61,12 +64,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetInput(float horizontal, float vertical, bool jumpPressed, bool dashPressed)
     {
+        if (movementLocked)
+        {
+            inputX = 0f;
+            inputY = 0f;
+            return;
+        }
+
         inputX = horizontal;
         inputY = vertical;
 
-        if (jumpPressed && !isJumping /* && groundChecker.IsGrounded */)
+        if (jumpPressed && !isJumping)
             jumpPressedThisFrame = true;
-        if(dashPressed && !isDashing)
+        if (dashPressed && !isDashing)
             dashPressedThisFrame = true;
     }
 
@@ -74,13 +84,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (visual != null && inputX != 0f)
         {
+            float dir = Mathf.Sign(inputX);
+            facingX = dir;
             Vector3 scale = visual.localScale;
             scale.x = Mathf.Sign(inputX) * Mathf.Abs(scale.x);
             visual.localScale = scale;
         }
 
         HandleJump();
-        Handledash();
+        HandleDash();
     }
 
     private void FixedUpdate()
@@ -138,30 +150,41 @@ public class PlayerMovement : MonoBehaviour
                 Physics2D.IgnoreLayerCollision(playerLayer, jumpableLayer, false);
         }
     }
-    private void Handledash()
+
+    private void HandleDash()
     {
         if (dashPressedThisFrame)
         {
             dashPressedThisFrame = false;
             isDashing = true;
             dashTime = 0f;
-            
+
             dashDir = new Vector2(inputX, inputY);
 
-            if(dashDir.sqrMagnitude < 0.01f && visual != null)
-            {
+            if (dashDir.sqrMagnitude < 0.01f && visual != null)
+
                 dashDir = new Vector2(Mathf.Sign(visual.localScale.x), 0f);
-            }
+
             dashDir = dashDir.normalized;
         }
+
         if (!isDashing)
             return;
-        dashTime += Time.deltaTime;
-        if(dashTime >= dashDuration)
-        {
-            isDashing = false;
-        }
 
+        dashTime += Time.deltaTime;
+        if (dashTime >= dashDuration)
+            isDashing = false;
+    }
+    public void SetMovementLocked(bool locked)
+    {
+        movementLocked = locked;
+        if (locked)
+        {
+            inputX = 0f;
+            inputY = 0f;
+            jumpPressedThisFrame = false;
+            rb.linearVelocity = Vector2.zero;
+        }
     }
 
     public bool IsMovingHorizontally => Mathf.Abs(inputX) > 0.01f;

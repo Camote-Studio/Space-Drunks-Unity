@@ -19,10 +19,7 @@ public class PlayerWeapon : MonoBehaviour
             movement = GetComponent<PlayerMovement>();
 
         if (mineWeapon == null)
-            mineWeapon = GetComponentInChildren<MineWeapon>();
-
-        if (machineWeapon == null)
-            machineWeapon = GetComponentInChildren<MachineWeapon>();
+            mineWeapon = GetComponent<MineWeapon>();
     }
 
     private void Start()
@@ -32,22 +29,30 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Update()
     {
-        bool movingHoriz = movement != null && movement.IsMovingHorizontally;
-
-        // Cambio Gun/Bat según se mueva o no
-        WeaponBase target = movingHoriz ? batWeapon : gunWeapon;
-        if (target != currentWeapon)
-            EquipWeapon(target);
-
         bool fireDown = Input.GetMouseButtonDown(0);
         bool fireHeld = Input.GetMouseButton(0);
         bool fireUp = Input.GetMouseButtonUp(0);
 
-        if (currentWeapon != null)
+        if (machineWeapon != null && Input.GetKeyDown(KeyCode.G))
+        {
+            machineWeapon.TryActivate();
+        }
+
+        bool machineActive = machineWeapon != null && machineWeapon.IsActive;
+
+        if (movement != null)
+            movement.SetMovementLocked(machineActive);
+
+        bool movingHoriz = movement != null && movement.IsMovingHorizontally;
+        WeaponBase target = movingHoriz ? batWeapon : gunWeapon;
+
+        if (!machineActive && target != currentWeapon)
+            EquipWeapon(target);
+
+        if (!machineActive && currentWeapon != null)
             currentWeapon.Tick(fireDown, fireHeld, fireUp);
 
-        // Minas (tecla E, como ya lo tenías)
-        if (mineWeapon != null)
+        if (!machineActive && mineWeapon != null)
         {
             mineWeapon.Tick();
 
@@ -55,10 +60,10 @@ public class PlayerWeapon : MonoBehaviour
                 mineWeapon.TryPlaceMine();
         }
 
-        // Máquina / torreta pegada (tecla G)
-        if (machineWeapon != null && Input.GetKeyDown(KeyCode.G))
+        if (machineWeapon != null)
         {
-            machineWeapon.TryActivate();
+            bool shootForMachine = machineActive && fireDown;
+            machineWeapon.SetShootInput(shootForMachine);
         }
     }
 
