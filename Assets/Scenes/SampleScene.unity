@@ -314,7 +314,6 @@ MonoBehaviour:
   jumpDuration: 0.4
   jumpableLayerName: JumpableObstacle
   dashSpeed: 10
-  dashWidth: 1.2
   dashDuration: 0.2
 --- !u!114 &493922817
 MonoBehaviour:
@@ -781,10 +780,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e308cc36f48381b4c8cf30ec07c70b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MineWeapon
-  mineSpawnPoint: {fileID: 1319300508}
   minePrefab: {fileID: 4676879467811483978, guid: 544dd1b396148964eb99b13586b42011, type: 3}
+  spawnPoint: {fileID: 1319300508}
+  facingVisual: {fileID: 0}
   maxMines: 3
-  rechargeTime: 8
+  replenishInterval: 8
 --- !u!1 &1029919011
 GameObject:
   m_ObjectHideFlags: 0
