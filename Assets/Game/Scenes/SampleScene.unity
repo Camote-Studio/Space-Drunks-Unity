@@ -761,7 +761,7 @@ Transform:
   m_GameObject: {fileID: 676634259}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56124, y: 2.51, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.23, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1312,8 +1312,8 @@ MonoBehaviour:
   movement: {fileID: 0}
   activeDuration: 18
   cooldownDuration: 24
-  bulletsPerBurst: 3
-  timeBetweenBullets: 0.2
+  bulletsPerBurst: 8
+  timeBetweenBullets: 0.4
   burstCooldown: 1.6
   useGamepadAim: 0
   aimHorizontalAxis: AimHorizontal

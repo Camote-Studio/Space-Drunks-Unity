@@ -64,7 +64,7 @@ public class Bullet : MonoBehaviour
         if (enemy != null)
         {
             float damage = isBig ? bigDamage : normalDamage;
-            enemy.RecibirDaño(damage);
+            enemy.RecibirDaÃ±o(damage);
             Destroy(gameObject);
         }
     }
