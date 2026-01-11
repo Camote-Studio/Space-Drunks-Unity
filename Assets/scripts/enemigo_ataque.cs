@@ -6,15 +6,20 @@ public class enemigo_ataque : MonoBehaviour
     public float rangoAtaque = 1.5f;
     public float daño = 10f;
     public float enfriamiento = 3f;
+
     private float temporizadorAtaque;
     private enemigo_base enemigo;
+    private enemigo_animacion anim;
     private Transform objetivo;
-    void Awake()
+
+    private void Awake()
     {
         enemigo = GetComponent<enemigo_base>();
+        anim = GetComponent<enemigo_animacion>();
         objetivo = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
-    void Update()
+
+    private void Update()
     {
         if (enemigo == null || objetivo == null) return;
         if (enemigo.estaMuerto) return;
@@ -24,25 +29,42 @@ public class enemigo_ataque : MonoBehaviour
         float distancia = Vector2.Distance(transform.position, objetivo.position);
 
         if (!enemigo.estaAtacando &&
-            temporizadorAtaque <= 0 &&
+            temporizadorAtaque <= 0f &&
             distancia <= rangoAtaque)
         {
             Atacar();
         }
     }
-    void Atacar()
+
+    private void Atacar()
     {
         enemigo.estaAtacando = true;
         temporizadorAtaque = enfriamiento;
-        GetComponent<enemigo_animacion>()?.SetAtacando(true);
-        objetivo.GetComponent<VidaJugador>()?.RecibirDaño(daño,"");
+
+        // animación de ataque
+        if (anim != null)
+            anim.SetAtacando(true);
+
+        // aplicar daño al jugador
+        var vida = objetivo.GetComponentInParent<VidaJugador>();
+        if (vida != null)
+        {
+            Debug.Log("enemigo_ataque: golpeo al jugador");
+            vida.RecibirDaño(daño);
+        }
+        else
+        {
+            Debug.LogWarning("enemigo_ataque: no encontré VidaJugador en el Player");
+        }
 
         Invoke(nameof(FinAtaque), 0.4f);
     }
 
-    void FinAtaque()
+    private void FinAtaque()
     {
         enemigo.estaAtacando = false;
-        GetComponent<enemigo_animacion>()?.SetAtacando(false);
+
+        if (anim != null)
+            anim.SetAtacando(false);
     }
 }

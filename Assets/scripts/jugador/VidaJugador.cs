@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using System;
 
 public class VidaJugador : MonoBehaviour
 {
     [Header("Vida")]
     public float vidaMaxima = 100f;
     public float vidaActual;
+
+    public event Action OnDamaged;
 
     [Header("Flotación")]
     public bool flotando = false;
@@ -25,18 +28,18 @@ public class VidaJugador : MonoBehaviour
 
     private bool bajando = false;
 
-    void Awake()
+    private void Awake()
     {
         vidaActual = vidaMaxima;
 
-        rb = GetComponent<Rigidbody2D>();   // puede ser null
+        rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
 
         yInicial = transform.position.y;
         tagOriginal = gameObject.tag;
     }
 
-    void Update()
+    private void Update()
     {
         if (flotando)
             ManejarFlotacion();
@@ -50,9 +53,11 @@ public class VidaJugador : MonoBehaviour
         if (invulnerable) return;
 
         vidaActual -= cantidad;
+        OnDamaged?.Invoke();
 
-        if (vidaActual <= 0)
+        if (vidaActual <= 0f)
         {
+            vidaActual = 0f;
             Morir();
             return;
         }
@@ -64,14 +69,13 @@ public class VidaJugador : MonoBehaviour
     }
 
     // 🟣 ACTIVAR FLOTACIÓN
-    void ActivarFlotacion()
+    private void ActivarFlotacion()
     {
         flotando = true;
         bajando = false;
         invulnerable = true;
         timerFlotacion = duracionFlotacion;
 
-        // 🚫 Enemigos lo ignoran
         gameObject.tag = "Untagged";
 
         if (rb != null)
@@ -85,7 +89,7 @@ public class VidaJugador : MonoBehaviour
     }
 
     // ⬆ SUBIDA
-    void ManejarFlotacion()
+    private void ManejarFlotacion()
     {
         timerFlotacion -= Time.deltaTime;
 
@@ -109,17 +113,16 @@ public class VidaJugador : MonoBehaviour
             FinalizarFlotacion();
     }
 
-    // 🔚 TERMINA FLOTACIÓN
-    void FinalizarFlotacion()
+    // 🔚 FIN FLOTACIÓN
+    private void FinalizarFlotacion()
     {
         flotando = false;
         bajando = true;
-
         transform.rotation = Quaternion.identity;
     }
 
-    // ⬇ BAJADA SUAVE
-    void ManejarDescenso()
+    // ⬇ BAJADA
+    private void ManejarDescenso()
     {
         float nuevaY = Mathf.Lerp(
             transform.position.y,
@@ -143,8 +146,6 @@ public class VidaJugador : MonoBehaviour
 
             bajando = false;
             invulnerable = false;
-
-            // ✅ Restaurar estado normal
             gameObject.tag = tagOriginal;
 
             if (rb != null)
@@ -156,7 +157,7 @@ public class VidaJugador : MonoBehaviour
     }
 
     // ☠ MUERTE
-    void Morir()
+    private void Morir()
     {
         Debug.Log("Jugador muerto");
         Destroy(gameObject);
