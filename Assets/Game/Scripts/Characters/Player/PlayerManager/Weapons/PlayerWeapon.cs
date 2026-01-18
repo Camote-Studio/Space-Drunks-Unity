@@ -6,14 +6,14 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private PlayerMovement movement;
 
     [Header("Attack 1")]
-    [SerializeField] private WeaponBase attack1IdleWeapon;   // ej: Gun, puños
-    [SerializeField] private WeaponBase attack1MoveWeapon;   // ej: Bat, combo
+    [SerializeField] private WeaponBase attack1IdleWeapon;   
+    [SerializeField] private WeaponBase attack1MoveWeapon;   
 
     [Header("Attack 2")]
-    [SerializeField] private WeaponBase attack2Weapon;       // ej: MineWeapon, UppercutWeapon
+    [SerializeField] private WeaponBase attack2Weapon;       
 
     [Header("Attack 3")]
-    [SerializeField] private WeaponBase attack3Weapon;       // ej: MachineWeapon, SuperSkillWeapon
+    [SerializeField] private WeaponBase attack3Weapon;       
 
     private WeaponBase currentAttack1;
 

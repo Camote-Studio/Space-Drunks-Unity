@@ -54,17 +54,24 @@ public class MachineWeapon : WeaponBase
         shotTimer = 0f;
         burstInProgress = false;
 
+        if (movement != null)
+            movement.SetMovementLocked(true);
+
         playerAnimation?.PlayMachineStart();
     }
 
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
-
         if (cooldownTimer > 0f)
             cooldownTimer -= Time.deltaTime;
 
         if (!isActive)
-            return;
+        {
+            if (fireDown && IsReady)
+                TryActivate();
+            else
+                return;
+        }
 
         activeTimer -= Time.deltaTime;
         if (activeTimer <= 0f)
@@ -73,25 +80,19 @@ public class MachineWeapon : WeaponBase
             return;
         }
 
-        if (!burstInProgress)
-        {
-            if (!fireDown)
-                return; 
-
-            if (shotTimer > 0f)
-            {
-                shotTimer -= Time.deltaTime;
-                return;
-            }
-
-            bulletsLeftInBurst = bulletsPerBurst;
-            burstInProgress = true;
-        }
-
         if (shotTimer > 0f)
         {
             shotTimer -= Time.deltaTime;
             return;
+        }
+
+        if (!burstInProgress)
+        {
+            if (!fireDown)
+                return;
+
+            bulletsLeftInBurst = bulletsPerBurst;
+            burstInProgress = true;
         }
 
         Vector2 dir = GetAimDirection();
@@ -101,11 +102,11 @@ public class MachineWeapon : WeaponBase
         bulletsLeftInBurst--;
         if (bulletsLeftInBurst > 0)
         {
-            shotTimer = timeBetweenBullets;  
+            shotTimer = timeBetweenBullets;
         }
         else
         {
-            shotTimer = burstCooldown;   
+            shotTimer = burstCooldown;
             burstInProgress = false;
         }
     }
@@ -116,6 +117,9 @@ public class MachineWeapon : WeaponBase
         cooldownTimer = cooldownDuration;
         bulletsLeftInBurst = 0;
         burstInProgress = false;
+
+        if (movement != null)
+            movement.SetMovementLocked(false);
 
         playerAnimation?.PlayMachineEnd();
     }

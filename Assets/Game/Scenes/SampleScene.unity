@@ -428,10 +428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
   movement: {fileID: 493922816}
-  gunWeapon: {fileID: 497623925}
-  batWeapon: {fileID: 329855847}
-  mineWeapon: {fileID: 676634261}
-  machineWeapon: {fileID: 1813658626}
+  attack1IdleWeapon: {fileID: 497623925}
+  attack1MoveWeapon: {fileID: 329855847}
+  attack2Weapon: {fileID: 676634261}
+  attack3Weapon: {fileID: 1813658626}
 --- !u!114 &493922823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,95 +824,12 @@ Transform:
   m_GameObject: {fileID: 740117907}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.388, y: -2.23825, z: 0}
+  m_LocalPosition: {x: 0, y: -2.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1117573718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &926993637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 926993638}
-  - component: {fileID: 926993640}
-  - component: {fileID: 926993639}
-  m_Layer: 9
-  m_Name: BatHitBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &926993638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926993637}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.33854565, w: -0.94095}
-  m_LocalPosition: {x: -0.14804733, y: 0.07371829, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1668655045}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 320.423}
---- !u!70 &926993639
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926993637}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.18029235, y: -0.48877406}
-  m_Size: {x: 0.28488973, y: 1.4459884}
-  m_Direction: 0
---- !u!114 &926993640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926993637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 364e2b3b8d484884f8d03b275ca31f55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BatHitbox
-  damage: 1
 --- !u!1 &1029919011
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ccb946b0a40b049a7fd0e5b4ce6297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerGroundChecker
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 740117908}
   groundRadius: 0.1
   groundLayer:
     serializedVersion: 2
@@ -1076,7 +993,9 @@ Transform:
   m_LocalPosition: {x: -3.47, y: 0.88741, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 740117908}
+  - {fileID: 2007802185}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1119827688
@@ -1089,7 +1008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119827689}
   m_Layer: 6
-  m_Name: MinePoint
+  m_Name: PoisonPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1104,7 +1023,7 @@ Transform:
   m_GameObject: {fileID: 1119827688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.03, z: 0}
+  m_LocalPosition: {x: 0, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1219,7 +1138,7 @@ GameObject:
   - component: {fileID: 1342925079}
   - component: {fileID: 1342925080}
   m_Layer: 6
-  m_Name: MineVisual
+  m_Name: PoisonVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,7 +1153,7 @@ Transform:
   m_GameObject: {fileID: 1342925078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.23, z: 0}
+  m_LocalPosition: {x: -2.09, y: 2.48, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1352,7 +1271,7 @@ GameObject:
   - component: {fileID: 1401832692}
   - component: {fileID: 1401832693}
   m_Layer: 6
-  m_Name: GunVisual
+  m_Name: PunchVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1367,7 +1286,7 @@ Transform:
   m_GameObject: {fileID: 1401832691}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.041, y: -0.031, z: 0}
+  m_LocalPosition: {x: -2.2, y: 2.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1421,7 +1340,7 @@ Transform:
   m_GameObject: {fileID: 1481037108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.03, y: 0.15, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1707,55 +1626,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1668655044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1668655045}
-  - component: {fileID: 1668655046}
-  m_Layer: 6
-  m_Name: BatVisual
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1668655045
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668655044}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.025, y: -0.048, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 926993638}
-  m_Father: {fileID: 2007802185}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1668655046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668655044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da86566813864048b989dfee901b2a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BatWeapon
-  batVisual: {fileID: 0}
-  batHitbox: {fileID: 926993637}
-  batActiveTime: 0.15
-  batAttackCooldown: 0.3
 --- !u!1 &1737193464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,7 +1808,7 @@ GameObject:
   - component: {fileID: 1833379014}
   - component: {fileID: 1833379015}
   m_Layer: 6
-  m_Name: MachineVisual
+  m_Name: SwordVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1953,7 +1823,7 @@ Transform:
   m_GameObject: {fileID: 1833379013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.16, y: 2.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2009,16 +1879,15 @@ Transform:
   m_GameObject: {fileID: 2007802184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.388, y: -1.73825, z: 0}
+  m_LocalPosition: {x: 3.082, y: -2.62566, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1654168964}
   - {fileID: 1401832692}
-  - {fileID: 1668655045}
   - {fileID: 1342925079}
   - {fileID: 1833379014}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1117573718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138250209
 GameObject:
@@ -2061,5 +1930,3 @@ SceneRoots:
   - {fileID: 1545303576}
   - {fileID: 30835028}
   - {fileID: 1117573718}
-  - {fileID: 740117908}
-  - {fileID: 2007802185}

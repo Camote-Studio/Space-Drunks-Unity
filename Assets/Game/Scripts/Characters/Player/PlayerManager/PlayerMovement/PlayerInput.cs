@@ -1,10 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem.DualShock;
+
+public enum PlayerControlsType
+{
+    KeyboardMouse,
+    GamePad,
+    Playstation
+}
 
 [RequireComponent(typeof(PlayerBase))]
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private int playerIndex = 0;
+    [SerializeField] private PlayerControlsType controlType = PlayerControlsType.KeyboardMouse;
 
     private PlayerBase player;
     private InputSystem_Actions actions;
@@ -21,8 +31,61 @@ public class PlayerInput : MonoBehaviour
         player = GetComponent<PlayerBase>();
         actions = new InputSystem_Actions();
 
-        if (player != null)
-            player.Initialize(playerIndex);
+        ConfigureDevices();
+
+        player.Initialize(playerIndex);
+    }
+
+    private void ConfigureDevices()
+    {
+        switch (controlType)
+        {
+            case PlayerControlsType.KeyboardMouse:
+                actions.devices = new InputDevice[]
+                {
+                    Keyboard.current,
+                    Mouse.current,
+                };
+                break;
+            case PlayerControlsType.GamePad:
+                var gamepad = Gamepad.current;
+                if (gamepad == null)
+                {
+                    actions.devices = new InputDevice[]
+                    {
+                    gamepad
+                    };
+                }
+                else
+                {
+                    actions.devices = null;
+                }
+                    break;
+            case PlayerControlsType.Playstation:
+                DualShockGamepad ps4 = DualShockGamepad.current;
+
+                if(ps4 == null)
+                {
+                    foreach(var pad in Gamepad.all)
+                    {
+                        if(pad is DualShockGamepad dualShock)
+                        {
+                            ps4 = dualShock;
+                            break;
+                        }
+                    }
+                }
+
+                if(ps4 != null)
+                {
+                    actions.devices = new InputDevice[] { ps4 };
+                }
+                else
+                {
+                    actions.devices = null;
+                }
+                break;
+        }
     }
 
     private void OnEnable()
@@ -65,9 +128,7 @@ public class PlayerInput : MonoBehaviour
         bool a3Up = attack3Action.WasReleasedThisFrame();
         bool a3Held = a3Val > 0.1f;
 
-        if (player != null)
-        {
-            player.HandleInput(
+        player.HandleInput(
                 move,
                 jump,
                 dash,
@@ -75,6 +136,5 @@ public class PlayerInput : MonoBehaviour
                 a2Down, a2Held, a2Up,
                 a3Down, a3Held, a3Up
             );
-        }
     }
 }
