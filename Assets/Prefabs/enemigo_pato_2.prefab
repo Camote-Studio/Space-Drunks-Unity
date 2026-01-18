@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 2398377442217424036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.87757885, y: 0.6851523, z: 1}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7528641956500490974}
@@ -131,37 +131,6 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
---- !u!1 &3688181008934419683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1503693564839326590}
-  m_Layer: 0
-  m_Name: enemigo_ataque
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1503693564839326590
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3688181008934419683}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -0.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2436404127753712438}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5227122393974932566
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,12 +160,11 @@ Transform:
   m_GameObject: {fileID: 5227122393974932566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.500021, y: 0.2756431, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7528641956500490974}
-  - {fileID: 1503693564839326590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &846437430469377332
@@ -224,13 +192,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemigo_pato_1
   distanciaParada: 1.2
-  vidaMaxima: 50000
+  vidaMaxima: 400
   velocidad: 3
   aceleracion: 8
   estaMuerto: 0
   estaAtacando: 0
-  fuerzaRetroceso: 5
-  tiempoRetroceso: 1
+  comboActual: 0
+  "da\xF1oExtraPorCombo": 10
+  duracionFatalityAnim: 1.4
+  fuerzaRetroceso: 4
+  tiempoRetroceso: 0.08
+  tiempoStun: 0.25
   probDefensa1: 0.3
   probDefensa2: 0.7
 --- !u!114 &7337090547902540771

@@ -1,0 +1,1729 @@
+fileFormatVersion: 2
+guid: bec54c263d48048459cff8d3b1454d93
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3362621628168150203
+    second: Estrellas chicas_0
+  - first:
+      213: -4514670858138207756
+    second: Estrellas chicas_1
+  - first:
+      213: 8418470223087802419
+    second: Estrellas chicas_2
+  - first:
+      213: -8449312713361267818
+    second: Estrellas chicas_3
+  - first:
+      213: -5886617192058599299
+    second: Estrellas chicas_4
+  - first:
+      213: -7923567123086971887
+    second: Estrellas chicas_5
+  - first:
+      213: -7144641313769945764
+    second: Estrellas chicas_6
+  - first:
+      213: -4101399315365597661
+    second: Estrellas chicas_7
+  - first:
+      213: 1158986115039602524
+    second: Estrellas chicas_8
+  - first:
+      213: 1072866506481879306
+    second: Estrellas chicas_9
+  - first:
+      213: 576870031689454964
+    second: Estrellas chicas_10
+  - first:
+      213: -4476476683027406240
+    second: Estrellas chicas_11
+  - first:
+      213: -1569330803720425913
+    second: Estrellas chicas_12
+  - first:
+      213: -6231778508062828663
+    second: Estrellas chicas_13
+  - first:
+      213: 137573661024755721
+    second: Estrellas chicas_14
+  - first:
+      213: 5932361402148839709
+    second: Estrellas chicas_15
+  - first:
+      213: 5853869731320732756
+    second: Estrellas chicas_16
+  - first:
+      213: 1471535280613707054
+    second: Estrellas chicas_17
+  - first:
+      213: 2747799408521242744
+    second: Estrellas chicas_18
+  - first:
+      213: 8663386910426408551
+    second: Estrellas chicas_19
+  - first:
+      213: -1758988799926459747
+    second: Estrellas chicas_20
+  - first:
+      213: -6129145985331263563
+    second: Estrellas chicas_21
+  - first:
+      213: -8476317182092452466
+    second: Estrellas chicas_22
+  - first:
+      213: 7829015261326835477
+    second: Estrellas chicas_23
+  - first:
+      213: -3286172231453187327
+    second: Estrellas chicas_24
+  - first:
+      213: 1838388343554215465
+    second: Estrellas chicas_25
+  - first:
+      213: 4471540086369575606
+    second: Estrellas chicas_26
+  - first:
+      213: -5784442242266978941
+    second: Estrellas chicas_27
+  - first:
+      213: -608386639191024687
+    second: Estrellas chicas_28
+  - first:
+      213: -8636832276601640306
+    second: Estrellas chicas_29
+  - first:
+      213: 4252740015845301928
+    second: Estrellas chicas_30
+  - first:
+      213: 7552220283342806222
+    second: Estrellas chicas_31
+  - first:
+      213: 5512803713746960327
+    second: Estrellas chicas_32
+  - first:
+      213: 4993877072845019072
+    second: Estrellas chicas_33
+  - first:
+      213: -7772886209311899236
+    second: Estrellas chicas_34
+  - first:
+      213: 2407425158386240197
+    second: Estrellas chicas_35
+  - first:
+      213: 1891157140056598960
+    second: Estrellas chicas_36
+  - first:
+      213: -4309456461893629284
+    second: Estrellas chicas_37
+  - first:
+      213: 8035919599158395448
+    second: Estrellas chicas_38
+  - first:
+      213: -327034798668988958
+    second: Estrellas chicas_39
+  - first:
+      213: -2613885077758078180
+    second: Estrellas chicas_40
+  - first:
+      213: -7658011868815810203
+    second: Estrellas chicas_41
+  - first:
+      213: -2044934836039140376
+    second: Estrellas chicas_42
+  - first:
+      213: 4311058651422489595
+    second: Estrellas chicas_43
+  - first:
+      213: -6738251569995313978
+    second: Estrellas chicas_44
+  - first:
+      213: -7657732746433374588
+    second: Estrellas chicas_45
+  - first:
+      213: -7948081505759982468
+    second: Estrellas chicas_46
+  - first:
+      213: -3409167182186921503
+    second: Estrellas chicas_47
+  - first:
+      213: 479459510534677094
+    second: Estrellas chicas_48
+  - first:
+      213: -9057762358834316238
+    second: Estrellas chicas_49
+  - first:
+      213: -5203896728874968701
+    second: Estrellas chicas_50
+  - first:
+      213: 7478053596487536491
+    second: Estrellas chicas_51
+  - first:
+      213: -5332487550388566355
+    second: Estrellas chicas_52
+  - first:
+      213: -895493434714537762
+    second: Estrellas chicas_53
+  - first:
+      213: -5015594652106402982
+    second: Estrellas chicas_54
+  - first:
+      213: -8327244640567514496
+    second: Estrellas chicas_55
+  - first:
+      213: -2991386670809020207
+    second: Estrellas chicas_56
+  - first:
+      213: 1140779573920226152
+    second: Estrellas chicas_57
+  - first:
+      213: -6197980792133249726
+    second: Estrellas chicas_58
+  - first:
+      213: -7361673474748649180
+    second: Estrellas chicas_59
+  - first:
+      213: 1387642126056322019
+    second: Estrellas chicas_60
+  - first:
+      213: 4297298704968870806
+    second: Estrellas chicas_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Estrellas chicas_0
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1052
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543edf2f1719551d0800000000000000
+      internalID: -3362621628168150203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_1
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1013
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f93dd636caa851c0800000000000000
+      internalID: -4514670858138207756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_2
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 972
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3381a5f901a64d470800000000000000
+      internalID: 8418470223087802419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_3
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 966
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693e8e38ad20eba80800000000000000
+      internalID: -8449312713361267818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_4
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 956
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78c3aa3ad88e4ea0800000000000000
+      internalID: -5886617192058599299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 932
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cef62bea5d90290800000000000000
+      internalID: -7923567123086971887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_6
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 920
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55892d349229dc90800000000000000
+      internalID: -7144641313769945764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_7
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 908
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e6a958d07e417c0800000000000000
+      internalID: -4101399315365597661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_8
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 903
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57ab862bbb851010800000000000000
+      internalID: 1158986115039602524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_9
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 909
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a094442476693ee00800000000000000
+      internalID: 1072866506481879306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_10
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 890
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4751b68cc34710800800000000000000
+      internalID: 576870031689454964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 878
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06225d69c2c50e1c0800000000000000
+      internalID: -4476476683027406240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_12
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 840
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e6a2dd2fd983ae0800000000000000
+      internalID: -1569330803720425913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 840
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987500cd6764489a0800000000000000
+      internalID: -6231778508062828663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_14
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 825
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900a4db0482c8e100800000000000000
+      internalID: 137573661024755721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_15
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 801
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11e156a34bf35250800000000000000
+      internalID: 5932361402148839709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_16
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 803
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c98c8618f1d3150800000000000000
+      internalID: 5853869731320732756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_17
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 795
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d4f6b8a81fb6410800000000000000
+      internalID: 1471535280613707054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_18
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 750
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878efeae005222620800000000000000
+      internalID: 2747799408521242744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_19
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 726
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7662cb39e788a3870800000000000000
+      internalID: 8663386910426408551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_20
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 705
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d922e788101d697e0800000000000000
+      internalID: -1758988799926459747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_21
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 696
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b781df2336e0faa0800000000000000
+      internalID: -6129145985331263563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_22
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 627
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8dd6ddae621e5a80800000000000000
+      internalID: -8476317182092452466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_23
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 620
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f7f7876ef36ac60800000000000000
+      internalID: 7829015261326835477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_24
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 615
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103ea7134cb2562d0800000000000000
+      internalID: -3286172231453187327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_25
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 617
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e84c05574438910800000000000000
+      internalID: 1838388343554215465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_26
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 609
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b26afe640a1e0e30800000000000000
+      internalID: 4471540086369575606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_27
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 564
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 385a9ed8d6889bfa0800000000000000
+      internalID: -5784442242266978941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_28
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 573
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dbdce433939e87f0800000000000000
+      internalID: -608386639191024687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_29
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 573
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ae788edcec32880800000000000000
+      internalID: -8636832276601640306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_30
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 497
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae5c8e2384c40b30800000000000000
+      internalID: 4252740015845301928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_31
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 473
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eccd5269550eec860800000000000000
+      internalID: 7552220283342806222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_32
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 444
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cf775205c9618c40800000000000000
+      internalID: 5512803713746960327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_33
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 422
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c715e23db0dd4540800000000000000
+      internalID: 4993877072845019072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_34
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 420
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c918e66dc29212490800000000000000
+      internalID: -7772886209311899236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_35
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 413
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca43fc2d64e86120800000000000000
+      internalID: 2407425158386240197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_36
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9648b266dbe3a10800000000000000
+      internalID: 1891157140056598960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_37
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 371
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a81dd2e2cb134c0800000000000000
+      internalID: -4309456461893629284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_38
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 359
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8328f6f9c42558f60800000000000000
+      internalID: 8035919599158395448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_39
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 348
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edb4245593267bf0800000000000000
+      internalID: -327034798668988958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_40
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 329
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c131988ee5d99bbd0800000000000000
+      internalID: -2613885077758078180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_41
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 329
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561228977c649b590800000000000000
+      internalID: -7658011868815810203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_42
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 309
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ebb015e99eee93e0800000000000000
+      internalID: -2044934836039140376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_43
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 305
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb79e3a005f3db30800000000000000
+      internalID: 4311058651422489595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_44
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 278
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc063bd5ebec72a0800000000000000
+      internalID: -6738251569995313978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_45
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 251
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48656f7b3a44ab590800000000000000
+      internalID: -7657732746433374588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_46
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 251
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c03533bfdb2b190800000000000000
+      internalID: -7948081505759982468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_47
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 240
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e144d5a28430b0d0800000000000000
+      internalID: -3409167182186921503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_48
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 221
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6622a9172e167a600800000000000000
+      internalID: 479459510534677094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_49
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 221
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cb6cdef1d5c4280800000000000000
+      internalID: -9057762358834316238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_50
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 207
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389179b1f7b08c7b0800000000000000
+      internalID: -5203896728874968701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_51
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6fc8f5202267c760800000000000000
+      internalID: 7478053596487536491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_52
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 194
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da685ed53d23ff5b0800000000000000
+      internalID: -5332487550388566355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_53
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 173
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0452537719293f0800000000000000
+      internalID: -895493434714537762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_54
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 135
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5359d7dc37056ab0800000000000000
+      internalID: -5015594652106402982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_55
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 96
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08aa2397e1faf6c80800000000000000
+      internalID: -8327244640567514496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_56
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 59
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d807940ca57c76d0800000000000000
+      internalID: -2991386670809020207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_57
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 60
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b59867afcd4df00800000000000000
+      internalID: 1140779573920226152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_58
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 66
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2451430de495cf9a0800000000000000
+      internalID: -6197980792133249726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_59
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421f0318af416d990800000000000000
+      internalID: -7361673474748649180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_60
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e374fe5925e14310800000000000000
+      internalID: 1387642126056322019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estrellas chicas_61
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b6a63776213ab30800000000000000
+      internalID: 4297298704968870806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Estrellas chicas_0: -3362621628168150203
+      Estrellas chicas_1: -4514670858138207756
+      Estrellas chicas_10: 576870031689454964
+      Estrellas chicas_11: -4476476683027406240
+      Estrellas chicas_12: -1569330803720425913
+      Estrellas chicas_13: -6231778508062828663
+      Estrellas chicas_14: 137573661024755721
+      Estrellas chicas_15: 5932361402148839709
+      Estrellas chicas_16: 5853869731320732756
+      Estrellas chicas_17: 1471535280613707054
+      Estrellas chicas_18: 2747799408521242744
+      Estrellas chicas_19: 8663386910426408551
+      Estrellas chicas_2: 8418470223087802419
+      Estrellas chicas_20: -1758988799926459747
+      Estrellas chicas_21: -6129145985331263563
+      Estrellas chicas_22: -8476317182092452466
+      Estrellas chicas_23: 7829015261326835477
+      Estrellas chicas_24: -3286172231453187327
+      Estrellas chicas_25: 1838388343554215465
+      Estrellas chicas_26: 4471540086369575606
+      Estrellas chicas_27: -5784442242266978941
+      Estrellas chicas_28: -608386639191024687
+      Estrellas chicas_29: -8636832276601640306
+      Estrellas chicas_3: -8449312713361267818
+      Estrellas chicas_30: 4252740015845301928
+      Estrellas chicas_31: 7552220283342806222
+      Estrellas chicas_32: 5512803713746960327
+      Estrellas chicas_33: 4993877072845019072
+      Estrellas chicas_34: -7772886209311899236
+      Estrellas chicas_35: 2407425158386240197
+      Estrellas chicas_36: 1891157140056598960
+      Estrellas chicas_37: -4309456461893629284
+      Estrellas chicas_38: 8035919599158395448
+      Estrellas chicas_39: -327034798668988958
+      Estrellas chicas_4: -5886617192058599299
+      Estrellas chicas_40: -2613885077758078180
+      Estrellas chicas_41: -7658011868815810203
+      Estrellas chicas_42: -2044934836039140376
+      Estrellas chicas_43: 4311058651422489595
+      Estrellas chicas_44: -6738251569995313978
+      Estrellas chicas_45: -7657732746433374588
+      Estrellas chicas_46: -7948081505759982468
+      Estrellas chicas_47: -3409167182186921503
+      Estrellas chicas_48: 479459510534677094
+      Estrellas chicas_49: -9057762358834316238
+      Estrellas chicas_5: -7923567123086971887
+      Estrellas chicas_50: -5203896728874968701
+      Estrellas chicas_51: 7478053596487536491
+      Estrellas chicas_52: -5332487550388566355
+      Estrellas chicas_53: -895493434714537762
+      Estrellas chicas_54: -5015594652106402982
+      Estrellas chicas_55: -8327244640567514496
+      Estrellas chicas_56: -2991386670809020207
+      Estrellas chicas_57: 1140779573920226152
+      Estrellas chicas_58: -6197980792133249726
+      Estrellas chicas_59: -7361673474748649180
+      Estrellas chicas_6: -7144641313769945764
+      Estrellas chicas_60: 1387642126056322019
+      Estrellas chicas_61: 4297298704968870806
+      Estrellas chicas_7: -4101399315365597661
+      Estrellas chicas_8: 1158986115039602524
+      Estrellas chicas_9: 1072866506481879306
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

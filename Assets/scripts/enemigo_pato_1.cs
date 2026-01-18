@@ -1,58 +1,81 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class enemigo_pato_1 : enemigo_base
 {
+    [Header("Combo (solo daño)")]
+    public int comboActual = 0;
+    public float dañoExtraPorCombo = 10f;
+
+    [Header("Fatality")]
+    [Tooltip("Duración REAL de la animación fatality")]
+    public float duracionFatalityAnim = 1.4f;
+
     [Header("Retroceso")]
-    public float fuerzaRetroceso = 8f;
-    public float tiempoRetroceso = 0.2f;
-    [Header("Defensas (solo pato_1)")]
-    [Range(0f, 1f)] public float probDefensa1 = 0.3f; // 30%
-    [Range(0f, 1f)] public float probDefensa2 = 0.7f; // 70%
+    public float fuerzaRetroceso = 4f;
+    public float tiempoRetroceso = 0.08f;
+
+    [Header("Stun")]
+    public float tiempoStun = 0.25f;
+
+    [Header("Defensas")]
+    [Range(0f, 1f)] public float probDefensa1 = 0.3f;
+    [Range(0f, 1f)] public float probDefensa2 = 0.7f;
+
+    // Estados
     private bool enRetroceso;
+    private bool enStun;
+    private bool fatalityEjecutada;
+
+    // Movimiento
     private Vector2 velocidadRetroceso;
+
     private enemigo_animacion anim;
+    private Collider2D col;
+
     protected override void Awake()
     {
         base.Awake();
-        anim = GetComponent<enemigo_animacion>();
+        anim = GetComponentInChildren<enemigo_animacion>(); // por si está en Visual
+        col = GetComponent<Collider2D>();
     }
+
     protected override void Update()
     {
+        if (fatalityEjecutada) return;
+
         if (enRetroceso)
         {
             transform.position += (Vector3)(velocidadRetroceso * Time.deltaTime);
             return;
         }
 
+        if (enStun) return;
+
         base.Update();
     }
+
     public override void RecibirDaño(float cantidad)
     {
-        Debug.Log("enemigo muerto");
+        if (estaMuerto || fatalityEjecutada) return;
 
-        if (estaMuerto) return;
-        // 🎲 DECISIÓN EXCLUSIVA DEL PATO
-        float r = Random.value;
-        if (r <= probDefensa1) {
+        comboActual = enStun ? comboActual + 1 : 1;
+        float dañoFinal = cantidad + (comboActual - 1) * dañoExtraPorCombo;
 
-            anim?.PlayTrigger("defensa_1");
-            Debug.Log("defensa_1"); }
-        else { 
-        anim?.PlayTrigger("defensa_2");
-        Debug.Log("defensa_2");
-    }
-        // ❤️ daño base
-        base.RecibirDaño(cantidad);
+        vidaActual -= dañoFinal;
 
-        if (estaMuerto || objetivo == null) return;
+        if (vidaActual <= 0)
+        {
+            StartCoroutine(EjecutarFatality());
+            return;
+        }
 
-        // 💥 retroceso
+        anim?.PlayTrigger(Random.value <= probDefensa1 ? "defensa_1" : "defensa_2");
+
         Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
         velocidadRetroceso = dir * fuerzaRetroceso;
-        Debug.Log("enemigo retrocede");
 
         enRetroceso = true;
-        CancelInvoke(nameof(FinRetroceso));
         Invoke(nameof(FinRetroceso), tiempoRetroceso);
     }
 
@@ -60,5 +83,45 @@ public class enemigo_pato_1 : enemigo_base
     {
         enRetroceso = false;
         velocidadRetroceso = Vector2.zero;
+
+        enStun = true;
+        Invoke(nameof(FinStun), tiempoStun);
+    }
+
+    void FinStun()
+    {
+        enStun = false;
+        comboActual = 0;
+    }
+
+    // 🔥 FATALITY SIN EVENTOS
+    IEnumerator EjecutarFatality()
+    {
+        estaMuerto = true;
+        fatalityEjecutada = true;
+
+        enRetroceso = false;
+        enStun = false;
+
+        // Desactivar colisión
+        if (col != null)
+            col.enabled = false;
+        // Determinar dirección del fatality
+        bool fatalityDerecha = objetivo.position.x < transform.position.x;
+        if (fatalityDerecha)
+            anim?.PlayTrigger("fatality_izquierda");
+        else
+            anim?.PlayTrigger("fatality_derecha");
+
+        // DEBUG duración
+
+        // Esperar a que termine la animación
+        yield return new WaitForSeconds(duracionFatalityAnim);
+        MorirFinal();
+    }
+
+    void MorirFinal()
+    {
+        Destroy(gameObject);
     }
 }
