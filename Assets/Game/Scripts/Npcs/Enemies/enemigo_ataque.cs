@@ -10,29 +10,21 @@ public class enemigo_ataque : MonoBehaviour
 
     private float temporizadorAtaque;
     private enemigo_base enemigo;
-<<<<<<< HEAD:Assets/scripts/enemigo_ataque.cs
-=======
-    private Transform objetivo;
->>>>>>> bee61956d884b2851c47101402417921baca21ac:Assets/Game/Scripts/Npcs/Enemies/enemigo_ataque.cs
-    private enemigo_animacion anim;
+
     private Transform objetivo;
 
-<<<<<<< HEAD:Assets/scripts/enemigo_ataque.cs
+    private enemigo_animacion anim;
+
     private void Awake()
-=======
-    void Awake()
->>>>>>> bee61956d884b2851c47101402417921baca21ac:Assets/Game/Scripts/Npcs/Enemies/enemigo_ataque.cs
+
     {
         enemigo = GetComponent<enemigo_base>();
         anim = GetComponent<enemigo_animacion>();
         objetivo = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
-<<<<<<< HEAD:Assets/scripts/enemigo_ataque.cs
     private void Update()
-=======
-    void Update()
->>>>>>> bee61956d884b2851c47101402417921baca21ac:Assets/Game/Scripts/Npcs/Enemies/enemigo_ataque.cs
+
     {
         if (enemigo == null || objetivo == null) return;
         if (enemigo.estaMuerto) return;
@@ -49,11 +41,8 @@ public class enemigo_ataque : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD:Assets/scripts/enemigo_ataque.cs
-    private void Atacar()
-=======
+
     void Atacar()
->>>>>>> bee61956d884b2851c47101402417921baca21ac:Assets/Game/Scripts/Npcs/Enemies/enemigo_ataque.cs
     {
         enemigo.estaAtacando = true;
         temporizadorAtaque = enfriamiento;
