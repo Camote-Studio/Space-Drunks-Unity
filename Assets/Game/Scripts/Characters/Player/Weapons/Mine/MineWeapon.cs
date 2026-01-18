@@ -2,46 +2,33 @@ using UnityEngine;
 
 public class MineWeapon : MonoBehaviour
 {
-    [Header("Refs")]
-    [SerializeField] private Transform visual;          
-    [SerializeField] private Transform mineSpawnPoint;  
-    [SerializeField] private GameObject minePrefab;     
+    [SerializeField] private GameObject minePrefab;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Transform facingVisual;
 
-    [Header("Stock de minas")]
     [SerializeField] private int maxMines = 3;
-    [SerializeField] private float regenInterval = 8f;  
+    [SerializeField] private float replenishInterval = 8f;
 
     private int currentMines;
-    private float regenTimer;
+    private float replenishTimer;
+
+    private PlayerMovement movement;
 
     private void Awake()
     {
-        if (visual == null)
-        {
-            var sr = GetComponentInChildren<SpriteRenderer>();
-            if (sr != null)
-                visual = sr.transform;
-        }
-
-        if (mineSpawnPoint == null && visual != null)
-            mineSpawnPoint = visual; 
-
+        movement = GetComponentInParent<PlayerMovement>();
         currentMines = maxMines;
     }
-    public void Tick()
-    {
-        RegenerarStock();
-    }
 
-    private void RegenerarStock()
+    public void Tick()
     {
         if (currentMines >= maxMines)
             return;
 
-        regenTimer += Time.deltaTime;
-        if (regenTimer >= regenInterval)
+        replenishTimer += Time.deltaTime;
+        if (replenishTimer >= replenishInterval)
         {
-            regenTimer -= regenInterval;
+            replenishTimer = 0f;
             currentMines++;
         }
     }
@@ -49,16 +36,24 @@ public class MineWeapon : MonoBehaviour
     public void TryPlaceMine()
     {
         if (currentMines <= 0) return;
-        if (minePrefab == null || mineSpawnPoint == null) return;
+        if (minePrefab == null || spawnPoint == null) return;
 
-        float facingX = 1f;
-        if (visual != null && Mathf.Abs(visual.localScale.x) > 0.01f)
-            facingX = Mathf.Sign(visual.localScale.x);
+        Vector2 dir = Vector2.zero;
 
-        Vector2 dir = new Vector2(1f * facingX, 0.8f); 
+        if (movement != null && movement.MoveInput.sqrMagnitude > 0.01f)
+        {
+            dir = movement.MoveInput.normalized;
+        }
+        else if (facingVisual != null && Mathf.Abs(facingVisual.localScale.x) > 0.01f)
+        {
+            dir = new Vector2(Mathf.Sign(facingVisual.localScale.x), 0f);
+        }
+        else
+        {
+            dir = Vector2.right;
+        }
 
-        GameObject mineGO = Instantiate(minePrefab, mineSpawnPoint.position, Quaternion.identity);
-
+        GameObject mineGO = Instantiate(minePrefab, spawnPoint.position, Quaternion.identity);
         Mine mine = mineGO.GetComponent<Mine>();
         if (mine != null)
             mine.Launch(dir);

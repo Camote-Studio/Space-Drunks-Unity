@@ -10,8 +10,8 @@ public class BatHitbox : MonoBehaviour
         enemigo_base enemy = other.GetComponentInParent<enemigo_base>();
         if (enemy != null)
         {
-            enemy.RecibirDaño(damage);
-            Debug.Log($"Bate pegó a {other.name} por {damage} de daño");
+            enemy.RecibirDaÃ±o(damage);
+            Debug.Log($"Bate pegï¿½ a {other.name} por {damage} de daï¿½o");
         }
     }
 }

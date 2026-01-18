@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2955535872960457404}
   - component: {fileID: -6952814843598594605}
   - component: {fileID: 1762158847815967226}
+  - component: {fileID: -7606397112892329825}
   m_Layer: 10
   m_Name: Mine
   m_TagString: Untagged
@@ -166,3 +167,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7606397112892329825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676879467811483978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d680cfe18033940b3c62ee280caab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mine
+  launchSpeed: 8
+  maxLifetime: 25
+  armTime: 0.6
+  explosionRadius: 2
+  baseDamage: 12
+  knockbackForce: 6
