@@ -497,7 +497,7 @@ Transform:
   m_GameObject: {fileID: 493922813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.388, y: -1.73825, z: 0}
+  m_LocalPosition: {x: -7.16, y: 2.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -550,6 +550,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VidaJugador
   vidaMaxima: 100
   vidaActual: 100
+  flotando: 0
+  invulnerable: 0
+  duracionFlotacion: 4.3
+  alturaFlotacion: 5
+  velocidadSubida: 2.5
+  velocidadDescenso: 1.5
+  velocidadRotacion: 180
 --- !u!1 &497623922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1445,14 @@ PrefabInstance:
     - target: {fileID: 48201338815403972, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
       propertyPath: m_Name
       value: enemigo_pato_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589980433608255396, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589980433608255396, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6759179734215920850, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
       propertyPath: rangoAtaque

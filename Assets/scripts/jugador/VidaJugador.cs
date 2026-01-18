@@ -71,6 +71,8 @@ public class VidaJugador : MonoBehaviour
     // 🟣 ACTIVAR FLOTACIÓN
     private void ActivarFlotacion()
     {
+        CancelInvoke();
+
         flotando = true;
         bajando = false;
         invulnerable = true;
@@ -162,4 +164,11 @@ public class VidaJugador : MonoBehaviour
         Debug.Log("Jugador muerto");
         Destroy(gameObject);
     }
+
+    public bool EsIntocable()
+    {
+        return flotando || invulnerable;
+    }
+
 }
+
