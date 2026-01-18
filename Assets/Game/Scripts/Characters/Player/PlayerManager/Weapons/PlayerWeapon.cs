@@ -5,89 +5,73 @@ public class PlayerWeapon : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private PlayerMovement movement;
 
-    [Header("Weapons")]
-    [SerializeField] private WeaponBase gunWeapon;
-    [SerializeField] private WeaponBase batWeapon;
-    [SerializeField] private MineWeapon mineWeapon;
-    [SerializeField] private MachineWeapon machineWeapon;
+    [Header("Attack 1")]
+    [SerializeField] private WeaponBase attack1IdleWeapon;   // ej: Gun, puños
+    [SerializeField] private WeaponBase attack1MoveWeapon;   // ej: Bat, combo
 
-    private WeaponBase currentWeapon;
+    [Header("Attack 2")]
+    [SerializeField] private WeaponBase attack2Weapon;       // ej: MineWeapon, UppercutWeapon
+
+    [Header("Attack 3")]
+    [SerializeField] private WeaponBase attack3Weapon;       // ej: MachineWeapon, SuperSkillWeapon
+
+    private WeaponBase currentAttack1;
 
     private void Awake()
     {
         if (movement == null)
             movement = GetComponent<PlayerMovement>();
-
-        if (mineWeapon == null)
-            mineWeapon = GetComponent<MineWeapon>();
-
-        if (machineWeapon == null)
-            machineWeapon = GetComponent<MachineWeapon>();
     }
 
     private void Start()
     {
-        EquipWeapon(gunWeapon);
+        EquipAttack1(attack1IdleWeapon);
     }
 
     public void SetInput(
-        bool fireDown,
-        bool fireHeld,
-        bool fireUp,
-        bool minePressed,
-        bool machinePressed
+        bool attack1Down, bool attack1Held, bool attack1Up,
+        bool attack2Down, bool attack2Held, bool attack2Up,
+        bool attack3Down, bool attack3Held, bool attack3Up
     )
     {
-        bool hasMachine = machineWeapon != null;
+        HandleAttack1(attack1Down, attack1Held, attack1Up);
 
-        if (hasMachine && machinePressed && !machineWeapon.IsActive && machineWeapon.IsReady)
-        {
-            machineWeapon.TryActivate();
-        }
+        if (attack2Weapon != null)
+            attack2Weapon.Tick(attack2Down, attack2Held, attack2Up);
 
-        bool machineActive = hasMachine && machineWeapon.IsActive;
-
-        if (movement != null)
-            movement.SetMovementLocked(machineActive);
-
-        if (hasMachine)
-        {
-            bool shootForMachine = machineActive && fireDown;
-            machineWeapon.SetShootInput(shootForMachine);
-        }
-
-        if (machineActive)
-            return; 
-
-        bool movingHoriz = movement != null && movement.IsMovingHorizontally;
-        WeaponBase target = movingHoriz ? batWeapon : gunWeapon;
-
-        if (target != currentWeapon)
-            EquipWeapon(target);
-
-        if (currentWeapon != null)
-            currentWeapon.Tick(fireDown, fireHeld, fireUp);
-
-        if (mineWeapon != null)
-        {
-            mineWeapon.Tick();
-
-            if (minePressed)
-                mineWeapon.TryPlaceMine();
-        }
+        if (attack3Weapon != null)
+            attack3Weapon.Tick(attack3Down, attack3Held, attack3Up);
     }
 
-    private void EquipWeapon(WeaponBase newWeapon)
+    private void HandleAttack1(bool down, bool held, bool up)
     {
-        if (currentWeapon == newWeapon)
+        if (attack1IdleWeapon == null && attack1MoveWeapon == null)
             return;
 
-        if (currentWeapon != null)
-            currentWeapon.OnDeselected();
+        bool movingHoriz = movement != null && movement.IsMovingHorizontally;
 
-        currentWeapon = newWeapon;
+        WeaponBase target = attack1IdleWeapon;
+        if (movingHoriz && attack1MoveWeapon != null)
+            target = attack1MoveWeapon;
 
-        if (currentWeapon != null)
-            currentWeapon.OnSelected();
+        if (target != currentAttack1)
+            EquipAttack1(target);
+
+        if (currentAttack1 != null)
+            currentAttack1.Tick(down, held, up);
+    }
+
+    private void EquipAttack1(WeaponBase newWeapon)
+    {
+        if (currentAttack1 == newWeapon)
+            return;
+
+        if (currentAttack1 != null)
+            currentAttack1.OnDeselected();
+
+        currentAttack1 = newWeapon;
+
+        if (currentAttack1 != null)
+            currentAttack1.OnSelected();
     }
 }

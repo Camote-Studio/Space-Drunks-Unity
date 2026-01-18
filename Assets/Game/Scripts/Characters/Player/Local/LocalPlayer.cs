@@ -21,19 +21,10 @@ public class LocalPlayer : PlayerBase
 
         if (Weapon != null)
         {
-            bool fireDown = attack1Down;
-            bool fireHeld = attack1Held;
-            bool fireUp = attack1Up;
-
-            bool minePressed = attack2Down; 
-            bool machinePressed = attack3Down;
-
             Weapon.SetInput(
-                fireDown,
-                fireHeld,
-                fireUp,
-                minePressed,
-                machinePressed
+                attack1Down, attack1Held, attack1Up,
+                attack2Down, attack2Held, attack2Up,
+                attack3Down, attack3Held, attack3Up
             );
         }
     }
