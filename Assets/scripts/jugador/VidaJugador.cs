@@ -1,32 +1,43 @@
 ﻿using UnityEngine;
 using System;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class VidaJugador : MonoBehaviour
 {
     [Header("Vida")]
-    public float vidaMaxima = 100f;
-    public float vidaActual;
+    [SerializeField] private float vidaMaxima = 100f;
+    [SerializeField] private float vidaActual;
+
+    public float VidaMaxima => vidaMaxima;
+    public float VidaActual => vidaActual;
 
     public event Action OnDamaged;
 
     [Header("Flotación")]
-    public bool flotando = false;
-    public bool invulnerable = false;
+    [SerializeField] private bool flotando = false;
+    [SerializeField] private bool invulnerable = false;
 
-    public float duracionFlotacion = 4.3f;
+    [SerializeField] private float duracionFlotacion = 4.3f;
+    [SerializeField] private float alturaFlotacion = 5f;
+    [SerializeField] private float velocidadSubida = 2.5f;     // unidades/seg
+    [SerializeField] private float velocidadDescenso = 1.5f;   // unidades/seg
+    [SerializeField] private float velocidadRotacion = 180f;   // grados/seg
+
     private float timerFlotacion;
-
-    public float alturaFlotacion = 5f;
-    public float velocidadSubida = 2.5f;
-    public float velocidadDescenso = 1.5f;
-    public float velocidadRotacion = 180f;
 
     private Rigidbody2D rb;
     private Collider2D col;
+
     private float yInicial;
+    private Quaternion rotInicial;
     private string tagOriginal;
 
     private bool bajando = false;
+
+    // Para restaurar estados originales (por si ya venían desactivados)
+    private bool rbSimulatedOriginal;
+    private bool colEnabledOriginal;
 
     private void Awake()
     {
@@ -35,29 +46,31 @@ public class VidaJugador : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
 
-        yInicial = transform.position.y;
         tagOriginal = gameObject.tag;
+
+        rbSimulatedOriginal = rb.simulated;
+        colEnabledOriginal = col.enabled;
+
+        rotInicial = transform.rotation;
+        yInicial = transform.position.y;
     }
 
     private void Update()
     {
-        if (flotando)
-            ManejarFlotacion();
-        else if (bajando)
-            ManejarDescenso();
+        if (flotando) ManejarFlotacion();
+        else if (bajando) ManejarDescenso();
     }
 
-    // 🔴 DAÑO
-    public void RecibirDaño(float cantidad, string fuente = "")
+    // DAÑO
+    public void RecibirDanio(float cantidad, string fuente = "")
     {
         if (invulnerable) return;
 
-        vidaActual -= cantidad;
+        vidaActual = Mathf.Clamp(vidaActual - cantidad, 0f, vidaMaxima);
         OnDamaged?.Invoke();
 
         if (vidaActual <= 0f)
         {
-            vidaActual = 0f;
             Morir();
             return;
         }
@@ -68,97 +81,90 @@ public class VidaJugador : MonoBehaviour
         }
     }
 
-    // 🟣 ACTIVAR FLOTACIÓN
+    // ACTIVAR FLOTACIÓN
     private void ActivarFlotacion()
     {
-        CancelInvoke();
+        // Captura la altura/rotación del momento del impacto (no desde Awake)
+        yInicial = transform.position.y;
+        rotInicial = transform.rotation;
+
+        // Guarda estados actuales por si cambian durante gameplay
+        rbSimulatedOriginal = rb.simulated;
+        colEnabledOriginal = col.enabled;
 
         flotando = true;
         bajando = false;
         invulnerable = true;
         timerFlotacion = duracionFlotacion;
 
+        // Evita que otros sistemas lo “detecten”
         gameObject.tag = "Untagged";
 
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-            rb.simulated = false;
-        }
+        // Congelar física y colisiones
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.simulated = false;
 
-        if (col != null)
-            col.enabled = false;
+        col.enabled = false;
     }
 
-    // ⬆ SUBIDA
+    // SUBIDA
     private void ManejarFlotacion()
     {
         timerFlotacion -= Time.deltaTime;
 
         float yObjetivo = yInicial + alturaFlotacion;
 
-        float nuevaY = Mathf.Lerp(
+        float nuevaY = Mathf.MoveTowards(
             transform.position.y,
             yObjetivo,
             velocidadSubida * Time.deltaTime
         );
 
-        transform.position = new Vector3(
-            transform.position.x,
-            nuevaY,
-            transform.position.z
-        );
+        transform.position = new Vector3(transform.position.x, nuevaY, transform.position.z);
 
-        transform.Rotate(0, 0, velocidadRotacion * Time.deltaTime);
+        transform.Rotate(0f, 0f, velocidadRotacion * Time.deltaTime);
 
         if (timerFlotacion <= 0f)
             FinalizarFlotacion();
     }
 
-    // 🔚 FIN FLOTACIÓN
+    // FIN FLOTACIÓN
     private void FinalizarFlotacion()
     {
         flotando = false;
         bajando = true;
-        transform.rotation = Quaternion.identity;
+
+        // Vuelve a la rotación que tenía al iniciar la flotación
+        transform.rotation = rotInicial;
     }
 
-    // ⬇ BAJADA
+    // BAJADA
     private void ManejarDescenso()
     {
-        float nuevaY = Mathf.Lerp(
+        float nuevaY = Mathf.MoveTowards(
             transform.position.y,
             yInicial,
             velocidadDescenso * Time.deltaTime
         );
 
-        transform.position = new Vector3(
-            transform.position.x,
-            nuevaY,
-            transform.position.z
-        );
+        transform.position = new Vector3(transform.position.x, nuevaY, transform.position.z);
 
-        if (Mathf.Abs(transform.position.y - yInicial) < 0.05f)
+        if (Mathf.Abs(transform.position.y - yInicial) <= 0.01f)
         {
-            transform.position = new Vector3(
-                transform.position.x,
-                yInicial,
-                transform.position.z
-            );
+            transform.position = new Vector3(transform.position.x, yInicial, transform.position.z);
 
             bajando = false;
             invulnerable = false;
+
             gameObject.tag = tagOriginal;
 
-            if (rb != null)
-                rb.simulated = true;
-
-            if (col != null)
-                col.enabled = true;
+            rb.simulated = rbSimulatedOriginal;
+            col.enabled = colEnabledOriginal;
         }
     }
 
-    // ☠ MUERTE
+    // MUERTE
     private void Morir()
     {
         Debug.Log("Jugador muerto");
@@ -169,6 +175,4 @@ public class VidaJugador : MonoBehaviour
     {
         return flotando || invulnerable;
     }
-
 }
-
