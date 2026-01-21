@@ -8,7 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/enemigo_verde.prefab
   - component: {fileID: 4679827450663980447}
   m_Layer: 0
   m_Name: visual
@@ -46,14 +45,7 @@ GameObject:
   - component: {fileID: 6109650281987078883}
   - component: {fileID: 215011365011103185}
   m_Layer: 0
-=======
-  - component: {fileID: 4029525985051945476}
-  - component: {fileID: 133525890851928025}
-  - component: {fileID: 8434568376785761775}
-  - component: {fileID: 5660740645522308759}
-  m_Layer: 7
->>>>>>> bee61956d884b2851c47101402417921baca21ac:Assets/Game/Prefabs/Enemies_pre/enemigo_verde.prefab
-  m_Name: enemigo_verde
+  m_Name: enemigo_verde 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 7037725358275901280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06141, y: 0.16542, z: 0}
+  m_LocalPosition: {x: 10.610825, y: 1.0253834, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -100,18 +92,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemigoverde
   distanciaParada: 2
-  vidaMaxima: 500
+  vidaMaxima: 200
   velocidad: 3
   aceleracion: 8
   estaMuerto: 0
   estaAtacando: 0
   balaPrefab: {fileID: 1880320973439676136, guid: 7202c5f8b804af04ca70eb1f7e98c1f4, type: 3}
   velocidadBala: 8
-  rangoDisparo: 6
-  distanciaIdeal: 5
+  rangoDisparo: 8
   enfriamientoDisparo: 2
+  distanciaIdeal: 8
   velocidadStrafe: 2
   cambioDireccionTiempo: 1.5
+  duracionFatalityAnim: 4
+  fuerzaRetroceso: 4
+  tiempoRetroceso: 0.08
+  tiempoStun: 0.25
 --- !u!70 &215011365011103185
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -157,49 +153,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/enemigo_verde.prefab
   - component: {fileID: 7650799527605288781}
   - component: {fileID: 5635572251276194642}
   - component: {fileID: 2143512293512696895}
   m_Layer: 0
-=======
-  - component: {fileID: 5090770402672660144}
-  m_Layer: 7
-  m_Name: visual
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5090770402672660144
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456549387906620695}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4634934875290950594}
-  m_Father: {fileID: 4029525985051945476}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3272109103675599227
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4634934875290950594}
-  - component: {fileID: 2676589545482400236}
-  - component: {fileID: 8701829635447478371}
-  m_Layer: 7
->>>>>>> bee61956d884b2851c47101402417921baca21ac:Assets/Game/Prefabs/Enemies_pre/enemigo_verde.prefab
   m_Name: fotograma0000_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +173,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6745412, y: 0.5856475, z: 1}
+  m_LocalScale: {x: 0.58, y: 0.5856475, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4679827450663980447}
