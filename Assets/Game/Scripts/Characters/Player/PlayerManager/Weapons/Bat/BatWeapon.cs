@@ -56,7 +56,6 @@ public class BatWeapon : WeaponBase
         if (!fireDown || batCooldown > 0f)
             return;
 
-        // Activamos hitbox un momento
         if (batHitbox != null)
         {
             batHitbox.SetActive(true);
