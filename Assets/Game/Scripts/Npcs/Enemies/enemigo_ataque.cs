@@ -10,21 +10,20 @@ public class enemigo_ataque : MonoBehaviour
 
     private float temporizadorAtaque;
     private enemigo_base enemigo;
-
+    private enemigo_animacion anim;
     private Transform objetivo;
 
-    private enemigo_animacion anim;
 
-    private void Awake()
-
+    void Awake()
     {
         enemigo = GetComponent<enemigo_base>();
         anim = GetComponent<enemigo_animacion>();
         objetivo = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
-    private void Update()
 
+
+    void Update()
     {
         if (enemigo == null || objetivo == null) return;
         if (enemigo.estaMuerto) return;
@@ -41,8 +40,8 @@ public class enemigo_ataque : MonoBehaviour
         }
     }
 
-
     void Atacar()
+
     {
         enemigo.estaAtacando = true;
         temporizadorAtaque = enfriamiento;
@@ -56,7 +55,7 @@ public class enemigo_ataque : MonoBehaviour
         if (vida != null)
         {
             Debug.Log("enemigo_ataque: golpeo al jugador");
-            vida.RecibirDaño(daño);
+            vida.RecibirDanio(daño);
         }
         else
         {

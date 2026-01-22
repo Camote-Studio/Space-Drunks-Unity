@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MineWeapon : MonoBehaviour
+public class MineWeapon : WeaponBase
 {
     [SerializeField] private GameObject minePrefab;
     [SerializeField] private Transform spawnPoint;
@@ -20,17 +20,20 @@ public class MineWeapon : MonoBehaviour
         currentMines = maxMines;
     }
 
-    public void Tick()
+    public override void Tick(bool fireDown, bool  fireHeld, bool fireUp)
     {
-        if (currentMines >= maxMines)
-            return;
-
-        replenishTimer += Time.deltaTime;
-        if (replenishTimer >= replenishInterval)
+        if (currentMines < maxMines)
         {
-            replenishTimer = 0f;
-            currentMines++;
+            replenishTimer += Time.deltaTime;
+            if (replenishTimer >= replenishInterval)
+            {
+                replenishTimer = 0f;
+                currentMines++;
+            }
         }
+
+        if (fireDown)
+            TryPlaceMine();
     }
 
     public void TryPlaceMine()
