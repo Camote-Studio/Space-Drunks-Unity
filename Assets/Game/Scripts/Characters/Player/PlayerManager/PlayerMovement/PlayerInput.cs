@@ -41,50 +41,71 @@ public class PlayerInput : MonoBehaviour
         switch (controlType)
         {
             case PlayerControlsType.KeyboardMouse:
-                actions.devices = new InputDevice[]
                 {
-                    Keyboard.current,
-                    Mouse.current,
-                };
-                break;
-            case PlayerControlsType.GamePad:
-                var gamepad = Gamepad.current;
-                if (gamepad == null)
-                {
-                    actions.devices = new InputDevice[]
-                    {
-                    gamepad
-                    };
-                }
-                else
-                {
-                    actions.devices = null;
-                }
-                    break;
-            case PlayerControlsType.Playstation:
-                DualShockGamepad ps4 = DualShockGamepad.current;
+                    var kb = Keyboard.current;
+                    var ms = Mouse.current;
 
-                if(ps4 == null)
-                {
-                    foreach(var pad in Gamepad.all)
+                    if (kb != null || ms != null)
                     {
-                        if(pad is DualShockGamepad dualShock)
+                        actions.devices = new InputDevice[]
                         {
-                            ps4 = dualShock;
-                            break;
+                        kb,
+                        ms
+                        };
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay teclado/mouse conectados");
+                    }
+                    break;
+                }
+
+            case PlayerControlsType.GamePad:
+                {
+                    Gamepad pad = null;
+
+                    if (Gamepad.all.Count > playerIndex)
+                        pad = Gamepad.all[playerIndex];
+                    else
+                        pad = Gamepad.current;
+
+                    if (pad != null)
+                    {
+                        actions.devices = new InputDevice[] { pad };
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay gamepad conectado");
+                    }
+                    break;
+                }
+
+            case PlayerControlsType.Playstation:
+                {
+                    DualShockGamepad ps4 = DualShockGamepad.current;
+
+                    if (ps4 == null)
+                    {
+                        foreach (var pad in Gamepad.all)
+                        {
+                            if (pad is DualShockGamepad dualShock)
+                            {
+                                ps4 = dualShock;
+                                break;
+                            }
                         }
                     }
-                }
 
-                if(ps4 != null)
-                {
-                    actions.devices = new InputDevice[] { ps4 };
+                    if (ps4 != null)
+                    {
+                        actions.devices = new InputDevice[] { ps4 };
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay mando de Play conectado");
+                    }
+                    break;
                 }
-                else
-                {
-                    actions.devices = null;
-                }
-                break;
         }
     }
 

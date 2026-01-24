@@ -19,7 +19,7 @@ public class bala : MonoBehaviour
         if (vida != null)
         {
             //vida.RecibirDaño(danio, tipo_bala); <------- ORIGINAL
-            vida.RecibirDaño(danio);
+            vida.RecibirDanio(danio);
             Destroy(gameObject);
         }
     }
