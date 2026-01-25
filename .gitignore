@@ -18,3 +18,9 @@ UserSettings/
 # OS
 .DS_Store
 Thumbs.db
+
+# Git mergetool backups
+*_BACKUP_*.unity
+*_BASE_*.unity
+*_LOCAL_*.unity
+*_REMOTE_*.unity

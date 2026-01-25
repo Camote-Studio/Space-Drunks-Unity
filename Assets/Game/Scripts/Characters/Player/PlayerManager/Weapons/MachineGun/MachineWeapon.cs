@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MachineWeapon : MonoBehaviour
+public class MachineWeapon : WeaponBase
 {
     [Header("Refs")]
     [SerializeField] private Transform firePoint;
@@ -29,7 +29,6 @@ public class MachineWeapon : MonoBehaviour
     private int bulletsLeftInBurst;
     private float shotTimer;
     private bool burstInProgress;
-    private bool shootRequested;
 
     private Vector2 lastShootDirection = Vector2.right;
 
@@ -44,15 +43,6 @@ public class MachineWeapon : MonoBehaviour
     public bool IsReady => !isActive && cooldownTimer <= 0f;
     public bool IsActive => isActive;
 
-    public void SetShootInput(bool fireDown)
-    {
-        if (!isActive)
-            return;
-
-        if (fireDown && !burstInProgress)
-            shootRequested = true;
-    }
-
     public void TryActivate()
     {
         if (!IsReady)
@@ -63,19 +53,25 @@ public class MachineWeapon : MonoBehaviour
         bulletsLeftInBurst = 0;
         shotTimer = 0f;
         burstInProgress = false;
-        shootRequested = false;
 
-        if (playerAnimation != null)
-            playerAnimation.PlayMachineStart();
+        if (movement != null)
+            movement.SetMovementLocked(true);
+
+        playerAnimation?.PlayMachineStart();
     }
 
-    private void Update()
+    public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
         if (cooldownTimer > 0f)
             cooldownTimer -= Time.deltaTime;
 
         if (!isActive)
-            return;
+        {
+            if (fireDown && IsReady)
+                TryActivate();
+            else
+                return;
+        }
 
         activeTimer -= Time.deltaTime;
         if (activeTimer <= 0f)
@@ -84,26 +80,19 @@ public class MachineWeapon : MonoBehaviour
             return;
         }
 
-        if (!burstInProgress)
-        {
-            if (!shootRequested)
-                return;
-
-            if (shotTimer > 0f)
-            {
-                shotTimer -= Time.deltaTime;
-                return;
-            }
-
-            bulletsLeftInBurst = bulletsPerBurst;
-            burstInProgress = true;
-            shootRequested = false;
-        }
-
         if (shotTimer > 0f)
         {
             shotTimer -= Time.deltaTime;
             return;
+        }
+
+        if (!burstInProgress)
+        {
+            if (!fireDown)
+                return;
+
+            bulletsLeftInBurst = bulletsPerBurst;
+            burstInProgress = true;
         }
 
         Vector2 dir = GetAimDirection();
@@ -128,10 +117,11 @@ public class MachineWeapon : MonoBehaviour
         cooldownTimer = cooldownDuration;
         bulletsLeftInBurst = 0;
         burstInProgress = false;
-        shootRequested = false;
 
-        if (playerAnimation != null)
-            playerAnimation.PlayMachineEnd();
+        if (movement != null)
+            movement.SetMovementLocked(false);
+
+        playerAnimation?.PlayMachineEnd();
     }
 
     private Vector2 GetAimDirection()
@@ -157,7 +147,7 @@ public class MachineWeapon : MonoBehaviour
         }
 
         if (dir.sqrMagnitude < 0.01f)
-            dir = lastShootDirection.sqrMagnitude > 0.01f ? lastShootDirection : Vector2.right;
+            dir = (lastShootDirection.sqrMagnitude > 0.01f) ? lastShootDirection : Vector2.right;
 
         return dir.normalized;
     }
@@ -171,20 +161,17 @@ public class MachineWeapon : MonoBehaviour
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         firePoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        GameObject bulletGO = Object.Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
             bullet.Initialize(dir, false);
 
-        if (playerAnimation != null)
-            playerAnimation.PlayMachineShoot();
+        playerAnimation?.PlayMachineShoot();
     }
 
     private void OnDrawGizmosSelected()
     {
-        if (firePoint == null)
-            return;
-
+        if (firePoint == null) return;
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(firePoint.position, firePoint.position + firePoint.right * 2f);
     }

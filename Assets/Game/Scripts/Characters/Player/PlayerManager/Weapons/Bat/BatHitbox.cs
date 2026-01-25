@@ -11,7 +11,7 @@ public class BatHitbox : MonoBehaviour
         if (enemy != null)
         {
             enemy.RecibirDaño(damage);
-            Debug.Log($"Bate peg� a {other.name} por {damage} de da�o");
+            Debug.Log($"Bat hit at {other.name} by {damage} damage");
         }
     }
 }
