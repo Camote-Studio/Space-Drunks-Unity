@@ -17,6 +17,8 @@ public class Mine : MonoBehaviour
 
     [SerializeField] private Transform visual;
 
+    //VARIABLES
+
     private Rigidbody2D rb;
     private float lifeTimer;
     private float travelTimer;
@@ -46,7 +48,9 @@ public class Mine : MonoBehaviour
 
     public void Launch(Vector2 dir)
     {
-        moveDir = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector2.right;
+        //Si la entrada de dirección (dir) es mayor que cero, usa esa dirección normalizada. Si la entrada es cero (el jugador no toca nada), 
+        // asume que la dirección es hacia la derecha por defecto.
+        moveDir = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector2.right; 
         startPos = transform.position;
 
         lifeTimer = 0f;
