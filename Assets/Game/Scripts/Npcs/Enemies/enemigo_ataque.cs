@@ -13,20 +13,19 @@ public class enemigo_ataque : MonoBehaviour
     private enemigo_animacion anim;
     private Transform objetivo;
 
-
     void Awake()
     {
         enemigo = GetComponent<enemigo_base>();
         anim = GetComponent<enemigo_animacion>();
-        objetivo = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
-
-
 
     void Update()
     {
-        if (enemigo == null || objetivo == null) return;
-        if (enemigo.estaMuerto) return;
+        if (enemigo == null || enemigo.estaMuerto) return;
+
+        // buscar siempre al objetivo más cercano
+        ActualizarObjetivo();
+        if (objetivo == null) return;
 
         temporizadorAtaque -= Time.deltaTime;
 
@@ -40,8 +39,38 @@ public class enemigo_ataque : MonoBehaviour
         }
     }
 
-    void Atacar()
+    void ActualizarObjetivo()
+    {
+        GameObject[] jugadores1 = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] jugadores2 = GameObject.FindGameObjectsWithTag("Player_2");
 
+        float menorDistancia = Mathf.Infinity;
+        Transform masCercano = null;
+
+        foreach (GameObject j in jugadores1)
+        {
+            float d = Vector2.Distance(transform.position, j.transform.position);
+            if (d < menorDistancia)
+            {
+                menorDistancia = d;
+                masCercano = j.transform;
+            }
+        }
+
+        foreach (GameObject j in jugadores2)
+        {
+            float d = Vector2.Distance(transform.position, j.transform.position);
+            if (d < menorDistancia)
+            {
+                menorDistancia = d;
+                masCercano = j.transform;
+            }
+        }
+
+        objetivo = masCercano;
+    }
+
+    void Atacar()
     {
         enemigo.estaAtacando = true;
         temporizadorAtaque = enfriamiento;
@@ -50,8 +79,8 @@ public class enemigo_ataque : MonoBehaviour
         if (anim != null)
             anim.SetAtacando(true);
 
-        // aplicar daño al jugador
-        var vida = objetivo.GetComponentInParent<VidaJugador>();
+        // aplicar daño
+        VidaJugador vida = objetivo.GetComponentInParent<VidaJugador>();
         if (vida != null)
         {
             Debug.Log("enemigo_ataque: golpeo al jugador");
@@ -59,13 +88,13 @@ public class enemigo_ataque : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("enemigo_ataque: no encontré VidaJugador en el Player");
+            Debug.LogWarning("enemigo_ataque: no encontré VidaJugador");
         }
 
         Invoke(nameof(FinAtaque), 0.4f);
     }
 
-    private void FinAtaque()
+    void FinAtaque()
     {
         enemigo.estaAtacando = false;
 

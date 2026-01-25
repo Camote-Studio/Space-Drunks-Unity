@@ -72,7 +72,7 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetFloat(hashSpeed, speed);
     }
 
-    private void OnDamaged()
+    private void OnDamaged(string fuente)
     {
         if (animator == null)
             return;

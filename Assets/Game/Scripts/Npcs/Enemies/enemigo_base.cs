@@ -24,39 +24,71 @@ public abstract class enemigo_base : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
         vidaActual = vidaMaxima;
 
-        objetivo = GameObject.FindGameObjectWithTag("Player")?.transform;
-
-        // 🔍 DEBUG: detectar jugador al iniciar
-        if (objetivo != null)
-            Debug.Log($"[ENEMIGO] Jugador detectado: {objetivo.name}");
-        else
-            Debug.LogWarning("[ENEMIGO] No se encontró GameObject con tag Player");
+        ActualizarObjetivoMasCercano();
     }
 
     protected virtual void Update()
     {
-        if (estaMuerto || objetivo == null || estaAtacando)
+        if (estaMuerto || estaAtacando)
             return;
 
-        VidaJugador vida = objetivo.GetComponent<VidaJugador>();
+        if (objetivo == null)
+            ActualizarObjetivoMasCercano();
 
-        // 🔍 DEBUG: confirmar que el objetivo tiene VidaJugador
-        if (vida != null)
-        {
-            Debug.Log($"[ENEMIGO] Objetivo tiene VidaJugador → {objetivo.name}");
+        if (objetivo == null)
             return;
-        }
 
         MoverHaciaObjetivo();
     }
 
+    // =====================================================
+    // 🎯 BUSCAR PLAYER MÁS CERCANO (SEGURO)
+    // =====================================================
+    protected void ActualizarObjetivoMasCercano()
+    {
+        Transform nearest = null;
+        float nearestDist = Mathf.Infinity;
+        Vector2 myPos = transform.position;
+
+        BuscarConTag("Player", ref nearest, ref nearestDist, myPos);
+        BuscarConTag("Player_2", ref nearest, ref nearestDist, myPos);
+
+        objetivo = nearest;
+    }
+
+    void BuscarConTag(string tag, ref Transform nearest, ref float nearestDist, Vector2 myPos)
+    {
+        GameObject[] objs;
+
+        try
+        {
+            objs = GameObject.FindGameObjectsWithTag(tag);
+        }
+        catch
+        {
+            return; // el tag no existe → no rompe nada
+        }
+
+        foreach (GameObject o in objs)
+        {
+            if (o == null) continue;
+
+            float dist = Vector2.Distance(myPos, o.transform.position);
+            if (dist < nearestDist)
+            {
+                nearestDist = dist;
+                nearest = o.transform;
+            }
+        }
+    }
+
+    // =====================================================
+    // 🏃 MOVIMIENTO
+    // =====================================================
     protected virtual void MoverHaciaObjetivo()
     {
         Vector2 toTarget = objetivo.position - transform.position;
         float dist = toTarget.magnitude;
-
-        // 🔍 DEBUG: distancia al jugador
-        Debug.Log($"[ENEMIGO] Persiguiendo a {objetivo.name} | Distancia: {dist:F2}");
 
         if (dist <= distanciaParada)
         {
@@ -65,24 +97,23 @@ public abstract class enemigo_base : MonoBehaviour
                 Vector2.zero,
                 aceleracion * Time.deltaTime
             );
+        }
+        else
+        {
+            Vector2 dir = toTarget.normalized;
+            Vector2 targetVel = dir * velocidad;
 
-            AplicarMovimiento();
-            return;
+            velocidadActual = Vector2.Lerp(
+                velocidadActual,
+                targetVel,
+                aceleracion * Time.deltaTime
+            );
+
+            if (sprite && Mathf.Abs(dir.x) > 0.01f)
+                sprite.flipX = dir.x > 0;
         }
 
-        Vector2 dir = toTarget.normalized;
-        Vector2 targetVel = dir * velocidad;
-
-        velocidadActual = Vector2.Lerp(
-            velocidadActual,
-            targetVel,
-            aceleracion * Time.deltaTime
-        );
-
         AplicarMovimiento();
-
-        if (sprite != null && Mathf.Abs(dir.x) > 0.01f)
-            sprite.flipX = dir.x > 0;
     }
 
     protected void AplicarMovimiento()
@@ -90,21 +121,30 @@ public abstract class enemigo_base : MonoBehaviour
         transform.position += (Vector3)(velocidadActual * Time.deltaTime);
     }
 
+    // =====================================================
+    // ❤️ VIDA
+    // =====================================================
     public virtual void RecibirDaño(float cantidad)
     {
-        if (estaMuerto) return;
+        if (estaMuerto || !PuedeRecibirDaño()) return;
 
         vidaActual -= cantidad;
 
         if (vidaActual <= 0)
             Morir();
     }
+    protected virtual bool PuedeRecibirDaño() => true;
 
     protected virtual void Morir()
     {
-        Debug.Log("[ENEMIGO] Enemigo muerto");
-
         estaMuerto = true;
         Destroy(gameObject);
     }
+
+    protected virtual bool PuedeMorir()
+    {
+        return true;
+    }
+
+
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7061363931169264206}
   - component: {fileID: 6957639434757134302}
   - component: {fileID: 9123331444975924195}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: DukaLIEN_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.26, y: 2.1}
+  m_Size: {x: 1.27, y: 2.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 6042974481003047734}
   - component: {fileID: 1915658188194594391}
   - component: {fileID: 5668495375432773178}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: enemigo_pato_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 7762896412878322680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.49, y: 4.36, z: 0}
+  m_LocalPosition: {x: 2.4594467, y: 2.9887168, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -256,8 +256,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.16, y: 0}
-  m_Size: {x: 1.7727612, y: 1.9862056}
+  m_Offset: {x: -0.3005786, y: 0}
+  m_Size: {x: 0.93267775, y: 1.9862056}
   m_Direction: 0
 --- !u!114 &5668495375432773178
 MonoBehaviour:
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6502848857158093655}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: visuales
   m_TagString: Untagged
   m_Icon: {fileID: 0}

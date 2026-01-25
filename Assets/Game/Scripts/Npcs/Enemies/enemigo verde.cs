@@ -61,12 +61,15 @@ public class enemigoverde : enemigo_base
         HandleShooting();
     }
 
-    bool Bloqueado() => estaMuerto || fatalityEjecutada || enRetroceso || enStun;
+    bool Bloqueado()
+        => estaMuerto || fatalityEjecutada || enRetroceso || enStun;
 
+    // ✅ CORREGIDO: ahora consulta el estado, no la vida
     bool JugadorIntocable()
     {
-        VidaJugador v = objetivo.GetComponent<VidaJugador>();
-        return v != null && v.EsIntocable();
+        estado_jugador estado =objetivo.GetComponent<estado_jugador>();
+
+        return estado != null && estado.EsIntocable();
     }
 
     void Detener()
@@ -130,31 +133,23 @@ public class enemigoverde : enemigo_base
         if (Bloqueado() || JugadorIntocable())
             yield break;
 
-        GameObject bala = Instantiate(balaPrefab, transform.position, Quaternion.identity);
-        Vector2 dir = (objetivo.position - transform.position).normalized;
+        GameObject bala = Instantiate(
+            balaPrefab,
+            transform.position,
+            Quaternion.identity
+        );
 
-        bala.GetComponent<Rigidbody2D>()?.AddForce(dir * velocidadBala, ForceMode2D.Impulse);
+        Vector2 dir = (objetivo.position - transform.position).normalized;
+        bala.GetComponent<Rigidbody2D>()
+            ?.AddForce(dir * velocidadBala, ForceMode2D.Impulse);
     }
 
     // 🔴 DAÑO
-    public override void RecibirDaño(float cantidad)
+    protected override void Morir()
     {
-        if (estaMuerto || fatalityEjecutada) return;
+        if (fatalityEjecutada) return;
 
-        vidaActual -= cantidad;
-
-        if (vidaActual <= 0)
-        {
-            StartCoroutine(EjecutarFatality());
-            return;
-        }
-
-        anim?.PlayTrigger("defensa_1");
-
-        Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
-        velocidadRetroceso = dir * fuerzaRetroceso;
-
-        StartCoroutine(Retroceso());
+        StartCoroutine(EjecutarFatality());
     }
 
     IEnumerator Retroceso()
@@ -173,17 +168,27 @@ public class enemigoverde : enemigo_base
         estaMuerto = true;
         fatalityEjecutada = true;
 
-        StopAllCoroutines();
         velocidadActual = Vector2.zero;
 
         if (col) col.enabled = false;
 
-        bool fatalityDerecha = objetivo.position.x < transform.position.x;
+        bool fatalityDerecha =
+            objetivo.position.x < transform.position.x;
 
-        anim?.PlayTrigger(fatalityDerecha ? "fatality_izquierda" : "fatality_derecha");
+        anim?.PlayTrigger(
+            fatalityDerecha ? "fatality_izquierda" : "fatality_derecha"
+        );
 
         yield return new WaitForSeconds(duracionFatalityAnim);
-
         Destroy(gameObject);
     }
+    protected override bool PuedeMorir()
+    {
+        return !fatalityEjecutada;
+    }
+
+
+
+
+
 }

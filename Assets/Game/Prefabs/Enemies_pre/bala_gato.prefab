@@ -156,7 +156,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3, y: 2.6899998}
+  m_Size: {x: 3, y: 3.8696826}
   m_Direction: 0
 --- !u!114 &3701253546740357776
 MonoBehaviour:
@@ -172,3 +172,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::bala
   danio: 10
   tiempoVida: 6
+  tipo_bala: bala_gravedad

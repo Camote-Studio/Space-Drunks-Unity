@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 7037725358275901280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.610825, y: 1.0253834, z: 0}
+  m_LocalPosition: {x: 7.2562976, y: 1.297718, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -100,11 +100,11 @@ MonoBehaviour:
   balaPrefab: {fileID: 1880320973439676136, guid: 7202c5f8b804af04ca70eb1f7e98c1f4, type: 3}
   velocidadBala: 8
   rangoDisparo: 8
-  enfriamientoDisparo: 2
-  distanciaIdeal: 8
+  enfriamientoDisparo: 5
+  distanciaIdeal: 1
   velocidadStrafe: 2
   cambioDireccionTiempo: 1.5
-  duracionFatalityAnim: 4
+  duracionFatalityAnim: 2.5
   fuerzaRetroceso: 4
   tiempoRetroceso: 0.08
   tiempoStun: 0.25
