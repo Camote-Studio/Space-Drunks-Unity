@@ -49,6 +49,7 @@ public class PunchsWeapon : WeaponBase
 
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
+        if (playerAnim != null && playerAnim.IsCombatLocked) return;
         if (punchCooldown > 0f)
             punchCooldown -= Time.deltaTime;
 

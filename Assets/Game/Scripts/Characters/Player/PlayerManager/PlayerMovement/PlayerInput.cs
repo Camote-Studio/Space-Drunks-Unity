@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private int playerIndex = 0;
     [SerializeField] private PlayerControlsType controlType = PlayerControlsType.KeyboardMouse;
+    [SerializeField] private int gamepadIndex = 0;
 
     private PlayerBase player;
     private InputSystem_Actions actions;
@@ -38,6 +39,9 @@ public class PlayerInput : MonoBehaviour
 
     private void ConfigureDevices()
     {
+        // Siempre reseteamos primero
+        actions.devices = null;
+
         switch (controlType)
         {
             case PlayerControlsType.KeyboardMouse:
@@ -45,16 +49,18 @@ public class PlayerInput : MonoBehaviour
                     var kb = Keyboard.current;
                     var ms = Mouse.current;
 
-                    if (kb != null || ms != null)
+                    // Construimos la lista solo con lo que exista
+                    var devicesList = new System.Collections.Generic.List<InputDevice>();
+                    if (kb != null) devicesList.Add(kb);
+                    if (ms != null) devicesList.Add(ms);
+
+                    if (devicesList.Count > 0)
                     {
-                        actions.devices = new InputDevice[]
-                        {
-                        kb,
-                        ms
-                        };
+                        actions.devices = devicesList.ToArray();
                     }
                     else
                     {
+                        actions.devices = System.Array.Empty<InputDevice>();
                         Debug.LogWarning($"[PlayerInput {playerIndex}] No hay teclado/mouse conectados");
                     }
                     break;
@@ -64,10 +70,11 @@ public class PlayerInput : MonoBehaviour
                 {
                     Gamepad pad = null;
 
-                    if (Gamepad.all.Count > playerIndex)
-                        pad = Gamepad.all[playerIndex];
-                    else
-                        pad = Gamepad.current;
+                    if (Gamepad.all.Count > 0)
+                    {
+                        int index = Mathf.Clamp(playerIndex, 0, Gamepad.all.Count - 1);
+                        pad = Gamepad.all[index];
+                    }
 
                     if (pad != null)
                     {
@@ -75,6 +82,8 @@ public class PlayerInput : MonoBehaviour
                     }
                     else
                     {
+                        // Sin gamepad: este player NO escucha nada
+                        actions.devices = System.Array.Empty<InputDevice>();
                         Debug.LogWarning($"[PlayerInput {playerIndex}] No hay gamepad conectado");
                     }
                     break;
@@ -102,6 +111,7 @@ public class PlayerInput : MonoBehaviour
                     }
                     else
                     {
+                        actions.devices = System.Array.Empty<InputDevice>();
                         Debug.LogWarning($"[PlayerInput {playerIndex}] No hay mando de Play conectado");
                     }
                     break;

@@ -13,14 +13,18 @@ public class PoisonAttackWeapon : WeaponBase
     private float replenishTimer;
 
     private PlayerMovement movement;
+    private Player2Animation p2Anim;
 
     private void Awake()
     {
+        p2Anim = GetComponentInParent<Player2Animation>();
         movement = GetComponentInParent<PlayerMovement>();
         currentPoison = maxPoison;
     }
+
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
+        if (p2Anim != null && p2Anim.IsCombatLocked) return;
         if (currentPoison < maxPoison)
         {
             replenishTimer += Time.deltaTime;
@@ -35,13 +39,12 @@ public class PoisonAttackWeapon : WeaponBase
             TryPlacePoison();
     }
 
-
     public void TryPlacePoison()
     {
         if (currentPoison <= 0) return;
         if (poisonPrefab == null || spawnPoint == null) return;
 
-        Vector2 dir = Vector2.zero;
+        Vector2 dir;
 
         if (movement != null && movement.MoveInput.sqrMagnitude > 0.01f)
         {
@@ -56,12 +59,11 @@ public class PoisonAttackWeapon : WeaponBase
             dir = Vector2.right;
         }
 
-        GameObject mineGO = Instantiate(poisonPrefab, spawnPoint.position, Quaternion.identity);
-        Mine mine = mineGO.GetComponent<Mine>();
-        if (mine != null)
-            mine.Launch(dir);
+        GameObject poisonGO = Instantiate(poisonPrefab, spawnPoint.position, Quaternion.identity);
+        PoisonAttack poison = poisonGO.GetComponent<PoisonAttack>();
+        if (poison != null)
+            poison.Launch(dir, spawnPoint.position);
 
         currentPoison--;
-
     }
 }
