@@ -349,6 +349,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 419033587}
     m_Modifications:
+    - target: {fileID: 5601818164164616306, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601818164164616306, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601818164164616306, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7575762190143498050, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
       propertyPath: m_Name
       value: Transiciones

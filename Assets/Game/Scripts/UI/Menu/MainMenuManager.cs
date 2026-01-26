@@ -61,12 +61,14 @@ public class MainMenuManager : MonoBehaviour
             case MainMenuButtons.VersuMode:
                 DebugMessage("Starting Versu Mode...");
                 //Agregar logica para iniciar Versu Mode
-                OpenVersusMenu();
+                //OpenVersusMenu();
+                TransitionManager.Instance.LocalTransition(TransitionType.CircleExpand, () => OpenVersusMenu());
                 break;
             case MainMenuButtons.Shop:
                 DebugMessage("Opening Shop...");
                 //Agregar logica para abrir Shop
-                OpenShopMenu();
+                //OpenShopMenu();
+                TransitionManager.Instance.LocalTransition(TransitionType.CircleExpand, () => OpenShopMenu());
                 break;
             case MainMenuButtons.Medals:
                 DebugMessage("Opening Medals...");
