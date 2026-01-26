@@ -30,13 +30,16 @@ public class enemigo_pato_1 : enemigo_base
     // Movimiento
     private Vector2 velocidadRetroceso;
 
+    // Última posición válida del golpe
+    private Vector2 ultimaPosicionGolpe;
+
     private enemigo_animacion anim;
     private Collider2D col;
 
     protected override void Awake()
     {
         base.Awake();
-        anim = GetComponentInChildren<enemigo_animacion>(); // por si está en Visual
+        anim = GetComponentInChildren<enemigo_animacion>();
         col = GetComponent<Collider2D>();
     }
 
@@ -54,9 +57,17 @@ public class enemigo_pato_1 : enemigo_base
 
         base.Update();
     }
+
+    // ===================== DAÑO =====================
     public override void RecibirDaño(float cantidad)
     {
         if (estaMuerto || fatalityEjecutada) return;
+
+        // Guardar posición del golpe (aunque el player muera luego)
+        if (objetivo != null)
+            ultimaPosicionGolpe = objetivo.position;
+        else
+            ultimaPosicionGolpe = transform.position;
 
         comboActual = enStun ? comboActual + 1 : 1;
         float dañoFinal = cantidad + (comboActual - 1) * dañoExtraPorCombo;
@@ -67,6 +78,19 @@ public class enemigo_pato_1 : enemigo_base
             ReaccionarAlGolpe();
     }
 
+    // ===================== RETROCESO =====================
+    void ReaccionarAlGolpe()
+    {
+        if (estaMuerto || fatalityEjecutada) return;
+
+        anim?.PlayTrigger(Random.value <= probDefensa1 ? "defensa_1" : "defensa_2");
+
+        Vector2 dir = ((Vector2)transform.position - ultimaPosicionGolpe).normalized;
+        velocidadRetroceso = dir * fuerzaRetroceso;
+
+        enRetroceso = true;
+        Invoke(nameof(FinRetroceso), tiempoRetroceso);
+    }
 
     void FinRetroceso()
     {
@@ -83,7 +107,13 @@ public class enemigo_pato_1 : enemigo_base
         comboActual = 0;
     }
 
-    // 🔥 FATALITY SIN EVENTOS
+    // ===================== MUERTE / FATALITY =====================
+    protected override void Morir()
+    {
+        if (fatalityEjecutada) return;
+        StartCoroutine(EjecutarFatality());
+    }
+
     IEnumerator EjecutarFatality()
     {
         CancelInvoke();
@@ -96,7 +126,10 @@ public class enemigo_pato_1 : enemigo_base
 
         if (col) col.enabled = false;
 
-        bool fatalityDerecha = objetivo.position.x < transform.position.x;
+        bool fatalityDerecha = false;
+        if (objetivo != null)
+            fatalityDerecha = objetivo.position.x < transform.position.x;
+
         anim?.PlayTrigger(
             fatalityDerecha ? "fatality_izquierda" : "fatality_derecha"
         );
@@ -104,26 +137,4 @@ public class enemigo_pato_1 : enemigo_base
         yield return new WaitForSeconds(duracionFatalityAnim);
         Destroy(gameObject);
     }
-
-
-    protected override void Morir()
-    {
-        if (fatalityEjecutada) return;
-        StartCoroutine(EjecutarFatality());
-    }
-
-    void ReaccionarAlGolpe()
-    {
-        if (estaMuerto || fatalityEjecutada) return;
-
-        anim?.PlayTrigger(Random.value <= probDefensa1 ? "defensa_1" : "defensa_2");
-
-        Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
-        velocidadRetroceso = dir * fuerzaRetroceso;
-
-        enRetroceso = true;
-        Invoke(nameof(FinRetroceso), tiempoRetroceso);
-    }
-
-
 }
