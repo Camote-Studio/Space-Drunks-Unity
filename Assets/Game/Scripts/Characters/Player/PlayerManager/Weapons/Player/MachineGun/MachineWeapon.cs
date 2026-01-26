@@ -18,6 +18,8 @@ public class MachineWeapon : WeaponBase
     [SerializeField] private float activeDuration = 18f;   // Tiempo que dura el arma activa
     [SerializeField] private float cooldownDuration = 24f; // Tiempo de espera para volver a usarla
 
+    [SerializeField] private float setupDuration = 1.0f;
+
     [Header("Disparo")]
     [SerializeField] private int bulletsPerBurst = 8;      // Cuántas balas salen en una ráfaga
     [SerializeField] private float timeBetweenBullets = 0.1f; // Velocidad entre bala y bala de la ráfaga
@@ -32,9 +34,10 @@ public class MachineWeapon : WeaponBase
     // VARIABLES DE ESTADO (Privadas)
     // ==========================================
     private bool isActive;           // ¿Está el arma activada disparando?
+    private bool isSettingUp;        // ¿Está en proceso de activación?
     private float activeTimer;       // Temporizador de duración de la habilidad
     private float cooldownTimer;     // Temporizador de enfriamiento
-
+    private float setupTimer;        // Temporizador de preparación
     private int bulletsLeftInBurst;  // Balas que faltan por salir en la ráfaga actual
     private float shotTimer;         // Temporizador para controlar el ritmo de disparo
     private bool burstInProgress;    // ¿Estamos en medio de una ráfaga automática?
@@ -60,8 +63,9 @@ public class MachineWeapon : WeaponBase
     }
 
     // Propiedades públicas para saber el estado del arma desde otros scripts
-    public bool IsReady => !isActive && cooldownTimer <= 0f;
+    public bool IsReady => !isActive && !isSettingUp;
     public bool IsActive => isActive;
+    public bool CanActivate => !isActive && cooldownTimer <= 0f;
 
     /// <summary>
     /// Intenta activar el modo "Machine Gun".
@@ -69,10 +73,15 @@ public class MachineWeapon : WeaponBase
     /// </summary>
     public void TryActivate()
     {
-        if (!IsReady) return; // Si está en cooldown o ya activa, no hace nada
+        if (!CanActivate) return; // Si está en cooldown o ya activa, no hace nada
 
         isActive = true;
+        isSettingUp = true; // Comenzamos la fase de transformación
+        setupTimer = setupDuration; //Inicimaos el timer de la transformación
+
         activeTimer = activeDuration;
+
+        //Reseteo de disparo
         bulletsLeftInBurst = 0;
         shotTimer = 0f;
         burstInProgress = false;
@@ -100,7 +109,7 @@ public class MachineWeapon : WeaponBase
         // 2. Si el arma NO está activa, comprobamos si el jugador quiere activarla
         if (!isActive)
         {
-            if (fireDown && IsReady)
+            if (fireDown && CanActivate)
                 TryActivate();
             else
                 return; // Si no está activa, no hacemos nada más
@@ -112,6 +121,20 @@ public class MachineWeapon : WeaponBase
         {
             EndMachine();
             return;
+        }
+
+        if (isSettingUp)
+        {
+            // Estamos en la fase de transformación
+            setupTimer -= Time.deltaTime;
+            if (setupTimer <= 0f)
+            {
+                isSettingUp = false; // Terminó la transformación
+            }
+            else
+            {
+                return; // Mientras se transforma, no puede disparar
+            }
         }
 
         // 4. Controlar el ritmo de disparo (cadencia)
@@ -132,6 +155,7 @@ public class MachineWeapon : WeaponBase
             bulletsLeftInBurst = bulletsPerBurst;
             burstInProgress = true;
         }
+        
 
         // 6. Ejecutar el disparo
         Vector2 dir = GetAimDirection();
@@ -160,6 +184,7 @@ public class MachineWeapon : WeaponBase
     private void EndMachine()
     {
         isActive = false;
+        isSettingUp = false;
         cooldownTimer = cooldownDuration;
         bulletsLeftInBurst = 0;
         burstInProgress = false;
