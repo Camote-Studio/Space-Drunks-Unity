@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   playerIndex: 1
-  controlType: 0
+  controlType: 2
   gamepadIndex: 1
 --- !u!114 &84137364
 MonoBehaviour:
@@ -435,13 +435,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271384620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9667163, w: 0.2558508}
+  m_LocalPosition: {x: -0.124, y: -0.917, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1813658627}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 150.352}
 --- !u!1 &329855844
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   playerIndex: 0
-  controlType: 2
+  controlType: 0
   gamepadIndex: 0
 --- !u!114 &493922816
 MonoBehaviour:
@@ -2435,13 +2435,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MachineWeapon
   firePoint: {fileID: 271384621}
-  bulletPrefab: {fileID: 7781194408997046336, guid: f820158aad118c145b261ac037491af8, type: 3}
+  bulletPrefab: {fileID: 7781194408997046336, guid: bd8e934bba89e2847879bff8b911bcb4, type: 3}
   playerAnimation: {fileID: 0}
   movement: {fileID: 0}
   activeDuration: 18
   cooldownDuration: 24
   bulletsPerBurst: 8
-  timeBetweenBullets: 0.4
+  timeBetweenBullets: 0.1
   burstCooldown: 1.6
   useGamepadAim: 0
   aimHorizontalAxis: AimHorizontal
@@ -2455,7 +2455,7 @@ Transform:
   m_GameObject: {fileID: 1813658625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.448, y: -1.069, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
