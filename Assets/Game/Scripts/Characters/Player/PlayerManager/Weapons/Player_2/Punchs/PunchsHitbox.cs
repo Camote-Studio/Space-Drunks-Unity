@@ -5,9 +5,13 @@ using UnityEngine;
 public class PunchsHitbox : MonoBehaviour
 {
     [SerializeField] private float damage = 10f;
+
     private readonly HashSet<enemigo_base> hitThisSwing = new();
 
-    private void OnEnable() => hitThisSwing.Clear();
+    private void OnEnable()
+    {
+        hitThisSwing.Clear();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,6 +22,6 @@ public class PunchsHitbox : MonoBehaviour
         hitThisSwing.Add(enemy);
 
         enemy.RecibirDaño(damage);
-        Debug.Log($"Punch hit {enemy.name} for {damage} damage");
+        Debug.Log($"PunchsHitbox: hit {enemy.name} for {damage}");
     }
 }

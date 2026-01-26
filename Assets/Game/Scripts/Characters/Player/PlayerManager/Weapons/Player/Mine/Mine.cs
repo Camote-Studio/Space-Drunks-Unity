@@ -10,18 +10,20 @@ public class Mine : MonoBehaviour
     [SerializeField] private float maxLifetime = 25f;
 
     [Header("Arme y explosion")]
-    [SerializeField] private float armTime = 0.6f;
+    [SerializeField] private float armTime = 0.6f; // después de caer
     [SerializeField] private float explosionRadius = 2f;
     [SerializeField] private float baseDamage = 12f;
     [SerializeField] private float knockbackForce = 6f;
 
     [SerializeField] private Transform visual;
 
-    //VARIABLES
-
     private Rigidbody2D rb;
+    private Collider2D col;
+
     private float lifeTimer;
     private float travelTimer;
+    private float armTimer;
+
     private bool isMoving;
     private bool isArmed;
     private bool hasLanded;
@@ -29,42 +31,49 @@ public class Mine : MonoBehaviour
     private Vector2 moveDir;
     private Vector3 startPos;
 
+    private Vector3 baseVisualLocalPos;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+
         rb.gravityScale = 0f;
         rb.bodyType = RigidbodyType2D.Kinematic;
-
-        var col = GetComponent<Collider2D>();
         col.isTrigger = true;
 
         if (visual == null)
         {
             SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
-            if (sr != null)
-                visual = sr.transform;
+            if (sr != null) visual = sr.transform;
         }
+
+        if (visual != null)
+            baseVisualLocalPos = visual.localPosition;
     }
 
     public void Launch(Vector2 dir)
     {
-        //Si la entrada de dirección (dir) es mayor que cero, usa esa dirección normalizada. Si la entrada es cero (el jugador no toca nada), 
-        // asume que la dirección es hacia la derecha por defecto.
-        moveDir = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector2.right; 
-        startPos = transform.position;
+        Launch(dir, transform.position); 
+    }
+
+    public void Launch(Vector2 dir, Vector3 worldStartPos)
+    {
+        transform.position = worldStartPos;
+        startPos = worldStartPos;
+
+        moveDir = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector2.right;
 
         lifeTimer = 0f;
         travelTimer = 0f;
+        armTimer = 0f;
+
         isMoving = true;
         hasLanded = false;
         isArmed = false;
 
         if (visual != null)
-        {
-            var lp = visual.localPosition;
-            lp.y = 0f;
-            visual.localPosition = lp;
-        }
+            visual.localPosition = baseVisualLocalPos;
     }
 
     private void Update()
@@ -76,19 +85,13 @@ public class Mine : MonoBehaviour
             travelTimer += Time.deltaTime;
             float t = Mathf.Clamp01(travelTimer / travelDuration);
 
-            float dist = travelDistance * t;
-            Vector3 planePos = startPos + (Vector3)(moveDir * dist);
-
+            Vector3 planePos = startPos + (Vector3)(moveDir * (travelDistance * t));
             float h = 4f * arcHeight * t * (1f - t);
 
             transform.position = planePos;
 
             if (visual != null)
-            {
-                var lp = visual.localPosition;
-                lp.y = h;
-                visual.localPosition = lp;
-            }
+                visual.localPosition = baseVisualLocalPos + Vector3.up * h;
 
             if (t >= 1f)
             {
@@ -96,23 +99,19 @@ public class Mine : MonoBehaviour
                 hasLanded = true;
 
                 if (visual != null)
-                {
-                    var lp = visual.localPosition;
-                    lp.y = 0f;
-                    visual.localPosition = lp;
-                }
+                    visual.localPosition = baseVisualLocalPos;
             }
         }
 
-        if (hasLanded && !isArmed && lifeTimer >= armTime)
+        if (hasLanded && !isArmed)
         {
-            isArmed = true;
+            armTimer += Time.deltaTime;
+            if (armTimer >= armTime)
+                isArmed = true;
         }
 
         if (lifeTimer >= maxLifetime)
-        {
             Destroy(gameObject);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -121,9 +120,7 @@ public class Mine : MonoBehaviour
 
         enemigo_base enemy = other.GetComponentInParent<enemigo_base>();
         if (enemy != null)
-        {
             Explode();
-        }
     }
 
     private void Explode()
@@ -132,16 +129,18 @@ public class Mine : MonoBehaviour
         foreach (var hit in hits)
         {
             enemigo_base enemy = hit.GetComponentInParent<enemigo_base>();
-            if (enemy != null)
-            {
-                enemy.RecibirDaño(baseDamage);
+            if (enemy == null) continue;
 
-                Rigidbody2D er = enemy.GetComponent<Rigidbody2D>();
-                if (er != null)
-                {
-                    Vector2 dir = (enemy.transform.position - transform.position).normalized;
-                    er.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
-                }
+            enemy.RecibirDaño(baseDamage);
+
+            Rigidbody2D er = enemy.GetComponent<Rigidbody2D>();
+            if (er != null && er.bodyType == RigidbodyType2D.Dynamic)
+            {
+                Vector2 dir = (enemy.transform.position - transform.position);
+                if (dir.sqrMagnitude < 0.0001f) dir = Vector2.up;
+                dir.Normalize();
+
+                er.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
             }
         }
 
