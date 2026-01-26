@@ -6,19 +6,20 @@ using UnityEngine.Rendering;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movimiento")]
-    [SerializeField] private float moveSpeed = 5f;
-
+    [SerializeField] private float moveSpeed = 5f; //Velocidad de movimiento del character
+ 
     [Header("Salto")]
-    [SerializeField] private Transform visual;
-    [SerializeField] private float jumpHeight = 1.2f;
-    [SerializeField] private float jumpDuration = 0.4f;
-    [SerializeField] private string jumpableLayerName = "JumpableObstacle";
+    [SerializeField] private Transform visual; //Transform del personaje 
+    [SerializeField] private float jumpHeight = 1.2f; //Altura del salto
+    [SerializeField] private float jumpDuration = 0.4f; //Duración del salto
+    [SerializeField] private string jumpableLayerName = "JumpableObstacle"; //Nombre de la capa
 
     [Header("Dash")]
-    [SerializeField] private float dashSpeed = 10f;
-    [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] private float dashSpeed = 10f; //Velocidad del dash
+    [SerializeField] private float dashDuration = 0.2f; //Duración del dash
 
-    private Rigidbody2D rb;
+    //Variables ----------------------------------------------------------------------------------------------------------------->
+    private Rigidbody2D rb; 
     private PlayerGroundChecker groundChecker;
 
     private float inputX;
@@ -43,10 +44,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        groundChecker = GetComponent<PlayerGroundChecker>();
+        rb = GetComponent<Rigidbody2D>(); //Toma el componente del rigidbody2d
+        groundChecker = GetComponent<PlayerGroundChecker>(); //Toma el componente para saber donde está pisando
 
-        rb.gravityScale = 0f;
+        rb.gravityScale = 0f; //Cambia la variable a gravedad 0, pues es un beat em up
 
         if (visual == null)
         {
@@ -90,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
             scale.x = Mathf.Sign(inputX) * Mathf.Abs(scale.x);
             visual.localScale = scale;
         }
-
+        Debug.Log($"{name} pos={transform.position} visualScale={visual.localScale}");
         HandleJump();
         HandleDash();
     }

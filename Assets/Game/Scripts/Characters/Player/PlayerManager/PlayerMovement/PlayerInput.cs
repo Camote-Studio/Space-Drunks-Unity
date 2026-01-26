@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private int playerIndex = 0;
     [SerializeField] private PlayerControlsType controlType = PlayerControlsType.KeyboardMouse;
+    [SerializeField] private int gamepadIndex = 0;
 
     private PlayerBase player;
     private InputSystem_Actions actions;
@@ -38,53 +39,83 @@ public class PlayerInput : MonoBehaviour
 
     private void ConfigureDevices()
     {
+        // Siempre reseteamos primero
+        actions.devices = null;
+
         switch (controlType)
         {
             case PlayerControlsType.KeyboardMouse:
-                actions.devices = new InputDevice[]
                 {
-                    Keyboard.current,
-                    Mouse.current,
-                };
-                break;
-            case PlayerControlsType.GamePad:
-                var gamepad = Gamepad.current;
-                if (gamepad == null)
-                {
-                    actions.devices = new InputDevice[]
-                    {
-                    gamepad
-                    };
-                }
-                else
-                {
-                    actions.devices = null;
-                }
-                    break;
-            case PlayerControlsType.Playstation:
-                DualShockGamepad ps4 = DualShockGamepad.current;
+                    var kb = Keyboard.current;
+                    var ms = Mouse.current;
 
-                if(ps4 == null)
-                {
-                    foreach(var pad in Gamepad.all)
+                    // Construimos la lista solo con lo que exista
+                    var devicesList = new System.Collections.Generic.List<InputDevice>();
+                    if (kb != null) devicesList.Add(kb);
+                    if (ms != null) devicesList.Add(ms);
+
+                    if (devicesList.Count > 0)
                     {
-                        if(pad is DualShockGamepad dualShock)
+                        actions.devices = devicesList.ToArray();
+                    }
+                    else
+                    {
+                        actions.devices = System.Array.Empty<InputDevice>();
+                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay teclado/mouse conectados");
+                    }
+                    break;
+                }
+
+            case PlayerControlsType.GamePad:
+                {
+                    Gamepad pad = null;
+
+                    if (Gamepad.all.Count > 0)
+                    {
+                        int index = Mathf.Clamp(playerIndex, 0, Gamepad.all.Count - 1);
+                        pad = Gamepad.all[index];
+                    }
+
+                    if (pad != null)
+                    {
+                        actions.devices = new InputDevice[] { pad };
+                    }
+                    else
+                    {
+                        // Sin gamepad: este player NO escucha nada
+                        actions.devices = System.Array.Empty<InputDevice>();
+                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay gamepad conectado");
+                    }
+                    break;
+                }
+
+            case PlayerControlsType.Playstation:
+                {
+                    DualShockGamepad ps4 = DualShockGamepad.current;
+
+                    if (ps4 == null)
+                    {
+                        foreach (var pad in Gamepad.all)
                         {
-                            ps4 = dualShock;
-                            break;
+                            if (pad is DualShockGamepad dualShock)
+                            {
+                                ps4 = dualShock;
+                                break;
+                            }
                         }
                     }
-                }
 
-                if(ps4 != null)
-                {
-                    actions.devices = new InputDevice[] { ps4 };
+                    if (ps4 != null)
+                    {
+                        actions.devices = new InputDevice[] { ps4 };
+                    }
+                    else
+                    {
+                        actions.devices = System.Array.Empty<InputDevice>();
+                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay mando de Play conectado");
+                    }
+                    break;
                 }
-                else
-                {
-                    actions.devices = null;
-                }
-                break;
         }
     }
 

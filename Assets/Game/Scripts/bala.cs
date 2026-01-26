@@ -18,7 +18,12 @@ public class bala : MonoBehaviour
         VidaJugador vida = other.GetComponent<VidaJugador>();
         if (vida != null)
         {
+<<<<<<< HEAD
             vida.RecibirDanio(danio, tipo_bala);
+=======
+            //vida.RecibirDaño(danio, tipo_bala); <------- ORIGINAL
+            vida.RecibirDanio(danio);
+>>>>>>> a97a0e77434961166844532a7bdf65b982e7cb5f
             Destroy(gameObject);
         }
     }
