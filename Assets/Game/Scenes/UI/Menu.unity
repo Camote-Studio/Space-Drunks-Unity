@@ -3513,9 +3513,29 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 32767
       objectReference: {fileID: 0}
+    - target: {fileID: 4366453316074072761, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601818164164616306, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601818164164616306, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601818164164616306, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7575762190143498050, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
       propertyPath: m_Name
       value: Transiciones
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637126531573019527, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7909128799897944434, guid: c6a61f20906ee7149b273d798c61b208, type: 3}
       propertyPath: m_LocalPosition.x
