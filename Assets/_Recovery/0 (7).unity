@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &30835028
+--- !u!1001 &35075913
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -127,59 +127,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 48201338815403972, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
-      propertyPath: m_Name
-      value: enemigo_pato_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6759179734215920850, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
-      propertyPath: rangoAtaque
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7380157
+      value: 7.355327
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6006113
+      value: 2.4967728
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8339925386666340661, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+    - target: {fileID: 5042995362026803277, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037725358275901280, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
+      propertyPath: m_Name
+      value: enemigo_verde 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0400dd54294862d41bd2a7c2e133442e, type: 3}
 --- !u!1 &84137358
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,15 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038063b2d6b45ca419f69339caf53121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaJugador
-  vidaMaxima: 100
-  vidaActual: 100
-  flotando: 0
-  invulnerable: 0
-  duracionFlotacion: 4.3
-  alturaFlotacion: 5
-  velocidadSubida: 2.5
-  velocidadDescenso: 1.5
-  velocidadRotacion: 180
 --- !u!114 &84137362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
   movement: {fileID: 84137364}
+  estadoJugador: {fileID: 0}
   attack1IdleWeapon: {fileID: 1357564020}
   attack1MoveWeapon: {fileID: 1005819681}
   attack2Weapon: {fileID: 0}
@@ -269,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   playerIndex: 1
   controlType: 2
+  gamepadIndex: 0
 --- !u!114 &84137364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   playerIndex: 0
   controlType: 0
+  gamepadIndex: 0
 --- !u!114 &493922816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
   movement: {fileID: 493922816}
+  estadoJugador: {fileID: 0}
   attack1IdleWeapon: {fileID: 497623925}
   attack1MoveWeapon: {fileID: 329855847}
   attack2Weapon: {fileID: 676634261}
@@ -1262,7 +1253,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1005819679
 GameObject:
@@ -1485,7 +1476,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1190181302
 GameObject:
@@ -1879,9 +1870,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PunchsWeapon
   punchRight: {fileID: 1130480208}
+  punchMiddle: {fileID: 0}
   punchLeft: {fileID: 758850370}
   punchActiveTime: 0.15
   punchAttackCooldown: 0.3
+  weaponAnim: {fileID: 0}
 --- !u!1 &1420998462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,4 +2376,4 @@ SceneRoots:
   - {fileID: 493922821}
   - {fileID: 84137368}
   - {fileID: 1545303576}
-  - {fileID: 30835028}
+  - {fileID: 35075913}
