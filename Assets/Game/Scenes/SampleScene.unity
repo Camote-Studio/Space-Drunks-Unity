@@ -197,6 +197,9 @@ GameObject:
   - component: {fileID: 84137362}
   - component: {fileID: 84137359}
   - component: {fileID: 84137369}
+  - component: {fileID: 84137372}
+  - component: {fileID: 84137371}
+  - component: {fileID: 84137370}
   m_Layer: 6
   m_Name: Player_2
   m_TagString: Player
@@ -229,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
   movement: {fileID: 84137364}
+  estadoJugador: {fileID: 0}
   attack1IdleWeapon: {fileID: 1357564020}
   attack1MoveWeapon: {fileID: 1005819681}
   attack2Weapon: {fileID: 1190181304}
@@ -380,6 +384,111 @@ MonoBehaviour:
   animator: {fileID: 1282942252}
   movement: {fileID: 84137364}
   vidaJugador: {fileID: 0}
+--- !u!114 &84137370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84137358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b9eb007d2b8cb4c993c382d7a20cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaJugador
+  vidaMaxima: 100
+  vidaActual: 0
+--- !u!114 &84137371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84137358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d705f402e580c4bbad235622099986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::estado_jugador
+  duracionFlotacion: 4.3
+  alturaFlotacion: 5
+  velocidadSubida: 2.5
+  velocidadDescenso: 3
+  velocidadRotacion: 180
+  alturaAbduccion: 0.4
+  velocidadFlotacion: 2
+  fuerzaLiberacion: 5
+--- !u!114 &84137372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84137358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b9eb007d2b8cb4c993c382d7a20cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaJugador
+  vidaMaxima: 100
+  vidaActual: 0
+--- !u!1001 &130862998
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4210027015946775837, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_Name
+      value: enemigo_gato
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.121124
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1375828
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405475317943740538, guid: d0acf957ec290794792089392b961cf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0acf957ec290794792089392b961cf9, type: 3}
 --- !u!1 &235198831
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +617,9 @@ GameObject:
   - component: {fileID: 493922822}
   - component: {fileID: 493922823}
   - component: {fileID: 493922825}
+  - component: {fileID: 493922828}
+  - component: {fileID: 493922827}
+  - component: {fileID: 493922826}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -660,6 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
   movement: {fileID: 493922816}
+  estadoJugador: {fileID: 0}
   attack1IdleWeapon: {fileID: 497623925}
   attack1MoveWeapon: {fileID: 329855847}
   attack2Weapon: {fileID: 676634261}
@@ -691,6 +804,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c4b04a8cb2df34e9a1c6bff8980373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalPlayer
+--- !u!114 &493922826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493922813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b9eb007d2b8cb4c993c382d7a20cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaJugador
+  vidaMaxima: 100
+  vidaActual: 0
+--- !u!114 &493922827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493922813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d705f402e580c4bbad235622099986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::estado_jugador
+  duracionFlotacion: 4.3
+  alturaFlotacion: 5
+  velocidadSubida: 2.5
+  velocidadDescenso: 3
+  velocidadRotacion: 180
+  alturaAbduccion: 0.4
+  velocidadFlotacion: 2
+  fuerzaLiberacion: 5
+--- !u!114 &493922828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493922813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b9eb007d2b8cb4c993c382d7a20cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaJugador
+  vidaMaxima: 100
+  vidaActual: 0
 --- !u!1 &497623922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +2676,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   activeDuration: 18
   cooldownDuration: 24
+  setupDuration: 1
   bulletsPerBurst: 8
   timeBetweenBullets: 0.4
   burstCooldown: 1.6
@@ -2768,3 +2930,4 @@ SceneRoots:
   - {fileID: 84137368}
   - {fileID: 1545303576}
   - {fileID: 30835028}
+  - {fileID: 130862998}
