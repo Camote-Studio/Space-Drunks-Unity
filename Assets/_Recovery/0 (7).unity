@@ -478,7 +478,7 @@ Transform:
   m_GameObject: {fileID: 329855844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.025, y: -0.048, z: 0}
+  m_LocalPosition: {x: 2.27, y: 2.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -728,7 +728,7 @@ Transform:
   m_GameObject: {fileID: 497623922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.041, y: -0.031, z: 0}
+  m_LocalPosition: {x: 2.38, y: 2.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1088,7 +1088,7 @@ Transform:
   m_GameObject: {fileID: 676634259}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.23, z: 0}
+  m_LocalPosition: {x: 2.26, y: 1.87, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1552,8 +1552,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211781078}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.6, y: -1.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1941,6 +1941,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   activeDuration: 18
   cooldownDuration: 24
+  setupDuration: 1
   bulletsPerBurst: 8
   timeBetweenBullets: 0.4
   burstCooldown: 1.6
@@ -2345,6 +2346,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   activeDuration: 18
   cooldownDuration: 24
+  setupDuration: 1
   bulletsPerBurst: 8
   timeBetweenBullets: 0.4
   burstCooldown: 1.6
@@ -2360,7 +2362,7 @@ Transform:
   m_GameObject: {fileID: 1813658625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.11, y: 1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
