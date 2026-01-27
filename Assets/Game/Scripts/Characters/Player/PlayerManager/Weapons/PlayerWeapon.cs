@@ -40,6 +40,8 @@ public class PlayerWeapon : MonoBehaviour
             attack2Weapon.Tick(attack2Down, attack2Held, attack2Up);
 
         if (attack3Weapon != null)
+            attack1IdleWeapon = null;
+            attack1MoveWeapon = null;
             attack3Weapon.Tick(attack3Down, attack3Held, attack3Up);
     }
 
