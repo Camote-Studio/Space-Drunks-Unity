@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class enemigo_pato_1 : enemigo_base
+public class enemigo_pato_1 : enemigo_base  
 {
     [Header("Combo (solo daño)")]
     public int comboActual = 0;
@@ -22,27 +22,30 @@ public class enemigo_pato_1 : enemigo_base
     [Range(0f, 1f)] public float probDefensa1 = 0.3f;
     [Range(0f, 1f)] public float probDefensa2 = 0.7f;
 
-    // Estados
+    // ===================== ESTADOS =====================
     private bool enRetroceso;
     private bool enStun;
     private bool fatalityEjecutada;
 
-    // Movimiento
+    // ===================== MOVIMIENTO =====================
     private Vector2 velocidadRetroceso;
 
     private enemigo_animacion anim;
-    private Collider2D col;
+    private Collider2D colLocal;
+
+    // ===================== UNITY =====================
 
     protected override void Awake()
     {
         base.Awake();
-        anim = GetComponentInChildren<enemigo_animacion>(); // por si está en Visual
-        col = GetComponent<Collider2D>();
+        anim = GetComponentInChildren<enemigo_animacion>();
+        colLocal = GetComponent<Collider2D>();
     }
 
     protected override void Update()
     {
-        if (fatalityEjecutada) return;
+        if (estaMuerto || fatalityEjecutada)
+            return;
 
         if (enRetroceso)
         {
@@ -50,14 +53,37 @@ public class enemigo_pato_1 : enemigo_base
             return;
         }
 
-        if (enStun) return;
+        if (enStun)
+            return;
 
         base.Update();
     }
 
+    // ===================== POOL =====================
+
+    public override void OnSpawnFromPool()
+    {
+        base.OnSpawnFromPool(); // Reinicio general (vida, navmesh, anim)
+
+        // Reset específico del pato
+        comboActual = 0;
+
+        enRetroceso = false;
+        enStun = false;
+        fatalityEjecutada = false;
+
+        velocidadRetroceso = Vector2.zero;
+
+        if (colLocal != null)
+            colLocal.enabled = true;
+    }
+
+    // ===================== COMBATE =====================
+
     public override void RecibirDaño(float cantidad)
     {
-        if (estaMuerto || fatalityEjecutada) return;
+        if (estaMuerto || fatalityEjecutada)
+            return;
 
         comboActual = enStun ? comboActual + 1 : 1;
         float dañoFinal = cantidad + (comboActual - 1) * dañoExtraPorCombo;
@@ -70,8 +96,10 @@ public class enemigo_pato_1 : enemigo_base
             return;
         }
 
+        // Defensa aleatoria
         anim?.PlayTrigger(Random.value <= probDefensa1 ? "defensa_1" : "defensa_2");
 
+        // Retroceso
         Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
         velocidadRetroceso = dir * fuerzaRetroceso;
 
@@ -94,7 +122,8 @@ public class enemigo_pato_1 : enemigo_base
         comboActual = 0;
     }
 
-    // 🔥 FATALITY SIN EVENTOS
+    // ===================== FATALITY =====================
+
     IEnumerator EjecutarFatality()
     {
         estaMuerto = true;
@@ -103,25 +132,25 @@ public class enemigo_pato_1 : enemigo_base
         enRetroceso = false;
         enStun = false;
 
-        // Desactivar colisión
-        if (col != null)
-            col.enabled = false;
-        // Determinar dirección del fatality
+        if (colLocal != null)
+            colLocal.enabled = false;
+
+        // Dirección del fatality
         bool fatalityDerecha = objetivo.position.x < transform.position.x;
+
         if (fatalityDerecha)
             anim?.PlayTrigger("fatality_izquierda");
         else
             anim?.PlayTrigger("fatality_derecha");
 
-        // DEBUG duración
-
-        // Esperar a que termine la animación
         yield return new WaitForSeconds(duracionFatalityAnim);
+
         MorirFinal();
     }
 
     void MorirFinal()
     {
-        Destroy(gameObject);
+        base.Morir();
+        PoolManager.Instance.ReturnToPool(enemyPoolTag, gameObject);
     }
 }
