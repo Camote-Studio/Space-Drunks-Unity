@@ -1,264 +1,108 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class enemigo_gato : enemigo_base
 {
-    private enemigo_animacion anim;
-
-    public enum EstadoGato
-    {
-        Patrulla,
-        Orbita,
-        IntentandoAbducir,
-        Abduciendo
-    }
-    [Header("Zona de Abducción")]
+    [Header("Abducción")]
+    public float tiempoAbduccion = 20f;
     public ZonaAbduccionGato zonaAbduccion;
 
-    [HideInInspector] public EstadoGato estadoActual;
+    private bool abduciendo;
 
-    // =====================================================
-    // 🌀 ÓRBITA
-    // =====================================================
-    [Header("Órbita")]
-    public float distanciaMin = 8f;
-    public float distanciaMax = 12f;
-    public float velocidadOrbita = 4f;
-    public float correccionRadial = 3f;
-    public float cambioDireccionTiempo = 5f;
-
-    private float timerCambioDir;
-    private int direccionOrbita = 1;
-
-    [Header("Control de Órbita")]
-    public float tiempoMinimoOrbita = 6f;
-    private float timerOrbitaEstado;
-
-    // =====================================================
-    // 🔫 DISPARO
-    // =====================================================
-    [Header("Disparo")]
-    public GameObject balaPrefab;
-    public float velocidadBala = 8f;
-    public float rangoDisparo = 5f;
-    public float enfriamientoDisparo = 3f;
-    private float cooldownDisparo;
-
-    // =====================================================
-    // 👽 ABDUCCIÓN
-    // =====================================================
-    [Header("Abducción")]
-    public float alturaAbduccionY = 3.5f;
-    public float velocidadAbduccion = 2f;
-    public float tiempoMaxIntento = 8f;
-
-    private float timerIntento;
-    private estado_jugador jugadorAbducido;
-
-    // =====================================================
+    // ===================== UNITY =====================
     protected override void Awake()
     {
         base.Awake();
-        anim = GetComponent<enemigo_animacion>();
-        CambiarEstado(EstadoGato.Patrulla);
+
+        if (zonaAbduccion != null)
+            zonaAbduccion.Configurar(this);
     }
 
-    // =====================================================
     protected override void Update()
     {
         if (estaMuerto) return;
 
-        cooldownDisparo -= Time.deltaTime;
-
-        if (objetivo == null)
+        // 🚫 Mientras abduce no se mueve
+        if (abduciendo)
         {
-            CambiarEstado(EstadoGato.Patrulla);
-            Patrullar();
+            if (agent != null && agent.isOnNavMesh)
+                agent.isStopped = true;
+
+            ForzarIdle();
             return;
         }
 
-        if (estadoActual == EstadoGato.IntentandoAbducir)
-        {
-            IntentarAbduccion();
-            return;
-        }
-
-        if (estadoActual == EstadoGato.Abduciendo)
-        {
-            MantenerAbduccion();
-            return;
-        }
-
-        if (estadoActual != EstadoGato.Orbita)
-            CambiarEstado(EstadoGato.Orbita);
-
-        timerOrbitaEstado -= Time.deltaTime;
-
-        MoverOrbita();
-        Disparar();
-
-        if (timerOrbitaEstado <= 0f &&
-            JugadorAtacable() &&
-            Random.value < 0.003f)
-        {
-            CambiarEstado(EstadoGato.IntentandoAbducir);
-        }
+        base.Update();
+        ActualizarAnimacionMovimiento();
     }
 
-    // =====================================================
-void CambiarEstado(EstadoGato nuevo)
-{
-    if (estadoActual == nuevo) return;
-
-    estadoActual = nuevo;
-
-    switch (nuevo)
+    // ===================== ABDUCCIÓN =====================
+    public bool PuedeAbducir()
     {
-        case EstadoGato.Orbita:
-            timerOrbitaEstado = tiempoMinimoOrbita;
-            zonaAbduccion?.DetenerLaser();   // 🔴 por seguridad
-            break;
-
-        case EstadoGato.IntentandoAbducir:
-            timerIntento = tiempoMaxIntento;
-            zonaAbduccion?.IniciarLaser();   // 👽🔥 AQUÍ EMPIEZA EL LÁSER
-            break;
-
-        case EstadoGato.Abduciendo:
-            // el láser ya está activo, no reiniciar animaciones
-            break;
+        return !abduciendo && !estaMuerto;
     }
 
-    Debug.Log($"[GATO] Estado → {estadoActual}");
-}
-
-
-    // =====================================================
-    bool JugadorAtacable()
+    public void IniciarAbduccion()
     {
-        if (objetivo == null) return false;
-        var ej = objetivo.GetComponent<estado_jugador>();
-        return ej != null && ej.PuedeAtacar();
+        if (!PuedeAbducir()) return;
+        StartCoroutine(RutinaAbduccion());
     }
 
-    // =====================================================
-    // 🌀 MOVIMIENTO ORBITAL
-    // =====================================================
-    void MoverOrbita()
+    IEnumerator RutinaAbduccion()
     {
-        Vector2 dir = (objetivo.position - transform.position);
-        float dist = dir.magnitude;
-        dir.Normalize();
+        abduciendo = true;
+        estaAtacando = true;
 
-        if ((timerCambioDir -= Time.deltaTime) <= 0f)
-        {
-            direccionOrbita *= -1;
-            timerCambioDir = cambioDireccionTiempo;
-        }
+        if (agent != null && agent.isOnNavMesh)
+            agent.isStopped = true;
 
-        Vector2 tangente = new Vector2(-dir.y, dir.x) * direccionOrbita;
+        ForzarIdle();
 
-        Vector2 correccion = Vector2.zero;
-        if (dist < distanciaMin) correccion = -dir * correccionRadial;
-        else if (dist > distanciaMax) correccion = dir * correccionRadial;
+        if (zonaAbduccion != null)
+            zonaAbduccion.IniciarLaser();
 
-        velocidadActual = Vector2.Lerp(
-            velocidadActual,
-            tangente * velocidadOrbita + correccion,
-            aceleracion * Time.deltaTime
-        );
+        yield return new WaitForSeconds(tiempoAbduccion);
 
-        AplicarMovimiento();
+        FinalizarAbduccion();
     }
 
-    // =====================================================
-    // 👽 INTENTO DE ABDUCCIÓN (MOVIMIENTO)
-    // =====================================================
-    void IntentarAbduccion()
+    public void FinalizarAbduccion()
     {
-        timerIntento -= Time.deltaTime;
+        if (!abduciendo) return;
 
-        if (timerIntento <= 0f)
-        {
-            CambiarEstado(EstadoGato.Orbita);
-            return;
-        }
+        abduciendo = false;
+        estaAtacando = false;
 
-        Vector3 destino = objetivo.position + Vector3.up * alturaAbduccionY;
-        Vector2 dir = (destino - transform.position).normalized;
+        if (zonaAbduccion != null)
+            zonaAbduccion.FinalizarLaser();
 
-        velocidadActual = dir * velocidadAbduccion;
-        AplicarMovimiento();
+        if (agent != null && agent.isOnNavMesh)
+            agent.isStopped = false;
     }
 
-    // =====================================================
-    // 👽 ACTIVADO POR ZONA (TRIGGER)
-    // =====================================================
-
-    public void ActivarAbduccion(estado_jugador ej)
+    // ===================== ANIMACIONES =====================
+    void ActualizarAnimacionMovimiento()
     {
-        if (estadoActual != EstadoGato.IntentandoAbducir) return;
-        if (!ej.PuedeAtacar()) return;
+        if (animator == null || agent == null) return;
 
-        jugadorAbducido = ej;
-        ej.ActivarAbduccion();
-
-        zonaAbduccion?.MantenerLaser(); // 🔥 láser activo
-
-        CambiarEstado(EstadoGato.Abduciendo);
+        bool moviendo = agent.velocity.magnitude > 0.1f;
+        animator.Play(moviendo ? "walk" : "idle");
     }
 
-    void MantenerAbduccion()
+    void ForzarIdle()
     {
-        if (jugadorAbducido == null || !jugadorAbducido.EstaAbducido)
-        {
-            jugadorAbducido = null;
-            cooldownDisparo = 0f;
-
-            zonaAbduccion?.DetenerLaser(); // ❌ apagar láser
-
-            CambiarEstado(EstadoGato.Orbita);
-            return;
-        }
-
-        Vector3 pos = jugadorAbducido.transform.position + Vector3.up * alturaAbduccionY;
-        transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime * 5f);
+        if (animator == null) return;
+        animator.Play("idle");
     }
 
-    // =====================================================
-    // 🔫 DISPARO
-    // =====================================================
-    void Disparar()
+    // ===================== POOL =====================
+    public override void OnSpawnFromPool()
     {
-        if (cooldownDisparo > 0f) return;
-        if (Vector2.Distance(transform.position, objetivo.position) > rangoDisparo) return;
+        base.OnSpawnFromPool();
 
-        cooldownDisparo = enfriamientoDisparo;
-        anim?.PlayTrigger("atacando");
-        Invoke(nameof(DisparoReal), 0.4f);
+        abduciendo = false;
+
+        if (zonaAbduccion != null)
+            zonaAbduccion.Resetear();
     }
-
-    void DisparoReal()
-    {
-        if (objetivo == null) return;
-
-        var bala = Instantiate(balaPrefab, transform.position, Quaternion.identity);
-        Vector2 dir = (objetivo.position - transform.position).normalized;
-        bala.GetComponent<Rigidbody2D>()?.AddForce(dir * velocidadBala, ForceMode2D.Impulse);
-    }
-
-    // =====================================================
-    // 🚶 PATRULLA
-    // =====================================================
-    void Patrullar()
-    {
-        velocidadActual = Vector2.Lerp(
-            velocidadActual,
-            Random.insideUnitCircle.normalized * velocidadOrbita * 0.5f,
-            aceleracion * Time.deltaTime
-        );
-
-        AplicarMovimiento();
-    }
-
-
 }

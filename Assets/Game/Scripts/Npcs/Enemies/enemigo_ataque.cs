@@ -3,27 +3,33 @@
 [RequireComponent(typeof(enemigo_base))]
 public class enemigo_ataque : MonoBehaviour
 {
-    [Header("Ataque Melee")]
+    [Header("Configuración de Ataque")]
     public float rangoAtaque = 1.5f;
     public float daño = 10f;
-    public float enfriamiento = 3f;
+    public float enfriamiento = 2f;
+
+    [Header("Sincronización")]
+    [Tooltip("Tiempo desde que inicia la animación hasta que se aplica el daño")]
+    public float delayImpacto = 0.3f;
+    [Tooltip("Duración total de la animación de ataque")]
+    public float duracionAnimacion = 0.8f;
 
     private float temporizadorAtaque;
     private enemigo_base enemigo;
-    private enemigo_animacion anim;
+    private Animator animator;
     private Transform objetivo;
 
+    // ===================== UNITY =====================
     void Awake()
     {
         enemigo = GetComponent<enemigo_base>();
-        anim = GetComponent<enemigo_animacion>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
         if (enemigo == null || enemigo.estaMuerto) return;
 
-        // buscar siempre al objetivo más cercano
         ActualizarObjetivo();
         if (objetivo == null) return;
 
@@ -39,66 +45,69 @@ public class enemigo_ataque : MonoBehaviour
         }
     }
 
-    void ActualizarObjetivo()
-    {
-        GameObject[] jugadores1 = GameObject.FindGameObjectsWithTag("Player");
-        GameObject[] jugadores2 = GameObject.FindGameObjectsWithTag("Player_2");
-
-        float menorDistancia = Mathf.Infinity;
-        Transform masCercano = null;
-
-        foreach (GameObject j in jugadores1)
-        {
-            float d = Vector2.Distance(transform.position, j.transform.position);
-            if (d < menorDistancia)
-            {
-                menorDistancia = d;
-                masCercano = j.transform;
-            }
-        }
-
-        foreach (GameObject j in jugadores2)
-        {
-            float d = Vector2.Distance(transform.position, j.transform.position);
-            if (d < menorDistancia)
-            {
-                menorDistancia = d;
-                masCercano = j.transform;
-            }
-        }
-
-        objetivo = masCercano;
-    }
-
+    // ===================== ATAQUE =====================
     void Atacar()
     {
         enemigo.estaAtacando = true;
         temporizadorAtaque = enfriamiento;
 
-        // animación de ataque
-        if (anim != null)
-            anim.SetAtacando(true);
+        if (animator != null)
+            animator.SetTrigger("atacar");
 
-        // aplicar daño
+        Invoke(nameof(AplicarDaño), delayImpacto);
+        Invoke(nameof(FinAtaque), duracionAnimacion);
+    }
+
+    void AplicarDaño()
+    {
+        if (enemigo.estaMuerto || objetivo == null) return;
+
+        float distancia = Vector2.Distance(transform.position, objetivo.position);
+        if (distancia > rangoAtaque + 0.5f) return;
+
         VidaJugador vida = objetivo.GetComponentInParent<VidaJugador>();
         if (vida != null)
-        {
-            Debug.Log("enemigo_ataque: golpeo al jugador");
             vida.RecibirDanio(daño);
-        }
-        else
-        {
-            Debug.LogWarning("enemigo_ataque: no encontré VidaJugador");
-        }
-
-        Invoke(nameof(FinAtaque), 0.4f);
     }
 
     void FinAtaque()
     {
         enemigo.estaAtacando = false;
+    }
 
-        if (anim != null)
-            anim.SetAtacando(false);
+    // ===================== OBJETIVO =====================
+    void ActualizarObjetivo()
+    {
+        Transform masCercano = null;
+        float menorDistancia = Mathf.Infinity;
+
+        Buscar("Player", ref masCercano, ref menorDistancia);
+        Buscar("Player_2", ref masCercano, ref menorDistancia);
+
+        objetivo = masCercano;
+    }
+
+    void Buscar(string tag, ref Transform cercano, ref float distMin)
+    {
+        GameObject[] objs;
+        try { objs = GameObject.FindGameObjectsWithTag(tag); }
+        catch { return; }
+
+        foreach (GameObject o in objs)
+        {
+            float d = Vector2.Distance(transform.position, o.transform.position);
+            if (d < distMin)
+            {
+                distMin = d;
+                cercano = o.transform;
+            }
+        }
+    }
+
+    // ===================== DEBUG =====================
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, rangoAtaque);
     }
 }

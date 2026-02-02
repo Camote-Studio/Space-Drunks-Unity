@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8135663367076951168, guid: d8b2742dd628f4844a07fe5fa491b8ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -179,9 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d680cfe18033940b3c62ee280caab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mine
-  launchSpeed: 8
+  travelDuration: 0.35
+  travelDistance: 3
+  arcHeight: 0.7
   maxLifetime: 25
   armTime: 0.6
   explosionRadius: 2
   baseDamage: 12
   knockbackForce: 6
+  visual: {fileID: 0}

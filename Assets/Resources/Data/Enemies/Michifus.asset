@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58df899e6b02f945b56b9cfeff7f104, type: 3}
+  m_Name: Michifus
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyProfileSO
+  enemyID: michifus
+  prefab: {fileID: 4210027015946775837, guid: d0acf957ec290794792089392b961cf9, type: 3}
+  maxHealth: 100
+  moveSpeed: 6
+  scoreValue: 10
+  damage: 13
+  acceleration: 10

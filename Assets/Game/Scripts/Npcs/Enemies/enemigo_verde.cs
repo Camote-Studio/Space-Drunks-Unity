@@ -6,6 +6,8 @@ public class enemigo_verde : enemigo_base
     [Header("Referencias")]
     private enemigo_animacion anim;
     private Collider2D col;
+    private Rigidbody2D rb;
+    private SpriteRenderer sprite;
 
     [Header("Ataque a Distancia")]
     public GameObject balaPrefab;
@@ -28,20 +30,27 @@ public class enemigo_verde : enemigo_base
     [Header("Stun")]
     public float tiempoStun = 0.25f;
 
-    // Estados
-    bool enRetroceso, enStun, fatalityEjecutada;
+    // 🔹 Estado interno
+    private bool enRetroceso;
+    private bool enStun;
+    private bool fatalityEjecutada;
 
-    Vector2 velocidadRetroceso;
+    private Vector2 velocidadActual;
+    private Vector2 velocidadRetroceso;
 
-    float timerDisparo;
-    float timerStrafe;
-    int dirStrafe = 1;
+    private float timerDisparo;
+    private float timerStrafe;
+    private int dirStrafe = 1;
 
     protected override void Awake()
     {
         base.Awake();
+
         anim = GetComponentInChildren<enemigo_animacion>();
         col = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
+
         timerStrafe = cambioDireccionTiempo;
     }
 
@@ -61,7 +70,13 @@ public class enemigo_verde : enemigo_base
         HandleShooting();
     }
 
-    bool Bloqueado() => estaMuerto || fatalityEjecutada || enRetroceso || enStun;
+    // =========================
+    // ESTADOS
+    // =========================
+    bool Bloqueado()
+    {
+        return estaMuerto || fatalityEjecutada || enRetroceso || enStun;
+    }
 
     bool JugadorIntocable()
     {
@@ -75,6 +90,9 @@ public class enemigo_verde : enemigo_base
         AplicarMovimiento();
     }
 
+    // =========================
+    // MOVIMIENTO
+    // =========================
     void HandleTimers()
     {
         timerDisparo -= Time.deltaTime;
@@ -112,6 +130,14 @@ public class enemigo_verde : enemigo_base
             sprite.flipX = dir.x > 0;
     }
 
+    void AplicarMovimiento()
+    {
+        rb.linearVelocity = velocidadActual;
+    }
+
+    // =========================
+    // DISPARO
+    // =========================
     void HandleShooting()
     {
         float dist = Vector2.Distance(transform.position, objetivo.position);
@@ -133,13 +159,18 @@ public class enemigo_verde : enemigo_base
         GameObject bala = Instantiate(balaPrefab, transform.position, Quaternion.identity);
         Vector2 dir = (objetivo.position - transform.position).normalized;
 
-        bala.GetComponent<Rigidbody2D>()?.AddForce(dir * velocidadBala, ForceMode2D.Impulse);
+        Rigidbody2D rbBala = bala.GetComponent<Rigidbody2D>();
+        if (rbBala)
+            rbBala.AddForce(dir * velocidadBala, ForceMode2D.Impulse);
     }
 
-    // 🔴 DAÑO
+    // =========================
+    // DAÑO
+    // =========================
     public override void RecibirDaño(float cantidad)
     {
-        if (estaMuerto || fatalityEjecutada) return;
+        if (estaMuerto || fatalityEjecutada)
+            return;
 
         vidaActual -= cantidad;
 
@@ -160,27 +191,38 @@ public class enemigo_verde : enemigo_base
     IEnumerator Retroceso()
     {
         enRetroceso = true;
+        rb.linearVelocity = velocidadRetroceso;
+
         yield return new WaitForSeconds(tiempoRetroceso);
+
         enRetroceso = false;
 
         enStun = true;
+        rb.linearVelocity = Vector2.zero;
+
         yield return new WaitForSeconds(tiempoStun);
+
         enStun = false;
     }
 
+    // =========================
+    // FATALITY
+    // =========================
     IEnumerator EjecutarFatality()
     {
         estaMuerto = true;
         fatalityEjecutada = true;
 
         StopAllCoroutines();
-        velocidadActual = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
 
         if (col) col.enabled = false;
 
         bool fatalityDerecha = objetivo.position.x < transform.position.x;
 
-        anim?.PlayTrigger(fatalityDerecha ? "fatality_izquierda" : "fatality_derecha");
+        anim?.PlayTrigger(
+            fatalityDerecha ? "fatality_izquierda" : "fatality_derecha"
+        );
 
         yield return new WaitForSeconds(duracionFatalityAnim);
 

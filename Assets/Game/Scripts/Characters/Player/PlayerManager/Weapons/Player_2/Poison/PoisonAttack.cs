@@ -10,7 +10,7 @@ public class PoisonAttack : MonoBehaviour
     [SerializeField] private float arcHeight = 0.7f;
     [SerializeField] private float maxLifetime = 25f;
 
-    [Header("Area y daño")]
+    [Header("Area y daï¿½o")]
     [SerializeField] private float armTime = 0.6f;
     [SerializeField] private float areaRadius = 2f;
     [SerializeField] private float damagePerSecond = 8f;
@@ -150,7 +150,7 @@ public class PoisonAttack : MonoBehaviour
         foreach (var enemy in uniqueEnemies)
         {
             if (enemy != null)
-                enemy.RecibirDaño(damagePerSecond * dt);
+                enemy.RecibirDaÃ±o(damagePerSecond * dt);
         }
     }
 

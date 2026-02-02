@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
+using DG.Tweening;
 
-public abstract class enemigo_base : MonoBehaviour
+public abstract class enemigo_base : MonoBehaviour, IPoolable
 {
     [Header("Persecución")]
     public float distanciaParada = 1.2f;
@@ -11,38 +13,71 @@ public abstract class enemigo_base : MonoBehaviour
     public float aceleracion = 8f;
 
     protected float vidaActual;
+
+    [Header("Pooling")]
+    [SerializeField] protected string enemyPoolTag;
+
+    // ===================== ESTADO =====================
+    public bool estaMuerto;
+    [HideInInspector] public bool estaAtacando;
+
+    // ===================== REFERENCIAS =====================
     protected Transform objetivo;
+    protected NavMeshAgent agent;
+    protected Animator animator;
+    protected Collider2D col;
+    protected SpriteRenderer spriteRenderer;
+    protected Rigidbody2D rb;
 
-    public bool estaMuerto = false;
-    public bool estaAtacando = false;
+    // ===================== EVENTOS =====================
+    public static System.Action OnAnyEnemyDeath;
 
-    protected Vector2 velocidadActual;
-    protected SpriteRenderer sprite;
-
+    // ===================== UNITY =====================
     protected virtual void Awake()
     {
-        sprite = GetComponentInChildren<SpriteRenderer>();
+        agent = GetComponent<NavMeshAgent>();
+        animator = GetComponentInChildren<Animator>();
+        col = GetComponent<Collider2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+
         vidaActual = vidaMaxima;
+
+        if (agent != null)
+        {
+            agent.updateRotation = false;
+            agent.updateUpAxis = false;
+            agent.speed = velocidad;
+        }
 
         ActualizarObjetivoMasCercano();
     }
 
     protected virtual void Update()
     {
-        if (estaMuerto || estaAtacando)
-            return;
+        if (estaMuerto) return;
 
         if (objetivo == null)
+        {
             ActualizarObjetivoMasCercano();
-
-        if (objetivo == null)
             return;
+        }
+
+        if (estaAtacando)
+        {
+            if (agent != null && agent.isOnNavMesh)
+                agent.isStopped = true;
+            return;
+        }
+
+        if (agent != null && agent.isOnNavMesh)
+            agent.isStopped = false;
 
         MoverHaciaObjetivo();
     }
 
     // =====================================================
-    // 🎯 BUSCAR PLAYER MÁS CERCANO (SEGURO)
+    // 🎯 BUSCAR PLAYER MÁS CERCANO
     // =====================================================
     protected void ActualizarObjetivoMasCercano()
     {
@@ -60,14 +95,8 @@ public abstract class enemigo_base : MonoBehaviour
     {
         GameObject[] objs;
 
-        try
-        {
-            objs = GameObject.FindGameObjectsWithTag(tag);
-        }
-        catch
-        {
-            return; // el tag no existe → no rompe nada
-        }
+        try { objs = GameObject.FindGameObjectsWithTag(tag); }
+        catch { return; }
 
         foreach (GameObject o in objs)
         {
@@ -83,68 +112,86 @@ public abstract class enemigo_base : MonoBehaviour
     }
 
     // =====================================================
-    // 🏃 MOVIMIENTO
+    // 🏃 MOVIMIENTO (NAVMESH)
     // =====================================================
     protected virtual void MoverHaciaObjetivo()
     {
-        Vector2 toTarget = objetivo.position - transform.position;
-        float dist = toTarget.magnitude;
+        if (agent == null || !agent.isOnNavMesh) return;
+
+        float dist = Vector2.Distance(transform.position, objetivo.position);
 
         if (dist <= distanciaParada)
         {
-            velocidadActual = Vector2.Lerp(
-                velocidadActual,
-                Vector2.zero,
-                aceleracion * Time.deltaTime
-            );
+            agent.SetDestination(transform.position);
+            return;
         }
-        else
+
+        agent.SetDestination(objetivo.position);
+
+        // Flip del sprite
+        if (spriteRenderer != null && agent.velocity.x != 0)
+            spriteRenderer.flipX = agent.velocity.x < 0;
+    }
+
+    // =====================================================
+    // ❤️ DAÑO
+    // =====================================================
+    public virtual void RecibirDaño(float daño)
+    {
+        if (estaMuerto) return;
+
+        vidaActual -= daño;
+
+        if (spriteRenderer != null)
         {
-            Vector2 dir = toTarget.normalized;
-            Vector2 targetVel = dir * velocidad;
-
-            velocidadActual = Vector2.Lerp(
-                velocidadActual,
-                targetVel,
-                aceleracion * Time.deltaTime
-            );
-
-            if (sprite && Mathf.Abs(dir.x) > 0.01f)
-                sprite.flipX = dir.x > 0;
+            spriteRenderer.DOKill();
+            spriteRenderer.DOColor(Color.red, 0.1f)
+                .OnComplete(() => spriteRenderer.DOColor(Color.white, 0.1f));
         }
-
-        AplicarMovimiento();
-    }
-
-    protected void AplicarMovimiento()
-    {
-        transform.position += (Vector3)(velocidadActual * Time.deltaTime);
-    }
-
-    // =====================================================
-    // ❤️ VIDA
-    // =====================================================
-    public virtual void RecibirDaño(float cantidad)
-    {
-        if (estaMuerto || !PuedeRecibirDaño()) return;
-
-        vidaActual -= cantidad;
 
         if (vidaActual <= 0)
             Morir();
     }
-    protected virtual bool PuedeRecibirDaño() => true;
 
     protected virtual void Morir()
     {
         estaMuerto = true;
-        Destroy(gameObject);
+
+        if (agent != null && agent.isOnNavMesh)
+            agent.isStopped = true;
+
+        if (col != null) col.enabled = false;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+
+        OnAnyEnemyDeath?.Invoke();
+
+        PoolManager.Instance.ReturnToPool(enemyPoolTag, gameObject);
     }
 
-    protected virtual bool PuedeMorir()
+    // =====================================================
+    // ♻️ POOLING
+    // =====================================================
+    public virtual void OnSpawnFromPool()
     {
-        return true;
+        estaMuerto = false;
+        estaAtacando = false;
+        vidaActual = vidaMaxima;
+
+        if (col != null) col.enabled = true;
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = Color.white;
+            spriteRenderer.flipX = false;
+        }
+
+        if (agent != null && agent.isOnNavMesh)
+            agent.isStopped = false;
     }
 
-
+    public virtual void OnDespawnToPool()
+    {
+        transform.DOKill();
+        StopAllCoroutines();
+    }
 }

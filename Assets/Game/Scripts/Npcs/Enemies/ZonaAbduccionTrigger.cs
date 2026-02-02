@@ -2,68 +2,92 @@
 
 public class ZonaAbduccionGato : MonoBehaviour
 {
+    [Header("Visual")]
+    public Animator visualAnimator; // objeto hijo "visual"
+
     private enemigo_gato gato;
+    private bool jugadorDentro;
+    private bool laserActivo;
 
-    [Header("Visual Láser")]
-    public Animator visualAnimator;
-
-    private bool laserActivo = false;
-
-    private void Awake()
+    // ===================== CONFIG =====================
+    public void Configurar(enemigo_gato g)
     {
-        gato = GetComponentInParent<enemigo_gato>();
+        gato = g;
+        Resetear();
+    }
 
-        if (visualAnimator == null)
+    public void Resetear()
+    {
+        jugadorDentro = false;
+        laserActivo = false;
+
+        if (visualAnimator != null)
         {
-            Debug.LogWarning("⚠️ Falta asignar Animator del Visual");
+            visualAnimator.ResetTrigger("laser_inicio");
+            visualAnimator.ResetTrigger("laser_fin");
+            visualAnimator.SetBool("laser_activo", false);
+            visualAnimator.Play("idle");
         }
+
+        gameObject.SetActive(false);
     }
 
-    // =====================================================
-    // 👽 CUANDO EL JUGADOR ENTRA A LA ZONA
-    // =====================================================
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!other.CompareTag("Player")) return;
-
-        var ej = other.GetComponent<estado_jugador>();
-        if (ej == null) return;
-
-        // 🔒 El láser YA DEBE ESTAR ENCENDIDO
-        if (gato.estadoActual != enemigo_gato.EstadoGato.IntentandoAbducir)
-            return;
-
-        gato.ActivarAbduccion(ej);
-    }
-
-    // =====================================================
-    // 🎬 ANIMACIONES
-    // =====================================================
+    // ===================== CONTROL DESDE EL GATO =====================
     public void IniciarLaser()
     {
-        if (laserActivo) return;
+        gameObject.SetActive(true);
+
+        if (visualAnimator == null) return;
+
+        visualAnimator.ResetTrigger("laser_fin");
+        visualAnimator.Play("idle");
+        visualAnimator.SetTrigger("laser_inicio");
+        visualAnimator.SetBool("laser_activo", true);
 
         laserActivo = true;
-        visualAnimator.ResetTrigger("laser_fin");
-        visualAnimator.SetTrigger("laser_inicio");
-
-        Debug.Log("👽 Láser iniciado");
     }
 
-    public void MantenerLaser()
-    {
-        visualAnimator.SetBool("laser_activo", true);
-    }
-
-    public void DetenerLaser()
+    public void FinalizarLaser()
     {
         if (!laserActivo) return;
 
         laserActivo = false;
-        visualAnimator.SetBool("laser_activo", false);
-        visualAnimator.SetTrigger("laser_fin");
 
-        Debug.Log("❌ Láser detenido");
+        if (visualAnimator != null)
+        {
+            visualAnimator.SetBool("laser_activo", false);
+            visualAnimator.SetTrigger("laser_fin");
+        }
+
+        Invoke(nameof(DesactivarZona), 0.2f);
+    }
+
+    void DesactivarZona()
+    {
+        gameObject.SetActive(false);
+        jugadorDentro = false;
+    }
+
+    // ===================== TRIGGER =====================
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!gato.PuedeAbducir()) return;
+
+        estado_jugador jugador = other.GetComponent<estado_jugador>();
+        if (jugador == null) return;
+
+        if (jugadorDentro) return;
+        jugadorDentro = true;
+
+        gato.IniciarAbduccion();
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        estado_jugador jugador = other.GetComponent<estado_jugador>();
+        if (jugador == null) return;
+
+        jugadorDentro = false;
+        gato.FinalizarAbduccion();
     }
 }
-
