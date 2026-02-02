@@ -25,6 +25,7 @@ public class estado_jugador : MonoBehaviour
     private bool colEnabledOriginal;
     public bool EstaAbducido { get; private set; }
 
+    public System.Action OnLiberado;
 
     [Header("Abducción")]
     [SerializeField] private float alturaAbduccion = 0.4f;
@@ -76,13 +77,23 @@ public class estado_jugador : MonoBehaviour
                 LiberarAbduccion();
         }
     }
-    private void LiberarAbduccion()
+    public void LiberarAbduccion()
     {
         abducido = false;
         invulnerable = false;
         EstaAbducido = false;
+
         rb.simulated = rbSimulatedOriginal;
         col.enabled = colEnabledOriginal;
+
+        // 🔔 AVISA AL GATO
+        OnLiberado?.Invoke();
+    }
+
+    public void DesactivarAbduccion()
+    {
+        if (!abducido) return;
+        LiberarAbduccion();
     }
 
 

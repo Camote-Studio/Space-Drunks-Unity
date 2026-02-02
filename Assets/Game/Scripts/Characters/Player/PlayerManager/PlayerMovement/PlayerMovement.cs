@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
             scale.x = Mathf.Sign(inputX) * Mathf.Abs(scale.x);
             visual.localScale = scale;
         }
-        Debug.Log($"{name} pos={transform.position} visualScale={visual.localScale}");
+        
         HandleJump();
         HandleDash();
     }

@@ -4,15 +4,17 @@ public class enemigo_gato : enemigo_base
 {
     private enemigo_animacion anim;
 
-    enum EstadoGato
+    public enum EstadoGato
     {
         Patrulla,
         Orbita,
         IntentandoAbducir,
         Abduciendo
     }
+    [Header("Zona de Abducción")]
+    public ZonaAbduccionGato zonaAbduccion;
 
-    private EstadoGato estadoActual;
+    [HideInInspector] public EstadoGato estadoActual;
 
     // =====================================================
     // 🌀 ÓRBITA
@@ -27,7 +29,6 @@ public class enemigo_gato : enemigo_base
     private float timerCambioDir;
     private int direccionOrbita = 1;
 
-    // ⏱️ Tiempo mínimo obligatorio en órbita
     [Header("Control de Órbita")]
     public float tiempoMinimoOrbita = 6f;
     private float timerOrbitaEstado;
@@ -48,7 +49,6 @@ public class enemigo_gato : enemigo_base
     [Header("Abducción")]
     public float alturaAbduccionY = 3.5f;
     public float velocidadAbduccion = 2f;
-    public float rayDistancia = 3f;
     public float tiempoMaxIntento = 8f;
 
     private float timerIntento;
@@ -69,9 +69,6 @@ public class enemigo_gato : enemigo_base
 
         cooldownDisparo -= Time.deltaTime;
 
-        // =========================
-        // SIN JUGADOR → PATRULLA
-        // =========================
         if (objetivo == null)
         {
             CambiarEstado(EstadoGato.Patrulla);
@@ -79,9 +76,6 @@ public class enemigo_gato : enemigo_base
             return;
         }
 
-        // =========================
-        // ESTADOS ESPECIALES
-        // =========================
         if (estadoActual == EstadoGato.IntentandoAbducir)
         {
             IntentarAbduccion();
@@ -94,9 +88,6 @@ public class enemigo_gato : enemigo_base
             return;
         }
 
-        // =========================
-        // MODO HABITUAL → ÓRBITA
-        // =========================
         if (estadoActual != EstadoGato.Orbita)
             CambiarEstado(EstadoGato.Orbita);
 
@@ -105,7 +96,6 @@ public class enemigo_gato : enemigo_base
         MoverOrbita();
         Disparar();
 
-        // 👽 Intentar abducción SOLO después de tiempo mínimo
         if (timerOrbitaEstado <= 0f &&
             JugadorAtacable() &&
             Random.value < 0.003f)
@@ -115,30 +105,32 @@ public class enemigo_gato : enemigo_base
     }
 
     // =====================================================
-    void CambiarEstado(EstadoGato nuevo)
+void CambiarEstado(EstadoGato nuevo)
+{
+    if (estadoActual == nuevo) return;
+
+    estadoActual = nuevo;
+
+    switch (nuevo)
     {
-        if (estadoActual == nuevo) return;
+        case EstadoGato.Orbita:
+            timerOrbitaEstado = tiempoMinimoOrbita;
+            zonaAbduccion?.DetenerLaser();   // 🔴 por seguridad
+            break;
 
-        estadoActual = nuevo;
+        case EstadoGato.IntentandoAbducir:
+            timerIntento = tiempoMaxIntento;
+            zonaAbduccion?.IniciarLaser();   // 👽🔥 AQUÍ EMPIEZA EL LÁSER
+            break;
 
-        switch (nuevo)
-        {
-            case EstadoGato.Orbita:
-                timerOrbitaEstado = tiempoMinimoOrbita;
-                break;
-
-            case EstadoGato.IntentandoAbducir:
-                timerIntento = tiempoMaxIntento;
-                break;
-        }
-
-        anim?.SetBool(
-            "abduciendo",
-            nuevo == EstadoGato.IntentandoAbducir || nuevo == EstadoGato.Abduciendo
-        );
-
-        Debug.Log($"[GATO] Estado → {estadoActual}");
+        case EstadoGato.Abduciendo:
+            // el láser ya está activo, no reiniciar animaciones
+            break;
     }
+
+    Debug.Log($"[GATO] Estado → {estadoActual}");
+}
+
 
     // =====================================================
     bool JugadorAtacable()
@@ -179,7 +171,7 @@ public class enemigo_gato : enemigo_base
     }
 
     // =====================================================
-    // 👽 INTENTAR ABDUCCIÓN
+    // 👽 INTENTO DE ABDUCCIÓN (MOVIMIENTO)
     // =====================================================
     void IntentarAbduccion()
     {
@@ -196,32 +188,34 @@ public class enemigo_gato : enemigo_base
 
         velocidadActual = dir * velocidadAbduccion;
         AplicarMovimiento();
-
-        if (Mathf.Abs(transform.position.x - objetivo.position.x) < 0.3f)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayDistancia);
-            if (hit.collider)
-            {
-                var ej = hit.collider.GetComponent<estado_jugador>();
-                if (ej && ej.PuedeAtacar())
-                {
-                    jugadorAbducido = ej;
-                    ej.ActivarAbduccion();
-                    CambiarEstado(EstadoGato.Abduciendo);
-                }
-            }
-        }
     }
 
     // =====================================================
-    // 👽 MANTENER ABDUCCIÓN
+    // 👽 ACTIVADO POR ZONA (TRIGGER)
     // =====================================================
+
+    public void ActivarAbduccion(estado_jugador ej)
+    {
+        if (estadoActual != EstadoGato.IntentandoAbducir) return;
+        if (!ej.PuedeAtacar()) return;
+
+        jugadorAbducido = ej;
+        ej.ActivarAbduccion();
+
+        zonaAbduccion?.MantenerLaser(); // 🔥 láser activo
+
+        CambiarEstado(EstadoGato.Abduciendo);
+    }
+
     void MantenerAbduccion()
     {
         if (jugadorAbducido == null || !jugadorAbducido.EstaAbducido)
         {
             jugadorAbducido = null;
-            cooldownDisparo = 0f; // 👈 dispara de inmediato
+            cooldownDisparo = 0f;
+
+            zonaAbduccion?.DetenerLaser(); // ❌ apagar láser
+
             CambiarEstado(EstadoGato.Orbita);
             return;
         }
@@ -253,7 +247,7 @@ public class enemigo_gato : enemigo_base
     }
 
     // =====================================================
-    // 🚶 PATRULLA (solo sin jugador)
+    // 🚶 PATRULLA
     // =====================================================
     void Patrullar()
     {
@@ -265,4 +259,6 @@ public class enemigo_gato : enemigo_base
 
         AplicarMovimiento();
     }
+
+
 }
