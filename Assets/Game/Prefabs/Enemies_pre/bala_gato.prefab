@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5782659315547091212, guid: 70f63b6b7af96d042892b38fe28b3398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,3 +172,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::bala
   danio: 10
   tiempoVida: 6
+  poolTag: Bala
+  tipo_bala: bala_gravedad

@@ -34,6 +34,7 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
     
     // Variable para física (Agregada para soportar el movimiento de enemigoverde/gato)
     protected Rigidbody2D rb; 
+    
 
     // ===================== UNITY =====================
 

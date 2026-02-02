@@ -153,10 +153,6 @@ MonoBehaviour:
     prefab: {fileID: 7762896412878322680, guid: 3f8e7b71f21589c41b87043c74a64ccb, type: 3}
     size: 10
     expandable: 1
-  - tag: Michifus
-    prefab: {fileID: 4210027015946775837, guid: d0acf957ec290794792089392b961cf9, type: 3}
-    size: 10
-    expandable: 1
 --- !u!4 &21939630
 Transform:
   m_ObjectHideFlags: 0
@@ -1446,10 +1442,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   oleadas:
-  - nombre: "Invasi\xF3n Michifus"
+  - nombre: "Invasi\xF3n quackos"
     grupos:
-    - poolTag: Michifus
-      cantidad: 2
+    - poolTag: Quacko
+      cantidad: 3
+      tasaAparicion: 1.5
+  - nombre: "Invasi\xF3n quackos"
+    grupos:
+    - poolTag: Quacko
+      cantidad: 3
       tasaAparicion: 1.5
   puntosDeSpawn:
   - {fileID: 796458534}
@@ -2261,7 +2262,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.71991086, g: 1, b: 0.54905653, a: 1}
