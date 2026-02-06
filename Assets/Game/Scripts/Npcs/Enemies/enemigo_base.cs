@@ -1,197 +1,217 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
+using System;
 
 public abstract class enemigo_base : MonoBehaviour, IPoolable
 {
-    [Header("Persecución")]
-    public float distanciaParada = 1.2f;
 
-    [Header("Estadísticas")]
+    //EVENTO GLOBAL: script pueden suscribirse para saber cuando un enemigo muere
+    public static event Action OnAnyEnemyDeath;
+
+    // ===================== VARIABLES CONFIGURABLES =====================
+    [Header("Stats")]
     public float vidaMaxima = 100f;
-    public float velocidad = 3f;
-    public float aceleracion = 8f;
-
     protected float vidaActual;
 
     [Header("Pooling")]
     [SerializeField] protected string enemyPoolTag;
 
-    // ===================== ESTADO =====================
-    public bool estaMuerto;
-    [HideInInspector] public bool estaAtacando;
+    // ===================== VARIABLES PUBLICAS (CAMBIOS AQUÍ) =====================
+    
+    // CAMBIO 1: De 'protected' a 'public' para que enemigo_ataque pueda leerlo
+    public bool estaMuerto; 
 
-    // ===================== REFERENCIAS =====================
+    // CAMBIO 2: Agregamos esta variable nueva que faltaba
+    [HideInInspector] public bool estaAtacando; 
+
+    // ===================== VARIABLES INTERNAS =====================
     protected Transform objetivo;
     protected NavMeshAgent agent;
     protected Animator animator;
     protected Collider2D col;
     protected SpriteRenderer spriteRenderer;
-    protected Rigidbody2D rb;
-
-    // ===================== EVENTOS =====================
-    public static System.Action OnAnyEnemyDeath;
+    
+    // Variable para física (Agregada para soportar el movimiento de enemigoverde/gato)
+    protected Rigidbody2D rb; 
+    
 
     // ===================== UNITY =====================
+
     protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         col = GetComponent<Collider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
-
-        vidaActual = vidaMaxima;
+        rb = GetComponent<Rigidbody2D>(); // Referencia a RB
 
         if (agent != null)
         {
             agent.updateRotation = false;
             agent.updateUpAxis = false;
-            agent.speed = velocidad;
         }
 
-        ActualizarObjetivoMasCercano();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+            objetivo = player.transform;
     }
 
     protected virtual void Update()
     {
-        if (estaMuerto) return;
-
-        if (objetivo == null)
-        {
-            ActualizarObjetivoMasCercano();
-            return;
-        }
-
+        // CAMBIO 3: Agregamos 'estaAtacando' para frenar el movimiento
+        if (estaMuerto || objetivo == null) return;
         if (estaAtacando)
         {
-            if (agent != null && agent.isOnNavMesh)
-                agent.isStopped = true;
+            //Si no nos movemos, frenamos al agente
+            if (agent != null && agent.isOnNavMesh) agent.isStopped = true;
             return;
+                
         }
+        
+        //Reactivar el movimiento
+        if (agent != null && agent.isOnNavMesh) agent.isStopped = false;
 
-        if (agent != null && agent.isOnNavMesh)
-            agent.isStopped = false;
-
+        // Lógica base
         MoverHaciaObjetivo();
     }
 
-    // =====================================================
-    // 🎯 BUSCAR PLAYER MÁS CERCANO
-    // =====================================================
-    protected void ActualizarObjetivoMasCercano()
+    // ===================== POOL =====================
+
+    public virtual void OnSpawnFromPool()
     {
-        Transform nearest = null;
-        float nearestDist = Mathf.Infinity;
-        Vector2 myPos = transform.position;
+        // Reiniciar variables vitales
+        estaMuerto = false;
+        estaAtacando = false; // <--- Importante resetear esto
+        vidaActual = vidaMaxima;
 
-        BuscarConTag("Player", ref nearest, ref nearestDist, myPos);
-        BuscarConTag("Player_2", ref nearest, ref nearestDist, myPos);
+        if (col != null) col.enabled = true;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
 
-        objetivo = nearest;
-    }
-
-    void BuscarConTag(string tag, ref Transform nearest, ref float nearestDist, Vector2 myPos)
-    {
-        GameObject[] objs;
-
-        try { objs = GameObject.FindGameObjectsWithTag(tag); }
-        catch { return; }
-
-        foreach (GameObject o in objs)
+        // Reset NavMesh si existe
+        if (agent != null)
         {
-            if (o == null) continue;
+            // Primero aseguramos que el componente esté encendido pero sin calcular nada aún
+            agent.enabled = true;
+            agent.updateRotation = false;
+            agent.updateUpAxis = false;
 
-            float dist = Vector2.Distance(myPos, o.transform.position);
-            if (dist < nearestDist)
+            // INTENTO DE COLOCACIÓN SEGURA
+            // Buscamos el punto de NavMesh más cercano en un radio de 3 unidades
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(transform.position, out hit, 3.0f, NavMesh.AllAreas))
             {
-                nearestDist = dist;
-                nearest = o.transform;
+                // ¡ÉXITO! Encontramos suelo azul cerca.
+                // 1. Lo teletransportamos a esa posición válida (hit.position)
+                agent.Warp(hit.position); 
+                
+                // 2. Ahora que sabemos que está en el suelo, es seguro llamar a estos métodos:
+                agent.ResetPath();
+                agent.isStopped = false;
+            }
+            else
+            {
+                // FALLO: No hay NavMesh cerca (Spawn point en el vacío o muy lejos)
+                Debug.LogError($"[Enemigo] ERROR CRÍTICO: SpawnPoint en {transform.position} está demasiado lejos del NavMesh. El enemigo no se moverá.");
+                
+                // Apagamos el agente para evitar que lance errores en el Update
+                agent.enabled = false; 
             }
         }
-    }
-
-    // =====================================================
-    // 🏃 MOVIMIENTO (NAVMESH)
-    // =====================================================
-    protected virtual void MoverHaciaObjetivo()
-    {
-        if (agent == null || !agent.isOnNavMesh) return;
-
-        float dist = Vector2.Distance(transform.position, objetivo.position);
-
-        if (dist <= distanciaParada)
+        
+        // Reset Rigidbody si existe
+        if (rb != null)
         {
-            agent.SetDestination(transform.position);
-            return;
+            rb.linearVelocity = Vector2.zero;
         }
 
-        agent.SetDestination(objetivo.position);
+        if (animator != null)
+        {
+            animator.Rebind();
+            animator.Update(0f);
+        }
 
-        // Flip del sprite
-        if (spriteRenderer != null && agent.velocity.x != 0)
-            spriteRenderer.flipX = agent.velocity.x < 0;
+        ResetVisuals();
+
+        //Vector3 currentPos = transform.position;
+        //currentPos.z = UnityEngine.Random.Range(-0.05f, 0.05f);
+        //transform.position = currentPos;
     }
 
-    // =====================================================
-    // ❤️ DAÑO
-    // =====================================================
+    public virtual void OnDespawnToPool()
+    {
+        transform.DOKill();
+        StopAllCoroutines(); // Buena práctica al guardar
+    }
+
+    // ===================== COMBATE =====================
+
     public virtual void RecibirDaño(float daño)
     {
         if (estaMuerto) return;
 
         vidaActual -= daño;
 
+        // Feedback visual simple
         if (spriteRenderer != null)
         {
             spriteRenderer.DOKill();
             spriteRenderer.DOColor(Color.red, 0.1f)
-                .OnComplete(() => spriteRenderer.DOColor(Color.white, 0.1f));
+                .OnComplete(() => {spriteRenderer.DOColor(Color.white, 0.1f);});
         }
 
         if (vidaActual <= 0)
+        {
             Morir();
+        }
     }
 
     protected virtual void Morir()
     {
         estaMuerto = true;
 
-        if (agent != null && agent.isOnNavMesh)
-            agent.isStopped = true;
-
         if (col != null) col.enabled = false;
-        if (rb != null) rb.linearVelocity = Vector2.zero;
+        if (rb != null) rb.linearVelocity = Vector2.zero; // Frenar física
 
+        //avisar sistema que un enemigo murió
         OnAnyEnemyDeath?.Invoke();
 
         PoolManager.Instance.ReturnToPool(enemyPoolTag, gameObject);
     }
 
-    // =====================================================
-    // ♻️ POOLING
-    // =====================================================
-    public virtual void OnSpawnFromPool()
+    // ===================== VISUAL =====================
+
+    protected virtual void ResetVisuals()
     {
-        estaMuerto = false;
-        estaAtacando = false;
-        vidaActual = vidaMaxima;
-
-        if (col != null) col.enabled = true;
-
         if (spriteRenderer != null)
         {
             spriteRenderer.color = Color.white;
             spriteRenderer.flipX = false;
         }
-
-        if (agent != null && agent.isOnNavMesh)
-            agent.isStopped = false;
     }
 
-    public virtual void OnDespawnToPool()
+    // ===================== MOVIMIENTO =====================
+
+    protected virtual void MoverHaciaObjetivo()
     {
-        transform.DOKill();
-        StopAllCoroutines();
+        if (agent != null && objetivo == null) return;
+
+        if (agent.isOnNavMesh)
+        {
+            // Esta sola línea hace todo el Pathfinding (A*)
+            agent.SetDestination(objetivo.position);
+            
+            // Orientar el sprite manualmente (Flip X)
+            if (spriteRenderer != null && agent.velocity.x != 0)
+            {
+                // Si la velocidad en X es positiva (derecha), flip false. 
+                    // Si es negativa (izquierda), flip true.
+                spriteRenderer.flipX = agent.velocity.x < 0;
+            }
+        }
+        else
+        {
+            agent.Warp(transform.position);
+        }
     }
 }

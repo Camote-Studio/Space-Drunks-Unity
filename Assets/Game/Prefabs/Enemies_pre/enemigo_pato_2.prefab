@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2398377442217424036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,8 +143,8 @@ GameObject:
   - component: {fileID: 846437430469377332}
   - component: {fileID: 9126489111563008020}
   - component: {fileID: 7337090547902540771}
-  - component: {fileID: 8102449027000982607}
-  - component: {fileID: 618489398700213685}
+  - component: {fileID: 1195565733487785197}
+  - component: {fileID: 8329361480411337103}
   m_Layer: 0
   m_Name: enemigo_pato_2
   m_TagString: Untagged
@@ -161,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 5227122393974932566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.0645094, y: 1.3926474, z: 0}
+  m_LocalPosition: {x: 9.500021, y: 0.2756431, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -192,16 +192,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5f54f9aaaa4c4fb0d50c3bbfeb89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemigo_pato_1
-  distanciaParada: 1.2
-  vidaMaxima: 200
-  velocidad: 3
-  aceleracion: 8
+  vidaMaxima: 400
+  enemyPoolTag: BigPat
   estaMuerto: 0
   estaAtacando: 0
   comboActual: 0
   "da\xF1oExtraPorCombo": 10
   duracionFatalityAnim: 1.4
-  fuerzaRetroceso: 2.5
+  fuerzaRetroceso: 4
   tiempoRetroceso: 0.08
   tiempoStun: 0.25
   probDefensa1: 0.3
@@ -218,10 +216,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2171900ebf12e84dbede79a7c52ae61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemigo_ataque
-  rangoAtaque: 3
+  rangoAtaque: 1.5
   "da\xF1o": 10
   enfriamiento: 3
---- !u!70 &8102449027000982607
+  delayImpacto: 0.3
+  duracionAnimacion: 0.8
+--- !u!70 &1195565733487785197
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,36 +255,31 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.12, y: -0.41382626}
-  m_Size: {x: 1.682039, y: 2.813858}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.82, y: 3.16}
   m_Direction: 0
---- !u!50 &618489398700213685
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!195 &8329361480411337103
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5227122393974932566}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.9
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 1.2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &8865639656403008269
 GameObject:
   m_ObjectHideFlags: 0
