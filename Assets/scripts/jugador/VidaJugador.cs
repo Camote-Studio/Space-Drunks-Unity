@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using TMPro; // o UnityEngine.UI si usas Text normal
 
 public class VidaJugador : MonoBehaviour
 {
@@ -10,58 +11,51 @@ public class VidaJugador : MonoBehaviour
     public float VidaMaxima => vidaMaxima;
     public float VidaActual => vidaActual;
 
-    // Eventos para escuchar daño y muerte
-    public event Action<string> OnDamaged; // Fuente de daño
+    // ================== MONEDAS ==================
+    [Header("Monedas")]
+    [SerializeField] private int monedas = 0;
+
+    [Tooltip("1 = Contador jugador 1 | 2 = Contador jugador 2")]
+    public int idJugador = 1;
+
+    [SerializeField] private TextMeshProUGUI textoMonedas;
+    // si usas Text normal cambia a: public Text textoMonedas;
+
+    // ================== EVENTOS ==================
+    public event Action<string> OnDamaged;
     public event Action OnDeath;
 
-    // Invulnerabilidad temporal opcional
     private bool intocable = false;
 
     private void Awake()
     {
         vidaActual = vidaMaxima;
+        ActualizarUI();
     }
 
-    /// <summary>
-    /// Método principal para recibir daño
-    /// </summary>
-    /// <param name="cantidad">Cuánto daño recibe</param>
-    /// <param name="fuente">Quién causó el daño</param>
+    // ================== VIDA ==================
+
     public void RecibirDanio(float cantidad, string fuente = "")
     {
-        if (EsIntocable()) return; // Ignora daño si es intocable
+        if (EsIntocable()) return;
 
         vidaActual = Mathf.Clamp(vidaActual - cantidad, 0f, vidaMaxima);
         OnDamaged?.Invoke(fuente);
 
         if (vidaActual <= 0f)
-        {
-            Morir();
-        }
+            Die();
     }
 
-    /// <summary>
-    /// Método de compatibilidad para enemigos que llamen "RecibirDaño"
-    /// </summary>
-    /// <param name="cantidad"></param>
     public void RecibirDaño(float cantidad)
     {
         RecibirDanio(cantidad);
     }
 
-    /// <summary>
-    /// Determina si el jugador es intocable
-    /// </summary>
-    /// <returns></returns>
     public bool EsIntocable()
     {
         return intocable;
     }
 
-    /// <summary>
-    /// Pone al jugador intocable temporalmente
-    /// </summary>
-    /// <param name="duracion">Tiempo en segundos</param>
     public void ActivarIntocable(float duracion)
     {
         if (!intocable)
@@ -75,13 +69,24 @@ public class VidaJugador : MonoBehaviour
         intocable = false;
     }
 
-    /// <summary>
-    /// Lógica de muerte del jugador
-    /// </summary>
-    private void Morir()
+    private void Die()
     {
-        Debug.Log("Jugador muerto");
+        Debug.Log($"Player {idJugador} dead");
         OnDeath?.Invoke();
         Destroy(gameObject);
+    }
+
+    // ================== MONEDAS ==================
+
+    public void AgregarMonedas(int cantidad)
+    {
+        monedas += cantidad;
+        ActualizarUI();
+    }
+
+    private void ActualizarUI()
+    {
+        if (textoMonedas != null)
+            textoMonedas.text = monedas.ToString();
     }
 }
