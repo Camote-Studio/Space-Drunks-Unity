@@ -8,6 +8,9 @@ public class enemigo_verde : enemigo_base
     private Collider2D col;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    [Header("Movimiento")]
+    public float velocidad = 3.5f;
+    public float aceleracion = 8f;
 
     [Header("Ataque a Distancia")]
     public GameObject balaPrefab;
