@@ -3,77 +3,113 @@ using System.Collections;
 
 public class enemigoverde : enemigo_base
 {
-    [Header("Referencias")]
-    private enemigo_animacion anim;
-    private Collider2D col;
+    [Header("Configuración de Proyectil")]
+    [SerializeField] private string bulletTag = "Bala"; // Debe coincidir con el PoolManager
+    [SerializeField] private Transform puntoDisparo;
 
     [Header("Ataque a Distancia")]
-    public GameObject balaPrefab;
     public float velocidadBala = 8f;
     public float rangoDisparo = 6f;
     public float enfriamientoDisparo = 2f;
 
-    [Header("Movimiento en Combate")]
+    [Header("Movimiento (Strafe)")]
     public float distanciaIdeal = 4.5f;
-    public float velocidadStrafe = 2f;
+    public float velocidadMovimiento = 3f; // Velocidad de acercarse/alejarse
+    public float velocidadStrafe = 2f;     // Velocidad lateral
     public float cambioDireccionTiempo = 1.5f;
+    public float suavizadoMovimiento = 5f; // Para el Lerp del Rigidbody
 
     [Header("Fatality")]
     public float duracionFatalityAnim = 1.4f;
 
-    [Header("Retroceso")]
+    [Header("Retroceso & Stun")]
     public float fuerzaRetroceso = 4f;
-    public float tiempoRetroceso = 0.08f;
-
-    [Header("Stun")]
+    public float tiempoRetroceso = 0.1f;
     public float tiempoStun = 0.25f;
 
-    // Estados
-    bool enRetroceso, enStun, fatalityEjecutada;
+    // Estados Internos
+    private bool enRetroceso;
+    private bool enStun;
+    private bool fatalityEjecutada;
+    private Rigidbody2D rb;
 
-    Vector2 velocidadRetroceso;
+    // Timers
+    private float timerDisparo;
+    private float timerStrafe;
+    private int dirStrafe = 1;
 
-    float timerDisparo;
-    float timerStrafe;
-    int dirStrafe = 1;
+    // Referencia de velocidad para retroceso
+    private Vector2 vectorRetroceso;
+
+    // ===================== UNITY =====================
 
     protected override void Awake()
     {
-        base.Awake();
-        anim = GetComponentInChildren<enemigo_animacion>();
-        col = GetComponent<Collider2D>();
+        base.Awake(); // Inicializa referencias base
+        rb = GetComponent<Rigidbody2D>();
         timerStrafe = cambioDireccionTiempo;
     }
 
     protected override void Update()
     {
-        if (objetivo == null || Bloqueado())
-            return;
+        if (objetivo == null) return;
 
-        if (JugadorIntocable())
-        {
-            Detener();
-            return;
-        }
+        // Si está muerto o en fatality, no hace nada (la corrutina de muerte maneja el resto)
+        if (estaMuerto || fatalityEjecutada) return;
 
         HandleTimers();
-        HandleMovement();
-        HandleShooting();
+
+        // Máquina de estados simple para movimiento
+        if (enRetroceso)
+        {
+            // Movimiento forzado por el golpe
+            if (rb) rb.linearVelocity = vectorRetroceso; 
+        }
+        else if (enStun)
+        {
+            // Quieto
+            if (rb) rb.linearVelocity = Vector2.zero;
+        }
+        else
+        {
+            // Comportamiento normal
+            if (!JugadorIntocable())
+            {
+                HandleMovement();
+                HandleShooting();
+            }
+            else
+            {
+                Detener();
+            }
+        }
     }
 
-    bool Bloqueado() => estaMuerto || fatalityEjecutada || enRetroceso || enStun;
+    // ===================== POOLING =====================
 
-    bool JugadorIntocable()
+    public override void OnSpawnFromPool()
     {
-        VidaJugador v = objetivo.GetComponent<VidaJugador>();
-        return v != null && v.EsIntocable();
+        base.OnSpawnFromPool();
+
+        // Reset de estados
+        enRetroceso = false;
+        enStun = false;
+        fatalityEjecutada = false;
+        
+        timerDisparo = enfriamientoDisparo; // Pequeño delay inicial
+        timerStrafe = cambioDireccionTiempo;
+        
+        // Limpiar fuerzas previas
+        if (rb) rb.linearVelocity = Vector2.zero;
     }
 
-    void Detener()
+    public override void OnDespawnToPool()
     {
-        velocidadActual = Vector2.zero;
-        AplicarMovimiento();
+        base.OnDespawnToPool();
+        StopAllCoroutines(); // Importante limpiar corrutinas al guardar
     }
+
+    // ===================== LOGICA =====================
 
     void HandleTimers()
     {
@@ -82,34 +118,42 @@ public class enemigoverde : enemigo_base
 
         if (timerStrafe <= 0f)
         {
-            dirStrafe = Random.value > 0.5f ? 1 : -1;
+            dirStrafe = (Random.value > 0.5f) ? 1 : -1;
             timerStrafe = cambioDireccionTiempo;
         }
     }
 
     void HandleMovement()
     {
-        float dist = Vector2.Distance(transform.position, objetivo.position);
-        Vector2 dir = (objetivo.position - transform.position).normalized;
-        Vector2 movimiento;
+        Vector2 toTarget = objetivo.position - transform.position;
+        float dist = toTarget.magnitude;
+        Vector2 dir = toTarget.normalized;
+        Vector2 movimientoDeseado = Vector2.zero;
 
+        // 1. Lógica de Distancia (Acercarse / Alejarse)
         if (dist > distanciaIdeal + 0.5f)
-            movimiento = dir * velocidad;
+        {
+            movimientoDeseado += dir * velocidadMovimiento;
+        }
         else if (dist < distanciaIdeal - 0.5f)
-            movimiento = -dir * velocidad;
-        else
-            movimiento = new Vector2(-dir.y, dir.x) * dirStrafe * velocidadStrafe;
+        {
+            movimientoDeseado -= dir * velocidadMovimiento;
+        }
 
-        velocidadActual = Vector2.Lerp(
-            velocidadActual,
-            movimiento,
-            aceleracion * Time.deltaTime
-        );
+        // 2. Lógica de Strafe (Moverse de lado)
+        // Obtenemos la tangente (-y, x)
+        Vector2 tangente = new Vector2(-dir.y, dir.x);
+        movimientoDeseado += tangente * (dirStrafe * velocidadStrafe);
 
-        AplicarMovimiento();
+        // 3. Aplicar al Rigidbody
+        if (rb)
+        {
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, movimientoDeseado, suavizadoMovimiento * Time.deltaTime);
+        }
 
-        if (sprite && Mathf.Abs(dir.x) > 0.05f)
-            sprite.flipX = dir.x > 0;
+        // 4. Flip Visual
+        if (spriteRenderer != null && Mathf.Abs(dir.x) > 0.1f)
+            spriteRenderer.flipX = dir.x < 0; // Ajustar según tu sprite
     }
 
     void HandleShooting()
@@ -117,26 +161,48 @@ public class enemigoverde : enemigo_base
         float dist = Vector2.Distance(transform.position, objetivo.position);
 
         if (dist <= rangoDisparo && timerDisparo <= 0f)
-            StartCoroutine(Disparar());
+        {
+            StartCoroutine(RutinaDisparo());
+        }
     }
 
-    IEnumerator Disparar()
+    IEnumerator RutinaDisparo()
     {
         timerDisparo = enfriamientoDisparo;
-        anim?.PlayTrigger("atacando");
+        
+        // Animación (usando SetTrigger para compatibilidad con Animator)
+        if (animator) animator.SetTrigger("atacando");
 
-        yield return new WaitForSeconds(0.7f);
+        // Esperar al frame del disparo
+        yield return new WaitForSeconds(0.5f); // Ajustar según tu animación
 
-        if (Bloqueado() || JugadorIntocable())
-            yield break;
+        // Validar que seguimos vivos y el jugador sigue ahí
+        if (estaMuerto || enStun || objetivo == null) yield break;
 
-        GameObject bala = Instantiate(balaPrefab, transform.position, Quaternion.identity);
-        Vector2 dir = (objetivo.position - transform.position).normalized;
+        // --- SPAWN DESDE POOL ---
+        Vector3 origen = puntoDisparo ? puntoDisparo.position : transform.position;
+        GameObject bala = PoolManager.Instance.SpawnFromPool(bulletTag, origen, Quaternion.identity);
 
-        bala.GetComponent<Rigidbody2D>()?.AddForce(dir * velocidadBala, ForceMode2D.Impulse);
+        if (bala != null)
+        {
+            Vector2 dir = (objetivo.position - transform.position).normalized;
+            
+            // Rotar bala
+            float angulo = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            bala.transform.rotation = Quaternion.Euler(0, 0, angulo);
+
+            // Impulsar
+            Rigidbody2D rbBala = bala.GetComponent<Rigidbody2D>();
+            if (rbBala)
+            {
+                rbBala.linearVelocity = Vector2.zero; // Reset velocidad previa del pool
+                rbBala.AddForce(dir * velocidadBala, ForceMode2D.Impulse);
+            }
+        }
     }
 
-    // 🔴 DAÑO
+    // ===================== DAÑO Y ESTADOS =====================
+
     public override void RecibirDaño(float cantidad)
     {
         if (estaMuerto || fatalityEjecutada) return;
@@ -149,22 +215,26 @@ public class enemigoverde : enemigo_base
             return;
         }
 
-        anim?.PlayTrigger("defensa_1");
+        // Animación de herido
+        if (animator) animator.SetTrigger("daño"); // Asumiendo que tienes trigger "daño" o "defensa_1"
 
+        // Calcular retroceso
         Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
-        velocidadRetroceso = dir * fuerzaRetroceso;
+        vectorRetroceso = dir * fuerzaRetroceso;
 
-        StartCoroutine(Retroceso());
+        // Iniciar secuencia de stun
+        StartCoroutine(SecuenciaDaño());
     }
 
-    IEnumerator Retroceso()
+    IEnumerator SecuenciaDaño()
     {
         enRetroceso = true;
         yield return new WaitForSeconds(tiempoRetroceso);
+        
         enRetroceso = false;
-
         enStun = true;
         yield return new WaitForSeconds(tiempoStun);
+        
         enStun = false;
     }
 
@@ -172,18 +242,34 @@ public class enemigoverde : enemigo_base
     {
         estaMuerto = true;
         fatalityEjecutada = true;
-
-        StopAllCoroutines();
-        velocidadActual = Vector2.zero;
-
+        
+        // Detener movimiento físico
+        if (rb) rb.linearVelocity = Vector2.zero;
         if (col) col.enabled = false;
 
+        // Animación
         bool fatalityDerecha = objetivo.position.x < transform.position.x;
-
-        anim?.PlayTrigger(fatalityDerecha ? "fatality_izquierda" : "fatality_derecha");
+        // Asumiendo que tu animator tiene estos triggers
+        string triggerAnim = fatalityDerecha ? "fatality_izquierda" : "fatality_derecha";
+        if (animator) animator.SetTrigger(triggerAnim);
 
         yield return new WaitForSeconds(duracionFatalityAnim);
 
-        Destroy(gameObject);
+        // Retornar al Pool
+        PoolManager.Instance.ReturnToPool(enemyPoolTag, gameObject);
+    }
+
+    // ===================== UTILIDADES =====================
+
+    bool JugadorIntocable()
+    {
+        if (objetivo == null) return false;
+        VidaJugador v = objetivo.GetComponent<VidaJugador>();
+        return v != null && v.EsIntocable();
+    }
+
+    void Detener()
+    {
+        if (rb) rb.linearVelocity = Vector2.zero;
     }
 }

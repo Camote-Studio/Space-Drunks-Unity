@@ -17,7 +17,7 @@ TagManager:
   - Bullet
   - Bat
   - Mine
-  - 
+  - ZonaAbduccionGato
   - 
   - 
   - 
@@ -41,6 +41,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemies
+    uniqueID: 385626743
+    locked: 0
+  - name: Players
+    uniqueID: 2414614169
+    locked: 0
+  - name: Proyectiles
+    uniqueID: 2785542703
     locked: 0
   m_RenderingLayers:
   - Default

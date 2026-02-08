@@ -10,7 +10,7 @@ public class MainMenuManager : MonoBehaviour
     public enum MainMenuButtons { StoryMode, VersuMode, Shop, Medals, Options, Quit };
     public enum SocialButtons {Instagram, ItchIO};
     //AGREGAR MÁS BOTONES EN CASO SER NECESARIO.
-    public enum StoryButtons {back, newGame};
+    public enum StoryButtons {back, newGame, versusGame};
     public enum VersusButtons {back};
     public enum ShopButtons {back};
     public enum MedalsButtons {back};
@@ -55,17 +55,20 @@ public class MainMenuManager : MonoBehaviour
             case MainMenuButtons.StoryMode:
                 DebugMessage("Starting Story Mode...");
                 //Agregar logica para iniciar Story Mode
-                OpenStoryMenu();
+                //OpenStoryMenu();
+                TransitionManager.Instance.LocalTransition(TransitionType.Fade, () => OpenStoryMenu());
                 break;
             case MainMenuButtons.VersuMode:
                 DebugMessage("Starting Versu Mode...");
                 //Agregar logica para iniciar Versu Mode
-                OpenVersusMenu();
+                //OpenVersusMenu();
+                TransitionManager.Instance.LocalTransition(TransitionType.CircleExpand, () => OpenVersusMenu());
                 break;
             case MainMenuButtons.Shop:
                 DebugMessage("Opening Shop...");
                 //Agregar logica para abrir Shop
-                OpenShopMenu();
+                //OpenShopMenu();
+                TransitionManager.Instance.LocalTransition(TransitionType.CircleExpand, () => OpenShopMenu());
                 break;
             case MainMenuButtons.Medals:
                 DebugMessage("Opening Medals...");
@@ -150,6 +153,9 @@ public class MainMenuManager : MonoBehaviour
                 break;
             case StoryButtons.newGame:
                 PlayClicked();
+                break;
+            case StoryButtons.versusGame:
+                OpenVersusMenu();
                 break;
         }
     }
