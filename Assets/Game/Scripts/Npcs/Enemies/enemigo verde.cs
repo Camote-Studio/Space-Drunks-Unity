@@ -85,6 +85,7 @@ public class enemigoverde : enemigo_base
         }
     }
 
+
     // ===================== POOLING =====================
 
     public override void OnSpawnFromPool()
@@ -179,6 +180,7 @@ public class enemigoverde : enemigo_base
         // Validar que seguimos vivos y el jugador sigue ahí
         if (estaMuerto || enStun || objetivo == null) yield break;
 
+
         // --- SPAWN DESDE POOL ---
         Vector3 origen = puntoDisparo ? puntoDisparo.position : transform.position;
         GameObject bala = PoolManager.Instance.SpawnFromPool(bulletTag, origen, Quaternion.identity);
@@ -205,7 +207,8 @@ public class enemigoverde : enemigo_base
 
     public override void RecibirDaño(float cantidad)
     {
-        if (estaMuerto || fatalityEjecutada) return;
+        if (fatalityEjecutada) return;
+
 
         vidaActual -= cantidad;
 
@@ -242,6 +245,7 @@ public class enemigoverde : enemigo_base
     {
         estaMuerto = true;
         fatalityEjecutada = true;
+
         
         // Detener movimiento físico
         if (rb) rb.linearVelocity = Vector2.zero;

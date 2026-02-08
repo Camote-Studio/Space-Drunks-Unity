@@ -30,6 +30,9 @@ public class enemigo_pato_1 : enemigo_base
     // ===================== MOVIMIENTO =====================
     private Vector2 velocidadRetroceso;
 
+    // Última posición válida del golpe
+    private Vector2 ultimaPosicionGolpe;
+
     private enemigo_animacion anim;
     private Collider2D colLocal;
 
@@ -39,6 +42,7 @@ public class enemigo_pato_1 : enemigo_base
     {
         base.Awake();
         anim = GetComponentInChildren<enemigo_animacion>();
+
         colLocal = GetComponent<Collider2D>();
     }
 
@@ -58,6 +62,7 @@ public class enemigo_pato_1 : enemigo_base
 
         base.Update();
     }
+
 
     // ===================== POOL =====================
 
@@ -85,19 +90,29 @@ public class enemigo_pato_1 : enemigo_base
         if (estaMuerto || fatalityEjecutada)
             return;
 
+        // Guardar posición del golpe (aunque el player muera luego)
+        if (objetivo != null)
+            ultimaPosicionGolpe = objetivo.position;
+        else
+            ultimaPosicionGolpe = transform.position;
+
         comboActual = enStun ? comboActual + 1 : 1;
         float dañoFinal = cantidad + (comboActual - 1) * dañoExtraPorCombo;
 
-        vidaActual -= dañoFinal;
+        base.RecibirDaño(dañoFinal);
 
-        if (vidaActual <= 0)
-        {
-            StartCoroutine(EjecutarFatality());
-            return;
-        }
+        if (vidaActual > 0)
+            ReaccionarAlGolpe();
+    }
+
+    // ===================== RETROCESO =====================
+    void ReaccionarAlGolpe()
+    {
+        if (estaMuerto || fatalityEjecutada) return;
 
         // Defensa aleatoria
         anim?.PlayTrigger(Random.value <= probDefensa1 ? "defensa_1" : "defensa_2");
+
 
         // Retroceso
         Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
@@ -122,15 +137,19 @@ public class enemigo_pato_1 : enemigo_base
         comboActual = 0;
     }
 
+
     // ===================== FATALITY =====================
 
     IEnumerator EjecutarFatality()
     {
+        CancelInvoke();
+
         estaMuerto = true;
         fatalityEjecutada = true;
 
         enRetroceso = false;
         enStun = false;
+
 
         if (colLocal != null)
             colLocal.enabled = false;
