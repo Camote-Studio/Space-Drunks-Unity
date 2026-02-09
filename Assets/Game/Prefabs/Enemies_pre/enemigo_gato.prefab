@@ -183,7 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eae8976b38454c43b0e6da1d8d589c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZonaAbduccionGato
-  visualAnimator: {fileID: 221330567490770254}
+  duracionSalida: 1.5
+  alturaSalida: 0.8
+  velocidadGiro: 360
 --- !u!1 &4210027015946775837
 GameObject:
   m_ObjectHideFlags: 0

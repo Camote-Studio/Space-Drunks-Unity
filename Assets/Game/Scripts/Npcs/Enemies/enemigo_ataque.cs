@@ -67,7 +67,7 @@ public class enemigo_ataque : MonoBehaviour, IPoolable
         // 1. Iniciar Animación
         if (animator != null)
         {
-            animator.SetTrigger("atacar"); // Usa Trigger, es mejor que Bool para golpes
+            animator.SetTrigger("atacando"); // Usa Trigger, es mejor que Bool para golpes
         }
 
         // 2. Programar el daño (para que coincida con el golpe visual)

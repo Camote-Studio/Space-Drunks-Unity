@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 /// <summary>
 /// Enemigo tipo gato:
@@ -271,9 +271,6 @@ public class enemigo_gato : enemigo_base
     // 2. Iniciar abducción
     public void IniciarAbduccion()
     {
-        if (zonaAbduccion == null) return;
-
-        CambiarEstado(EstadoGato.Abduciendo);
 
         if (agent != null)
             agent.isStopped = true;
@@ -284,14 +281,11 @@ public class enemigo_gato : enemigo_base
     // 3. Finalizar abducción
     public void FinalizarAbduccion()
     {
-        if (zonaAbduccion == null) return;
+        animator?.SetBool("abduciendo", false);
 
         if (agent != null)
             agent.isStopped = false;
 
-        animator?.SetBool("abduciendo", false);
-
-        CambiarEstado(EstadoGato.Orbita);
     }
 
 }
