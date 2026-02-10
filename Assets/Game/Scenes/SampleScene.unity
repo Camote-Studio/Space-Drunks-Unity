@@ -1962,11 +1962,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
 
   oleadas:
-  - nombre: "Invasi\xF3n Quackos"
+
+  - nombre: Quacko
     grupos:
     - poolTag: Quacko
       cantidad: 2
-      tasaAparicion: 1.5
+      tasaAparicion: 4
+    - poolTag: Quacko
+      cantidad: 3
+      tasaAparicion: 0.2
   puntosDeSpawn:
   - {fileID: 796458534}
   tiempoEntreOleadas: 5
