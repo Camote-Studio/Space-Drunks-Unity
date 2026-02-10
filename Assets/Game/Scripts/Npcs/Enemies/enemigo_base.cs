@@ -10,6 +10,9 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
     public static event Action OnAnyEnemyDeath;
 
     // ===================== VARIABLES CONFIGURABLES =====================
+    [Header("Configuración Visual")]
+    [SerializeField] private bool spriteMiraALaIzquierdaPorDefecto = true; // Ajusta esto en el Inspector
+
     [Header("Stats")]
     public float vidaMaxima = 100f;
     protected float vidaActual;
@@ -59,21 +62,36 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
     protected virtual void Update()
     {
-        // CAMBIO 3: Agregamos 'estaAtacando' para frenar el movimiento
+       
         if (estaMuerto || objetivo == null) return;
+
+        OrientarHaciaObjetivo();
+
+        float distanciaAlJugador = Vector3.Distance(transform.position, objetivo.position);
+
+        if (estaAtacando && distanciaAlJugador > 2.5f)
+        {
+            estaAtacando = false; // Dejar de atacar si el jugador se aleja demasiado
+        }
+
         if (estaAtacando)
         {
             //Si no nos movemos, frenamos al agente
-            if (agent != null && agent.isOnNavMesh) agent.isStopped = true;
+            if (agent != null && agent.isOnNavMesh) 
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
             return;
                 
         }
         
         //Reactivar el movimiento
-        if (agent != null && agent.isOnNavMesh) agent.isStopped = false;
+        if (agent != null && agent.isOnNavMesh) agent.isStopped = false;  
 
         // Lógica base
         MoverHaciaObjetivo();
+
     }
 
     // ===================== POOL =====================
@@ -151,6 +169,8 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
         if (estaMuerto) return;
 
         vidaActual -= daño;
+        GetComponent<enemigo_ataque>()?.StopAllCoroutines(); 
+        estaAtacando = false;
 
         // Feedback visual simple
         if (spriteRenderer != null)
@@ -198,20 +218,35 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
         if (agent.isOnNavMesh)
         {
-            // Esta sola línea hace todo el Pathfinding (A*)
-            agent.SetDestination(objetivo.position);
-            
-            // Orientar el sprite manualmente (Flip X)
-            if (spriteRenderer != null && agent.velocity.x != 0)
+            if (Vector3.Distance(transform.position, objetivo.position) > 0.3f)
             {
-                // Si la velocidad en X es positiva (derecha), flip false. 
-                    // Si es negativa (izquierda), flip true.
-                spriteRenderer.flipX = agent.velocity.x < 0;
+                // Esta sola línea hace todo el Pathfinding (A*)
+                agent.SetDestination(objetivo.position);
             }
         }
-        else
+       // else
+       // {
+       //     NavMeshHit hit;
+       //     if (NavMesh.SamplePosition(transform.position, out hit, 1.0f, NavMesh.AllAreas))
+       //     {
+       //         agent.Warp(transform.position);
+       //     }
+       // }
+    }
+
+    protected virtual void OrientarHaciaObjetivo()
+    {
+        if (objetivo != null)
         {
-            agent.Warp(transform.position);
+            float diferenciaX = objetivo.position.x - transform.position.x;
+            if (Mathf.Abs(diferenciaX) > 0.2f)
+            {
+                float direccionDeseada = (diferenciaX > 0) ? -1f : 1f;
+                float correccion = spriteMiraALaIzquierdaPorDefecto ? -1f : 1f;
+                float newEscalaX = direccionDeseada * correccion;
+                // Aplicamos a la escala del objeto (o del hijo que tiene el sprite)
+                transform.localScale = new Vector3(newEscalaX, 1f, 1f);
+            }
         }
     }
-}
+}   

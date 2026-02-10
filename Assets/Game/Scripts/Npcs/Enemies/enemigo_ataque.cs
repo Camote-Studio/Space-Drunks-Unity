@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(enemigo_base))]
 public class enemigo_ataque : MonoBehaviour, IPoolable
@@ -29,15 +30,21 @@ public class enemigo_ataque : MonoBehaviour, IPoolable
     void Update()
     {
         // Validaciones de seguridad
-        if (enemigo == null || objetivo == null) return;
-        if (enemigo.estaMuerto) return;
+        if (enemigo == null || objetivo == null || enemigo.estaMuerto) return;
 
         temporizadorAtaque -= Time.deltaTime;
 
         // Verificar distancia
         float distancia = Vector2.Distance(transform.position, objetivo.position);
 
-        if (!enemigo.estaAtacando && temporizadorAtaque <= 0f && distancia <= rangoAtaque)
+        // Calcula si el jugador está frente al enemigo
+        Vector2 dirAlJugador = (objetivo.position - transform.position).normalized;
+        float mirandoHacia = transform.localScale.x; // 1 o -1 según tu lógica de escala
+
+        // Si el enemigo mira a la derecha (1) y el jugador está a la izquierda (-), no ataca
+        bool estaDeFrente = (mirandoHacia < 0 && dirAlJugador.x < 0) || (mirandoHacia > 0 && dirAlJugador.x > 0);
+
+        if (!enemigo.estaAtacando && temporizadorAtaque <= 0f && distancia <= rangoAtaque && estaDeFrente)
         {
             IniciarAtaque();
         }
@@ -61,6 +68,8 @@ public class enemigo_ataque : MonoBehaviour, IPoolable
 
     void IniciarAtaque()
     {
+        StopAllCoroutines(); // Asegura que no haya secuencias de ataque corriendo
+
         enemigo.estaAtacando = true;
         temporizadorAtaque = enfriamiento;
 
@@ -69,28 +78,68 @@ public class enemigo_ataque : MonoBehaviour, IPoolable
         {
             animator.SetTrigger("atacando"); // Usa Trigger, es mejor que Bool para golpes
         }
-
-        // 2. Programar el daño (para que coincida con el golpe visual)
-        Invoke(nameof(AplicarDaño), delayImpacto);
-
-        // 3. Programar el fin del estado de ataque (para volver a moverse)
-        Invoke(nameof(FinalizarAtaque), duracionAnimacion);
+        StartCoroutine(SecuenciaAtaque());
     }
 
+    IEnumerator SecuenciaAtaque()
+    {
+        // Esperar el momento del impacto
+        yield return new WaitForSeconds(delayImpacto);
+
+        if (enemigo != null && !enemigo.estaMuerto)
+        {
+
+            float distanciaReal = Vector2.Distance(transform.position, objetivo.position);
+
+            if (distanciaReal <= rangoAtaque + 0.3f) 
+            {
+                AplicarDaño();
+            }
+            else 
+            {
+                Debug.Log("El jugador esquivó el ataque!");
+            }
+        }
+
+        // Esperar a que termine la animación antes de permitir otro ataque
+        yield return new WaitForSeconds(duracionAnimacion - delayImpacto);
+        FinalizarAtaque();
+    }
     void AplicarDaño()
     {
-        // Verificar si el enemigo murió o fue stuneado durante el delay
-        if (enemigo.estaMuerto) return;
+        if (enemigo == null || enemigo.estaMuerto) return;
 
-        // Verificar si el jugador sigue en rango (opcional, si quieres que el ataque pueda fallar)
-        float distancia = Vector2.Distance(transform.position, objetivo.position);
-        if (distancia > rangoAtaque + 0.5f) return; // +0.5f de margen de error
+            // 1. Validación de Distancia (con un margen pequeño)
+            float distancia = Vector2.Distance(transform.position, objetivo.position);
+            if (distancia > rangoAtaque + 0.3f) return;
 
-        var vida = objetivo.GetComponentInParent<VidaJugador>();
-        if (vida != null)
-        {
-            vida.RecibirDanio(daño);
-        }
+            // 2. Validación de Dirección (Evitar daño si el jugador te pasó de largo)
+            Vector2 dirAlJugador = (objetivo.position - transform.position).normalized;
+            
+            // Obtenemos hacia dónde mira el pato basándonos en su escala
+            // Si escala X es negativa, mira a un lado; si es positiva, al otro.
+            float mirandoHacia = Mathf.Sign(transform.localScale.x);
+
+            // Ajustamos según tu configuración de 'spriteMiraALaIzquierdaPorDefecto'
+            // Si el pato mira a la izquierda y el jugador está a la derecha, el ataque falla.
+            bool jugadorEstaEnFrente = (mirandoHacia < 0 && dirAlJugador.x < 0) || (mirandoHacia > 0 && dirAlJugador.x > 0);
+
+            if (!jugadorEstaEnFrente) return;
+
+            // 3. Aplicar Daño
+            var vida = objetivo.GetComponentInParent<VidaJugador>();
+            if (vida != null)
+            {
+                vida.RecibirDanio(daño);
+            }
+    }
+
+        public void InterrumpirAtaque()
+    {
+        StopAllCoroutines();
+        enemigo.estaAtacando = false;
+        // Opcional: Volver a idle en el animator
+        animator.Play("idle"); 
     }
 
     void FinalizarAtaque()
