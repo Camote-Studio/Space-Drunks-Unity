@@ -78,6 +78,9 @@ public class enemigo_pato_1 : enemigo_base
             colLocal.enabled = true;
     }
 
+    // ===================== MOVIMIENTO =====================
+
+
     // ===================== COMBATE =====================
 
     public override void RecibirDaño(float cantidad)
@@ -85,6 +88,7 @@ public class enemigo_pato_1 : enemigo_base
         if (estaMuerto || fatalityEjecutada)
             return;
 
+        GetComponent<enemigo_ataque>()?.InterrumpirAtaque();
         comboActual = enStun ? comboActual + 1 : 1;
         float dañoFinal = cantidad + (comboActual - 1) * dañoExtraPorCombo;
 
@@ -104,6 +108,8 @@ public class enemigo_pato_1 : enemigo_base
         velocidadRetroceso = dir * fuerzaRetroceso;
 
         enRetroceso = true;
+        estaAtacando = false; // Interrumpe ataque actual
+        StopAllCoroutines(); // Detiene secuencias de ataque
         Invoke(nameof(FinRetroceso), tiempoRetroceso);
     }
 
