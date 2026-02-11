@@ -228,6 +228,7 @@ MonoBehaviour:
   - {fileID: 63384790}
   colorNormal: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   colorSeleccionado: {r: 1, g: 0.83, b: 0, a: 1}
+
 --- !u!1 &54596428
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +381,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+
 --- !u!1 &84137358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,7 +1665,8 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.68939, y: -0.21198988, z: -10}
+
+  m_LocalPosition: {x: -6.654165, y: -0.20798016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2218,7 +2221,7 @@ Transform:
   m_GameObject: {fileID: 726557285}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.554148, y: 7.29, z: -10}
+  m_LocalPosition: {x: -12.864445, y: 7.29, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4606,6 +4609,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693950094}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1730558582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4977,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808260440}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1809105434
 GameObject:
   m_ObjectHideFlags: 0
