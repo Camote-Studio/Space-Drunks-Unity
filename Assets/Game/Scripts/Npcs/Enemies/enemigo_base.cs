@@ -8,6 +8,9 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
     //EVENTO GLOBAL: script pueden suscribirse para saber cuando un enemigo muere
     public static event Action OnAnyEnemyDeath;
+    [Header("Drop")]
+    [SerializeField] private GameObject monedaPrefab; // Prefab de la moneda
+    [SerializeField] private int cantidadMonedas = 1; // Cantidad de monedas a soltar
 
     // ===================== VARIABLES CONFIGURABLES =====================
     [Header("Configuración Visual")]
@@ -185,7 +188,6 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
             Morir();
         }
     }
-
     protected virtual void Morir()
     {
         estaMuerto = true;
@@ -193,11 +195,30 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
         if (col != null) col.enabled = false;
         if (rb != null) rb.linearVelocity = Vector2.zero; // Frenar física
 
-        //avisar sistema que un enemigo murió
+        // Generar monedas
+        if (monedaPrefab != null)
+        {
+            for (int i = 0; i < cantidadMonedas; i++)
+            {
+                // Posición aleatoria cerca del enemigo
+                Vector3 spawnPos = transform.position + new Vector3(UnityEngine.Random.Range(-0.3f, 0.3f),
+                                                                   UnityEngine.Random.Range(-0.3f, 0.3f),
+                                                                   0f);
+
+                // Instanciar la moneda
+                GameObject moneda = Instantiate(monedaPrefab, spawnPos, Quaternion.identity);
+
+                // Hacer que "salte" un poco al aparecer
+                moneda.transform.DOMoveY(moneda.transform.position.y + 0.5f, 0.3f).SetEase(Ease.OutBounce);
+            }
+        }
+
+        // Avisar sistema que un enemigo murió
         OnAnyEnemyDeath?.Invoke();
 
         PoolManager.Instance.ReturnToPool(enemyPoolTag, gameObject);
     }
+
 
     // ===================== VISUAL =====================
 

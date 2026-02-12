@@ -44,6 +44,7 @@ public class bala : MonoBehaviour, IPoolable
         // Verificamos por Tag primero (es más rápido que GetComponent)
         if (other.CompareTag("Player")) 
         {
+
             VidaJugador vida = other.GetComponent<VidaJugador>();
             if (vida != null)
             {

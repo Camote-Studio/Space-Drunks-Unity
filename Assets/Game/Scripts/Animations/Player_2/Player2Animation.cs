@@ -62,11 +62,12 @@ public class Player2Animation : MonoBehaviour
         animator.SetFloat(hashSpeed, moveInput.magnitude);
     }
 
-    private void OnDamaged()
+    private void OnDamaged(string tipoDanio)
     {
         if (animator == null) return;
         animator.SetTrigger(hashHit);
     }
+
 
     // ===== LOCK =====
     public void SetCombatLocked(bool value)

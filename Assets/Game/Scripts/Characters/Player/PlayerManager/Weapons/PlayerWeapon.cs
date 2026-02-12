@@ -5,15 +5,18 @@ public class PlayerWeapon : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private PlayerMovement movement;
 
+    [Header("Estado")]
+    [SerializeField] private estado_jugador estadoJugador;
+
     [Header("Attack 1")]
-    [SerializeField] private WeaponBase attack1IdleWeapon;   
-    [SerializeField] private WeaponBase attack1MoveWeapon;   
+    [SerializeField] private WeaponBase attack1IdleWeapon;
+    [SerializeField] private WeaponBase attack1MoveWeapon;
 
     [Header("Attack 2")]
-    [SerializeField] private WeaponBase attack2Weapon;       
+    [SerializeField] private WeaponBase attack2Weapon;
 
     [Header("Attack 3")]
-    [SerializeField] private WeaponBase attack3Weapon;       
+    [SerializeField] private WeaponBase attack3Weapon;
 
     private WeaponBase currentAttack1;
 
@@ -21,6 +24,9 @@ public class PlayerWeapon : MonoBehaviour
     {
         if (movement == null)
             movement = GetComponent<PlayerMovement>();
+
+        if (estadoJugador == null)
+            estadoJugador = GetComponent<estado_jugador>();
     }
 
     private void Start()
@@ -34,6 +40,10 @@ public class PlayerWeapon : MonoBehaviour
         bool attack3Down, bool attack3Held, bool attack3Up
     )
     {
+        // 🚫 BLOQUEO TOTAL DE ATAQUES SI ESTÁ FLOTANDO
+        if (estadoJugador != null && !estadoJugador.PuedeAtacar())
+            return;
+
         HandleAttack1(attack1Down, attack1Held, attack1Up);
 
         if (attack2Weapon != null)
@@ -57,8 +67,7 @@ public class PlayerWeapon : MonoBehaviour
         if (target != currentAttack1)
             EquipAttack1(target);
 
-        if (currentAttack1 != null)
-            currentAttack1.Tick(down, held, up);
+        currentAttack1?.Tick(down, held, up);
     }
 
     private void EquipAttack1(WeaponBase newWeapon)
@@ -66,12 +75,9 @@ public class PlayerWeapon : MonoBehaviour
         if (currentAttack1 == newWeapon)
             return;
 
-        if (currentAttack1 != null)
-            currentAttack1.OnDeselected();
+        currentAttack1?.OnDeselected();
 
         currentAttack1 = newWeapon;
-
-        if (currentAttack1 != null)
-            currentAttack1.OnSelected();
+        currentAttack1?.OnSelected();
     }
 }
