@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuButtons : MonoBehaviour
 {
@@ -82,4 +83,14 @@ public class PauseMenuButtons : MonoBehaviour
         menuPause.SetActive(false);
         Time.timeScale = 1f;
     }
+    public void IrATienda()
+    {
+        SceneContext.escenaAnterior = SceneManager.GetActiveScene().name;
+        SceneContext.volverAlJuego = true;
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("tienda");
+    }
+
+
 }

@@ -12,6 +12,8 @@ public enum ShopCategory
 
 public class ShopManager : MonoBehaviour
 {
+    [SerializeField] private PlayerSkinManager playerSkinManager;
+
     [Header("UI")]
     [SerializeField] private RectTransform content;
     [SerializeField] private TextMeshProUGUI categoryText;
@@ -183,6 +185,14 @@ public class ShopManager : MonoBehaviour
 
     private void SeleccionarItem()
     {
-        Debug.Log("Item seleccionado: " + listaActual[indiceSeleccionado].name);
+        if (categoriaActual == ShopCategory.Skin)
+        {
+            PlayerPrefs.SetInt("SkinSeleccionada", indiceSeleccionado);
+            PlayerPrefs.Save();
+
+            Debug.Log("Skin guardada: " + indiceSeleccionado);
+        }
     }
+
+
 }
