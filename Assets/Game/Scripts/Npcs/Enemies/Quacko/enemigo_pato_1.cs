@@ -33,6 +33,8 @@ public class enemigo_pato_1 : enemigo_base
     private enemigo_animacion anim;
     private Collider2D colLocal;
 
+    private enemigo_ataque sistemaAtaque; 
+
     // ===================== UNITY =====================
 
     protected override void Awake()
@@ -40,6 +42,7 @@ public class enemigo_pato_1 : enemigo_base
         base.Awake();
         anim = GetComponentInChildren<enemigo_animacion>();
         colLocal = GetComponent<Collider2D>();
+        sistemaAtaque = GetComponent<enemigo_ataque>();
     }
 
     protected override void Update()
@@ -88,28 +91,43 @@ public class enemigo_pato_1 : enemigo_base
         if (estaMuerto || fatalityEjecutada)
             return;
 
-        GetComponent<enemigo_ataque>()?.InterrumpirAtaque();
+        // --- CORRECCIÓN CLAVE ---
+        // Llamamos al OTRO script para que corte la corrutina de ataque.
+        if (sistemaAtaque != null) 
+        {
+            sistemaAtaque.InterrumpirAtaque();
+        }
+        
+        // Calculamos daño
         comboActual = enStun ? comboActual + 1 : 1;
         float dañoFinal = cantidad + (comboActual - 1) * dañoExtraPorCombo;
 
         vidaActual -= dañoFinal;
 
+        // Verificar Muerte
         if (vidaActual <= 0)
         {
             StartCoroutine(EjecutarFatality());
             return;
         }
 
-        // Defensa aleatoria
+        // Animación de dolor/defensa
         anim?.PlayTrigger(Random.value <= probDefensa1 ? "defensa_1" : "defensa_2");
 
-        // Retroceso
-        Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
-        velocidadRetroceso = dir * fuerzaRetroceso;
+        // Calculamos Retroceso
+        if (objetivo != null)
+        {
+            Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
+            velocidadRetroceso = dir * fuerzaRetroceso;
+        }
 
+        // Activamos estados
         enRetroceso = true;
-        estaAtacando = false; // Interrumpe ataque actual
-        StopAllCoroutines(); // Detiene secuencias de ataque
+        
+        // Usamos CancelInvoke para limpiar timers viejos de retroceso si nos pegan muy rápido
+        CancelInvoke(nameof(FinRetroceso));
+        CancelInvoke(nameof(FinStun));
+        
         Invoke(nameof(FinRetroceso), tiempoRetroceso);
     }
 
@@ -135,19 +153,25 @@ public class enemigo_pato_1 : enemigo_base
         estaMuerto = true;
         fatalityEjecutada = true;
 
+        // Aseguramos que nada más se mueva
         enRetroceso = false;
         enStun = false;
+        
+        // Apagamos el ataque por si acaso
+        if (sistemaAtaque != null) sistemaAtaque.InterrumpirAtaque();
 
         if (colLocal != null)
             colLocal.enabled = false;
 
         // Dirección del fatality
-        bool fatalityDerecha = objetivo.position.x < transform.position.x;
-
-        if (fatalityDerecha)
-            anim?.PlayTrigger("fatality_izquierda");
-        else
-            anim?.PlayTrigger("fatality_derecha");
+        if (objetivo != null)
+        {
+            bool fatalityDerecha = objetivo.position.x < transform.position.x;
+            if (fatalityDerecha)
+                anim?.PlayTrigger("fatality_izquierda");
+            else
+                anim?.PlayTrigger("fatality_derecha");
+        }
 
         yield return new WaitForSeconds(duracionFatalityAnim);
 
