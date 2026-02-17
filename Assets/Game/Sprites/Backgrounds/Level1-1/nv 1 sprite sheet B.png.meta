@@ -1,0 +1,772 @@
+fileFormatVersion: 2
+guid: a5a135e8624c1f24a8bd95474b7411cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8697227181421102045
+    second: nv 1 sprite sheet B_0
+  - first:
+      213: -3277276241299468411
+    second: nv 1 sprite sheet B_1
+  - first:
+      213: -5527935033560168166
+    second: nv 1 sprite sheet B_2
+  - first:
+      213: -8744213621490316039
+    second: nv 1 sprite sheet B_3
+  - first:
+      213: -3764756980256013029
+    second: nv 1 sprite sheet B_4
+  - first:
+      213: -2715952698183217346
+    second: nv 1 sprite sheet B_5
+  - first:
+      213: -8690834482144423925
+    second: nv 1 sprite sheet B_6
+  - first:
+      213: -6107360974072042220
+    second: nv 1 sprite sheet B_7
+  - first:
+      213: 4869903458618969843
+    second: nv 1 sprite sheet B_8
+  - first:
+      213: -6358986059804063755
+    second: nv 1 sprite sheet B_9
+  - first:
+      213: 9111947491884417365
+    second: nv 1 sprite sheet B_10
+  - first:
+      213: -461895946940214905
+    second: nv 1 sprite sheet B_11
+  - first:
+      213: -870775670340208922
+    second: nv 1 sprite sheet B_12
+  - first:
+      213: 7748979263422871302
+    second: nv 1 sprite sheet B_13
+  - first:
+      213: 6005875979511748838
+    second: nv 1 sprite sheet B_14
+  - first:
+      213: -3549749430516716124
+    second: nv 1 sprite sheet B_15
+  - first:
+      213: 5776201591694963115
+    second: nv 1 sprite sheet B_16
+  - first:
+      213: -1744325501992249317
+    second: nv 1 sprite sheet B_17
+  - first:
+      213: 1825728106860858155
+    second: nv 1 sprite sheet B_18
+  - first:
+      213: 1022020172558884431
+    second: nv 1 sprite sheet B_19
+  - first:
+      213: -5666180369298450855
+    second: nv 1 sprite sheet B_20
+  - first:
+      213: 5251855875478091631
+    second: nv 1 sprite sheet B_21
+  - first:
+      213: -2258923566258539574
+    second: nv 1 sprite sheet B_22
+  - first:
+      213: 4376045668199942451
+    second: nv 1 sprite sheet B_23
+  - first:
+      213: -7200472795837455572
+    second: nv 1 sprite sheet B_24
+  - first:
+      213: 4280182781840838444
+    second: nv 1 sprite sheet B_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2056
+        width: 800
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32cf58855fd3d4780800000000000000
+      internalID: -8697227181421102045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_1
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 2024
+        width: 915
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f848e4f96c482d0800000000000000
+      internalID: -3277276241299468411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_2
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 2077
+        width: 484
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19853f0064d843b0800000000000000
+      internalID: -5527935033560168166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1647
+        width: 800
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc00f24a0056a680800000000000000
+      internalID: -8744213621490316039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_4
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1570
+        width: 345
+        height: 433
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b150b261975e0cbc0800000000000000
+      internalID: -3764756980256013029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_5
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 1638
+        width: 713
+        height: 315
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f8606296ffe4ad0800000000000000
+      internalID: -2715952698183217346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_6
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 1826
+        width: 412
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00d012a514f36780800000000000000
+      internalID: -8690834482144423925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_7
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1241
+        width: 800
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d2a516d8b4e3ba0800000000000000
+      internalID: -6107360974072042220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_8
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 1576
+        width: 412
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe0e6dc46f559340800000000000000
+      internalID: 4869903458618969843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_9
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1304
+        width: 419
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7c7b5bed750c7a0800000000000000
+      internalID: -6358986059804063755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_10
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1309
+        width: 408
+        height: 220
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55148c977f3247e70800000000000000
+      internalID: 9111947491884417365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_11
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1358
+        width: 414
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7819f6f55140799f0800000000000000
+      internalID: -461895946940214905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_12
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 915
+        width: 223
+        height: 335
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6b15234226ae3f0800000000000000
+      internalID: -870775670340208922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_13
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 914
+        width: 206
+        height: 330
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60730309597e98b60800000000000000
+      internalID: 7748979263422871302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_14
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 910
+        width: 233
+        height: 340
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e859d30268295350800000000000000
+      internalID: 6005875979511748838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_15
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 905
+        width: 205
+        height: 227
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ade76843b1ccbec0800000000000000
+      internalID: -3549749430516716124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_16
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 1125
+        width: 412
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba136087eb0392050800000000000000
+      internalID: 5776201591694963115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_17
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 908
+        width: 412
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18d811a239eac7e0800000000000000
+      internalID: -1744325501992249317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_18
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 515
+        width: 462
+        height: 313
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b43e14a0a465910800000000000000
+      internalID: 1825728106860858155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_19
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 528
+        width: 905
+        height: 313
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ed7aa9ee1fe2e00800000000000000
+      internalID: 1022020172558884431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_20
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 688
+        width: 412
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9569cae89fead51b0800000000000000
+      internalID: -5666180369298450855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 169
+        width: 184
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f677b6dd71752e840800000000000000
+      internalID: 5251855875478091631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_22
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 236
+        width: 197
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3b66a1cf0b6a0e0800000000000000
+      internalID: -2258923566258539574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_23
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 123
+        width: 217
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339c1f59956dabc30800000000000000
+      internalID: 4376045668199942451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nv 1 sprite sheet B_24
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 115
+        width: 214
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23ae355428c21c90800000000000000
+      internalID: -7200472795837455572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7fc663558d4593b4ea169c981efc1784
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      nv 1 sprite sheet B_0: -8697227181421102045
+      nv 1 sprite sheet B_1: -3277276241299468411
+      nv 1 sprite sheet B_10: 9111947491884417365
+      nv 1 sprite sheet B_11: -461895946940214905
+      nv 1 sprite sheet B_12: -870775670340208922
+      nv 1 sprite sheet B_13: 7748979263422871302
+      nv 1 sprite sheet B_14: 6005875979511748838
+      nv 1 sprite sheet B_15: -3549749430516716124
+      nv 1 sprite sheet B_16: 5776201591694963115
+      nv 1 sprite sheet B_17: -1744325501992249317
+      nv 1 sprite sheet B_18: 1825728106860858155
+      nv 1 sprite sheet B_19: 1022020172558884431
+      nv 1 sprite sheet B_2: -5527935033560168166
+      nv 1 sprite sheet B_20: -5666180369298450855
+      nv 1 sprite sheet B_21: 5251855875478091631
+      nv 1 sprite sheet B_22: -2258923566258539574
+      nv 1 sprite sheet B_23: 4376045668199942451
+      nv 1 sprite sheet B_24: -7200472795837455572
+      nv 1 sprite sheet B_3: -8744213621490316039
+      nv 1 sprite sheet B_4: -3764756980256013029
+      nv 1 sprite sheet B_5: -2715952698183217346
+      nv 1 sprite sheet B_6: -8690834482144423925
+      nv 1 sprite sheet B_7: -6107360974072042220
+      nv 1 sprite sheet B_8: 4869903458618969843
+      nv 1 sprite sheet B_9: -6358986059804063755
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
