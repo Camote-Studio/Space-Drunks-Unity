@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: idle
+  m_Name: ataque_armadura
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.09, y: 1.68, z: 0}
+        value: {x: 0.31, y: 1.54, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -37,21 +37,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 0588a5fd6096337488380f1c95225823, type: 3}
-    - time: 0.1
-      value: {fileID: 21300000, guid: d29c1f8ca10013d4dae549d0801dd7c4, type: 3}
-    - time: 0.18333334
-      value: {fileID: 21300000, guid: 7ecf56830f6721b46b9090da4de7616b, type: 3}
-    - time: 0.28333333
-      value: {fileID: 21300000, guid: a73e42a45ab016c4b925badf17438128, type: 3}
-    - time: 0.38333333
-      value: {fileID: 21300000, guid: b0921f7a33d071f45a3674e858aa95e2, type: 3}
-    - time: 0.48333332
-      value: {fileID: 21300000, guid: 847372c96e4b92d459231b9285337ef9, type: 3}
-    - time: 0.56666666
-      value: {fileID: 21300000, guid: f6b1b693d92bda64aa72c038c4281a1f, type: 3}
-    - time: 0.6666667
-      value: {fileID: 21300000, guid: e681b1f5e4844da43a0eedec400c6fcf, type: 3}
+      value: {fileID: 7793505912963752046, guid: 0ade10e600fd3e74693b2124fb731b71, type: 3}
+    - time: 0.11666667
+      value: {fileID: 7247665212957556433, guid: d3256b4c5b4604545868c9989e87cfc2, type: 3}
+    - time: 0.23333333
+      value: {fileID: 7494681547873923272, guid: 5a1891e3a01b1964ca520156ab15c631, type: 3}
+    - time: 0.35
+      value: {fileID: -8762822744831444118, guid: fb9a79e87a1da934c8e5e536dd2edd83, type: 3}
+    - time: 0.46666667
+      value: {fileID: 3561956157082347536, guid: 7307f63e5602f1d4db8ed023769d0f69, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -83,20 +77,17 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 0588a5fd6096337488380f1c95225823, type: 3}
-    - {fileID: 21300000, guid: d29c1f8ca10013d4dae549d0801dd7c4, type: 3}
-    - {fileID: 21300000, guid: 7ecf56830f6721b46b9090da4de7616b, type: 3}
-    - {fileID: 21300000, guid: a73e42a45ab016c4b925badf17438128, type: 3}
-    - {fileID: 21300000, guid: b0921f7a33d071f45a3674e858aa95e2, type: 3}
-    - {fileID: 21300000, guid: 847372c96e4b92d459231b9285337ef9, type: 3}
-    - {fileID: 21300000, guid: f6b1b693d92bda64aa72c038c4281a1f, type: 3}
-    - {fileID: 21300000, guid: e681b1f5e4844da43a0eedec400c6fcf, type: 3}
+    - {fileID: 7793505912963752046, guid: 0ade10e600fd3e74693b2124fb731b71, type: 3}
+    - {fileID: 7247665212957556433, guid: d3256b4c5b4604545868c9989e87cfc2, type: 3}
+    - {fileID: 7494681547873923272, guid: 5a1891e3a01b1964ca520156ab15c631, type: 3}
+    - {fileID: -8762822744831444118, guid: fb9a79e87a1da934c8e5e536dd2edd83, type: 3}
+    - {fileID: 3561956157082347536, guid: 7307f63e5602f1d4db8ed023769d0f69, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.68333334
+    m_StopTime: 0.48333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -118,7 +109,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.09
+        value: 0.31
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -139,7 +130,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.68
+        value: 1.54
         inSlope: 0
         outSlope: 0
         tangentMode: 136

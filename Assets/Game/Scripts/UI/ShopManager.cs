@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -13,12 +13,14 @@ public enum ShopCategory
 public class ShopManager : MonoBehaviour
 {
     [SerializeField] private PlayerSkinManager playerSkinManager;
+    [Header("Panel Item Seleccionado")]
+    [SerializeField] private Transform panelItemSeleccionado;
 
     [Header("UI")]
     [SerializeField] private RectTransform content;
     [SerializeField] private TextMeshProUGUI categoryText;
 
-    [Header("Prefabs por categor�a")]
+    [Header("Prefabs por categoría")]
     [SerializeField] private List<GameObject> skins;
     [SerializeField] private List<GameObject> bailes;
     [SerializeField] private List<GameObject> poderes;
@@ -30,7 +32,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private float offsetYInicial = -30f;
     [SerializeField] private float[] posicionesX = { -539f, -16f, 500f };
 
-    [Header("Selecci�n Visual")]
+    [Header("Selección Visual")]
     [SerializeField] private float escalaSeleccionado = 1.2f;
 
     [Header("Colores")]
@@ -185,14 +187,39 @@ public class ShopManager : MonoBehaviour
 
     private void SeleccionarItem()
     {
+        if (listaActual == null || listaActual.Count == 0) return;
+
+        GameObject prefabSeleccionado = listaActual[indiceSeleccionado];
+
+        // Limpiar el panel
+        for (int i = panelItemSeleccionado.childCount - 1; i >= 0; i--)
+        {
+            Destroy(panelItemSeleccionado.GetChild(i).gameObject);
+        }
+
+        // Instanciar correctamente como UI
+        GameObject nuevoItem = Instantiate(prefabSeleccionado);
+        nuevoItem.transform.SetParent(panelItemSeleccionado, false);
+
+        RectTransform rt = nuevoItem.GetComponent<RectTransform>();
+
+        // 🔥 HACERLO MÁS GRANDE
+        float escalaPreview = 3f;   // puedes ajustar este valor
+        rt.localScale = Vector3.one * escalaPreview;
+
+        // Centrarlo en el panel
+        rt.anchoredPosition = Vector2.zero;
+
+        // Guardar si es skin
         if (categoriaActual == ShopCategory.Skin)
         {
             PlayerPrefs.SetInt("SkinSeleccionada", indiceSeleccionado);
             PlayerPrefs.Save();
-
             Debug.Log("Skin guardada: " + indiceSeleccionado);
         }
     }
+
+
 
 
 }
