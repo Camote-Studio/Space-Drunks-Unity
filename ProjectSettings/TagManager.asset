@@ -51,5 +51,11 @@ TagManager:
   - name: Proyectiles
     uniqueID: 2785542703
     locked: 0
+  - name: Mesas
+    uniqueID: 208941543
+    locked: 0
+  - name: Sillas
+    uniqueID: 3725269251
+    locked: 0
   m_RenderingLayers:
   - Default

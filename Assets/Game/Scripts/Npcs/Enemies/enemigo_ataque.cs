@@ -122,7 +122,7 @@ public class enemigo_ataque : MonoBehaviour, IPoolable
 
             // Ajustamos según tu configuración de 'spriteMiraALaIzquierdaPorDefecto'
             // Si el pato mira a la izquierda y el jugador está a la derecha, el ataque falla.
-            bool jugadorEstaEnFrente = (mirandoHacia < 0 && dirAlJugador.x < 0) || (mirandoHacia > 0 && dirAlJugador.x > 0);
+                bool jugadorEstaEnFrente = (mirandoHacia < 0 && dirAlJugador.x < 0) || (mirandoHacia > 0 && dirAlJugador.x > 0);
 
             if (!jugadorEstaEnFrente) return;
 

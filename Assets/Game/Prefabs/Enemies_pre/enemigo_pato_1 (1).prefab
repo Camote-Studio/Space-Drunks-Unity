@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 385626743
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 2d9e0f52d576f5b4a818deadf8852b5b, type: 3}
@@ -105,7 +105,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8d86d6c30ff94864695825f22523e701, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 9005488544218910146}
   - component: {fileID: 886529506772046325}
   m_Layer: 7
-  m_Name: enemigo_pato_1
+  m_Name: enemigo_pato_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +188,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7762896412878322680}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Animation: {fileID: 0}
   m_Animations: []
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2171900ebf12e84dbede79a7c52ae61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemigo_ataque
-  rangoAtaque: 1.3
+  rangoAtaque: 2
   "da\xF1o": 10
   enfriamiento: 1
   delayImpacto: 0.3
@@ -275,6 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5f54f9aaaa4c4fb0d50c3bbfeb89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemigo_pato_1
+  monedaPrefab: {fileID: 0}
+  cantidadMonedas: 1
   spriteMiraALaIzquierdaPorDefecto: 0
   vidaMaxima: 200
   enemyPoolTag: Quacko
