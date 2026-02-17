@@ -8,6 +8,8 @@ public class VidaJugador : MonoBehaviour
     [SerializeField] private float vidaMaxima = 100f;
     [SerializeField] private float vidaActual;
 
+    [Header("Referencias")]
+    [SerializeField] private PlayerMovement playerMovement;
     public float VidaMaxima => vidaMaxima;
     public float VidaActual => vidaActual;
 
@@ -38,6 +40,7 @@ public class VidaJugador : MonoBehaviour
     public void RecibirDanio(float cantidad, string fuente = "")
     {
         if (EsIntocable()) return;
+        if (playerMovement != null && playerMovement.IsJumping) return;
 
         vidaActual = Mathf.Clamp(vidaActual - cantidad, 0f, vidaMaxima);
         OnDamaged?.Invoke(fuente);

@@ -5,6 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PropItems : MonoBehaviour
 {
+    [Header("Saltable")]
+    [SerializeField] private bool esSaltable = false;
+    [SerializeField] private float landingRangeY = 0.4f;
+    [SerializeField] private float landingOffsetY = 0f;
+
+    public bool EsSaltable => esSaltable;
+    public float LandingY => transform.position.y + landingOffsetY;
+    public float LandingRangeY => landingRangeY;
+
     [Header("Hits para romper")]
     [SerializeField] private int hitsToBreak = 3;
     private int hitsLeft;
@@ -97,5 +106,13 @@ public class PropItems : MonoBehaviour
 
         if (((1 << collision.gameObject.layer) & hitMask.value) != 0)
             TakeHit(1);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (!esSaltable) return;
+        Gizmos.color = Color.cyan;
+        Vector3 center = transform.position + Vector3.up * landingOffsetY;
+        Gizmos.DrawWireCube(center, new Vector3(1f, landingRangeY, 0f));
     }
 }

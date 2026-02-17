@@ -2,120 +2,100 @@ using UnityEngine;
 
 public class MachineWeapon : WeaponBase
 {
-    // ==========================================
-    // REFERENCIAS
-    // ==========================================
     [Header("Refs")]
-    [SerializeField] private Transform firePoint;        // Punto desde donde salen las balas
-    [SerializeField] private GameObject bulletPrefab;    // El prefab de la bala (debe tener el script MachineBullet)
-    [SerializeField] private PlayerAnimation playerAnimation; // Referencia para animaciones
-    [SerializeField] private PlayerMovement movement;    // Referencia para bloquear movimiento
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private PlayerAnimation playerAnimation;
 
-    // ==========================================
-    // CONFIGURACIÓN
-    // ==========================================
-    [Header("Lógica de máquina")]
-    [SerializeField] private float activeDuration = 18f;   // Tiempo que dura el arma activa
-    [SerializeField] private float cooldownDuration = 24f; // Tiempo de espera para volver a usarla
-
+    [Header("Máquina")]
+    [SerializeField] private float activeDuration = 18f;
+    [SerializeField] private float cooldownDuration = 24f;
     [SerializeField] private float setupDuration = 1.0f;
 
     [Header("Disparo")]
-    [SerializeField] private int bulletsPerBurst = 8;      // Cuántas balas salen en una ráfaga
-    [SerializeField] private float timeBetweenBullets = 0.1f; // Velocidad entre bala y bala de la ráfaga
-    [SerializeField] private float burstCooldown = 0.5f;   // Tiempo de espera entre ráfaga y ráfaga
+    [SerializeField] private int bulletsPerBurst = 8;
+    [SerializeField] private float timeBetweenBullets = 0.1f;
+    [SerializeField] private float burstCooldown = 0.5f;
 
-    [Header("Apuntado")]
+    [Header("Dirección (solo izquierda/derecha)")]
+    [SerializeField] private float aimDeadzone = 0.2f;
     [SerializeField] private bool useGamepadAim = false;
     [SerializeField] private string aimHorizontalAxis = "AimHorizontal";
-    [SerializeField] private string aimVerticalAxis = "AimVertical";
 
-    // ==========================================
-    // VARIABLES DE ESTADO (Privadas)
-    // ==========================================
-    private bool isActive;           // ¿Está el arma activada disparando?
-    private bool isSettingUp;        // ¿Está en proceso de activación?
-    private float activeTimer;       // Temporizador de duración de la habilidad
-    private float cooldownTimer;     // Temporizador de enfriamiento
-    private float setupTimer;        // Temporizador de preparación
-    private int bulletsLeftInBurst;  // Balas que faltan por salir en la ráfaga actual
-    private float shotTimer;         // Temporizador para controlar el ritmo de disparo
-    private bool burstInProgress;    // ¿Estamos en medio de una ráfaga automática?
+    private bool isActive;
+    private bool isSettingUp;
+    private float activeTimer;
+    private float cooldownTimer;
+    private float setupTimer;
 
-    private Vector2 lastShootDirection = Vector2.right; // Última dirección válida para no disparar a (0,0)
-    
-    // Variable para guardar la cámara y no usar Camera.main en cada frame (Optimización)
-    private Camera _mainCamera;
+    private int bulletsLeftInBurst;
+    private float shotTimer;
+    private bool burstInProgress;
 
-    /// <summary>
-    /// Awake se ejecuta una sola vez al iniciar.
-    /// Aquí obtenemos referencias y cacheamos la cámara para mejorar el rendimiento.
-    /// </summary>
-    private void Awake()
-    {
-        _mainCamera = Camera.main;
+    private float lastDirX = 1f;
+    private Camera cam;
 
-        // Si no se asignaron manualmente en el inspector, intentamos buscarlos en el padre
-        if (playerAnimation == null)
-            playerAnimation = GetComponentInParent<PlayerAnimation>();
-        if (movement == null)
-            movement = GetComponentInParent<PlayerMovement>();
-    }
-
-    // Propiedades públicas para saber el estado del arma desde otros scripts
-    public bool IsReady => !isActive && !isSettingUp;
     public bool IsActive => isActive;
     public bool CanActivate => !isActive && cooldownTimer <= 0f;
 
-    /// <summary>
-    /// Intenta activar el modo "Machine Gun".
-    /// Resetea los temporizadores y bloquea el movimiento del jugador.
-    /// </summary>
+    private void Awake()
+    {
+        cam = Camera.main;
+
+        if (playerAnimation == null)
+            playerAnimation = GetComponentInParent<PlayerAnimation>();
+
+        // ✅ Asegura que use el firePoint del MISMO arma (MachineVisual)
+        if (firePoint == null)
+        {
+            // 1) Busca primero en hijos directos del arma
+            Transform fp = transform.Find("FirePoint");
+            if (fp != null) firePoint = fp;
+            else
+            {
+                // 2) Busca por nombre en TODO el subárbol del arma
+                foreach (Transform t in GetComponentsInChildren<Transform>(true))
+                {
+                    if (t.name == "FirePoint")
+                    {
+                        firePoint = t;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (firePoint == null)
+            Debug.LogWarning("[MachineWeapon] No encontró FirePoint en este arma. Asigna firePoint en el Inspector o crea un hijo llamado 'FirePoint'.");
+    }
+
     public void TryActivate()
     {
-        if (!CanActivate) return; // Si está en cooldown o ya activa, no hace nada
+        if (!CanActivate) return;
 
         isActive = true;
-        isSettingUp = true; // Comenzamos la fase de transformación
-        setupTimer = setupDuration; //Inicimaos el timer de la transformación
+        isSettingUp = true;
+        setupTimer = setupDuration;
 
         activeTimer = activeDuration;
-
-        //Reseteo de disparo
         bulletsLeftInBurst = 0;
         shotTimer = 0f;
         burstInProgress = false;
 
-        // Bloqueamos el movimiento del personaje para que dispare quieto (tipo torreta)
-        if (movement != null)
-            movement.SetMovementLocked(true);
-
         playerAnimation?.PlayMachineStart();
     }
 
-    /// <summary>
-    /// Tick reemplaza al Update. Se llama desde el controlador del jugador.
-    /// Maneja toda la lógica temporal: Cooldowns, duración activa y frecuencia de disparo.
-    /// </summary>
-    /// <param name="fireDown">Se presionó el botón justo ahora</param>
-    /// <param name="fireHeld">El botón se mantiene presionado</param>
-    /// <param name="fireUp">Se soltó el botón</param>
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
-        // 1. Reducir el cooldown si existe
         if (cooldownTimer > 0f)
             cooldownTimer -= Time.deltaTime;
 
-        // 2. Si el arma NO está activa, comprobamos si el jugador quiere activarla
         if (!isActive)
         {
-            if (fireDown && CanActivate)
-                TryActivate();
-            else
-                return; // Si no está activa, no hacemos nada más
+            if (fireDown && CanActivate) TryActivate();
+            else return;
         }
 
-        // 3. Controlar el tiempo de vida de la habilidad (ej. 18 segundos)
         activeTimer -= Time.deltaTime;
         if (activeTimer <= 0f)
         {
@@ -125,62 +105,32 @@ public class MachineWeapon : WeaponBase
 
         if (isSettingUp)
         {
-            // Estamos en la fase de transformación
             setupTimer -= Time.deltaTime;
-            if (setupTimer <= 0f)
-            {
-                isSettingUp = false; // Terminó la transformación
-            }
-            else
-            {
-                return; // Mientras se transforma, no puede disparar
-            }
+            if (setupTimer <= 0f) isSettingUp = false;
+            else return;
         }
 
-        // 4. Controlar el ritmo de disparo (cadencia)
         if (shotTimer > 0f)
         {
             shotTimer -= Time.deltaTime;
-            return; // Si estamos esperando entre balas, salimos
+            return;
         }
 
-        // 5. Iniciar una nueva ráfaga si no estamos disparando ya
         if (!burstInProgress)
         {
-            // Si NO presiona ni mantiene el botón, no disparamos
-            if (!fireDown && !fireHeld)
-                return;
-
-            // Iniciamos la ráfaga
+            if (!fireDown && !fireHeld) return;
             bulletsLeftInBurst = bulletsPerBurst;
             burstInProgress = true;
         }
-        
 
-        // 6. Ejecutar el disparo
-        Vector2 dir = GetAimDirection();
+        Vector2 dir = GetHorizontalAimDirection();
         FireOnce(dir);
-        lastShootDirection = dir;
 
-        // 7. Lógica de la ráfaga
         bulletsLeftInBurst--;
-        if (bulletsLeftInBurst > 0)
-        {
-            // Aún faltan balas en esta ráfaga, esperar un poco (tiempo corto)
-            shotTimer = timeBetweenBullets;
-        }
-        else
-        {
-            // Ráfaga terminada, esperar el tiempo de "recuperación" (tiempo largo)
-            shotTimer = burstCooldown;
-            burstInProgress = false;
-        }
+        shotTimer = (bulletsLeftInBurst > 0) ? timeBetweenBullets : burstCooldown;
+        if (bulletsLeftInBurst <= 0) burstInProgress = false;
     }
 
-    /// <summary>
-    /// Se llama cuando se acaba el tiempo de la habilidad (18s).
-    /// Desactiva el arma, inicia el cooldown global y devuelve el control de movimiento.
-    /// </summary>
     private void EndMachine()
     {
         isActive = false;
@@ -189,83 +139,56 @@ public class MachineWeapon : WeaponBase
         bulletsLeftInBurst = 0;
         burstInProgress = false;
 
-        // Desbloqueamos el movimiento del jugador
-        if (movement != null)
-            movement.SetMovementLocked(false);
-
         playerAnimation?.PlayMachineEnd();
     }
 
-    /// <summary>
-    /// Calcula la dirección de disparo basada en Gamepad o Mouse.
-    /// </summary>
-    private Vector2 GetAimDirection()
+    private Vector2 GetHorizontalAimDirection()
     {
-        Vector2 dir = Vector2.zero;
+        float x;
 
-        // Opción A: Joystick (Gamepad)
         if (useGamepadAim)
         {
-            float ax = Input.GetAxis(aimHorizontalAxis);
-            float ay = Input.GetAxis(aimVerticalAxis);
-            dir = new Vector2(ax, ay);
+            x = Input.GetAxis(aimHorizontalAxis);
         }
-
-        // Opción B: Ratón (si el joystick no se usa)
-        if (dir.sqrMagnitude < 0.01f)
+        else
         {
-            if (_mainCamera != null && firePoint != null)
+            x = 0f;
+            if (cam != null && firePoint != null)
             {
-                // Convertimos la posición del mouse en pantalla a posición en el mundo
-                Vector3 mouseWorld = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-                Vector3 to = mouseWorld - firePoint.position;
-                to.z = 0f;
-                dir = new Vector2(to.x, to.y);
+                Vector3 mouseWorld = cam.ScreenToWorldPoint(Input.mousePosition);
+                x = mouseWorld.x - firePoint.position.x;
             }
         }
 
-        // Opción C: Fallback (si no hay input, usar la última dirección conocida)
-        if (dir.sqrMagnitude < 0.01f)
-            dir = (lastShootDirection.sqrMagnitude > 0.01f) ? lastShootDirection : Vector2.right;
+        if (Mathf.Abs(x) < aimDeadzone)
+            x = lastDirX;
+        else
+            x = Mathf.Sign(x);
 
-        return dir.normalized;
+        lastDirX = x;
+        return new Vector2(x, 0f);
     }
 
-    /// <summary>
-    /// Instancia la bala y configura su dirección.
-    /// </summary>
     private void FireOnce(Vector2 dir)
     {
         if (bulletPrefab == null || firePoint == null)
             return;
 
-        // Rotar el punto de salida hacia la dirección de disparo
         dir = dir.normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        firePoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        // Crear la bala
-        GameObject bulletGO = Object.Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        
-        // --- CAMBIO IMPORTANTE ---
-        // Buscamos el script MachineBullet en lugar de Bullet normal
-        MachineBullet bullet = bulletGO.GetComponent<MachineBullet>();
-        
-        if (bullet != null)
-        {
-            // Inicializamos solo con dirección (la MachineBullet no tiene lógica de carga/tamaño)
+        // ✅ Instancia desde el firePoint del MachineVisual
+        Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, rot);
+
+        if (bulletGO.TryGetComponent(out MachineBullet bullet))
             bullet.Initialize(dir);
-        }
         else
-        {
-            Debug.LogWarning("¡El prefab asignado no tiene el script MachineBullet!");
-        }
+            Debug.LogWarning("[MachineWeapon] El prefab no tiene MachineBullet.");
 
-        // Reproducir animación de retroceso o disparo
         playerAnimation?.PlayMachineShoot();
     }
 
-    // Dibuja una línea amarilla en el editor para ver hacia dónde apunta el arma
     private void OnDrawGizmosSelected()
     {
         if (firePoint == null) return;
