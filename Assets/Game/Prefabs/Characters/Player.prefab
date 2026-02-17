@@ -341,16 +341,15 @@ MonoBehaviour:
   firePoint: {fileID: 294170945954601868}
   bulletPrefab: {fileID: 7781194408997046336, guid: bd8e934bba89e2847879bff8b911bcb4, type: 3}
   playerAnimation: {fileID: 0}
-  movement: {fileID: 0}
   activeDuration: 18
   cooldownDuration: 24
   setupDuration: 1
   bulletsPerBurst: 80
   timeBetweenBullets: 0.1
   burstCooldown: 1.6
+  aimDeadzone: 0.2
   useGamepadAim: 0
   aimHorizontalAxis: AimHorizontal
-  aimVerticalAxis: AimVertical
 --- !u!1 &7594726476574010923
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,9 +556,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.17469609, y: 0.7730733}
-  m_Size: {x: 0.7276318, y: 1.4793344}
-  m_Direction: 0
+  m_Offset: {x: -0.1, y: -0.15}
+  m_Size: {x: 0.7, y: 0.25}
+  m_Direction: 1
 --- !u!114 &3840744988390739793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,6 +593,7 @@ MonoBehaviour:
   jumpHeight: 1.2
   jumpDuration: 0.4
   jumpableLayerName: JumpableObstacle
+  playerCollider: {fileID: 0}
   dashSpeed: 10
   dashDuration: 0.2
 --- !u!114 &4480433745720044691

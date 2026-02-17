@@ -747,6 +747,7 @@ MonoBehaviour:
   jumpHeight: 1.2
   jumpDuration: 0.4
   jumpableLayerName: JumpableObstacle
+  playerCollider: {fileID: 0}
   dashSpeed: 10
   dashDuration: 0.2
 --- !u!114 &84137365
@@ -2094,7 +2095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &493922815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2127,6 +2128,7 @@ MonoBehaviour:
   jumpHeight: 1.2
   jumpDuration: 0.4
   jumpableLayerName: JumpableObstacle
+  playerCollider: {fileID: 0}
   dashSpeed: 10
   dashDuration: 0.2
 --- !u!114 &493922817
@@ -2528,6 +2530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56da8538ed2b80448b0bc95264372c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PropItems
+  esSaltable: 0
+  landingRangeY: 0.4
+  landingOffsetY: 0
   hitsToBreak: 3
   propsAnim: {fileID: 507518265}
   breakDelay: 0.25
@@ -8324,6 +8329,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4607731560703426475, guid: dfb0beb3667bef34ea3590839f8996de, type: 3}
   m_PrefabInstance: {fileID: 7278032179128201460}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1690191111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.37417
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.82764
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412913632877793971, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Name
+      value: Player (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
 --- !u!1 &1693950094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9421,16 +9483,15 @@ MonoBehaviour:
   firePoint: {fileID: 271384621}
   bulletPrefab: {fileID: 7781194408997046336, guid: bd8e934bba89e2847879bff8b911bcb4, type: 3}
   playerAnimation: {fileID: 0}
-  movement: {fileID: 0}
   activeDuration: 18
   cooldownDuration: 24
   setupDuration: 1
   bulletsPerBurst: 80
   timeBetweenBullets: 0.1
   burstCooldown: 1.6
+  aimDeadzone: 0.2
   useGamepadAim: 0
   aimHorizontalAxis: AimHorizontal
-  aimVerticalAxis: AimVertical
 --- !u!4 &1813658627
 Transform:
   m_ObjectHideFlags: 0
@@ -12351,6 +12412,7 @@ SceneRoots:
   - {fileID: 1730558584}
   - {fileID: 196369632}
   - {fileID: 54596429}
+  - {fileID: 1690191111}
   - {fileID: 493922821}
   - {fileID: 84137368}
   - {fileID: 1545303576}

@@ -189,7 +189,7 @@ PrefabInstance:
     - target: {fileID: 3164319539635877337, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 7781194408997046336, guid: 93ba0a9b960af944cb742e5aef0faa37, type: 3}
+      objectReference: {fileID: 7781194408997046336, guid: bd8e934bba89e2847879bff8b911bcb4, type: 3}
     - target: {fileID: 3396268553862206238, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: attack3Weapon
       value: 
@@ -209,6 +209,26 @@ PrefabInstance:
     - target: {fileID: 5694099947801444874, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_Name
       value: MachineFirePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087821955359619329, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087821955359619329, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087821955359619329, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087821955359619329, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087821955359619329, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Direction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8412913632877793971, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_Name
