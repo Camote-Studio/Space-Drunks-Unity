@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 8ece2b44f72a2134cbe33cb2b39bee9b
+guid: 355e4a3822620a34da1aac60992257ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4037647143221221698
-    second: Dirk_launch_machine_3_0
+      213: 5963280228658666717
+    second: Dirk_michigun_2_0
   - first:
-      213: -2249175897535124934
-    second: Dirk_launch_machine_3_1
+      213: 1612387290493337869
+    second: Dirk_michigun_2_1
   - first:
-      213: 1871511128086008927
-    second: Dirk_launch_machine_3_2
+      213: 8940280230669310180
+    second: Dirk_michigun_2_2
   - first:
-      213: -1450359125164375309
-    second: Dirk_launch_machine_3_3
+      213: 4345541046762437961
+    second: Dirk_michigun_2_3
   - first:
-      213: 1419886463959996095
-    second: Dirk_launch_machine_3_4
+      213: -1645647359147913556
+    second: Dirk_michigun_2_4
   - first:
-      213: 9040669508223528727
-    second: Dirk_launch_machine_3_5
-  - first:
-      213: -2776173016012329639
-    second: Dirk_launch_machine_3_6
+      213: 3871384714013866093
+    second: Dirk_michigun_2_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +64,7 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
+  alignment: 7
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -118,35 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dirk_launch_machine_3_0
+      name: Dirk_michigun_2_0
       rect:
         serializedVersion: 2
-        x: 458
-        y: 416
-        width: 151
-        height: 173
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb6adebc05567f7c0800000000000000
-      internalID: -4037647143221221698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dirk_launch_machine_3_1
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 110
+        x: 3
+        y: 70
         width: 205
-        height: 199
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,18 +130,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3a6c06107259c0e0800000000000000
-      internalID: -2249175897535124934
+      spriteID: ddc5f4de5c3d1c250800000000000000
+      internalID: 5963280228658666717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirk_launch_machine_3_2
+      name: Dirk_michigun_2_1
       rect:
         serializedVersion: 2
-        x: 404
-        y: 220
+        x: 191
+        y: 204
         width: 21
         height: 21
       alignment: 0
@@ -177,18 +152,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f54d1ce8471f8f910800000000000000
-      internalID: 1871511128086008927
+      spriteID: d01c53aa2b9506610800000000000000
+      internalID: 1612387290493337869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirk_launch_machine_3_3
+      name: Dirk_michigun_2_2
       rect:
         serializedVersion: 2
-        x: 409
-        y: 201
+        x: 196
+        y: 185
         width: 16
         height: 16
       alignment: 0
@@ -199,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f2c4db5f0a4fdbe0800000000000000
-      internalID: -1450359125164375309
+      spriteID: 4e8dd7d8081421c70800000000000000
+      internalID: 8940280230669310180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirk_launch_machine_3_4
+      name: Dirk_michigun_2_3
       rect:
         serializedVersion: 2
-        x: 267
-        y: 28
-        width: 75
-        height: 81
+        x: 52
+        y: 0
+        width: 77
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,18 +196,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb698b1573374b310800000000000000
-      internalID: 1419886463959996095
+      spriteID: 94d7721fe867e4c30800000000000000
+      internalID: 4345541046762437961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dirk_launch_machine_3_5
+      name: Dirk_michigun_2_4
       rect:
         serializedVersion: 2
-        x: 314
-        y: 29
+        x: 169
+        y: 25
+        width: 120
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caecd64227c7929e0800000000000000
+      internalID: -1645647359147913556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirk_michigun_2_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
         width: 30
         height: 6
       alignment: 0
@@ -243,30 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71f6e59a409e67d70800000000000000
-      internalID: 9040669508223528727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dirk_launch_machine_3_6
-      rect:
-        serializedVersion: 2
-        x: 441
-        y: 14
-        width: 172
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95d6f89c95d0979d0800000000000000
-      internalID: -2776173016012329639
+      spriteID: d687cabc2ebe9b530800000000000000
+      internalID: 3871384714013866093
       vertices: []
       indices: 
       edges: []
@@ -285,13 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dirk_launch_machine_3_0: -4037647143221221698
-      Dirk_launch_machine_3_1: -2249175897535124934
-      Dirk_launch_machine_3_2: 1871511128086008927
-      Dirk_launch_machine_3_3: -1450359125164375309
-      Dirk_launch_machine_3_4: 1419886463959996095
-      Dirk_launch_machine_3_5: 9040669508223528727
-      Dirk_launch_machine_3_6: -2776173016012329639
+      Dirk_michigun_2_0: 5963280228658666717
+      Dirk_michigun_2_1: 1612387290493337869
+      Dirk_michigun_2_2: 8940280230669310180
+      Dirk_michigun_2_3: 4345541046762437961
+      Dirk_michigun_2_4: -1645647359147913556
+      Dirk_michigun_2_5: 3871384714013866093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
