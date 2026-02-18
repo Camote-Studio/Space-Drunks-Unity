@@ -8,10 +8,10 @@ public class PlayerSkinManager : MonoBehaviour
     private void Start()
     {
         int skinGuardada = PlayerPrefs.GetInt("SkinSeleccionada", 0);
-        ActivarSkin(skinGuardada);
+        CambiarSkin(skinGuardada);
     }
 
-    public void ActivarSkin(int index)
+    public void CambiarSkin(int index)
     {
         if (index < 0 || index >= skins.Length) return;
 

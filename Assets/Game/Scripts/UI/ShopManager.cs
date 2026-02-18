@@ -191,33 +191,35 @@ public class ShopManager : MonoBehaviour
 
         GameObject prefabSeleccionado = listaActual[indiceSeleccionado];
 
-        // Limpiar el panel
+        // Limpiar preview
         for (int i = panelItemSeleccionado.childCount - 1; i >= 0; i--)
         {
             Destroy(panelItemSeleccionado.GetChild(i).gameObject);
         }
 
-        // Instanciar correctamente como UI
         GameObject nuevoItem = Instantiate(prefabSeleccionado);
         nuevoItem.transform.SetParent(panelItemSeleccionado, false);
 
         RectTransform rt = nuevoItem.GetComponent<RectTransform>();
-
-        // 🔥 HACERLO MÁS GRANDE
-        float escalaPreview = 3f;   // puedes ajustar este valor
+        float escalaPreview = 3f;
         rt.localScale = Vector3.one * escalaPreview;
-
-        // Centrarlo en el panel
         rt.anchoredPosition = Vector2.zero;
 
-        // Guardar si es skin
         if (categoriaActual == ShopCategory.Skin)
         {
             PlayerPrefs.SetInt("SkinSeleccionada", indiceSeleccionado);
             PlayerPrefs.Save();
-            Debug.Log("Skin guardada: " + indiceSeleccionado);
+
+            // 🔥 APLICAR SKIN INMEDIATAMENTE
+            if (playerSkinManager != null)
+            {
+                playerSkinManager.CambiarSkin(indiceSeleccionado);
+            }
+
+            Debug.Log("Skin aplicada y guardada: " + indiceSeleccionado);
         }
     }
+
 
 
 

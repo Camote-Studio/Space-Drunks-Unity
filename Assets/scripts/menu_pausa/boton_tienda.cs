@@ -1,11 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BotonTienda : MonoBehaviour
 {
+    public GameObject panelTienda;
+    public GameObject menuPause;
+
     void Update()
     {
-        // Detecta cuando se presiona Escape
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Volver();
@@ -14,13 +15,7 @@ public class BotonTienda : MonoBehaviour
 
     public void Volver()
     {
-        if (SceneContext.volverAlJuego && !string.IsNullOrEmpty(SceneContext.escenaAnterior))
-        {
-            SceneManager.LoadScene(SceneContext.escenaAnterior);
-        }
-        else
-        {
-            SceneManager.LoadScene("SampleScene");
-        }
+        panelTienda.SetActive(false);
+        menuPause.SetActive(true);
     }
 }

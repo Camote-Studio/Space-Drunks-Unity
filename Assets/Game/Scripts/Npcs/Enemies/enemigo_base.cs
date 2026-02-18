@@ -8,9 +8,10 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
     //EVENTO GLOBAL: script pueden suscribirse para saber cuando un enemigo muere
     public static event Action OnAnyEnemyDeath;
-    [Header("Drop")]
-    [SerializeField] private GameObject monedaPrefab; // Prefab de la moneda
-    [SerializeField] private int cantidadMonedas = 1; // Cantidad de monedas a soltar
+    [Header("XP Drop")]
+    [SerializeField] private GameObject xpOrbPrefab;
+    [SerializeField] private int cantidadOrbes = 15;
+
 
     // ===================== VARIABLES CONFIGURABLES =====================
     [Header("Configuración Visual")]
@@ -193,23 +194,27 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
         estaMuerto = true;
 
         if (col != null) col.enabled = false;
-        if (rb != null) rb.linearVelocity = Vector2.zero; // Frenar física
+        if (rb != null) rb.linearVelocity = Vector2.zero;
 
-        // Generar monedas
-        if (monedaPrefab != null)
+        // 🔥 GENERAR ORBES DE EXPERIENCIA
+        if (xpOrbPrefab != null)
         {
-            for (int i = 0; i < cantidadMonedas; i++)
+            for (int i = 0; i < cantidadOrbes; i++)
             {
-                // Posición aleatoria cerca del enemigo
-                Vector3 spawnPos = transform.position + new Vector3(UnityEngine.Random.Range(-0.3f, 0.3f),
-                                                                   UnityEngine.Random.Range(-0.3f, 0.3f),
-                                                                   0f);
+                Vector3 spawnPos = transform.position;
 
-                // Instanciar la moneda
-                GameObject moneda = Instantiate(monedaPrefab, spawnPos, Quaternion.identity);
+                GameObject orb = Instantiate(xpOrbPrefab, spawnPos, Quaternion.identity);
 
-                // Hacer que "salte" un poco al aparecer
-                moneda.transform.DOMoveY(moneda.transform.position.y + 0.5f, 0.3f).SetEase(Ease.OutBounce);
+                Rigidbody2D orbRb = orb.GetComponent<Rigidbody2D>();
+                if (orbRb != null)
+                {
+                    Vector2 randomForce = new Vector2(
+                        UnityEngine.Random.Range(-2f, 2f),
+                        UnityEngine.Random.Range(1f, 3f)
+                    );
+
+                    orbRb.AddForce(randomForce, ForceMode2D.Impulse);
+                }
             }
         }
 
@@ -218,6 +223,7 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
         PoolManager.Instance.ReturnToPool(enemyPoolTag, gameObject);
     }
+
 
 
     // ===================== VISUAL =====================

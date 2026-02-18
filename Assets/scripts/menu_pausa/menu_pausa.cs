@@ -11,6 +11,8 @@ public class PauseMenuButtons : MonoBehaviour
 
     public Color colorNormal = new Color(0.8f, 0.8f, 0.8f);
     public Color colorSeleccionado = new Color(1f, 0.83f, 0f);
+    [Header("Paneles")]
+    public GameObject panelTienda;
 
     private bool juegoPausado = false;
     private int index = 0;
@@ -85,12 +87,20 @@ public class PauseMenuButtons : MonoBehaviour
     }
     public void IrATienda()
     {
-        SceneContext.escenaAnterior = SceneManager.GetActiveScene().name;
-        SceneContext.volverAlJuego = true;
+        menuPause.SetActive(false);
+        panelTienda.SetActive(true);
 
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("tienda");
+        index = 0;
     }
+    public void VolverDesdeTienda()
+    {
+        panelTienda.SetActive(false);
+        menuPause.SetActive(true);
+
+        index = 0;
+        SeleccionarActual();
+    }
+
 
 
 }

@@ -4,6 +4,12 @@ using TMPro; // o UnityEngine.UI si usas Text normal
 
 public class VidaJugador : MonoBehaviour
 {
+    // ================== EXPERIENCIA ==================
+    [Header("Experiencia")]
+    [SerializeField] private int nivel = 1;
+    [SerializeField] private int experienciaActual = 0;
+    [SerializeField] private int experienciaParaSubir = 20;
+
     [Header("Vida")]
     [SerializeField] private float vidaMaxima = 100f;
     [SerializeField] private float vidaActual;
@@ -92,4 +98,26 @@ public class VidaJugador : MonoBehaviour
         if (textoMonedas != null)
             textoMonedas.text = monedas.ToString();
     }
+
+    public void AgregarExperiencia(int cantidad)
+    {
+        experienciaActual += cantidad;
+
+        while (experienciaActual >= experienciaParaSubir)
+        {
+            experienciaActual -= experienciaParaSubir;
+            SubirNivel();
+        }
+    }
+
+
+    private void SubirNivel()
+    {
+        nivel++;
+        experienciaParaSubir += 10; // Escalado simple
+
+        Debug.Log("¡Subiste a nivel " + nivel + "!");
+    }
+
+
 }
