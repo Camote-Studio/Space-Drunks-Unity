@@ -44,6 +44,20 @@ public class PlayerWeapon : MonoBehaviour
         if (estadoJugador != null && !estadoJugador.PuedeAtacar())
             return;
 
+        if (attack3Weapon != null && attack3Down)
+            attack3Weapon.Tick(true, false, false);
+
+        if (attack3Weapon != null && attack3Weapon.IsActive)
+        {
+            attack3Weapon.Tick(attack1Down, attack1Held, attack1Up);
+
+            if (attack2Weapon != null)
+                attack2Weapon.Tick(attack2Down, attack2Held, attack2Up);
+
+            return; 
+        }
+
+
         HandleAttack1(attack1Down, attack1Held, attack1Up);
 
         if (attack2Weapon != null)

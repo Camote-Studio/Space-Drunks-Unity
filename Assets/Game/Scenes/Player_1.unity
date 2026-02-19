@@ -130,6 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e5f5076e2ee1c45ae0265ec3fdcb01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MachineWeapon
+--- !u!4 &763082222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 529155078735484322, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+  m_PrefabInstance: {fileID: 1079217571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1079217571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 294170945954601868, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 529155078735484322, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,10 +195,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1678760599356255572, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678760599356255572, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578868205403800664, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.28488678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578868205403800664, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2040136
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578868205403800664, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1802919
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578868205403800664, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.5418708
+      objectReference: {fileID: 0}
     - target: {fileID: 3164319539635877337, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 7781194408997046336, guid: bd8e934bba89e2847879bff8b911bcb4, type: 3}
+    - target: {fileID: 3164319539635877337, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: bulletsPerBurst
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3396268553862206238, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: attack3Weapon
       value: 
@@ -198,13 +235,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.69
       objectReference: {fileID: 0}
+    - target: {fileID: 4481305961101612376, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5307599087609688967, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_Size.x
-      value: 3
+      value: 2.14
       objectReference: {fileID: 0}
     - target: {fileID: 5307599087609688967, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_Size.y
-      value: 2.74
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 5694099947801444874, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_Name
@@ -230,15 +271,112 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6135928781734141390, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: batHitbox_1
+      value: 
+      objectReference: {fileID: 2114474222}
+    - target: {fileID: 6135928781734141390, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      propertyPath: batHitbox_2
+      value: 
+      objectReference: {fileID: 1710324577}
     - target: {fileID: 8412913632877793971, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 529155078735484322, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2114474223}
+    - targetCorrespondingSourceObject: {fileID: 529155078735484322, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1710324578}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
+--- !u!1 &1710324577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710324578}
+  - component: {fileID: 1710324580}
+  - component: {fileID: 1710324579}
+  m_Layer: 9
+  m_Name: BatHitBox_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1710324578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710324577}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.9591713, w: -0.28282613}
+  m_LocalPosition: {x: -0.51, y: 0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 763082222}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 212.858}
+--- !u!70 &1710324579
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710324577}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.1802919, y: -0.5418708}
+  m_Size: {x: 0.28488678, y: 1.2040136}
+  m_Direction: 0
+--- !u!114 &1710324580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710324577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e2b3b8d484884f8d03b275ca31f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatHitbox
+  damage: 10
 --- !u!1 &1763753568
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +706,89 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &2114474222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114474223}
+  - component: {fileID: 2114474225}
+  - component: {fileID: 2114474224}
+  m_Layer: 9
+  m_Name: BatHitBox_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2114474223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114474222}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.011529869, w: -0.99993354}
+  m_LocalPosition: {x: 1.25, y: 1.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 763082222}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 358.679}
+--- !u!70 &2114474224
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114474222}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.18029076, y: -0.4894358}
+  m_Size: {x: 0.2848828, y: 1.3088889}
+  m_Direction: 0
+--- !u!114 &2114474225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114474222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e2b3b8d484884f8d03b275ca31f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatHitbox
+  damage: 15
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
