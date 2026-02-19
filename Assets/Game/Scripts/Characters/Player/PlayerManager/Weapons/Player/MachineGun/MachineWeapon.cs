@@ -17,11 +17,6 @@ public class MachineWeapon : WeaponBase
     [SerializeField] private float timeBetweenBullets = 0.1f;
     [SerializeField] private float burstCooldown = 0.5f;
 
-    [Header("Dirección (solo izquierda/derecha)")]
-    [SerializeField] private float aimDeadzone = 0.2f;
-    [SerializeField] private bool useGamepadAim = false;
-    [SerializeField] private string aimHorizontalAxis = "AimHorizontal";
-
     private bool isActive;
     private bool isSettingUp;
     private float activeTimer;
@@ -32,28 +27,28 @@ public class MachineWeapon : WeaponBase
     private float shotTimer;
     private bool burstInProgress;
 
-    private float lastDirX = 1f;
+    private float lastFacingX = 1f;
+
+    private PlayerMovement movement;
     private Camera cam;
 
-    public bool IsActive => isActive;
+    public override bool IsActive => isActive;
     public bool CanActivate => !isActive && cooldownTimer <= 0f;
 
     private void Awake()
     {
         cam = Camera.main;
+        movement = GetComponentInParent<PlayerMovement>();
 
         if (playerAnimation == null)
             playerAnimation = GetComponentInParent<PlayerAnimation>();
 
-        // ✅ Asegura que use el firePoint del MISMO arma (MachineVisual)
         if (firePoint == null)
         {
-            // 1) Busca primero en hijos directos del arma
             Transform fp = transform.Find("FirePoint");
             if (fp != null) firePoint = fp;
             else
             {
-                // 2) Busca por nombre en TODO el subárbol del arma
                 foreach (Transform t in GetComponentsInChildren<Transform>(true))
                 {
                     if (t.name == "FirePoint")
@@ -64,9 +59,6 @@ public class MachineWeapon : WeaponBase
                 }
             }
         }
-
-        if (firePoint == null)
-            Debug.LogWarning("[MachineWeapon] No encontró FirePoint en este arma. Asigna firePoint en el Inspector o crea un hijo llamado 'FirePoint'.");
     }
 
     public void TryActivate()
@@ -92,8 +84,10 @@ public class MachineWeapon : WeaponBase
 
         if (!isActive)
         {
-            if (fireDown && CanActivate) TryActivate();
-            else return;
+            if (fireDown)
+                TryActivate();
+
+            return;
         }
 
         activeTimer -= Time.deltaTime;
@@ -123,7 +117,7 @@ public class MachineWeapon : WeaponBase
             burstInProgress = true;
         }
 
-        Vector2 dir = GetHorizontalAimDirection();
+        Vector2 dir = GetFacingDirection();
         FireOnce(dir);
 
         bulletsLeftInBurst--;
@@ -142,31 +136,15 @@ public class MachineWeapon : WeaponBase
         playerAnimation?.PlayMachineEnd();
     }
 
-    private Vector2 GetHorizontalAimDirection()
+    private Vector2 GetFacingDirection()
     {
-        float x;
+        float facingX = lastFacingX;
 
-        if (useGamepadAim)
-        {
-            x = Input.GetAxis(aimHorizontalAxis);
-        }
-        else
-        {
-            x = 0f;
-            if (cam != null && firePoint != null)
-            {
-                Vector3 mouseWorld = cam.ScreenToWorldPoint(Input.mousePosition);
-                x = mouseWorld.x - firePoint.position.x;
-            }
-        }
+        if (movement != null)
+            facingX = Mathf.Sign(movement.FacingX == 0f ? lastFacingX : movement.FacingX);
 
-        if (Mathf.Abs(x) < aimDeadzone)
-            x = lastDirX;
-        else
-            x = Mathf.Sign(x);
-
-        lastDirX = x;
-        return new Vector2(x, 0f);
+        lastFacingX = facingX;
+        return new Vector2(facingX, 0f);
     }
 
     private void FireOnce(Vector2 dir)
@@ -174,25 +152,11 @@ public class MachineWeapon : WeaponBase
         if (bulletPrefab == null || firePoint == null)
             return;
 
-        dir = dir.normalized;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-        // ✅ Instancia desde el firePoint del MachineVisual
-        Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
-        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, rot);
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
         if (bulletGO.TryGetComponent(out MachineBullet bullet))
             bullet.Initialize(dir);
-        else
-            Debug.LogWarning("[MachineWeapon] El prefab no tiene MachineBullet.");
 
         playerAnimation?.PlayMachineShoot();
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (firePoint == null) return;
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(firePoint.position, firePoint.position + firePoint.right * 2f);
     }
 }

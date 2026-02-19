@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class MachineBullet : MonoBehaviour
 {
-
-     [Header("MachineBullet Ajustes")]
+    [Header("MachineBullet Ajustes")]
     [SerializeField] private float speed = 25f;
     [SerializeField] private float damage = 3f;
     [SerializeField] private float lifeTimeNormal = 4f;
@@ -15,6 +14,10 @@ public class MachineBullet : MonoBehaviour
     {
         direction = dir.normalized;
         timer = 0f;
+
+        Vector3 s = transform.localScale;
+        s.x = Mathf.Abs(s.x) * (direction.x >= 0 ? 1f : -1f);
+        transform.localScale = s;
     }
 
     private void Awake()
@@ -24,26 +27,23 @@ public class MachineBullet : MonoBehaviour
 
     private void Update()
     {
-        //Movimiento para bala
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
 
-        //Control de tiempo de vida de la bala
         timer += Time.deltaTime;
 
-        //Si no chocó con nada, se destruye al pasar el tiempo
         if (timer >= lifeTimeNormal)
         {
             Destroy(gameObject);
         }
     }
 
-    //Aseguremenos que se destruya al salir de la pantalla
-    private void OnBecameInvisible() {
+    private void OnBecameInvisible()
+    {
         Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {   //Detección de colisión con enemigos
+    {
         enemigo_base enemy = collision.GetComponentInParent<enemigo_base>();
 
         if (enemy != null)
@@ -51,7 +51,5 @@ public class MachineBullet : MonoBehaviour
             enemy.RecibirDaño(damage);
             Destroy(gameObject);
         }
-
-        //Si choca con paredes se agrega...
     }
 }

@@ -15,6 +15,7 @@ public class PlayerAnimation : MonoBehaviour
     private int hashMachineStart;
     private int hashMachineShoot;
     private int hashMachineEnd;
+    private int hashIsMovingUp;
 
     private bool isInMachineMode;
 
@@ -42,6 +43,7 @@ public class PlayerAnimation : MonoBehaviour
         hashMachineStart = Animator.StringToHash("MachineStart");
         hashMachineShoot = Animator.StringToHash("MachineShoot");
         hashMachineEnd = Animator.StringToHash("MachineEnd");
+        hashIsMovingUp = Animator.StringToHash("IsMovingUp");
     }
 
     private void OnEnable()
@@ -67,9 +69,19 @@ public class PlayerAnimation : MonoBehaviour
             return;
         }
 
-        Vector2 moveInput = movement.MoveInput;
-        float speed = Mathf.Abs(moveInput.x);
-        animator.SetFloat(hashSpeed, speed);
+        Rigidbody2D rb = movement.GetComponent<Rigidbody2D>();
+        Vector2 moveInput = rb != null ? rb.linearVelocity : Vector2.zero;
+        float horizontal = Mathf.Abs(moveInput.x);
+        float vertical = Mathf.Abs(moveInput.y);
+        bool movingUp = vertical > 0.01f;
+
+        animator.SetBool(hashIsMovingUp, movingUp);
+
+        if (movingUp)
+            animator.SetFloat(hashSpeed, 0f);
+        else 
+            animator.SetFloat (hashSpeed, horizontal);
+
     }
 
     private void OnDamaged(string fuente)
@@ -123,7 +135,6 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetFloat(hashSpeed, 0f);
         animator.SetTrigger(hashMachineStart);
     }
-
     public void PlayMachineShoot()
     {
         if (animator == null)
