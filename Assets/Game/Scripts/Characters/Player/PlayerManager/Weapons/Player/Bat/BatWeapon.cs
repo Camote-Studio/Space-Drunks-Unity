@@ -7,6 +7,8 @@ public class BatWeapon : WeaponBase
 
     [Header("Hitbox")]
     [SerializeField] private GameObject batHitbox;
+    [SerializeField] private GameObject batHitbox_1;
+    [SerializeField] private GameObject batHitbox_2;
     [SerializeField] private float batActiveTime = 0.15f;
     [SerializeField] private float batAttackCooldown = 0.3f;
 
@@ -21,12 +23,19 @@ public class BatWeapon : WeaponBase
 
         if (batHitbox != null)
             batHitbox.SetActive(false);
+
+        if (batHitbox_1 != null)
+            batHitbox_1.SetActive(false);
+
+        if (batHitbox_2 != null)
+            batHitbox_2.SetActive(false);
     }
 
     public override void OnSelected()
     {
         if (batVisual != null)
             batVisual.SetActive(true);
+            
     }
 
     public override void OnDeselected()
@@ -36,6 +45,12 @@ public class BatWeapon : WeaponBase
 
         if (batHitbox != null)
             batHitbox.SetActive(false);
+
+        if (batHitbox_1 != null)
+            batHitbox_1.SetActive(false);
+
+        if (batHitbox_2 != null)
+            batHitbox_2.SetActive(false);
 
         batCooldown = 0f;
         batTimer = 0f;
@@ -49,19 +64,25 @@ public class BatWeapon : WeaponBase
         if (batTimer > 0f)
         {
             batTimer -= Time.deltaTime;
-            if (batTimer <= 0f && batHitbox != null)
-                batHitbox.SetActive(false);
+            if (batTimer <= 0f )
+                if (batHitbox != null) batHitbox.SetActive(false);
+                if (batHitbox_1 != null) batHitbox_1.SetActive(false);
+                if (batHitbox_2 != null) batHitbox_2.SetActive(false);
         }
 
         if (!fireDown || batCooldown > 0f)
             return;
 
+        if (batHitbox != null) batHitbox.SetActive(false);
+        if (batHitbox_1 != null) batHitbox_1.SetActive(false);
+        if (batHitbox_2 != null) batHitbox_2.SetActive(false);
+
         if (batHitbox != null)
         {
             batHitbox.SetActive(true);
-            batTimer = batActiveTime;
         }
 
+        batTimer = batActiveTime;
         batCooldown = batAttackCooldown;
         playerAnim?.PlayBatAttack();  
     }
