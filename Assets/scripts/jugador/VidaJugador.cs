@@ -29,6 +29,9 @@ public class VidaJugador : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoMonedas;
     // si usas Text normal cambia a: public Text textoMonedas;
 
+    [SerializeField] private HealthBarUI barraVidaUI;
+    [SerializeField] private GameObject[] corazones;
+
     // ================== EVENTOS ==================
     public event Action<string> OnDamaged;
     public event Action OnDeath;
@@ -39,6 +42,17 @@ public class VidaJugador : MonoBehaviour
     {
         vidaActual = vidaMaxima;
         ActualizarUI();
+        ActualizarBarraVida();
+        ActualizarCorazones();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            RecibirDanio(10);
+            Debug.Log("Presiona");
+        }
     }
 
     // ================== VIDA ==================
@@ -49,10 +63,40 @@ public class VidaJugador : MonoBehaviour
         if (playerMovement != null && playerMovement.IsJumping) return;
 
         vidaActual = Mathf.Clamp(vidaActual - cantidad, 0f, vidaMaxima);
+        ActualizarBarraVida();
+        ActualizarCorazones();
         OnDamaged?.Invoke(fuente);
 
         if (vidaActual <= 0f)
             Die();
+    }
+
+    private void ActualizarBarraVida()
+    {
+        float v = vidaActual / vidaMaxima;
+        Debug.Log("Update barra a: " + v);
+        barraVidaUI.Set01(v);
+    }
+
+    private void ActualizarCorazones()
+    {
+        float porcentaje = vidaActual / vidaMaxima;
+
+        int corazonesActivos = 0;
+
+        if (porcentaje > 0.66f)
+            corazonesActivos = 3;
+        else if (porcentaje > 0.33f)
+            corazonesActivos = 2;
+        else if (porcentaje > 0f)
+            corazonesActivos = 1;
+        else
+            corazonesActivos = 0;
+
+        for (int i = 0; i < corazones.Length; i++)
+        {
+            corazones[i].SetActive(i < corazonesActivos);
+        }
     }
 
     public void RecibirDaño(float cantidad)
