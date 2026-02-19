@@ -18,6 +18,9 @@ public class PlayerWeapon : MonoBehaviour
     [Header("Attack 3")]
     [SerializeField] private WeaponBase attack3Weapon;
 
+    [Header("Ultimate")]
+    [SerializeField] private WeaponBase ultimateWeapon;
+
     private WeaponBase currentAttack1;
 
     private void Awake()
