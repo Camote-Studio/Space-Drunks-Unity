@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249380987499134470}
   - component: {fileID: 6331508878090543482}
-  - component: {fileID: 3757232816290645511}
+  - component: {fileID: 5297524119936302673}
   m_Layer: 0
   m_Name: Maquina1
   m_TagString: Untagged
@@ -92,8 +92,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
---- !u!61 &3757232816290645511
-BoxCollider2D:
+--- !u!60 &5297524119936302673
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.31244838, y: 0.31596047}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -136,5 +136,23 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.8251035, y: 0.5003654}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.361151, y: 1.0958738}
+      - {x: 0.88468766, y: 1.093742}
+      - {x: 0.16543126, y: 1.0368092}
+      - {x: -0.0949195, y: 1.0197173}
+      - {x: -0.3632272, y: 1.0231628}
+      - {x: -0.65111804, y: 1.0306227}
+      - {x: -1.1551013, y: 1.0894295}
+      - {x: -1.6619564, y: 1.4330505}
+      - {x: -1.6946875, y: 1.4565488}
+      - {x: -1.6966473, y: 0.8308192}
+      - {x: -1.240411, y: 0.09540944}
+      - {x: -1.1641932, y: 0.023007173}
+      - {x: 0.6152085, y: 0.021047551}
+      - {x: 0.6289257, y: 0.020676317}
+      - {x: 1.6727542, y: 0.030474367}
+      - {x: 1.7075522, y: 0.07899}
+      - {x: 1.7056179, y: 1.0875318}
+  m_UseDelaunayMesh: 1

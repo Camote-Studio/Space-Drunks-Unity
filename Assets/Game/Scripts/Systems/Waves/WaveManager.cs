@@ -1,4 +1,5 @@
 using UnityEngine;
+using System; // Necesario para usar Action
 using System.Collections;
 using System.Collections.Generic;
 
@@ -18,7 +19,7 @@ public class WaveManager : MonoBehaviour
     public class Oleada
     {
         public string nombre;
-        public List<GrupoEnemigos> grupos; // Lista de sub-grupos (ej: 5 patos y luego 3 gatos)
+        public List<GrupoEnemigos> grupos; // Lista de sub-grupos
     }
 
     // ================= VARIABLES =================
@@ -34,15 +35,18 @@ public class WaveManager : MonoBehaviour
     public bool esperandoSiguienteOleada = false;
     public bool nivelCompletado = false;
 
+    // VARIABLE NUEVA: Aquí guardaremos la función de la Zona que nos llama
+    private Action onZonaCompletada;
+
     // ================= UNITY =================
 
     void Start()
     {
         // Nos suscribimos al evento de muerte
-        enemigo_base.OnAnyEnemyDeath += EnemigoEliminado;
+        //enemigo_base.OnAnyEnemyDeath += EnemigoEliminado;
         
-        // Iniciar la primera oleada
-        StartCoroutine(IniciarOleada(oleadaActualIndex));
+        // ELIMINADO: Ya no iniciamos la oleada automáticamente.
+        // Esperaremos a que la ZonaCombate nos dé la orden.
     }
 
     void OnDestroy()
@@ -51,14 +55,34 @@ public class WaveManager : MonoBehaviour
         enemigo_base.OnAnyEnemyDeath -= EnemigoEliminado;
     }
 
+    // ================= CONEXIÓN CON LA ZONA =================
+
+    // ESTA ES LA FUNCIÓN NUEVA QUE LLAMA ZONACOMBATE.CS
+    public void IniciarCombateDeZona(Action callbackAlTerminar)
+    {
+        // Guardamos la función que abre las barreras para llamarla después
+        onZonaCompletada = callbackAlTerminar; 
+
+        enemigo_base.OnAnyEnemyDeath += EnemigoEliminado;
+        
+        // Empezamos la primera oleada de esta zona
+        StartCoroutine(IniciarOleada(0)); 
+    }
+
     // ================= LÓGICA PRINCIPAL =================
 
     IEnumerator IniciarOleada(int index)
     {
+        // Si ya no quedan más oleadas en esta zona...
         if (index >= oleadas.Count)
         {
-            Debug.Log("¡JUEGO COMPLETADO!");
+            Debug.Log("¡TODAS LAS OLEADAS DE ESTA ZONA COMPLETADAS!");
             nivelCompletado = true;
+
+            enemigo_base.OnAnyEnemyDeath -= EnemigoEliminado;
+
+            // AVISAMOS A LA ZONA QUE ABRA LAS PUERTAS
+            onZonaCompletada?.Invoke(); 
             yield break;
         }
 
@@ -67,7 +91,6 @@ public class WaveManager : MonoBehaviour
         Debug.Log($"Iniciando Oleada {index + 1}: {oleadaActual.nombre}");
 
         // 1. CALCULAR TOTAL ENEMIGOS
-        // Sumamos todos los enemigos de todos los grupos para saber cuántos esperar
         enemigosVivos = 0;
         foreach (var grupo in oleadaActual.grupos)
         {
@@ -93,23 +116,17 @@ public class WaveManager : MonoBehaviour
     {
         if (puntosDeSpawn.Length == 0) return;
 
-        // Elegir un punto aleatorio
-        Transform punto = puntosDeSpawn[Random.Range(0, puntosDeSpawn.Length)];
-
-        // Generar una posición aleatoria alrededor del punto (Radio de 1 metro)
-        // Esto evita que nazcan todos en el pixel exacto
-        Vector3 desplazamiento = Random.insideUnitCircle * 1.0f; 
+        Transform punto = puntosDeSpawn[UnityEngine.Random.Range(0, puntosDeSpawn.Length)];
+        Vector3 desplazamiento = UnityEngine.Random.insideUnitCircle * 1.0f; 
         Vector3 posicionFinal =  punto.position + desplazamiento;
+        
         GameObject enemigo = PoolManager.Instance.SpawnFromPool(tag, posicionFinal, Quaternion.identity);
 
         if (enemigo == null)
         {
-            Debug.LogError($" ERROR CRÍTICO: No se pudo spawnear el tag '{tag}'. ¿Está bien escrito en el WaveManager y en el PoolManager?");
-            
-            // RESTAMOS AL ENEMIGO FANTASMA para que el juego no se quede trabado
+            Debug.LogError($" ERROR CRÍTICO: No se pudo spawnear el tag '{tag}'");
             enemigosVivos--; 
             
-            // Verificamos si al restar este error, la oleada terminó instantáneamente
             if (enemigosVivos <= 0 && !esperandoSiguienteOleada)
             {
                 StartCoroutine(PrepararSiguienteOleada());
@@ -121,7 +138,6 @@ public class WaveManager : MonoBehaviour
 
     void EnemigoEliminado()
     {
-        // Si ya ganamos o estamos esperando, ignorar
         if (nivelCompletado || esperandoSiguienteOleada) return;
 
         enemigosVivos--;

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7246876525957326849}
   - component: {fileID: 8622806154490106828}
   - component: {fileID: 3180324782373384729}
+  - component: {fileID: 4652806243834890533}
   m_Layer: 0
   m_Name: Silla_bar_espalda
   m_TagString: Untagged
@@ -99,7 +100,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7697558838900137476}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -129,3 +130,94 @@ CapsuleCollider2D:
   m_Offset: {x: -0.05, y: 0.6}
   m_Size: {x: 1.85, y: 0.9}
   m_Direction: 1
+--- !u!60 &4652806243834890533
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697558838900137476}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2.0600002, y: 3.3000002}
+    newSize: {x: 2.0600002, y: 3.3000002}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.9424711, y: 0.6366169}
+      - {x: 0.8929026, y: 0.73223}
+      - {x: 0.7144727, y: 0.9088996}
+      - {x: 0.41994363, y: 1.0711061}
+      - {x: 0.24753135, y: 1.1325746}
+      - {x: 0.13015464, y: 1.148686}
+      - {x: 0.1235168, y: 1.8384093}
+      - {x: 0.691213, y: 1.8427851}
+      - {x: 0.81077576, y: 1.8487324}
+      - {x: 0.88095856, y: 1.8558997}
+      - {x: 0.967427, y: 1.9177049}
+      - {x: 0.96593356, y: 1.9879535}
+      - {x: 0.8340442, y: 1.9666511}
+      - {x: 0.59757787, y: 1.9291856}
+      - {x: 0.35500923, y: 1.9358463}
+      - {x: 0.15851906, y: 1.9485807}
+      - {x: -0.0005475618, y: 1.9305797}
+      - {x: -0.1679293, y: 1.9380368}
+      - {x: -0.36181054, y: 1.9352407}
+      - {x: -0.58740443, y: 1.9328187}
+      - {x: -0.7486471, y: 1.9692243}
+      - {x: -0.8309347, y: 2.0017245}
+      - {x: -0.94626075, y: 2.0565193}
+      - {x: -0.93242854, y: 2.012798}
+      - {x: -0.92245674, y: 1.9712051}
+      - {x: -0.8694036, y: 1.9298338}
+      - {x: -0.7602435, y: 1.8813182}
+      - {x: -0.5783099, y: 1.8449315}
+      - {x: -0.23064584, y: 1.8442224}
+      - {x: -0.23700738, y: 1.1240618}
+      - {x: -0.69873893, y: 1.0098436}
+      - {x: -0.93167156, y: 0.84006274}
+      - {x: -0.9824302, y: 0.75424516}
+      - {x: -1.0141296, y: 0.5998539}
+      - {x: -0.9946518, y: 0.49813557}
+      - {x: -0.95215297, y: 0.41687846}
+      - {x: -0.69021493, y: 0.19805509}
+      - {x: -0.47189462, y: 0.08125186}
+      - {x: -0.23849267, y: 0.03161448}
+      - {x: 0.26286292, y: 0.026007827}
+      - {x: 0.57926387, y: 0.13942471}
+      - {x: 0.6090355, y: 0.15831447}
+      - {x: 0.76417476, y: 0.23416771}
+      - {x: 0.933724, y: 0.4264679}
+  m_UseDelaunayMesh: 1
