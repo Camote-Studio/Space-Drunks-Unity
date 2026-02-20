@@ -73,17 +73,20 @@ public class PlayerAnimation : MonoBehaviour
             return;
         }
 
-        Rigidbody2D rb = movement.GetComponent<Rigidbody2D>();
-        Vector2 v = rb != null ? rb.linearVelocity : Vector2.zero;
+        Vector2 input = movement.MoveInput;
 
-        float horizontal = Mathf.Abs(v.x);
-        float vertical = Mathf.Abs(v.y);
-        bool movingUp = vertical > 0.01f;
+        float hx = Mathf.Abs(input.x);
+        float vy = Mathf.Abs(input.y);
+
+        bool movingUp = vy > 0.1f && hx < 0.1f;
 
         animator.SetBool(hashIsMovingUp, movingUp);
 
-        if (movingUp) animator.SetFloat(hashSpeed, 0f);
-        else animator.SetFloat(hashSpeed, horizontal);
+        if (movingUp)
+            animator.SetFloat(hashSpeed, 0f);
+        else
+            animator.SetFloat(hashSpeed, Mathf.Abs(movement.GetComponent<Rigidbody2D>()?.linearVelocity.x ?? 0f));
+
     }
 
     private void OnDamaged(string fuente)
@@ -141,32 +144,35 @@ public class PlayerAnimation : MonoBehaviour
         isInMachineMode = false;
     }
 
+
+    // ANIMATION EVENT al final de Ultimate_Attack
+    public void UltimateEnterState()
+    {
+        if (animator == null) return;
+        animator.SetBool(hashUltiIni, true); // ahora pasa a Ultimate_state
+    }
+
+
     public void PlayUltimateStart()
     {
         if (animator == null) return;
-
         isInUltimateMode = true;
-
-        animator.ResetTrigger(hashHit);
-        animator.ResetTrigger(hashShoot);
-        animator.ResetTrigger(hashBatAttack);
-        animator.ResetTrigger(hashPlaceMine);
-
         animator.SetFloat(hashSpeed, 0f);
-        animator.SetBool(hashUltiIni, false);
-        animator.SetTrigger(hashUltimate);
+        animator.SetBool(Animator.StringToHash("UltiIni"), false);
+        animator.SetTrigger(Animator.StringToHash("Ultimate"));
     }
 
     public void SetUltimateStateActive(bool active)
     {
         if (animator == null) return;
-        animator.SetBool(hashUltiIni, active);
+        animator.SetBool(Animator.StringToHash("UltiIni"), active);
     }
 
     public void EndUltimate()
     {
         if (animator == null) return;
-        animator.SetBool(hashUltiIni, false);
+        animator.SetBool(Animator.StringToHash("UltiIni"), false);
         isInUltimateMode = false;
     }
+
 }
