@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.DualShock;
 
 public enum PlayerControlsType
@@ -33,13 +32,11 @@ public class PlayerInput : MonoBehaviour
         actions = new InputSystem_Actions();
 
         ConfigureDevices();
-
         player.Initialize(playerIndex);
     }
 
     private void ConfigureDevices()
     {
-        // Siempre reseteamos primero
         actions.devices = null;
 
         switch (controlType)
@@ -49,20 +46,11 @@ public class PlayerInput : MonoBehaviour
                     var kb = Keyboard.current;
                     var ms = Mouse.current;
 
-                    // Construimos la lista solo con lo que exista
                     var devicesList = new System.Collections.Generic.List<InputDevice>();
                     if (kb != null) devicesList.Add(kb);
                     if (ms != null) devicesList.Add(ms);
 
-                    if (devicesList.Count > 0)
-                    {
-                        actions.devices = devicesList.ToArray();
-                    }
-                    else
-                    {
-                        actions.devices = System.Array.Empty<InputDevice>();
-                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay teclado/mouse conectados");
-                    }
+                    actions.devices = devicesList.Count > 0 ? devicesList.ToArray() : System.Array.Empty<InputDevice>();
                     break;
                 }
 
@@ -72,20 +60,11 @@ public class PlayerInput : MonoBehaviour
 
                     if (Gamepad.all.Count > 0)
                     {
-                        int index = Mathf.Clamp(playerIndex, 0, Gamepad.all.Count - 1);
+                        int index = Mathf.Clamp(gamepadIndex, 0, Gamepad.all.Count - 1);
                         pad = Gamepad.all[index];
                     }
 
-                    if (pad != null)
-                    {
-                        actions.devices = new InputDevice[] { pad };
-                    }
-                    else
-                    {
-                        // Sin gamepad: este player NO escucha nada
-                        actions.devices = System.Array.Empty<InputDevice>();
-                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay gamepad conectado");
-                    }
+                    actions.devices = pad != null ? new InputDevice[] { pad } : System.Array.Empty<InputDevice>();
                     break;
                 }
 
@@ -105,15 +84,7 @@ public class PlayerInput : MonoBehaviour
                         }
                     }
 
-                    if (ps4 != null)
-                    {
-                        actions.devices = new InputDevice[] { ps4 };
-                    }
-                    else
-                    {
-                        actions.devices = System.Array.Empty<InputDevice>();
-                        Debug.LogWarning($"[PlayerInput {playerIndex}] No hay mando de Play conectado");
-                    }
+                    actions.devices = ps4 != null ? new InputDevice[] { ps4 } : System.Array.Empty<InputDevice>();
                     break;
                 }
         }
@@ -159,14 +130,24 @@ public class PlayerInput : MonoBehaviour
         bool a3Up = attack3Action.WasReleasedThisFrame();
         bool a3Held = a3Val > 0.1f;
 
-        player.HandleInput(
-                move,
-                jump,
-                dash,
-                a1Down, a1Held, a1Up,
-                a2Down, a2Held, a2Up,
-                a3Down, a3Held, a3Up
-            );
+        bool shiftHeld = false;
+        if (controlType == PlayerControlsType.KeyboardMouse && Keyboard.current != null)
+        {
+            shiftHeld = Keyboard.current.leftShiftKey.isPressed || Keyboard.current.rightShiftKey.isPressed;
+        }
 
+        bool ultiDown = shiftHeld && a1Down;
+        bool ultiHeld = shiftHeld && a1Held;
+        bool ultiUp = shiftHeld && a1Up;
+
+        player.HandleInput(
+            move,
+            jump,
+            dash,
+            a1Down, a1Held, a1Up,
+            a2Down, a2Held, a2Up,
+            a3Down, a3Held, a3Up,
+            ultiDown, ultiHeld, ultiUp
+        );
     }
 }

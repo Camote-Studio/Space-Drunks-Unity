@@ -25,7 +25,8 @@ public abstract class PlayerBase : MonoBehaviour
         bool dash,
         bool attack1Down, bool attack1Held, bool attack1Up,
         bool attack2Down, bool attack2Held, bool attack2Up,
-        bool attack3Down, bool attack3Held, bool attack3Up
+        bool attack3Down, bool attack3Held, bool attack3Up,
+        bool ultiDown, bool ultiHeld, bool ultiUp
         );
 
 }

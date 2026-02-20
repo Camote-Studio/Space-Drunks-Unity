@@ -21,6 +21,8 @@ public class PlayerWeapon : MonoBehaviour
     [Header("Ultimate")]
     [SerializeField] private WeaponBase ultimateWeapon;
 
+    [SerializeField] private bool ultimateReady = true;
+
     private WeaponBase currentAttack1;
 
     private void Awake()
@@ -37,15 +39,32 @@ public class PlayerWeapon : MonoBehaviour
         EquipAttack1(attack1IdleWeapon);
     }
 
+    public void SetUltimateReady(bool ready)
+    {
+        ultimateReady = ready;
+    }
+
     public void SetInput(
         bool attack1Down, bool attack1Held, bool attack1Up,
         bool attack2Down, bool attack2Held, bool attack2Up,
-        bool attack3Down, bool attack3Held, bool attack3Up
+        bool attack3Down, bool attack3Held, bool attack3Up,
+        bool ultiDown, bool ultiHeld, bool ultiUp
     )
     {
         // 🚫 BLOQUEO TOTAL DE ATAQUES SI ESTÁ FLOTANDO
         if (estadoJugador != null && !estadoJugador.PuedeAtacar())
             return;
+
+        if (ultimateWeapon != null)
+        {
+            if (!ultimateReady)
+                ultiDown = ultiHeld = ultiUp = false;
+
+            ultimateWeapon.Tick(ultiDown, ultiHeld, ultiUp);
+
+            if (ultimateWeapon.IsActive)
+                return;
+        }
 
         if (attack3Weapon != null && attack3Down)
             attack3Weapon.Tick(true, false, false);
