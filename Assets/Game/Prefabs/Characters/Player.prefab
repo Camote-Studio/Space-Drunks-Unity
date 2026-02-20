@@ -256,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 5694099947801444874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24, y: -1.83, z: 0}
+  m_LocalPosition: {x: 1.07, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,9 +347,6 @@ MonoBehaviour:
   bulletsPerBurst: 80
   timeBetweenBullets: 0.1
   burstCooldown: 1.6
-  aimDeadzone: 0.2
-  useGamepadAim: 0
-  aimHorizontalAxis: AimHorizontal
 --- !u!1 &7594726476574010923
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BatWeapon
   batVisual: {fileID: 0}
   batHitbox: {fileID: 1353865223812026497}
+  batHitbox_1: {fileID: 0}
+  batHitbox_2: {fileID: 0}
   batActiveTime: 0.15
   batAttackCooldown: 0.3
 --- !u!1 &7750498244733730411
@@ -520,7 +519,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &6087821955359619329
 CapsuleCollider2D:

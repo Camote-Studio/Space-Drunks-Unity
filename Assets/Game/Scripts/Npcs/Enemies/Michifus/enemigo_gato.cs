@@ -25,13 +25,22 @@ public class enemigo_gato : enemigo_base
     // CONFIGURACIÓN DE DISPARO (POOLING)
     // =====================================================
     [Header("Disparo")]
-    [SerializeField] private string bulletTag = "Bala";   // Tag usado por PoolManager
-    [SerializeField] private Transform puntoDisparo;      // Boca / arma del gato
+    [SerializeField] private string bulletTag = "Bala";   
+    [SerializeField] private Transform puntoDisparo;      
     public float velocidadBala = 8f;
     public float rangoDisparo = 7f;
     public float enfriamientoDisparo = 2f;
 
     private float timerDisparo;
+
+    // =====================================================
+    // 🛸 CONFIGURACIÓN DE ABDUCCIÓN (¡NUEVO!)
+    // =====================================================
+    [Header("Abducción (IA)")]
+    public float rangoAbduccion = 2.5f; // A qué distancia decide soltar el rayo
+    public float enfriamientoAbduccion = 6f; // Cuánto tarda en volver a intentarlo
+
+    private float timerAbduccion;
 
     // =====================================================
     // 🌀 MOVIMIENTO ORBITAL
@@ -49,8 +58,6 @@ public class enemigo_gato : enemigo_base
 
     [SerializeField] private ZonaAbduccionGato zonaAbduccion;
 
-
-
     // =====================================================
     // CICLO DE VIDA
     // =====================================================
@@ -58,12 +65,8 @@ public class enemigo_gato : enemigo_base
     {
         base.Awake();
 
-        //rb = GetComponent<Rigidbody2D>();
-
-        // Evita conflictos si el enemigo usa NavMesh en otro modo
         if (agent != null)
         {
-            //agent.updatePosition = false;
             agent.updateRotation = false;
             agent.updateUpAxis = false;
         }
@@ -84,10 +87,6 @@ public class enemigo_gato : enemigo_base
     protected override void Update()
     {
         base.Update();
-        if (objetivo != null && estadoActual == EstadoGato.Patrulla)
-        {
-            CambiarEstado(EstadoGato.Orbita);
-        }
         
         if (estaMuerto)
         {
@@ -95,10 +94,14 @@ public class enemigo_gato : enemigo_base
             return;
         }
 
-        // Si no hay jugador, patrulla
         if (objetivo == null)
         {
             CambiarEstado(EstadoGato.Patrulla);
+            return; // Añadido un return por seguridad para no ejecutar código extra
+        }
+        else if (estadoActual == EstadoGato.Patrulla)
+        {
+            CambiarEstado(EstadoGato.Orbita);
         }
 
         // Ejecutar lógica según el estado
@@ -111,12 +114,12 @@ public class enemigo_gato : enemigo_base
             case EstadoGato.Orbita:
                 ActualizarTimers();
                 MoverOrbita();
+                IntentarAbducir(); // <-- NUEVO: Ahora el gato decide si abduce
                 IntentarDisparar();
                 break;
             
             case EstadoGato.Abduciendo:
-                // No hace nada, la zona controla el láser
-                //rb.linearVelocity = Vector2.zero;
+                // El gato se queda quieto anclado, esperando que termine la animación
                 if (agent != null)
                     agent.isStopped = true;
                 break;
@@ -131,6 +134,7 @@ public class enemigo_gato : enemigo_base
         base.OnSpawnFromPool();
 
         timerDisparo = enfriamientoDisparo;
+        timerAbduccion = enfriamientoAbduccion; // Reiniciamos el timer de abducción
         timerCambioDireccion = cambioDireccionTiempo;
         direccionOrbita = Random.value > 0.5f ? 1 : -1;
 
@@ -143,9 +147,7 @@ public class enemigo_gato : enemigo_base
     void CambiarEstado(EstadoGato nuevoEstado)
     {
         if (estadoActual == nuevoEstado) return;
-
         estadoActual = nuevoEstado;
-
         Debug.Log($"[GATO] Estado → {estadoActual}");
     }
 
@@ -155,6 +157,7 @@ public class enemigo_gato : enemigo_base
     void ActualizarTimers()
     {
         timerDisparo -= Time.deltaTime;
+        timerAbduccion -= Time.deltaTime; // Restamos tiempo al cooldown de abducción
         timerCambioDireccion -= Time.deltaTime;
 
         if (timerCambioDireccion <= 0f)
@@ -176,10 +179,7 @@ public class enemigo_gato : enemigo_base
         float dist = toTarget.magnitude;
         Vector2 dir = toTarget.normalized;
 
-        // Tangente para orbitar
         Vector2 tangente = new Vector2(-dir.y, dir.x) * direccionOrbita;
-
-        // Corrección radial
         Vector2 correccion = Vector2.zero;
 
         if (dist > distanciaMax)
@@ -187,33 +187,42 @@ public class enemigo_gato : enemigo_base
         else if (dist < distanciaMin)
             correccion = -dir * correccionRadial;
 
-        // Punto destino sobre NavMesh
-        Vector2 destino = (Vector2)transform.position +
-                        tangente * velocidadOrbita +
-                        correccion;
+        Vector2 destino = (Vector2)transform.position + tangente * velocidadOrbita + correccion;
 
         agent.isStopped = false;
         agent.SetDestination(destino);
 
-        // Flip visual
         if (spriteRenderer != null && agent.velocity.x != 0)
             spriteRenderer.flipX = agent.velocity.x < 0;
     }
 
     // =====================================================
-    // ATAQUE A DISTANCIA
+    // INTELIGENCIA DE ATAQUES
     // =====================================================
+    
+    // --- 1. INTENTO DE ABDUCCIÓN (NUEVO) ---
+    void IntentarAbducir()
+    {
+        if (timerAbduccion > 0f) return;
+        if (Vector2.Distance(transform.position, objetivo.position) > rangoAbduccion) return;
+
+        // Si está cerca y tiene recarga, inicia la secuencia
+        timerAbduccion = enfriamientoAbduccion;
+        IniciarAbduccion();
+    }
+
+    // --- 2. INTENTO DE DISPARO ---
     void IntentarDisparar()
     {
         if (timerDisparo > 0f) return;
+        
+        // Evitar que dispare si justo acaba de decidir abducir
+        if (estadoActual == EstadoGato.Abduciendo) return; 
+
         if (Vector2.Distance(transform.position, objetivo.position) > rangoDisparo) return;
 
         timerDisparo = enfriamientoDisparo;
-
-        // Animación de ataque
         animator?.SetTrigger("atacando");
-
-        // Delay para sincronizar con animación
         Invoke(nameof(DisparoReal), 0.5f);
     }
 
@@ -221,26 +230,15 @@ public class enemigo_gato : enemigo_base
     {
         if (objetivo == null || estaMuerto) return;
 
-        Vector3 origen = puntoDisparo != null
-            ? puntoDisparo.position
-            : transform.position;
-
-        // Obtener bala del Pool
-        GameObject bala = PoolManager.Instance.SpawnFromPool(
-            bulletTag,
-            origen,
-            Quaternion.identity
-        );
+        Vector3 origen = puntoDisparo != null ? puntoDisparo.position : transform.position;
+        GameObject bala = PoolManager.Instance.SpawnFromPool(bulletTag, origen, Quaternion.identity);
 
         if (bala == null) return;
 
         Vector2 dir = (objetivo.position - transform.position).normalized;
-
-        // Rotación visual
         float angulo = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         bala.transform.rotation = Quaternion.Euler(0, 0, angulo);
 
-        // Impulso
         Rigidbody2D balaRB = bala.GetComponent<Rigidbody2D>();
         if (balaRB != null)
         {
@@ -249,43 +247,53 @@ public class enemigo_gato : enemigo_base
         }
     }
 
-    // =====================================================
-    // PATRULLA (SIN JUGADOR)
-    // =====================================================
     void Patrullar()
     {
         if (agent == null || !agent.isOnNavMesh) return;
-
-        agent.isStopped = true; // Quieto hasta ver al jugador
+        agent.isStopped = true; 
     }
 
     // =====================================================
-    // MÉTODOS LLAMADOS POR LA ZONA (ZonaAbduccionGato)
+    // EJECUCIÓN FÍSICA Y ANIMACIÓN
     // =====================================================
-    // 1. ¿Puede la zona atrapar al jugador?
     public bool PuedeAbducir()
     {
-        return !estaMuerto;
+        return !estaMuerto && estadoActual != EstadoGato.Abduciendo;
     }
 
-    // 2. Iniciar abducción
     public void IniciarAbduccion()
     {
+        CambiarEstado(EstadoGato.Abduciendo);
 
         if (agent != null)
-            agent.isStopped = true;
+        {
+            agent.isStopped = true; 
+            agent.velocity = Vector3.zero;
+        }
+        
+        Rigidbody2D rbLocal = GetComponent<Rigidbody2D>();
+        if (rbLocal != null)
+        {
+            rbLocal.linearVelocity = Vector2.zero;
+            rbLocal.bodyType = RigidbodyType2D.Kinematic; 
+        }
 
         animator?.SetBool("abduciendo", true);
     }
 
-    // 3. Finalizar abducción
+    // ESTA ES LA FUNCIÓN QUE DEBES LLAMAR DESDE EL ANIMATION EVENT AL FINAL DE LA ANIMACIÓN
     public void FinalizarAbduccion()
     {
+        CambiarEstado(EstadoGato.Orbita);
         animator?.SetBool("abduciendo", false);
 
-        if (agent != null)
+        if (agent != null && agent.isOnNavMesh)
             agent.isStopped = false;
 
+        Rigidbody2D rbLocal = GetComponent<Rigidbody2D>();
+        if (rbLocal != null)
+        {
+            rbLocal.bodyType = RigidbodyType2D.Dynamic; 
+        }
     }
-
 }

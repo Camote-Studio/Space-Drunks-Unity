@@ -1572,17 +1572,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   oleadas:
-  - nombre: Quackos
+  - nombre: Michifus
     grupos:
-    - poolTag: Quacko
+    - poolTag: Michifus
       cantidad: 2
       tasaAparicion: 1.5
-    - poolTag: Quacko
-      cantidad: 3
+    - poolTag: Michifus
+      cantidad: 2
       tasaAparicion: 1.5
   puntosDeSpawn:
   - {fileID: 784881882}
-  tiempoEntreOleadas: 5
+  tiempoEntreOleadas: 10
   oleadaActualIndex: 0
   enemigosVivos: 0
   esperandoSiguienteOleada: 0
@@ -2045,6 +2045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BatWeapon
   batVisual: {fileID: 0}
   batHitbox: {fileID: 1352115882}
+  batHitbox_1: {fileID: 0}
+  batHitbox_2: {fileID: 0}
   batActiveTime: 0.15
   batAttackCooldown: 0.3
 --- !u!4 &348799926 stripped
@@ -2119,6 +2121,84 @@ Transform:
   - {fileID: 698189415}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &357471890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357471891}
+  - component: {fileID: 357471892}
+  m_Layer: 0
+  m_Name: MuroAbajo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &357471891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357471890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 808891370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &357471892
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357471890}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 27.690315, y: 0.031710327}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 58.18, y: 0.93657935}
+  m_EdgeRadius: 0
 --- !u!1 &378907759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3395,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 155232384682688868, guid: 49e869a385d8d62418f6053616675424, type: 3}
   m_PrefabInstance: {fileID: 1109541421}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &516227706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516227707}
+  - component: {fileID: 516227708}
+  m_Layer: 0
+  m_Name: MuroArriba
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516227707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516227706}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 808891370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &516227708
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516227706}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 27.690315, y: 0.031710327}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 58.18, y: 0.93657935}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3447,7 +3605,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.733133, y: -0.6104257, z: -10}
+  m_LocalPosition: {x: -2.900001, y: -0.6099999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4090,7 +4248,7 @@ GameObject:
   - component: {fileID: 698189417}
   - component: {fileID: 698189416}
   m_Layer: 0
-  m_Name: ZonaMovimiento
+  m_Name: ZonaMovimientoEnemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4105,8 +4263,8 @@ Transform:
   m_GameObject: {fileID: 698189414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.3256, y: -2.2592, z: 0}
-  m_LocalScale: {x: 172.50919, y: 6.6828294, z: 1}
+  m_LocalPosition: {x: 67.2368, y: -2.7816, z: 0}
+  m_LocalScale: {x: 167.4995, y: 4.869284, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 356663654}
@@ -4835,7 +4993,7 @@ Transform:
   m_GameObject: {fileID: 726557285}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.97, y: -0.6099999, z: -10}
+  m_LocalPosition: {x: -2.9, y: -0.6099999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5486,7 +5644,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 808891370}
-  - component: {fileID: 808891372}
   m_Layer: 0
   m_Name: LimitesPlayer
   m_TagString: Untagged
@@ -5503,67 +5660,16 @@ Transform:
   m_GameObject: {fileID: 808891368}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.93, y: -0.38, z: 0}
+  m_LocalPosition: {x: -19.1, y: 2.2, z: 0}
   m_LocalScale: {x: 3.0720203, y: 4.548217, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 516227707}
+  - {fileID: 357471891}
+  - {fileID: 1730665251}
+  - {fileID: 1246669327}
   m_Father: {fileID: 356663654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &808891372
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808891368}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -7.8683667, y: 0.19818118}
-  - {x: -7.8600607, y: -0.98340344}
-  - {x: 48.622803, y: -0.99105406}
-  - {x: 48.623344, y: 0.19998227}
-  - {x: 2.8371093, y: 0.19795541}
-  - {x: 2.7404523, y: 0.19758524}
-  - {x: 2.7376246, y: 0.19754966}
-  - {x: 2.697641, y: 0.19674942}
-  - {x: 2.5962958, y: 0.19608992}
-  - {x: 2.5041578, y: 0.1962016}
-  - {x: 2.3726342, y: 0.19614837}
-  - {x: 0.9884305, y: 0.19583826}
-  - {x: 0.5219919, y: 0.1951086}
-  - {x: -7.8678317, y: 0.19646823}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &809124944
 GameObject:
   m_ObjectHideFlags: 0
@@ -7905,6 +8011,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 493922821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1246669326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246669327}
+  - component: {fileID: 1246669328}
+  m_Layer: 0
+  m_Name: MuroDerecha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1246669327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246669326}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 57.24, y: -2.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 808891370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1246669328
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246669326}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.8148105, y: 1.3889283}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.169755, y: 3.6510155}
+  m_EdgeRadius: 0
 --- !u!1 &1260208188
 GameObject:
   m_ObjectHideFlags: 0
@@ -9999,6 +10183,12 @@ MonoBehaviour:
     - poolTag: Quacko
       cantidad: 2
       tasaAparicion: 1.5
+    - poolTag: Michifus
+      cantidad: 2
+      tasaAparicion: 1.5
+    - poolTag: Quacko
+      cantidad: 2
+      tasaAparicion: 1.5
   puntosDeSpawn:
   - {fileID: 1837696590}
   tiempoEntreOleadas: 5
@@ -10517,7 +10707,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.97
+      value: -2.9
       objectReference: {fileID: 0}
     - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10925,6 +11115,84 @@ MonoBehaviour:
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: 0b1f2edfb4ab80946a34e3585ffd4712, type: 2}
+--- !u!1 &1730665250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730665251}
+  - component: {fileID: 1730665252}
+  m_Layer: 0
+  m_Name: MuroIzquierda
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730665251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730665250}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 808891370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1730665252
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730665250}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.8148105, y: 1.3889283}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.169755, y: 3.6510155}
+  m_EdgeRadius: 0
 --- !u!1001 &1735468399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11802,9 +12070,6 @@ MonoBehaviour:
   bulletsPerBurst: 80
   timeBetweenBullets: 0.1
   burstCooldown: 1.6
-  aimDeadzone: 0.2
-  useGamepadAim: 0
-  aimHorizontalAxis: AimHorizontal
 --- !u!4 &1813658627
 Transform:
   m_ObjectHideFlags: 0
@@ -13505,12 +13770,28 @@ MonoBehaviour:
     - poolTag: Quacko
       cantidad: 2
       tasaAparicion: 1.5
-    - poolTag: Quacko
+  - nombre: Michifus
+    grupos:
+    - poolTag: Michifus
       cantidad: 2
+      tasaAparicion: 1.5
+  - nombre: Quacko
+    grupos:
+    - poolTag: Quacko
+      cantidad: 1
+      tasaAparicion: 1.5
+    - poolTag: Michifus
+      cantidad: 1
+      tasaAparicion: 1.5
+    - poolTag: Quacko
+      cantidad: 1
+      tasaAparicion: 1.5
+    - poolTag: Michifus
+      cantidad: 1
       tasaAparicion: 1.5
   puntosDeSpawn:
   - {fileID: 1317007915}
-  tiempoEntreOleadas: 5
+  tiempoEntreOleadas: 15
   oleadaActualIndex: 0
   enemigosVivos: 0
   esperandoSiguienteOleada: 0
