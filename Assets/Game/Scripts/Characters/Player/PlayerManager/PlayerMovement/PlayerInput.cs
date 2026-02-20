@@ -137,6 +137,7 @@ public class PlayerInput : MonoBehaviour
         }
 
         bool ultiDown = shiftHeld && a1Down;
+        if (ultiDown) Debug.Log("ULTI DOWN TRUE (Shift + Attack1)");
         bool ultiHeld = shiftHeld && a1Held;
         bool ultiUp = shiftHeld && a1Up;
 

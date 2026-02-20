@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 1e086f3eabffb1644a699ceb743fb9cd
+guid: 89d6aa4db54165046b4866964d972f4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1341716890831980797
-    second: Ultimate_attack_13_0
+      213: -6013414054264081072
+    second: BigbMoveUp1_0
+  - first:
+      213: -346876305793121951
+    second: BigbMoveUp1_1
+  - first:
+      213: -5077251567242089176
+    second: BigbMoveUp1_2
+  - first:
+      213: -813565143610104676
+    second: BigbMoveUp1_3
+  - first:
+      213: 5120959923397206198
+    second: BigbMoveUp1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ultimate_attack_13_0
+      name: BigbMoveUp1_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 6
-        width: 257
-        height: 294
+        x: 61
+        y: 349
+        width: 143
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30771d4b893416de0800000000000000
-      internalID: -1341716890831980797
+      spriteID: 0557f3037cf0c8ca0800000000000000
+      internalID: -6013414054264081072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigbMoveUp1_1
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 421
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 161833476d5af2bf0800000000000000
+      internalID: -346876305793121951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigbMoveUp1_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 413
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d6d3b999af989b0800000000000000
+      internalID: -5077251567242089176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigbMoveUp1_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 407
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94ea75ffc2a5b4f0800000000000000
+      internalID: -813565143610104676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigbMoveUp1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 246
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b02a171bed411740800000000000000
+      internalID: 5120959923397206198
       vertices: []
       indices: 
       edges: []
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ultimate_attack_13_0: -1341716890831980797
+      BigbMoveUp1_0: -6013414054264081072
+      BigbMoveUp1_1: -346876305793121951
+      BigbMoveUp1_2: -5077251567242089176
+      BigbMoveUp1_3: -813565143610104676
+      BigbMoveUp1_4: 5120959923397206198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

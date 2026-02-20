@@ -41,4 +41,24 @@ public class WeaponPlayer2Animation : MonoBehaviour
         if (animator == null) return;
         animator.SetTrigger(hashPunchLeft);
     }
+
+    public void PlayUltimatePunch(int index)
+    {
+        if (animator == null) return;
+
+        int pattern = index % 3;
+
+        switch (pattern)
+        {
+            case 0:
+                animator.SetTrigger(hashPunchRight);
+                break;
+            case 1:
+                animator.SetTrigger(hashPunchMiddle);
+                break;
+            default:
+                animator.SetTrigger(hashPunchLeft);
+                break;
+        }
+    }
 }

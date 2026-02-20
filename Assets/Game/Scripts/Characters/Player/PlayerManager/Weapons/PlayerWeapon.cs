@@ -87,6 +87,19 @@ public class PlayerWeapon : MonoBehaviour
 
         if (attack3Weapon != null)
             attack3Weapon.Tick(attack3Down, attack3Held, attack3Up);
+
+        if (ultimateWeapon == null)
+        {
+            if (ultiDown) Debug.Log("ULTI: ultimateWeapon = NULL (no asignado en PlayerWeapon)");
+        }
+        else
+        {
+            if (ultiDown) Debug.Log("ULTI: PlayerWeapon tickeando UltimateWeapon");
+            ultimateWeapon.Tick(ultiDown, ultiHeld, ultiUp);
+
+            if (ultimateWeapon.IsActive)
+                return;
+        }
     }
 
     private void HandleAttack1(bool down, bool held, bool up)
