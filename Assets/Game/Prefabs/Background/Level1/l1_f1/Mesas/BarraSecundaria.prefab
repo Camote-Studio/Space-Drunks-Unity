@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4607731560703426475}
   - component: {fileID: 2209993346099018481}
   - component: {fileID: 6891946041390740011}
+  - component: {fileID: 2854513137399702588}
   m_Layer: 0
   m_Name: BarraSecundaria
   m_TagString: Untagged
@@ -178,3 +179,19 @@ PolygonCollider2D:
       - {x: 2.1916018, y: 0.038036823}
       - {x: 2.2037306, y: 0.15932588}
   m_UseDelaunayMesh: 1
+--- !u!114 &2854513137399702588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2852243804508886583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8989789744208605237}
   - component: {fileID: 7326886379470601217}
   - component: {fileID: 804578454354474751}
+  - component: {fileID: 1029327713688977591}
   m_Layer: 0
   m_Name: mesita
   m_TagString: Untagged
@@ -129,3 +130,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.55}
   m_Size: {x: 3.7, y: 0.7}
   m_Direction: 1
+--- !u!114 &1029327713688977591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8150429379405859991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

@@ -108,7 +108,7 @@ MonoBehaviour:
   velocidadForcejeo: 1.5
   duracionSalida: 1.5
   velocidadGiro: 360
-  cooldownGato: 12
+  cooldownGato: 20
   inmunidadGlobalJugador: 2.5
 --- !u!60 &563444615066709512
 PolygonCollider2D:
@@ -360,19 +360,22 @@ MonoBehaviour:
   enemyPoolTag: Michifus
   estaMuerto: 0
   estaAtacando: 0
+  rangoDisparoMax: 8
+  rangoDisparoMin: 5
+  rangoHuir: 3.5
   bulletTag: Bala
   puntoDisparo: {fileID: 4603441605358227307}
   velocidadBala: 8
-  rangoDisparo: 6
-  enfriamientoDisparo: 5
-  rangoAbduccion: 2.5
+  bolasPorRafaga: 3
+  tiempoEntreBolas: 0.4
+  enfriamientoDisparo: 3
+  primerDisparoDelay: 0.5
   enfriamientoAbduccion: 6
-  distanciaMin: 3
-  distanciaMax: 4.5
-  velocidadOrbita: 3
-  correccionRadial: 2
-  cambioDireccionTiempo: 1.5
-  suavizadoMovimiento: 5
+  alturaAbduccion: 3
+  tiempoRetroceso: 1.5
+  maxGolpesPermitidos: 3
+  tiempoStun: 0.4
+  fuerzaRetrocesoStun: 2
   zonaAbduccion: {fileID: 6857594337003180769}
 --- !u!114 &877952091321846806
 MonoBehaviour:
@@ -417,7 +420,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4210027015946775837}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2.5
+  m_Radius: 0.5
   m_Speed: 5
   m_Acceleration: 10
   avoidancePriority: 50
@@ -426,10 +429,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 3
+  m_Height: 2.3
   m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!50 &3462641029663198274
 Rigidbody2D:
   serializedVersion: 5
@@ -442,7 +445,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -492,7 +495,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.4}
-  m_Size: {x: 2.4, y: 0.6}
+  m_Size: {x: 2.7, y: 0.6}
   m_Direction: 1
 --- !u!61 &8954623212721692674
 BoxCollider2D:
