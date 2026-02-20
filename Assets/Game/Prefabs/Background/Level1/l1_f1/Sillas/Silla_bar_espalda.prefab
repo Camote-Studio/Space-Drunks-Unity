@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8622806154490106828}
   - component: {fileID: 3180324782373384729}
   - component: {fileID: 4652806243834890533}
+  - component: {fileID: -8772701369230508107}
   m_Layer: 0
   m_Name: Silla_bar_espalda
   m_TagString: Untagged
@@ -221,3 +222,19 @@ PolygonCollider2D:
       - {x: 0.76417476, y: 0.23416771}
       - {x: 0.933724, y: 0.4264679}
   m_UseDelaunayMesh: 1
+--- !u!114 &-8772701369230508107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697558838900137476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

@@ -14,12 +14,17 @@ public class ZonaAbduccionGato : MonoBehaviour
     public float cooldownGato = 12f;
     public float inmunidadGlobalJugador = 2.5f;
 
+    /* == SECCIÓN COMENTADA PARA EL FUTURO SISTEMA DE VIDA ==
+    [Header("Daño de Abducción")]
+    public float dañoPorSegundo = 10f; 
+    */
+
     private enemigo_gato gato;
     private Transform jugador;
     private Rigidbody2D rbJugador;
     private MonoBehaviour movimientoJugador; 
     
-    // VARIABLE NUEVA: Capturaremos tu PolygonCollider
+    // Capturaremos tu PolygonCollider
     private Collider2D miCollider; 
 
     private bool enProceso;
@@ -28,7 +33,6 @@ public class ZonaAbduccionGato : MonoBehaviour
 
     private void Awake()
     {
-        // Captura automáticamente el PolygonCollider2D que enciendes en la animación
         miCollider = GetComponent<Collider2D>();
     }
 
@@ -65,11 +69,18 @@ public class ZonaAbduccionGato : MonoBehaviour
 
         // ==========================================================
         // 1. FORCEJEO (Dictado por la animación)
-        // Este bucle funciona MIENTRAS el collider siga encendido en tu línea de tiempo
         // ==========================================================
         while (miCollider.enabled)
         {
             if (gato.estaMuerto) { LiberarJugadorEmergencia(); yield break; }
+
+            /* == LÓGICA DE DAÑO COMENTADA PARA EL FUTURO ==
+            var scriptVida = jugador.GetComponent<ScriptVidaJugador>(); 
+            if (scriptVida != null)
+            {
+                scriptVida.RecibirDaño(dañoPorSegundo * Time.deltaTime);
+            }
+            */
 
             float movX = Input.GetAxisRaw("Horizontal");
             float movY = Input.GetAxisRaw("Vertical");
@@ -78,12 +89,11 @@ public class ZonaAbduccionGato : MonoBehaviour
             Vector2 nuevaPosicion = rbJugador.position + (direccionForcejeo * velocidadForcejeo * Time.deltaTime);
             rbJugador.MovePosition(nuevaPosicion);
 
-            yield return null; // Esperamos al siguiente frame
+            yield return null; 
         }
 
         // ==========================================================
         // 2. MAREO (El rayo amarillo ya se apagó en la animación)
-        // El OVNI puede irse libremente mientras esto ocurre
         // ==========================================================
         float tiempoActual = 0f;
         while (tiempoActual < duracionSalida)

@@ -4,20 +4,25 @@ using System.Collections;
 [RequireComponent(typeof(enemigo_base))]
 public class enemigo_ataque : MonoBehaviour, IPoolable
 {
-    [Header("Configuración de Ataque")]
+    [Header("Configuración de Ataque y Combo")]
     public float rangoAtaque = 1.5f;
-    public float daño = 10f;
+    public float dañoPorGolpe = 10f;
     public float enfriamiento = 2f;
     
-    [Header("Sincronización")]
-    [Tooltip("Tiempo desde que inicia la animación hasta que se aplica el daño")]
-    public float delayImpacto = 0.3f; 
-    [Tooltip("Duración total de la animación de ataque")]
-    public float duracionAnimacion = 0.8f;
+    [Header("Secuencia de Combo")]
+    [Tooltip("Cuántos golpes da el enemigo en su combo")]
+    public int cantidadGolpesCombo = 3;
+    [Tooltip("Tiempo entre cada puñetazo del combo")]
+    public float tiempoEntreGolpes = 0.5f;
+    [Tooltip("Tiempo desde que inicia la animación de un golpe hasta que hace el daño")]
+    public float delayImpacto = 0.2f;
+
+    [Header("Efectos en el Jugador")]
+    public float tiempoDerribo = 1.5f; // Cuánto tiempo queda tumbado el jugador al final
 
     private float temporizadorAtaque;
     private enemigo_base enemigo;
-    private Animator animator; // Referencia directa o usa tu wrapper enemigo_animacion
+    private Animator animator;
     private Transform objetivo;
 
     void Awake()
@@ -29,125 +34,111 @@ public class enemigo_ataque : MonoBehaviour, IPoolable
 
     void Update()
     {
-        // Validaciones de seguridad
         if (enemigo == null || objetivo == null || enemigo.estaMuerto) return;
 
-        temporizadorAtaque -= Time.deltaTime;
+        if (temporizadorAtaque > 0) temporizadorAtaque -= Time.deltaTime;
 
-        // Verificar distancia
         float distancia = Vector2.Distance(transform.position, objetivo.position);
 
-        // Calcula si el jugador está frente al enemigo
-        Vector2 dirAlJugador = (objetivo.position - transform.position).normalized;
-        float mirandoHacia = transform.localScale.x; // 1 o -1 según tu lógica de escala
-
-        // Si el enemigo mira a la derecha (1) y el jugador está a la izquierda (-), no ataca
-        bool estaDeFrente = (mirandoHacia < 0 && dirAlJugador.x < 0) || (mirandoHacia > 0 && dirAlJugador.x > 0);
-
-        if (!enemigo.estaAtacando && temporizadorAtaque <= 0f && distancia <= rangoAtaque && estaDeFrente)
+        // Si el cooldown terminó, no estamos atacando y el jugador está en rango: INICIAMOS COMBO
+        if (!enemigo.estaAtacando && temporizadorAtaque <= 0f && distancia <= rangoAtaque)
         {
-            IniciarAtaque();
+            IniciarCombo();
         }
     }
 
-    // ===================== POOLING =====================
-    // Este script necesita reiniciar sus propios timers cuando el enemigo vuelve del pool
     public void OnSpawnFromPool()
     {
-        temporizadorAtaque = 0.5f; // Pequeño delay inicial para que no ataque instantáneo al spawnear
-        enemigo.estaAtacando = false;
-        CancelInvoke(); // Limpiar ataques pendientes
+        temporizadorAtaque = 0.5f; 
+        if (enemigo != null) enemigo.estaAtacando = false;
+        StopAllCoroutines();
     }
 
     public void OnDespawnToPool()
     {
-        CancelInvoke();
+        StopAllCoroutines();
     }
 
-    // ===================== LÓGICA DE ATAQUE =====================
+    // ===================== LÓGICA DE COMBO =====================
 
-    void IniciarAtaque()
-    {
-        StopAllCoroutines(); // Asegura que no haya secuencias de ataque corriendo
-
-        enemigo.estaAtacando = true;
-        temporizadorAtaque = enfriamiento;
-
-        // 1. Iniciar Animación
-        if (animator != null)
-        {
-            animator.SetTrigger("atacando"); // Usa Trigger, es mejor que Bool para golpes
-        }
-        StartCoroutine(SecuenciaAtaque());
-    }
-
-    IEnumerator SecuenciaAtaque()
-    {
-        // Esperar el momento del impacto
-        yield return new WaitForSeconds(delayImpacto);
-
-        if (enemigo != null && !enemigo.estaMuerto)
-        {
-
-            float distanciaReal = Vector2.Distance(transform.position, objetivo.position);
-
-            if (distanciaReal <= rangoAtaque + 0.3f) 
-            {
-                AplicarDaño();
-            }
-            else 
-            {
-                Debug.Log("El jugador esquivó el ataque!");
-            }
-        }
-
-        // Esperar a que termine la animación antes de permitir otro ataque
-        yield return new WaitForSeconds(duracionAnimacion - delayImpacto);
-        FinalizarAtaque();
-    }
-    void AplicarDaño()
-    {
-        if (enemigo == null || enemigo.estaMuerto) return;
-
-            // 1. Validación de Distancia (con un margen pequeño)
-            float distancia = Vector2.Distance(transform.position, objetivo.position);
-            if (distancia > rangoAtaque + 0.3f) return;
-
-            // 2. Validación de Dirección (Evitar daño si el jugador te pasó de largo)
-            Vector2 dirAlJugador = (objetivo.position - transform.position).normalized;
-            
-            // Obtenemos hacia dónde mira el pato basándonos en su escala
-            // Si escala X es negativa, mira a un lado; si es positiva, al otro.
-            float mirandoHacia = Mathf.Sign(transform.localScale.x);
-
-            // Ajustamos según tu configuración de 'spriteMiraALaIzquierdaPorDefecto'
-            // Si el pato mira a la izquierda y el jugador está a la derecha, el ataque falla.
-                bool jugadorEstaEnFrente = (mirandoHacia < 0 && dirAlJugador.x < 0) || (mirandoHacia > 0 && dirAlJugador.x > 0);
-
-            if (!jugadorEstaEnFrente) return;
-
-            // 3. Aplicar Daño
-            var vida = objetivo.GetComponentInParent<VidaJugador>();
-            if (vida != null)
-            {
-                vida.RecibirDanio(daño);
-            }
-    }
-
-        public void InterrumpirAtaque()
+    void IniciarCombo()
     {
         StopAllCoroutines();
-        enemigo.estaAtacando = false;
-        // Opcional: Volver a idle en el animator
-        animator.Play("idle"); 
+        enemigo.estaAtacando = true;
+        StartCoroutine(RutinaCombo());
+    }
+
+    IEnumerator RutinaCombo()
+    {
+        for (int i = 0; i < cantidadGolpesCombo; i++)
+        {
+            // Validar que el enemigo siga vivo antes de cada golpe
+            if (enemigo.estaMuerto) yield break;
+
+            // 1. Disparar animación (asegúrate de que tu Animator pueda repetir este trigger rápido)
+            if (animator != null) animator.SetTrigger("atacando");
+
+            // 2. Esperar el "wind-up" (tiempo hasta que el puño conecta)
+            yield return new WaitForSeconds(delayImpacto);
+
+            // 3. Validar si el jugador sigue en rango para recibir EL DAÑO
+            if (objetivo != null)
+            {
+                float distanciaReal = Vector2.Distance(transform.position, objetivo.position);
+                
+                // Le damos un pequeño margen (+0.3f) por si el jugador se está moviendo
+                if (distanciaReal <= rangoAtaque + 0.3f) 
+                {
+                    bool esUltimoGolpe = (i == cantidadGolpesCombo - 1);
+                    AplicarEfectosAlJugador(esUltimoGolpe);
+                }
+            }
+
+            // 4. Esperar el resto del tiempo de este golpe antes de lanzar el siguiente
+            yield return new WaitForSeconds(tiempoEntreGolpes - delayImpacto);
+        }
+
+        // --- FIN DEL COMBO ---
+        FinalizarAtaque();
+    }
+
+    void AplicarEfectosAlJugador(bool esDerribo)
+    {
+        if (objetivo == null) return;
+
+        var vidaJugador = objetivo.GetComponentInParent<VidaJugador>();
+        if (vidaJugador != null)
+        {
+            // Aplicamos el daño estándar
+            //vidaJugador.RecibirDanio(dañoPorGolpe);
+
+            // Si es el último golpe, lo tumbamos. Si no, solo lo aturdimos brevemente.
+            //if (esDerribo)
+            //{
+            //    // Deberás crear este método en tu script VidaJugador (ver paso 2)
+            //    vidaJugador.SufrirDerribo(tiempoDerribo);
+            //}
+            //else
+            //{
+            //    // Lo aturdimos solo por lo que dura el tiempo entre golpes para que no escape
+            //    vidaJugador.SufrirStunLigero(tiempoEntreGolpes); 
+            //}
+        }//
+    }
+
+    public void InterrumpirAtaque()
+    {
+        StopAllCoroutines();
+        if (enemigo != null) enemigo.estaAtacando = false;
+        animator?.Play("idle"); 
     }
 
     void FinalizarAtaque()
     {
         enemigo.estaAtacando = false;
+        temporizadorAtaque = enfriamiento; // El cooldown real empieza cuando termina el combo
     }
 
-    // ===================== DEBUG =====================
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
