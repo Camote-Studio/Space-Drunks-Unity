@@ -8,26 +8,44 @@ public class ataque_jugador : MonoBehaviour
 
     public GameObject hitEffectPrefab; // HIT SPARK
 
+    [Header("Filtros de Ataque")]
+    [Tooltip("Selecciona aquí la capa (Layer) donde están tus enemigos o sus Hitboxes")]
+    public LayerMask capaEnemigos; // <-- ¡NUEVO! Optimización profesional
+
     void Golpear()
     {
-        Collider2D[] enemigos = Physics2D.OverlapCircleAll(transform.position, rango);
+        // 1. ESCANEO OPTIMIZADO: Solo buscamos en la capa de Enemigos, ignorando muros y al propio jugador.
+        Collider2D[] enemigos = Physics2D.OverlapCircleAll(transform.position, rango, capaEnemigos);
+        
         foreach (Collider2D col in enemigos)
         {
-            enemigo_base enemigo = col.GetComponent<enemigo_base>();
-            if (enemigo == null)
+            // 2. REGLA DE HITBOX: Si el colisionador NO es un Trigger (ej. son los pies sólidos), lo ignoramos.
+            if (!col.isTrigger)
             {
                 continue;
             }
+
+            // 3. BUSCAR EN EL PADRE: Como golpeamos al hijo (Hitbox_Cuerpo), 
+            // le decimos a Unity que busque el script de vida en el objeto principal (el padre).
+            enemigo_base enemigo = col.GetComponentInParent<enemigo_base>();
+            
+            // 4. VALIDACIÓN: ¿Encontramos al enemigo? ¿Está vivo?
+            if (enemigo == null || enemigo.estaMuerto)
+            {
+                continue;
+            }
+
+            // --- EFECTO VISUAL ---
             Vector2 hitPos = col.ClosestPoint(transform.position);
             if (hitEffectPrefab != null)
             {
-                GameObject hit = Instantiate(hitEffectPrefab, hitPos, Quaternion.identity);
-            }     
-            // DAÑO
+                Instantiate(hitEffectPrefab, hitPos, Quaternion.identity);
+            }    
+            
+            // --- APLICAR DAÑO ---
             enemigo.RecibirDaño(daño);
 
-            break; // solo un enemigo
+            break; // Solo golpea a un enemigo por ataque
         }
     }
-
 }

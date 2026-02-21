@@ -2988,7 +2988,7 @@ MonoBehaviour:
   _ShopMenuContainer: {fileID: 258100401}
   _MedalsMenuContainer: {fileID: 938258752}
   _OptionsMenuContainer: {fileID: 2079061891}
-  _sceneToLoadAfterClickingPlay: SampleScene
+  _sceneToLoadAfterClickingPlay: elegir_personajes
 --- !u!4 &1214937421
 Transform:
   m_ObjectHideFlags: 0

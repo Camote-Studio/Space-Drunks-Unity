@@ -1018,7 +1018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130040285}
   - component: {fileID: 130040286}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_salida2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ Transform:
   m_GameObject: {fileID: 130040284}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.56, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1582,6 +1582,7 @@ MonoBehaviour:
   puntosDeSpawn:
   - {fileID: 784881882}
   tiempoEntreOleadas: 10
+  tiempofinZona: 0.5
   oleadaActualIndex: 0
   enemigosVivos: 0
   esperandoSiguienteOleada: 0
@@ -2115,6 +2116,7 @@ Transform:
   m_Children:
   - {fileID: 1861857052}
   - {fileID: 1225311252}
+  - {fileID: 832710969}
   - {fileID: 45021357}
   - {fileID: 808891370}
   - {fileID: 698189415}
@@ -2130,7 +2132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 357471891}
   - component: {fileID: 357471892}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MuroAbajo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2347,7 +2349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383882096}
   - component: {fileID: 383882097}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_salida3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2363,7 +2365,7 @@ Transform:
   m_GameObject: {fileID: 383882095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2735,7 +2737,7 @@ Transform:
   m_GameObject: {fileID: 488689824}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18, y: 0.03, z: 0}
+  m_LocalPosition: {x: -11.49, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3406,7 +3408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 516227707}
   - component: {fileID: 516227708}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MuroArriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4087,6 +4089,7 @@ MonoBehaviour:
   puntosDeSpawn:
   - {fileID: 796458534}
   tiempoEntreOleadas: 5
+  tiempofinZona: 0.5
   oleadaActualIndex: 0
   enemigosVivos: 0
   esperandoSiguienteOleada: 0
@@ -4168,7 +4171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 688755185}
   - component: {fileID: 688755186}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_salida1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4184,7 +4187,7 @@ Transform:
   m_GameObject: {fileID: 688755184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.27, y: 0, z: 0}
+  m_LocalPosition: {x: 2.46, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4537,7 +4540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711713012}
   - component: {fileID: 711713013}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_entrada4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4553,7 +4556,7 @@ Transform:
   m_GameObject: {fileID: 711713011}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.94, y: 0, z: 0}
+  m_LocalPosition: {x: -23.24, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5139,7 +5142,7 @@ Transform:
   m_GameObject: {fileID: 751238060}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 0.13, z: 0}
+  m_LocalPosition: {x: -10.09, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5599,7 +5602,7 @@ Transform:
   m_GameObject: {fileID: 784881881}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.52, y: -0.37, z: 0}
+  m_LocalPosition: {x: 4.38, y: -0.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5630,7 +5633,7 @@ Transform:
   m_GameObject: {fileID: 796458533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.55, y: -2.16, z: 0}
+  m_LocalPosition: {x: 18.64, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5936,6 +5939,97 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &832710968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832710969}
+  - component: {fileID: 832710970}
+  m_Layer: 0
+  m_Name: Piso
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &832710969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832710968}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 64.6516, y: -2.9, z: 0}
+  m_LocalScale: {x: 4.4241114, y: 1.0706896, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 356663654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &832710970
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832710968}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -10
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -2930336123272592177, guid: aa70057c09426b642833e21b465b0d6a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1001 &844917735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7064,7 +7158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1067739751}
   - component: {fileID: 1067739752}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_entrada1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7080,7 +7174,7 @@ Transform:
   m_GameObject: {fileID: 1067739750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23, y: 0.07, z: 0}
+  m_LocalPosition: {x: -22.94, y: 0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7695,7 +7789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179257737}
   - component: {fileID: 1179257738}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_entrada3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7711,7 +7805,7 @@ Transform:
   m_GameObject: {fileID: 1179257736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.3, y: 0, z: 0}
+  m_LocalPosition: {x: -22.87, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7901,7 +7995,7 @@ GameObject:
   - component: {fileID: 1225311252}
   - component: {fileID: 1225311254}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Techo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7916,8 +8010,8 @@ Transform:
   m_GameObject: {fileID: 1225311251}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.2, y: 0.1685, z: 0}
-  m_LocalScale: {x: 1, y: 1.0706896, z: 1}
+  m_LocalPosition: {x: 64.9951, y: 3.3, z: 0}
+  m_LocalScale: {x: 4.4323335, y: 1.0706896, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 356663654}
@@ -7971,7 +8065,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6671494965954396783, guid: abf0e571dfb2cec439d275f254f6de11, type: 3}
+  m_Sprite: {fileID: -6943007098751978870, guid: 2c6fc5ca943e8b14ba74c03c9c6572fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8022,7 +8116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246669327}
   - component: {fileID: 1246669328}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MuroDerecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8261,7 +8355,7 @@ Transform:
   m_GameObject: {fileID: 1281025677}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9013,7 +9107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1379209685}
   - component: {fileID: 1379209686}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_salida4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9029,7 +9123,7 @@ Transform:
   m_GameObject: {fileID: 1379209684}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.61, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9295,7 +9389,7 @@ RectTransform:
   m_GameObject: {fileID: 1387701772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.28, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 94065917}
@@ -9309,7 +9403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.6165, y: -14.8843}
+  m_AnchoredPosition: {x: 0, y: -14.8843}
   m_SizeDelta: {x: 3427.4219, y: 2029.5239}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1395115758 stripped
@@ -10193,6 +10287,7 @@ MonoBehaviour:
   puntosDeSpawn:
   - {fileID: 1837696590}
   tiempoEntreOleadas: 5
+  tiempofinZona: 0.5
   oleadaActualIndex: 0
   enemigosVivos: 0
   esperandoSiguienteOleada: 0
@@ -10613,7 +10708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1653455944}
   - component: {fileID: 1653455945}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: barrera_entrada2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10629,7 +10724,7 @@ Transform:
   m_GameObject: {fileID: 1653455943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.45, y: 0, z: 0}
+  m_LocalPosition: {x: -22.65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10737,18 +10832,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1123265891386991573, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6437344905980569988, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ee430003cc8833240876b456e446a99a, type: 2}
-    - target: {fileID: 7839877586725565192, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7839877586725565192, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8412913632877793971, guid: 7759d9b941d78804d8471f58a68bd6c0, type: 3}
@@ -11131,7 +11214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730665251}
   - component: {fileID: 1730665252}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MuroIzquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12119,7 +12202,7 @@ Transform:
   m_GameObject: {fileID: 1814072278}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -11.34, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12222,7 +12305,7 @@ Transform:
   m_GameObject: {fileID: 1837696589}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -1.2, z: 0}
+  m_LocalPosition: {x: 13.72, y: 1.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13979,6 +14062,7 @@ MonoBehaviour:
   puntosDeSpawn:
   - {fileID: 1317007915}
   tiempoEntreOleadas: 15
+  tiempofinZona: 0.5
   oleadaActualIndex: 0
   enemigosVivos: 0
   esperandoSiguienteOleada: 0
@@ -13994,7 +14078,7 @@ GameObject:
   - component: {fileID: 2046712738}
   - component: {fileID: 2046712737}
   m_Layer: 0
-  m_Name: Level-1-floor-1-music
+  m_Name: Level-1-floor-2-music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14011,9 +14095,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2164130051799240336, guid: 564a0d00f723dc2489c81f03e9dc7e2c, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 935af396850271f49863a684f2956ade, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5f29c8a54c6b1684bacb266d2b4eb7c6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.255
   m_Pitch: 1
   Loop: 1
   Mute: 0

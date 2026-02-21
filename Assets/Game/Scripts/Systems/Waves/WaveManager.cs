@@ -28,6 +28,7 @@ public class WaveManager : MonoBehaviour
     public List<Oleada> oleadas;
     public Transform[] puntosDeSpawn; // Arrastra tus spawn points aquí
     public float tiempoEntreOleadas = 5f;
+    public float tiempofinZona = 0.5f;
 
     [Header("Estado (Solo lectura)")]
     public int oleadaActualIndex = 0;
@@ -145,7 +146,16 @@ public class WaveManager : MonoBehaviour
         if (enemigosVivos <= 0)
         {
             enemigosVivos = 0;
-            StartCoroutine(PrepararSiguienteOleada());
+            if (oleadaActualIndex >= oleadas.Count - 1)
+            {
+                // Sí. Terminamos la zona rápido.
+                StartCoroutine(TerminarZonaRapido());
+            }
+            else
+            {
+                // No. Aún quedan oleadas, hacemos la espera normal larga.
+                StartCoroutine(PrepararSiguienteOleada());
+            }
         }
     }
 
@@ -158,5 +168,14 @@ public class WaveManager : MonoBehaviour
 
         oleadaActualIndex++;
         StartCoroutine(IniciarOleada(oleadaActualIndex));
+    }
+
+    IEnumerator TerminarZonaRapido()
+    {
+        esperandoSiguienteOleada = true;
+        yield return new WaitForSeconds(tiempofinZona);
+        nivelCompletado = true;
+        enemigo_base.OnAnyEnemyDeath -= EnemigoEliminado;
+        onZonaCompletada?.Invoke();
     }
 }
