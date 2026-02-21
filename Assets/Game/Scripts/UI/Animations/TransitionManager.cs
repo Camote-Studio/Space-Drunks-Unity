@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System; // <--- IMPORTANTE: Necesario para usar Action
+using System;
 
 public enum TransitionType
 {
@@ -15,12 +15,18 @@ public class TransitionManager : MonoBehaviour
     public static TransitionManager Instance;
 
     [Header("Referencias")]
-    public Animator fadeAnimator;   
-    public Animator circleAnimator; 
-    public Animator slideAnimator;  
+    public Animator fadeAnimator;
+    public Animator circleAnimator;
+    public Animator slideAnimator;
 
     [Header("Configuración")]
-    public float transitionTime = 1f; 
+    public float transitionTime = 1f;
+
+    [Header("Opcional")]
+    public AudioSource transitionSound; // 🔥 NUEVO (opcional)
+    public bool debugMode = false;      // 🔥 NUEVO
+
+    private bool isTransitioning = false; // 🔥 NUEVO (evita doble transición)
 
     private void Awake()
     {
@@ -32,66 +38,89 @@ public class TransitionManager : MonoBehaviour
         else { Destroy(gameObject); }
     }
 
-    // --- MÉTODO ORIGINAL (Para cambiar de ESCENA) ---
+    // -------------------------------
+    // CAMBIO DE ESCENA
+    // -------------------------------
     public void LoadScene(string sceneName, TransitionType transitionType)
     {
-        StartCoroutine(ProcessSceneTransition(sceneName, transitionType));
+        if (!isTransitioning)
+            StartCoroutine(ProcessSceneTransition(sceneName, transitionType));
     }
 
-    // --- NUEVO MÉTODO (Para cambios DENTRO del menú) ---
-    // En lugar de una escena, recibe una "Action" (lo que quieres que pase en medio)
+    // -------------------------------
+    // CAMBIO LOCAL
+    // -------------------------------
     public void LocalTransition(TransitionType type, Action midTransitionAction)
     {
-        StartCoroutine(ProcessLocalTransition(type, midTransitionAction));
+        if (!isTransitioning)
+            StartCoroutine(ProcessLocalTransition(type, midTransitionAction));
     }
 
-    // Corrutina para cambio de ESCENA
     private IEnumerator ProcessSceneTransition(string sceneName, TransitionType type)
     {
+        isTransitioning = true;
+
         Animator currentAnimator = GetAnimator(type);
-        if (currentAnimator != null)
-        {
-            currentAnimator.gameObject.SetActive(true);
-            currentAnimator.SetTrigger("StartTransition");
-        }
+        PlayTransition(currentAnimator);
 
         yield return new WaitForSeconds(transitionTime);
 
-        yield return SceneManager.LoadSceneAsync(sceneName); // Carga escena
+        yield return SceneManager.LoadSceneAsync(sceneName);
 
-        if (currentAnimator != null)
-        {
-            currentAnimator.SetTrigger("EndTransition");
-            yield return new WaitForSeconds(transitionTime);
-            currentAnimator.gameObject.SetActive(false);
-        }
+        EndTransition(currentAnimator);
+
+        isTransitioning = false;
     }
 
-    // Corrutina para cambio LOCAL (NUEVA)
     private IEnumerator ProcessLocalTransition(TransitionType type, Action action)
     {
-        // 1. Pantalla a Negro
-        Animator currentAnimator = GetAnimator(type);
-        if (currentAnimator != null)
-        {
-            currentAnimator.gameObject.SetActive(true);
-            currentAnimator.SetTrigger("StartTransition");
-        }
+        isTransitioning = true;
 
-        // 2. Esperar
+        Animator currentAnimator = GetAnimator(type);
+        PlayTransition(currentAnimator);
+
         yield return new WaitForSeconds(transitionTime);
 
-        // 3. EJECUTAR TU LÓGICA DE MENÚS (Aquí ocurre la magia)
-        // Esto ejecutará OpenStoryMenu() mientras la pantalla está negra
-        if (action != null) action.Invoke();
+        if (action != null)
+            action.Invoke();
 
-        // 4. Pantalla a Transparente
-        if (currentAnimator != null)
+        EndTransition(currentAnimator);
+
+        isTransitioning = false;
+    }
+
+    // -------------------------------
+    // MÉTODOS AUXILIARES (NUEVOS)
+    // -------------------------------
+
+    private void PlayTransition(Animator animator)
+    {
+        if (animator == null)
         {
-            currentAnimator.SetTrigger("EndTransition");
-            yield return new WaitForSeconds(transitionTime);
-            currentAnimator.gameObject.SetActive(false);
+            if (debugMode)
+                Debug.LogWarning("No Animator asignado para esta transición.");
+            return;
         }
+
+        animator.gameObject.SetActive(true);
+        animator.SetTrigger("StartTransition");
+
+        if (transitionSound != null)
+            transitionSound.Play();
+    }
+
+    private void EndTransition(Animator animator)
+    {
+        if (animator == null) return;
+
+        animator.SetTrigger("EndTransition");
+        StartCoroutine(DisableAfterDelay(animator));
+    }
+
+    private IEnumerator DisableAfterDelay(Animator animator)
+    {
+        yield return new WaitForSeconds(transitionTime);
+        animator.gameObject.SetActive(false);
     }
 
     private Animator GetAnimator(TransitionType type)

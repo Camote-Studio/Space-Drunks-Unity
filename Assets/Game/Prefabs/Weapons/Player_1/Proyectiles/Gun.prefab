@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   speed: 8
   normalDamage: 10
-  lifeTimeNormal: 0.35
+  lifeTimeNormal: 3
   speedBig: 4
   bigScaleMultiplier: 2
   growSpeed: 5
