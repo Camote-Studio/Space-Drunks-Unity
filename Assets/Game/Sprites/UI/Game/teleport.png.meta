@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 96552913908543247b934f41f64d8b3d
+guid: 45482360708553c459bd2b7e64370b4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8583624080851226831
-    second: Go_0
-  - first:
-      213: -1907308360247228068
-    second: Go_1
-  - first:
-      213: -1713631115247851000
-    second: Go_2
+      213: -8753283788699527778
+    second: teleport_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Go_0
+      name: teleport_0
       rect:
         serializedVersion: 2
-        x: 282
-        y: 704
-        width: 176
-        height: 304
+        x: 271
+        y: 629
+        width: 370
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13faf5f5067d0e880800000000000000
-      internalID: -8583624080851226831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Go_1
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 699
-        width: 177
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c59c456d621e785e0800000000000000
-      internalID: -1907308360247228068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Go_2
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 284
-        width: 747
-        height: 347
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80a68937495f738e0800000000000000
-      internalID: -1713631115247851000
+      spriteID: e95116465c6168680800000000000000
+      internalID: -8753283788699527778
       vertices: []
       indices: 
       edges: []
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Go_0: -8583624080851226831
-      Go_1: -1907308360247228068
-      Go_2: -1713631115247851000
+      teleport_0: -8753283788699527778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
