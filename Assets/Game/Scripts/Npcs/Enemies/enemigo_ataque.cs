@@ -78,6 +78,8 @@ public class enemigo_ataque : MonoBehaviour, IPoolable
             // 1. Disparar animación (asegúrate de que tu Animator pueda repetir este trigger rápido)
             if (animator != null) animator.SetTrigger("atacando");
 
+            var sound = GetComponent<enemigo_sound>();
+            sound?.PlayAtaque();   // 🔊 SONIDO DE ATAQUE
             // 2. Esperar el "wind-up" (tiempo hasta que el puño conecta)
             yield return new WaitForSeconds(delayImpacto);
 
