@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class enemigo_pato_1 : enemigo_base  
+public class enemigo_pato_1 : enemigo_base
 {
+    private enemigo_sound sound;
+
     [Header("Combo (solo daño)")]
     public int comboActual = 0;
     public float dañoExtraPorCombo = 10f;
@@ -32,14 +34,15 @@ public class enemigo_pato_1 : enemigo_base
 
     private enemigo_animacion anim;
     private Collider2D colLocal;
-
-    private enemigo_ataque sistemaAtaque; 
+    private enemigo_ataque sistemaAtaque;
 
     // ===================== UNITY =====================
 
     protected override void Awake()
     {
         base.Awake();
+
+        sound = GetComponent<enemigo_sound>();
         anim = GetComponentInChildren<enemigo_animacion>();
         colLocal = GetComponent<Collider2D>();
         sistemaAtaque = GetComponent<enemigo_ataque>();
@@ -48,16 +51,26 @@ public class enemigo_pato_1 : enemigo_base
     protected override void Update()
     {
         if (estaMuerto || fatalityEjecutada)
+        {
+            sound?.StopMovimiento();
             return;
+        }
 
         if (enRetroceso)
         {
+            sound?.StopMovimiento();
             transform.position += (Vector3)(velocidadRetroceso * Time.deltaTime);
             return;
         }
 
         if (enStun)
+        {
+            sound?.StopMovimiento();
             return;
+        }
+
+        // 🔥 Movimiento normal
+        sound?.StartMovimiento();
 
         base.Update();
     }
@@ -66,9 +79,8 @@ public class enemigo_pato_1 : enemigo_base
 
     public override void OnSpawnFromPool()
     {
-        base.OnSpawnFromPool(); // Reinicio general (vida, navmesh, anim)
+        base.OnSpawnFromPool();
 
-        // Reset específico del pato
         comboActual = 0;
 
         enRetroceso = false;
@@ -79,10 +91,14 @@ public class enemigo_pato_1 : enemigo_base
 
         if (colLocal != null)
             colLocal.enabled = true;
+
+        sound?.StopMovimiento();
     }
 
-    // ===================== MOVIMIENTO =====================
-
+    private void OnDisable()
+    {
+        sound?.StopMovimiento();
+    }
 
     // ===================== COMBATE =====================
 
@@ -91,43 +107,38 @@ public class enemigo_pato_1 : enemigo_base
         if (estaMuerto || fatalityEjecutada)
             return;
 
-        // --- CORRECCIÓN CLAVE ---
-        // Llamamos al OTRO script para que corte la corrutina de ataque.
-        if (sistemaAtaque != null) 
+        
+
+        if (sistemaAtaque != null)
         {
             sistemaAtaque.InterrumpirAtaque();
         }
-        
-        // Calculamos daño
+
         comboActual = enStun ? comboActual + 1 : 1;
         float dañoFinal = cantidad + (comboActual - 1) * dañoExtraPorCombo;
 
         vidaActual -= dañoFinal;
 
-        // Verificar Muerte
         if (vidaActual <= 0)
         {
             StartCoroutine(EjecutarFatality());
             return;
         }
-
-        // Animación de dolor/defensa
+        Debug.Log("EL ENEMIGO RECIBIÓ DAÑO");
+        sound?.PlayDaño(); // 🔊 SONIDO DAÑO
         anim?.PlayTrigger(Random.value <= probDefensa1 ? "defensa_1" : "defensa_2");
 
-        // Calculamos Retroceso
         if (objetivo != null)
         {
             Vector2 dir = ((Vector2)transform.position - (Vector2)objetivo.position).normalized;
             velocidadRetroceso = dir * fuerzaRetroceso;
         }
 
-        // Activamos estados
         enRetroceso = true;
-        
-        // Usamos CancelInvoke para limpiar timers viejos de retroceso si nos pegan muy rápido
+
         CancelInvoke(nameof(FinRetroceso));
         CancelInvoke(nameof(FinStun));
-        
+
         Invoke(nameof(FinRetroceso), tiempoRetroceso);
     }
 
@@ -153,20 +164,22 @@ public class enemigo_pato_1 : enemigo_base
         estaMuerto = true;
         fatalityEjecutada = true;
 
-        // Aseguramos que nada más se mueva
+        sound?.StopMovimiento();   // 🔊 DETENER PASOS
+        sound?.PlayFatality();     // 🔊 SONIDO FATALITY
+
         enRetroceso = false;
         enStun = false;
-        
-        // Apagamos el ataque por si acaso
-        if (sistemaAtaque != null) sistemaAtaque.InterrumpirAtaque();
+
+        if (sistemaAtaque != null)
+            sistemaAtaque.InterrumpirAtaque();
 
         if (colLocal != null)
             colLocal.enabled = false;
 
-        // Dirección del fatality
         if (objetivo != null)
         {
             bool fatalityDerecha = objetivo.position.x < transform.position.x;
+
             if (fatalityDerecha)
                 anim?.PlayTrigger("fatality_izquierda");
             else
@@ -180,6 +193,8 @@ public class enemigo_pato_1 : enemigo_base
 
     void MorirFinal()
     {
+        sound?.PlayMuerte(); // 🔊 SONIDO MUERTE
+
         base.Morir();
         PoolManager.Instance.ReturnToPool(enemyPoolTag, gameObject);
     }

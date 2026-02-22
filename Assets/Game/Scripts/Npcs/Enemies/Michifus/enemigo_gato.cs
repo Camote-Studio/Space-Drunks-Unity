@@ -26,7 +26,7 @@ public class enemigo_gato : enemigo_base
         Stun,
         Muerto
     }
-
+    private enemigo_sound sound;
     private EstadoGato estadoActual;
 
     // ----------------------------------------------------------
@@ -93,12 +93,24 @@ public class enemigo_gato : enemigo_base
     protected override void Awake()
     {
         base.Awake();
-        if (agent != null) { agent.updateRotation = false; agent.updateUpAxis = false; }
-        if (zonaAbduccion == null) zonaAbduccion = GetComponentInChildren<ZonaAbduccionGato>();
-        if (zonaAbduccion != null) zonaAbduccion.Configurar(this);
+
+        sound = GetComponent<enemigo_sound>();
+
+        if (agent != null)
+        {
+            agent.updateRotation = false;
+            agent.updateUpAxis = false;
+        }
+
+        if (zonaAbduccion == null)
+            zonaAbduccion = GetComponentInChildren<ZonaAbduccionGato>();
+
+        if (zonaAbduccion != null)
+            zonaAbduccion.Configurar(this);
 
         timerDisparo = primerDisparoDelay;
         timerAbduccion = enfriamientoAbduccion;
+
         CambiarEstado(EstadoGato.Patrulla);
     }
 
@@ -116,7 +128,17 @@ public class enemigo_gato : enemigo_base
 
         // Estados bloqueantes: la IA se pausa
         if (estadoActual == EstadoGato.Stun || estadoActual == EstadoGato.Abduciendo) return;
-
+        // MOVIMIENTO
+        if (estadoActual == EstadoGato.Posicionandose ||
+            estadoActual == EstadoGato.Retrocediendo ||
+            estadoActual == EstadoGato.PreparandoAbduccion)
+        {
+            sound?.StartMovimiento();
+        }
+        else
+        {
+            sound?.StopMovimiento();
+        }
         float dist = Vector2.Distance(transform.position, objetivo.position);
 
         // ==========================================================
@@ -246,15 +268,24 @@ public class enemigo_gato : enemigo_base
     {
         if (estaMuerto || estadoActual == EstadoGato.Abduciendo) return;
 
+        sound?.PlayDaño(); // 🔊 SONIDO DAÑO
+
         comboRecibido = enStun ? comboRecibido + 1 : 1;
-        vidaActual   -= cantidad;
+        vidaActual -= cantidad;
 
-        if (vidaActual <= 0) { Morir(); return; }
+        if (vidaActual <= 0)
+        {
+            sound?.StopMovimiento();
+            sound?.PlayMuerte(); // 🔊 SONIDO MUERTE
+            Morir();
+            return;
+        }
 
-        if (comboRecibido > maxGolpesPermitidos) Contraatacar();
-        else                                     EntrarEnStun();
+        if (comboRecibido > maxGolpesPermitidos)
+            Contraatacar();
+        else
+            EntrarEnStun();
     }
-
     IEnumerator ParpadeoRojoDaño()
     {
         if (spriteRenderer != null)
@@ -353,18 +384,19 @@ public class enemigo_gato : enemigo_base
         if (!estaMuerto && estadoActual == EstadoGato.Disparando)
             CambiarEstado(EstadoGato.Posicionandose);
     }
-
     void DisparoReal()
     {
         if (objetivo == null) return;
 
-        Vector3    origen = puntoDisparo != null ? puntoDisparo.position : transform.position;
-        GameObject bala   = PoolManager.Instance.SpawnFromPool(bulletTag, origen, Quaternion.identity);
+        sound?.PlayAtaque(); // 🔊 SONIDO DISPARO
+
+        Vector3 origen = puntoDisparo != null ? puntoDisparo.position : transform.position;
+        GameObject bala = PoolManager.Instance.SpawnFromPool(bulletTag, origen, Quaternion.identity);
 
         if (bala != null)
         {
-            Vector2 dir    = (objetivo.position - transform.position).normalized;
-            float   angulo = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            Vector2 dir = (objetivo.position - transform.position).normalized;
+            float angulo = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             bala.transform.rotation = Quaternion.Euler(0, 0, angulo);
 
             Rigidbody2D balaRB = bala.GetComponent<Rigidbody2D>();
@@ -375,7 +407,6 @@ public class enemigo_gato : enemigo_base
             }
         }
     }
-
     // ==========================================================
     //  RETROCESO
     // ==========================================================

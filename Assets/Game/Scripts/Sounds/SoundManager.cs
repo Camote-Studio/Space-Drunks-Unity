@@ -36,6 +36,18 @@ public class SoundManager : MonoBehaviour
 
     private void Load(Slider slider, string param, string pref)
     {
+        if (slider == null)
+        {
+            Debug.LogError("Slider no asignado en SoundManager.");
+            return;
+        }
+
+        if (masterMixer == null)
+        {
+            Debug.LogError("MasterMixer no asignado en SoundManager.");
+            return;
+        }
+
         float db = PlayerPrefs.GetFloat(pref, 0f);
         slider.value = DbToLinear(db);
         masterMixer.SetFloat(param, db);

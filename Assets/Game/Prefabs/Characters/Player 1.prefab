@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 4255034466345171450}
   - component: {fileID: 8031066230311758801}
   - component: {fileID: 9031100662077153165}
+  - component: {fileID: 3248718556648550373}
   m_Layer: 6
   m_Name: Player 1
   m_TagString: Player
@@ -365,7 +366,7 @@ Transform:
   m_GameObject: {fileID: 1516105471445060695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3700647, y: -1.2934784, z: 0}
+  m_LocalPosition: {x: -5.66, y: -4.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -562,6 +563,24 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &3248718556648550373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516105471445060695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eff50f1ef879fc41b20f6d788ef0d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSkinManager
+  animator: {fileID: 6136975906622865659}
+  skins:
+  - {fileID: 9100000, guid: ee430003cc8833240876b456e446a99a, type: 2}
+  - {fileID: 9100000, guid: 20eb1fd0910d26849849dd67069fd09c, type: 2}
+  - {fileID: 9100000, guid: 063bbf3c9faa6d1499736bddfab75cf2, type: 2}
+  defaultSkinIndex: 0
 --- !u!1 &2289727116112963541
 GameObject:
   m_ObjectHideFlags: 0
