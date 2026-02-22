@@ -11671,9 +11671,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1644104812}
-        m_TargetAssemblyTypeName: OptionsButtonMenuManager, Assembly-CSharp
-        m_MethodName: ButtonClicked
+      - m_Target: {fileID: 1193458889}
+        m_TargetAssemblyTypeName: PauseMenuButtons, Assembly-CSharp
+        m_MethodName: CerrarOpciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

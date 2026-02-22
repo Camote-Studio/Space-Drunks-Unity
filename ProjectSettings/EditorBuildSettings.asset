@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Level1/L1_f2.unity
     guid: b3c780dd3adb45d47bd8e6e4c827a439
+  - enabled: 1
+    path: Assets/Game/Scenes/UI/YouWin.unity
+    guid: 4f0aa6d14ecf56d44bfe5bb5015dc4ea
+  - enabled: 1
+    path: Assets/Game/Scenes/UI/YouLose.unity
+    guid: a6f9e3fc3d1a8444ab15f23e093445b4
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
