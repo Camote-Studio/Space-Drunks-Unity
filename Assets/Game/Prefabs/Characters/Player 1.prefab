@@ -525,6 +525,10 @@ MonoBehaviour:
   animator: {fileID: 0}
   movement: {fileID: 0}
   vidaJugador: {fileID: 0}
+  playerWeapon: {fileID: 0}
+  knockdownStaySeconds: 1.5
+  knockdownStateName: Damage_Hit
+  reincorporationStateName: Reincorporation_Damage
 --- !u!114 &8031066230311758801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,7 +556,7 @@ MonoBehaviour:
   nivel: 1
   experienciaActual: 0
   experienciaParaSubir: 20
-  vidaMaxima: 100
+  vidaMaxima: 500
   vidaActual: 0
   playerMovement: {fileID: 0}
   monedas: 0
@@ -563,6 +567,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  healBarUI: {fileID: 0}
+  healMaxCharge: 100
+  healChargeActual: 0
+  damageOnContact: 1
+  contactDamage: 10
+  contactCooldown: 0.35
+  golpesParaDerribo: 3
+  ventanaComboSeg: 1.2
 --- !u!114 &3248718556648550373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,6 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8cbc595e3540941a002f3dc5a7b692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UltimateWeapon
+  presentationTime: 0.6
   firePointSmall: {fileID: 3734651615031164793}
   firePointBig: {fileID: 6393301593843110708}
   smallBulletPrefab: {fileID: 7781194408997046336, guid: fbc90e54a6929af47ac31d82e05c3818, type: 3}
@@ -803,10 +816,11 @@ MonoBehaviour:
   playerAnimation: {fileID: 0}
   totalShots: 120
   bigShotEvery: 6
-  coneY: 0.7
-  setupTime: 0.8
   shotInterval: 0.025
   endLag: 0.2
+  presentationTimeDefault: 0.7
+  maxCharge: 100
+  ultiBar: {fileID: 0}
 --- !u!1 &5923810407948118931
 GameObject:
   m_ObjectHideFlags: 0
