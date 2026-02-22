@@ -38,6 +38,9 @@ public class Seleccion_Manager : MonoBehaviour
     public static int personajeFinalJ1;
     public static int personajeFinalJ2;
 
+    // SEGURO PARA EL MANDO (Evita que pase por 20 personajes en un segundo)
+    private bool ejeHSuelta = true;
+
     private void Awake()
     {
         if (Instance == null)
@@ -58,64 +61,68 @@ public class Seleccion_Manager : MonoBehaviour
     {
         if (bloqueado) return;
 
-        tiempo -= Time.deltaTime;
+        // Leemos la palanca / cruceta del mando
+        float h = Input.GetAxisRaw("Horizontal");
 
         // =========================
-        // JUGADOR 1 (FLECHAS)
+        // JUGADOR 1 (FLECHAS O MANDO)
         // =========================
-        if (!j1Confirmado && tiempo <= 0f)
+        if (!j1Confirmado)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) || (h > 0.5f && ejeHSuelta))
             {
                 J1_Derecha();
-                tiempo = cooldown;
+                ejeHSuelta = false; // Ponemos el seguro
             }
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) || (h < -0.5f && ejeHSuelta))
             {
                 J1_Izquierda();
-                tiempo = cooldown;
+                ejeHSuelta = false; // Ponemos el seguro
             }
         }
 
         // =========================
-        // JUGADOR 2 (A y D)
+        // JUGADOR 2 (A y D - TECLADO)
         // =========================
-        if (!j2Confirmado && tiempo <= 0f)
+        // (En el sistema clásico de Unity, ambos mandos se mezclan. 
+        // Asumimos que J2 usa teclado si juegan en la misma PC sin configuración extra de Input Manager).
+        if (!j2Confirmado)
         {
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                J2_Derecha();
-                tiempo = cooldown;
-            }
+            if (Input.GetKeyDown(KeyCode.D)) J2_Derecha();
+            if (Input.GetKeyDown(KeyCode.A)) J2_Izquierda();
+        }
 
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                J2_Izquierda();
-                tiempo = cooldown;
-            }
+        // Quitamos el seguro cuando la palanca del mando vuelve al centro
+        if (Mathf.Abs(h) < 0.1f)
+        {
+            ejeHSuelta = true;
         }
 
         // =========================
-        // CONFIRMAR (ENTER)
+        // CONFIRMAR (ENTER O BOTÓN "A" DEL MANDO)
         // =========================
-        if (Input.GetKeyDown(KeyCode.Return))
+        tiempo -= Time.deltaTime; // Usamos tiempo para evitar dobles confirmaciones accidentales
+        bool confirmar = Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0);
+        
+        if (confirmar && tiempo <= 0f)
         {
-            if (!j1Confirmado)
-                ConfirmarJ1();
-            else if (!j2Confirmado)
-                ConfirmarJ2();
+            if (!j1Confirmado) ConfirmarJ1();
+            else if (!j2Confirmado) ConfirmarJ2();
+            
+            tiempo = cooldown;
         }
 
         // =========================
-        // CANCELAR (BACKSPACE)
+        // CANCELAR (BACKSPACE O BOTÓN "B" DEL MANDO)
         // =========================
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        bool cancelar = Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.JoystickButton1);
+        
+        if (cancelar && tiempo <= 0f)
         {
-            if (j2Confirmado)
-                j2Confirmado = false;
-            else if (j1Confirmado)
-                j1Confirmado = false;
+            if (j2Confirmado) j2Confirmado = false;
+            else if (j1Confirmado) j1Confirmado = false;
+
+            tiempo = cooldown;
         }
 
         AnimarSalto();
@@ -124,87 +131,66 @@ public class Seleccion_Manager : MonoBehaviour
     // =========================
     // MOVIMIENTO JUGADOR 1
     // =========================
-
     private void J1_Derecha()
     {
         seleccionJ1 = (seleccionJ1 + 1) % personajesSprites.Length;
-
         if (j2Confirmado && seleccionJ1 == seleccionJ2)
             seleccionJ1 = (seleccionJ1 + 1) % personajesSprites.Length;
-
         ActualizarVisuales();
     }
 
     private void J1_Izquierda()
     {
         seleccionJ1--;
-        if (seleccionJ1 < 0)
-            seleccionJ1 = personajesSprites.Length - 1;
-
+        if (seleccionJ1 < 0) seleccionJ1 = personajesSprites.Length - 1;
         if (j2Confirmado && seleccionJ1 == seleccionJ2)
         {
             seleccionJ1--;
-            if (seleccionJ1 < 0)
-                seleccionJ1 = personajesSprites.Length - 1;
+            if (seleccionJ1 < 0) seleccionJ1 = personajesSprites.Length - 1;
         }
-
         ActualizarVisuales();
     }
 
     // =========================
     // MOVIMIENTO JUGADOR 2
     // =========================
-
     private void J2_Derecha()
     {
         seleccionJ2 = (seleccionJ2 + 1) % personajesSprites.Length;
-
         if (j1Confirmado && seleccionJ2 == seleccionJ1)
             seleccionJ2 = (seleccionJ2 + 1) % personajesSprites.Length;
-
         ActualizarVisuales();
     }
 
     private void J2_Izquierda()
     {
         seleccionJ2--;
-        if (seleccionJ2 < 0)
-            seleccionJ2 = personajesSprites.Length - 1;
-
+        if (seleccionJ2 < 0) seleccionJ2 = personajesSprites.Length - 1;
         if (j1Confirmado && seleccionJ2 == seleccionJ1)
         {
             seleccionJ2--;
-            if (seleccionJ2 < 0)
-                seleccionJ2 = personajesSprites.Length - 1;
+            if (seleccionJ2 < 0) seleccionJ2 = personajesSprites.Length - 1;
         }
-
         ActualizarVisuales();
     }
+
     private void ConfirmarJ1()
     {
         j1Confirmado = true;
         Debug.Log("Jugador 1 confirmado");
-
-        // 🔥 Si ambos están en el mismo personaje,
-        // mover automáticamente al jugador 2 a otro diferente
         if (seleccionJ2 == seleccionJ1)
         {
             seleccionJ2 = (seleccionJ1 + 1) % personajesSprites.Length;
             ActualizarVisuales();
         }
     }
+
     private void ConfirmarJ2()
     {
-        // 🚫 Si eligieron el mismo personaje, no permitir confirmar
-        if (seleccionJ2 == seleccionJ1)
-        {
-            Debug.Log("Los jugadores no pueden elegir el mismo personaje");
-            return;
-        }
+        if (seleccionJ2 == seleccionJ1) return;
 
         j2Confirmado = true;
         Debug.Log("Jugador 2 confirmado");
-
         VerificarInicio();
     }
 
@@ -219,24 +205,16 @@ public class Seleccion_Manager : MonoBehaviour
         if (j1Confirmado)
         {
             float y = Mathf.Sin(Time.time * saltoVelocidad) * saltoAltura;
-            imagenJugador1.rectTransform.localPosition =
-                posInicialJ1 + new Vector3(0, y, 0);
+            imagenJugador1.rectTransform.localPosition = posInicialJ1 + new Vector3(0, y, 0);
         }
-        else
-        {
-            imagenJugador1.rectTransform.localPosition = posInicialJ1;
-        }
+        else imagenJugador1.rectTransform.localPosition = posInicialJ1;
 
         if (j2Confirmado)
         {
             float y = Mathf.Sin(Time.time * saltoVelocidad) * saltoAltura;
-            imagenJugador2.rectTransform.localPosition =
-                posInicialJ2 + new Vector3(0, y, 0);
+            imagenJugador2.rectTransform.localPosition = posInicialJ2 + new Vector3(0, y, 0);
         }
-        else
-        {
-            imagenJugador2.rectTransform.localPosition = posInicialJ2;
-        }
+        else imagenJugador2.rectTransform.localPosition = posInicialJ2;
     }
 
     private void VerificarInicio()
@@ -244,7 +222,6 @@ public class Seleccion_Manager : MonoBehaviour
         if (j1Confirmado && j2Confirmado)
         {
             bloqueado = true;
-
             personajeFinalJ1 = seleccionJ1;
             personajeFinalJ2 = seleccionJ2;
 

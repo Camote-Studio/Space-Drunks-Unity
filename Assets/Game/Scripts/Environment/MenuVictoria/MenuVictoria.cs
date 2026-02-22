@@ -15,6 +15,7 @@ public class MenuVictoria : MonoBehaviour
     public string nombreEscenaMenu = "Menu";
 
     private int index = 0;
+    private bool inputEnEspera = false;
 
     void Start()
     {
@@ -26,26 +27,42 @@ public class MenuVictoria : MonoBehaviour
     {
         if (opciones == null || opciones.Length == 0) return;
 
-        // Permite usar flechas Arriba/Abajo o Izquierda/Derecha
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+        bool confirmar = Input.GetButtonDown("Submit") || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0);
+
+        // Movimiento Hacia Adelante (Abajo o Derecha)
+        if (v < -0.5f || h > 0.5f || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            index = (index + 1) % opciones.Length;
-            ActualizarColores();
+            if (!inputEnEspera)
+            {
+                index = (index + 1) % opciones.Length;
+                ActualizarColores();
+                inputEnEspera = true;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        // Movimiento Hacia Atrás (Arriba o Izquierda)
+        else if (v > 0.5f || h < -0.5f || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            index--;
-            if (index < 0) index = opciones.Length - 1;
-            ActualizarColores();
+            if (!inputEnEspera)
+            {
+                index--;
+                if (index < 0) index = opciones.Length - 1;
+                ActualizarColores();
+                inputEnEspera = true;
+            }
         }
 
-        // Presionar Enter
-        if (Input.GetKeyDown(KeyCode.Return))
+        // Aceptar
+        if (confirmar)
         {
-            if (opciones[index] != null) 
-            {
-                opciones[index].onClick.Invoke();
-            }
+            if (opciones[index] != null) opciones[index].onClick.Invoke();
+        }
+
+        // Liberar seguro al soltar la palanca
+        if (Mathf.Abs(v) < 0.1f && Mathf.Abs(h) < 0.1f)
+        {
+            inputEnEspera = false;
         }
     }
 

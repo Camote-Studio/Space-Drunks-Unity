@@ -25,6 +25,8 @@ public class PauseMenuButtons : MonoBehaviour
     private bool juegoPausado = false;
     private int index = 0;
     private int indexOpciones = 0;
+    private bool inputEnEspera = false; // 
+
 
     void Start()
     {
@@ -39,7 +41,11 @@ public class PauseMenuButtons : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // 1. RED DE CAPTURA PARA EL BOTÓN START / ESCAPE
+        bool presionaPausa = Input.GetKeyDown(KeyCode.Escape) || 
+                             Input.GetKeyDown(KeyCode.JoystickButton7);
+
+        if (presionaPausa)
         {
             if (juegoPausado) Reanudar();
             else Pausar();
@@ -66,39 +72,70 @@ public class PauseMenuButtons : MonoBehaviour
     // ==========================================
     // LÓGICA DE NAVEGACIÓN (BOTONES Y SLIDERS)
     // ==========================================
-    void ProcesarNavegacion(Selectable[] lista, ref int indiceActual)
+void ProcesarNavegacion(Selectable[] lista, ref int indiceActual)
     {
         if (lista == null || lista.Length == 0) return;
 
-        // Flechas Arriba/Abajo para cambiar de opción
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        // Leemos tanto el teclado como el mando de forma universal
+        float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+        
+        // "Submit" detecta Enter, Espacio y el botón A (Xbox) / X (PlayStation)
+        bool confirmar = Input.GetButtonDown("Submit") || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0);
+
+        // ==========================================
+        // 1. MOVIMIENTO VERTICAL (Subir y Bajar)
+        // ==========================================
+        if (v < -0.5f || Input.GetKeyDown(KeyCode.DownArrow)) // ABAJO
         {
-            indiceActual = (indiceActual + 1) % lista.Length;
-            SeleccionarActual(lista, indiceActual);
+            if (!inputEnEspera)
+            {
+                indiceActual = (indiceActual + 1) % lista.Length;
+                SeleccionarActual(lista, indiceActual);
+                inputEnEspera = true; // Ponemos el seguro
+            }
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (v > 0.5f || Input.GetKeyDown(KeyCode.UpArrow)) // ARRIBA
         {
-            indiceActual--;
-            if (indiceActual < 0) indiceActual = lista.Length - 1;
-            SeleccionarActual(lista, indiceActual);
+            if (!inputEnEspera)
+            {
+                indiceActual--;
+                if (indiceActual < 0) indiceActual = lista.Length - 1;
+                SeleccionarActual(lista, indiceActual);
+                inputEnEspera = true; // Ponemos el seguro
+            }
         }
 
+        // ==========================================
+        // 2. INTERACCIÓN (Sliders y Botones)
+        // ==========================================
         Selectable elementoActual = lista[indiceActual];
         if (elementoActual == null) return;
 
-        // INTERACCIÓN SEGÚN EL TIPO DE ELEMENTO
-        if (elementoActual is Button boton)
+        if (elementoActual is Slider slider)
         {
-            // Si es un botón, usamos Enter
-            if (Input.GetKeyDown(KeyCode.Return)) boton.onClick.Invoke();
+            float paso = (slider.maxValue - slider.minValue) * 0.1f;
+            if (h < -0.5f || Input.GetKeyDown(KeyCode.LeftArrow)) // IZQUIERDA
+            {
+                if (!inputEnEspera) { slider.value -= paso; inputEnEspera = true; }
+            }
+            else if (h > 0.5f || Input.GetKeyDown(KeyCode.RightArrow)) // DERECHA
+            {
+                if (!inputEnEspera) { slider.value += paso; inputEnEspera = true; }
+            }
         }
-        else if (elementoActual is Slider slider)
+        else if (elementoActual is Button boton)
         {
-            // Si es un slider, usamos Izquierda/Derecha para mover el volumen
-            float paso = (slider.maxValue - slider.minValue) * 0.1f; // Sube/baja de 10% en 10%
-            
-            if (Input.GetKeyDown(KeyCode.LeftArrow)) slider.value -= paso;
-            if (Input.GetKeyDown(KeyCode.RightArrow)) slider.value += paso;
+            if (confirmar) boton.onClick.Invoke(); // Aceptar
+        }
+
+        // ==========================================
+        // 3. QUITAR EL SEGURO
+        // ==========================================
+        // Si la palanca del mando o las flechas se sueltan (vuelven al centro), quitamos el seguro
+        if (Mathf.Abs(v) < 0.1f && Mathf.Abs(h) < 0.1f)
+        {
+            inputEnEspera = false;
         }
     }
 

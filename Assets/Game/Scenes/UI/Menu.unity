@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599890571088247316, guid: a3eef6cdc3102d148b8dd1f63bccf62f, type: 3}
       propertyPath: m_Transition
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5599890571088247316, guid: a3eef6cdc3102d148b8dd1f63bccf62f, type: 3}
       propertyPath: m_Colors.m_PressedColor.a
@@ -348,6 +348,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SocialButtonManager
   _buttonType: 1
+--- !u!114 &3544186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5599890571088247316, guid: a3eef6cdc3102d148b8dd1f63bccf62f, type: 3}
+  m_PrefabInstance: {fileID: 3544179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &20253763 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5631134259741724172, guid: e9ac0183d942b17429b7580a2628a681, type: 3}
@@ -1878,6 +1889,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuButtonManager
   _buttonType: 4
+--- !u!114 &651278211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6365597207601718694, guid: d6fd6246c463d104c9b53c391ac56df1, type: 3}
+  m_PrefabInstance: {fileID: 8344072754316133085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651278202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &700057522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3056,21 @@ MonoBehaviour:
   _MedalsMenuContainer: {fileID: 938258752}
   _OptionsMenuContainer: {fileID: 2079061891}
   _sceneToLoadAfterClickingPlay: elegir_personajes
+  colorNormal: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  colorSeleccionado: {r: 1, g: 0.83, b: 0, a: 1}
+  elementosMain:
+  - {fileID: 1636773129}
+  - {fileID: 651278211}
+  - {fileID: 8641078957344339016}
+  - {fileID: 3544186}
+  elementosStory: []
+  elementosVersus: []
+  elementosShop: []
+  elementosMedals: []
+  elementosOptions:
+  - {fileID: 1992886632}
+  - {fileID: 1554774807}
+  - {fileID: 366804389016551536}
 --- !u!4 &1214937421
 Transform:
   m_ObjectHideFlags: 0
@@ -4216,6 +4253,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8641078958237856323, guid: 7c169c14625810245aba233c6c44a44a, type: 3}
   m_PrefabInstance: {fileID: 608451184173429925}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1636773129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6839316997232029893, guid: 7c169c14625810245aba233c6c44a44a, type: 3}
+  m_PrefabInstance: {fileID: 608451184173429925}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1742917179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,7 +5631,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5631,6 +5679,10 @@ PrefabInstance:
     - target: {fileID: 1736349720137610836, guid: 7c169c14625810245aba233c6c44a44a, type: 3}
       propertyPath: m_Name
       value: Story mode
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839316997232029893, guid: 7c169c14625810245aba233c6c44a44a, type: 3}
+      propertyPath: m_Transition
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6839316997232029893, guid: 7c169c14625810245aba233c6c44a44a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -6241,6 +6293,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -358357410970122945, guid: c9c3122bab8404a4bb2ab49db6f33b82, type: 3}
     - target: {fileID: 5599890571088247316, guid: a3eef6cdc3102d148b8dd1f63bccf62f, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599890571088247316, guid: a3eef6cdc3102d148b8dd1f63bccf62f, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -6479,6 +6535,10 @@ PrefabInstance:
       value: Options
       objectReference: {fileID: 0}
     - target: {fileID: 6365597207601718694, guid: d6fd6246c463d104c9b53c391ac56df1, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365597207601718694, guid: d6fd6246c463d104c9b53c391ac56df1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 651278208}
@@ -6519,6 +6579,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _buttonType: 0
+--- !u!114 &8641078957344339016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5599890571088247316, guid: a3eef6cdc3102d148b8dd1f63bccf62f, type: 3}
+  m_PrefabInstance: {fileID: 5943241790885287437}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736349719420252244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &9042694676330574632
 GameObject:
   m_ObjectHideFlags: 0
