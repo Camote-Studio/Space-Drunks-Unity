@@ -1,0 +1,3289 @@
+fileFormatVersion: 2
+guid: a8414b239e4a5ac419fe80afbc60464f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6972677406172644176
+    second: EFECTS AND ORBS_0
+  - first:
+      213: 3332291618139907404
+    second: EFECTS AND ORBS_1
+  - first:
+      213: -4394068331423460072
+    second: EFECTS AND ORBS_2
+  - first:
+      213: -4359709213149437309
+    second: EFECTS AND ORBS_3
+  - first:
+      213: -5825296362910384085
+    second: EFECTS AND ORBS_4
+  - first:
+      213: 5804500757304745546
+    second: EFECTS AND ORBS_5
+  - first:
+      213: 8112914273397371733
+    second: EFECTS AND ORBS_6
+  - first:
+      213: 1670052261327100879
+    second: EFECTS AND ORBS_7
+  - first:
+      213: 7343453927276941782
+    second: EFECTS AND ORBS_8
+  - first:
+      213: -4365873912349201785
+    second: EFECTS AND ORBS_9
+  - first:
+      213: -8352139391050891826
+    second: EFECTS AND ORBS_10
+  - first:
+      213: -7382990187945362269
+    second: EFECTS AND ORBS_11
+  - first:
+      213: 5038957263560972505
+    second: EFECTS AND ORBS_12
+  - first:
+      213: -8115220693955385256
+    second: EFECTS AND ORBS_13
+  - first:
+      213: -5340280526749351285
+    second: EFECTS AND ORBS_14
+  - first:
+      213: 3784718707138569009
+    second: EFECTS AND ORBS_15
+  - first:
+      213: 8542087717608438456
+    second: EFECTS AND ORBS_16
+  - first:
+      213: -3462898141910460453
+    second: EFECTS AND ORBS_17
+  - first:
+      213: -2163072108340619175
+    second: EFECTS AND ORBS_18
+  - first:
+      213: -3295083585946582147
+    second: EFECTS AND ORBS_19
+  - first:
+      213: 9209112385179525992
+    second: EFECTS AND ORBS_20
+  - first:
+      213: 3885799014648750999
+    second: EFECTS AND ORBS_21
+  - first:
+      213: 1239084152913423938
+    second: EFECTS AND ORBS_22
+  - first:
+      213: 8191211363906772021
+    second: EFECTS AND ORBS_23
+  - first:
+      213: -8087151100323056682
+    second: EFECTS AND ORBS_24
+  - first:
+      213: -2587001061138225526
+    second: EFECTS AND ORBS_25
+  - first:
+      213: 9048436518700858694
+    second: EFECTS AND ORBS_26
+  - first:
+      213: -4304413785800504484
+    second: EFECTS AND ORBS_27
+  - first:
+      213: 7649975701320932651
+    second: EFECTS AND ORBS_28
+  - first:
+      213: 8011024081072149579
+    second: EFECTS AND ORBS_29
+  - first:
+      213: 1681103290020425010
+    second: EFECTS AND ORBS_30
+  - first:
+      213: 4264370245813182663
+    second: EFECTS AND ORBS_31
+  - first:
+      213: -2042912029592842163
+    second: EFECTS AND ORBS_32
+  - first:
+      213: 9112129311405467498
+    second: EFECTS AND ORBS_33
+  - first:
+      213: 1667905730238828419
+    second: EFECTS AND ORBS_34
+  - first:
+      213: 8556531361315953251
+    second: EFECTS AND ORBS_35
+  - first:
+      213: -1969483347508495225
+    second: EFECTS AND ORBS_36
+  - first:
+      213: -8214428714364836160
+    second: EFECTS AND ORBS_37
+  - first:
+      213: 1163403120618649911
+    second: EFECTS AND ORBS_38
+  - first:
+      213: -3629413362423071310
+    second: EFECTS AND ORBS_39
+  - first:
+      213: -6314650107347403288
+    second: EFECTS AND ORBS_40
+  - first:
+      213: -5661294289507121311
+    second: EFECTS AND ORBS_41
+  - first:
+      213: -1089006123258592747
+    second: EFECTS AND ORBS_42
+  - first:
+      213: 2527728262751720052
+    second: EFECTS AND ORBS_43
+  - first:
+      213: 5524459095579274468
+    second: EFECTS AND ORBS_44
+  - first:
+      213: 3216457774828285644
+    second: EFECTS AND ORBS_45
+  - first:
+      213: -8536863251235082888
+    second: EFECTS AND ORBS_46
+  - first:
+      213: 239103092360845574
+    second: EFECTS AND ORBS_47
+  - first:
+      213: 7095356562680996268
+    second: EFECTS AND ORBS_48
+  - first:
+      213: 5274032601749876438
+    second: EFECTS AND ORBS_49
+  - first:
+      213: -6282161963156640769
+    second: EFECTS AND ORBS_50
+  - first:
+      213: 2990427530097040690
+    second: EFECTS AND ORBS_51
+  - first:
+      213: 4982657583013503898
+    second: EFECTS AND ORBS_52
+  - first:
+      213: 5123715670319695471
+    second: EFECTS AND ORBS_53
+  - first:
+      213: 5200543549400081378
+    second: EFECTS AND ORBS_54
+  - first:
+      213: 6283260470217953906
+    second: EFECTS AND ORBS_55
+  - first:
+      213: 2596582207870173096
+    second: EFECTS AND ORBS_56
+  - first:
+      213: -8902332880908333652
+    second: EFECTS AND ORBS_57
+  - first:
+      213: -1077331078585886354
+    second: EFECTS AND ORBS_58
+  - first:
+      213: -4236213834983261532
+    second: EFECTS AND ORBS_59
+  - first:
+      213: 3115953763228373865
+    second: EFECTS AND ORBS_60
+  - first:
+      213: 4845844947495141804
+    second: EFECTS AND ORBS_61
+  - first:
+      213: 8958520972231611810
+    second: EFECTS AND ORBS_62
+  - first:
+      213: -6433876725472980062
+    second: EFECTS AND ORBS_63
+  - first:
+      213: -4390783315207864323
+    second: EFECTS AND ORBS_64
+  - first:
+      213: -6589287893794913993
+    second: EFECTS AND ORBS_65
+  - first:
+      213: 870221564514635883
+    second: EFECTS AND ORBS_66
+  - first:
+      213: -987722668806506026
+    second: EFECTS AND ORBS_67
+  - first:
+      213: -3938236076287285271
+    second: EFECTS AND ORBS_68
+  - first:
+      213: -2563728650823067073
+    second: EFECTS AND ORBS_69
+  - first:
+      213: 2724173399420351680
+    second: EFECTS AND ORBS_70
+  - first:
+      213: 5293413107558157819
+    second: EFECTS AND ORBS_71
+  - first:
+      213: 6792799050216756658
+    second: EFECTS AND ORBS_72
+  - first:
+      213: 3887865111103770778
+    second: EFECTS AND ORBS_73
+  - first:
+      213: -457226624623091582
+    second: EFECTS AND ORBS_74
+  - first:
+      213: -4230454825566868979
+    second: EFECTS AND ORBS_75
+  - first:
+      213: -144962356506445711
+    second: EFECTS AND ORBS_76
+  - first:
+      213: -9150527974076608960
+    second: EFECTS AND ORBS_77
+  - first:
+      213: -5513531238203847694
+    second: EFECTS AND ORBS_78
+  - first:
+      213: -4708466457898046290
+    second: EFECTS AND ORBS_79
+  - first:
+      213: 884757274189435944
+    second: EFECTS AND ORBS_80
+  - first:
+      213: 8193316628625339164
+    second: EFECTS AND ORBS_81
+  - first:
+      213: 515510231859478701
+    second: EFECTS AND ORBS_82
+  - first:
+      213: 8457595018334725093
+    second: EFECTS AND ORBS_83
+  - first:
+      213: -8723283309239821608
+    second: EFECTS AND ORBS_84
+  - first:
+      213: 1293838621331729649
+    second: EFECTS AND ORBS_85
+  - first:
+      213: 4850868039133499588
+    second: EFECTS AND ORBS_86
+  - first:
+      213: -8957617477392143188
+    second: EFECTS AND ORBS_87
+  - first:
+      213: 8282858331476004572
+    second: EFECTS AND ORBS_88
+  - first:
+      213: -8774678734719285571
+    second: EFECTS AND ORBS_89
+  - first:
+      213: 6984912200126924138
+    second: EFECTS AND ORBS_90
+  - first:
+      213: -7733965158651241363
+    second: EFECTS AND ORBS_91
+  - first:
+      213: 8781611293043690683
+    second: EFECTS AND ORBS_92
+  - first:
+      213: -572590683064193298
+    second: EFECTS AND ORBS_93
+  - first:
+      213: -5124213294488828592
+    second: EFECTS AND ORBS_94
+  - first:
+      213: -8395605666711948969
+    second: EFECTS AND ORBS_95
+  - first:
+      213: -296773238420464228
+    second: EFECTS AND ORBS_96
+  - first:
+      213: 8620164819046557384
+    second: EFECTS AND ORBS_97
+  - first:
+      213: -6459241341187693492
+    second: EFECTS AND ORBS_98
+  - first:
+      213: -3737342028846472024
+    second: EFECTS AND ORBS_99
+  - first:
+      213: 4457986884728627161
+    second: EFECTS AND ORBS_100
+  - first:
+      213: 2354424396847536212
+    second: EFECTS AND ORBS_101
+  - first:
+      213: 8478023784572452125
+    second: EFECTS AND ORBS_102
+  - first:
+      213: -399498568936172820
+    second: EFECTS AND ORBS_103
+  - first:
+      213: -2449027255902490188
+    second: EFECTS AND ORBS_104
+  - first:
+      213: -4246746170424080334
+    second: EFECTS AND ORBS_105
+  - first:
+      213: -170023225340616328
+    second: EFECTS AND ORBS_106
+  - first:
+      213: 5893743819773932074
+    second: EFECTS AND ORBS_107
+  - first:
+      213: 1066149625359068025
+    second: EFECTS AND ORBS_108
+  - first:
+      213: -5752717172931619991
+    second: EFECTS AND ORBS_109
+  - first:
+      213: 968761186552693748
+    second: EFECTS AND ORBS_110
+  - first:
+      213: -595476324603229214
+    second: EFECTS AND ORBS_111
+  - first:
+      213: -4954608010911641099
+    second: EFECTS AND ORBS_112
+  - first:
+      213: -1951617362595451859
+    second: EFECTS AND ORBS_113
+  - first:
+      213: 3448650741622343758
+    second: EFECTS AND ORBS_114
+  - first:
+      213: -7462979761571156429
+    second: EFECTS AND ORBS_115
+  - first:
+      213: 157807598607448431
+    second: EFECTS AND ORBS_116
+  - first:
+      213: 4404259097868275698
+    second: EFECTS AND ORBS_117
+  - first:
+      213: 834523342137842010
+    second: EFECTS AND ORBS_118
+  - first:
+      213: 3660458486550955189
+    second: EFECTS AND ORBS_119
+  - first:
+      213: -8033084404551959651
+    second: EFECTS AND ORBS_120
+  - first:
+      213: 8064114146805396121
+    second: EFECTS AND ORBS_121
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_0
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1320
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bcffa787d21c3f90800000000000000
+      internalID: -6972677406172644176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_1
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 1130
+        width: 178
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45ad3b429dae3e20800000000000000
+      internalID: 3332291618139907404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1295
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81516b222222503c0800000000000000
+      internalID: -4394068331423460072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_3
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1275
+        width: 110
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 382ea32c1933f73c0800000000000000
+      internalID: -4359709213149437309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_4
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 1127
+        width: 175
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b200a5952d3682fa0800000000000000
+      internalID: -5825296362910384085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_5
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1280
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e92a96faabd8050800000000000000
+      internalID: 5804500757304745546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_6
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1277
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553fb0f2c8cd69070800000000000000
+      internalID: 8112914273397371733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_7
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1231
+        width: 66
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb5db0fea73d2710800000000000000
+      internalID: 1670052261327100879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1229
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d11ac7807039e560800000000000000
+      internalID: 7343453927276941782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_9
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1187
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ae740eecc4963c0800000000000000
+      internalID: -4365873912349201785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_10
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1242
+        width: 86
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd3dd1b97d371c80800000000000000
+      internalID: -8352139391050891826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_11
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1247
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac72537a895a8990800000000000000
+      internalID: -7382990187945362269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_12
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1240
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d81de40fe8fde540800000000000000
+      internalID: 5038957263560972505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_13
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1242
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858e3ee66c1f06f80800000000000000
+      internalID: -8115220693955385256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_14
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1219
+        width: 120
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b824b2aa72383e5b0800000000000000
+      internalID: -5340280526749351285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_15
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1208
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13325c1ac95068430800000000000000
+      internalID: 3784718707138569009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_16
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1219
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba374075879b8670800000000000000
+      internalID: 8542087717608438456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_17
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1115
+        width: 65
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd71116bc7051ffc0800000000000000
+      internalID: -3462898141910460453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_18
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1210
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9585dceb0693bf1e0800000000000000
+      internalID: -2163072108340619175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_19
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 1114
+        width: 196
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d730f6acfe28542d0800000000000000
+      internalID: -3295083585946582147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_20
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1193
+        width: 55
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863a64f1ce65dcf70800000000000000
+      internalID: 9209112385179525992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_21
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1194
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793a3b0bd912de530800000000000000
+      internalID: 3885799014648750999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_22
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1193
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e683dd87c123110800000000000000
+      internalID: 1239084152913423938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1194
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c5ec926570da170800000000000000
+      internalID: 8191211363906772021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_24
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1111
+        width: 246
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3b55cfbeaa4cf80800000000000000
+      internalID: -8087151100323056682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_25
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1185
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a862c4dcd30291cd0800000000000000
+      internalID: -2587001061138225526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_26
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1183
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d36d5b211829d70800000000000000
+      internalID: 9048436518700858694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_27
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1179
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b0113b776a344c0800000000000000
+      internalID: -4304413785800504484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_28
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1165
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d9a997e5c2a2a60800000000000000
+      internalID: 7649975701320932651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_29
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1174
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44d76f15ffdc2f60800000000000000
+      internalID: 8011024081072149579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_30
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1060
+        width: 53
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d6860198a745710800000000000000
+      internalID: 1681103290020425010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_31
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1147
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0a07c15261e2b30800000000000000
+      internalID: 4264370245813182663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_32
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1143
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d401fb8355e16a3e0800000000000000
+      internalID: -2042912029592842163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_33
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1144
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a676fb1a459c47e70800000000000000
+      internalID: 9112129311405467498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_34
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1069
+        width: 49
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f49b9bc67952710800000000000000
+      internalID: 1667905730238828419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_35
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1130
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a1abc40f7eeb670800000000000000
+      internalID: 8556531361315953251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_36
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1057
+        width: 70
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c75b8845dfaa4e0800000000000000
+      internalID: -1969483347508495225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_37
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 1096
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6e38f2b9c700e80800000000000000
+      internalID: -8214428714364836160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_38
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1118
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7393e0769fc352010800000000000000
+      internalID: 1163403120618649911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_39
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 1082
+        width: 56
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd77bdb6cbb1adc0800000000000000
+      internalID: -3629413362423071310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_40
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 943
+        width: 158
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edfcae0f2bdd58a0800000000000000
+      internalID: -6314650107347403288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_41
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1092
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1670bf8a6da0f61b0800000000000000
+      internalID: -5661294289507121311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_42
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1099
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51242f063b213e0f0800000000000000
+      internalID: -1089006123258592747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_43
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1045
+        width: 118
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4721806667b441320800000000000000
+      internalID: 2527728262751720052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_44
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 889
+        width: 191
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ecad201742daac40800000000000000
+      internalID: 5524459095579274468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_45
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1084
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cceeeaffd4723ac20800000000000000
+      internalID: 3216457774828285644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_46
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1075
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87deb0e6a18f68980800000000000000
+      internalID: -8536863251235082888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_47
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1065
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6099dd4eef6715300800000000000000
+      internalID: 239103092360845574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_48
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1071
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca166517335c77260800000000000000
+      internalID: 7095356562680996268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_49
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1047
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de612155b0213940800000000000000
+      internalID: 5274032601749876438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_50
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 970
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbe3949af641d8a0800000000000000
+      internalID: -6282161963156640769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_51
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 960
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d9bf1aef1208920800000000000000
+      internalID: 2990427530097040690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_52
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 905
+        width: 120
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a932de82ca4f52540800000000000000
+      internalID: 4982657583013503898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_53
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 926
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66028b61481b1740800000000000000
+      internalID: 5123715670319695471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_54
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 904
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e3e0f4fdca0c2840800000000000000
+      internalID: 5200543549400081378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_55
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 800
+        width: 196
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27258968b10a23750800000000000000
+      internalID: 6283260470217953906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_56
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 879
+        width: 55
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af7332c2c9e80420800000000000000
+      internalID: 2596582207870173096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_57
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 762
+        width: 139
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cadcd21596f847480800000000000000
+      internalID: -8902332880908333652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_58
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 840
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69566b871d8c01f0800000000000000
+      internalID: -1077331078585886354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_59
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 796
+        width: 79
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa3a3526f1f535c0800000000000000
+      internalID: -4236213834983261532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_60
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 832
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963d4c940771e3b20800000000000000
+      internalID: 3115953763228373865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_61
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 797
+        width: 246
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1c11c2e46ef3340800000000000000
+      internalID: 4845844947495141804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_62
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 678
+        width: 171
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a590c62c5f035c70800000000000000
+      internalID: 8958520972231611810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_63
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 750
+        width: 107
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a39781d43746b6a0800000000000000
+      internalID: -6433876725472980062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_64
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 731
+        width: 118
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dffb25396ddc013c0800000000000000
+      internalID: -4390783315207864323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_65
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 768
+        width: 56
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731829772952e84a0800000000000000
+      internalID: -6589287893794913993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_66
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 782
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6097ccf6e5a31c00800000000000000
+      internalID: 870221564514635883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_67
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 730
+        width: 65
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d9ff254777ea42f0800000000000000
+      internalID: -987722668806506026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_68
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 677
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7a44f77239859c0800000000000000
+      internalID: -3938236076287285271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_69
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 548
+        width: 122
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a1333106ecb6cd0800000000000000
+      internalID: -2563728650823067073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_70
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 652
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4b40306453ec520800000000000000
+      internalID: 2724173399420351680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_71
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 632
+        width: 110
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd8665fc2bf57940800000000000000
+      internalID: 5293413107558157819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_72
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 491
+        width: 191
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5d7c21fbed44e50800000000000000
+      internalID: 6792799050216756658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_73
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 637
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9099f148b874f530800000000000000
+      internalID: 3887865111103770778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_74
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 634
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2806d71beca97a9f0800000000000000
+      internalID: -457226624623091582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_75
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 588
+        width: 66
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0aefb300c76a45c0800000000000000
+      internalID: -4230454825566868979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_76
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 586
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17831aa318dfcfdf0800000000000000
+      internalID: -144962356506445711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_77
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 544
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e83e50a4bc20180800000000000000
+      internalID: -9150527974076608960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_78
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 599
+        width: 86
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb07d00d800c73b0800000000000000
+      internalID: -5513531238203847694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_79
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 604
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac252cf3ba28aeb0800000000000000
+      internalID: -4708466457898046290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_80
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 597
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8241180ad0a474c00800000000000000
+      internalID: 884757274189435944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_81
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 599
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13b38d401284b170800000000000000
+      internalID: 8193316628625339164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_82
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 565
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da0401813d5772700800000000000000
+      internalID: 515510231859478701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_83
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 576
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e364f1ebd96f5570800000000000000
+      internalID: 8457595018334725093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_84
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 472
+        width: 65
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da9aa55c0ca0f680800000000000000
+      internalID: -8723283309239821608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_85
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 567
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fca82dfe53a4f110800000000000000
+      internalID: 1293838621331729649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_86
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 551
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c019d4d7ceb15340800000000000000
+      internalID: 4850868039133499588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_87
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 550
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cace5322d5620b380800000000000000
+      internalID: -8957617477392143188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_88
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 551
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde038c94cf92f270800000000000000
+      internalID: 8282858331476004572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_89
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 542
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db602e65e241a3680800000000000000
+      internalID: -8774678734719285571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_90
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 540
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a658bdb63a46fe060800000000000000
+      internalID: 6984912200126924138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_91
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 536
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c585d1aaf6ba490800000000000000
+      internalID: -7733965158651241363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_92
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 522
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc8d6da1fc8ed970800000000000000
+      internalID: 8781611293043690683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_93
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 531
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeea246becfbd08f0800000000000000
+      internalID: -572590683064193298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_94
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 417
+        width: 53
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055c8ac682323e8b0800000000000000
+      internalID: -5124213294488828592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_95
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 504
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751b061c021dc7b80800000000000000
+      internalID: -8395605666711948969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_96
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 500
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d1b11ef46a1ebf0800000000000000
+      internalID: -296773238420464228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_97
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 501
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6e6983b3af0a770800000000000000
+      internalID: 8620164819046557384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_98
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 426
+        width: 49
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c446df3093a2c56a0800000000000000
+      internalID: -6459241341187693492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_99
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 487
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4e77ed93b422cc0800000000000000
+      internalID: -3737342028846472024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_100
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 414
+        width: 70
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df9995c373fddd30800000000000000
+      internalID: 4457986884728627161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_101
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 475
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4585c90c3889ca020800000000000000
+      internalID: 2354424396847536212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_102
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 449
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1df0cca6bdf7a570800000000000000
+      internalID: 8478023784572452125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_103
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 456
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2584e0b22b47af0800000000000000
+      internalID: -399498568936172820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_104
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 315
+        width: 140
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1beaeafae430ed0800000000000000
+      internalID: -2449027255902490188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_105
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 271
+        width: 227
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2384f94bbd68015c0800000000000000
+      internalID: -4246746170424080334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_106
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 441
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871a10207c4f3adf0800000000000000
+      internalID: -170023225340616328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_107
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 432
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2277c617c8cac150800000000000000
+      internalID: 5893743819773932074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_108
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 422
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b61f08f69bbce00800000000000000
+      internalID: 1066149625359068025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_109
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 428
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9631f1ed53e3a20b0800000000000000
+      internalID: -5752717172931619991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_110
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 404
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3c8ac9a2bb17d00800000000000000
+      internalID: 968761186552693748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_111
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 327
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb8edf00717cb7f0800000000000000
+      internalID: -595476324603229214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_112
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 317
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f19e44c342bd3bb0800000000000000
+      internalID: -4954608010911641099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_113
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 283
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c630d49567ae4e0800000000000000
+      internalID: -1951617362595451859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_114
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 261
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4889c8e3911cdf20800000000000000
+      internalID: 3448650741622343758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_115
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 197
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e2f99827b2e6890800000000000000
+      internalID: -7462979761571156429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_116
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 153
+        width: 79
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69bad1cc25a03200800000000000000
+      internalID: 157807598607448431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_117
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 189
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff883390521f1d30800000000000000
+      internalID: 4404259097868275698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_118
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 87
+        width: 155
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59d5e4ee82d49b00800000000000000
+      internalID: 834523342137842010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_119
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 87
+        width: 202
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b40fed799f8cc230800000000000000
+      internalID: 3660458486550955189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_120
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 107
+        width: 107
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b33ff8b40c48090800000000000000
+      internalID: -8033084404551959651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EFECTS AND ORBS_121
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 87
+        width: 65
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992b98c471d79ef60800000000000000
+      internalID: 8064114146805396121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EFECTS AND ORBS_0: -6972677406172644176
+      EFECTS AND ORBS_1: 3332291618139907404
+      EFECTS AND ORBS_10: -8352139391050891826
+      EFECTS AND ORBS_100: 4457986884728627161
+      EFECTS AND ORBS_101: 2354424396847536212
+      EFECTS AND ORBS_102: 8478023784572452125
+      EFECTS AND ORBS_103: -399498568936172820
+      EFECTS AND ORBS_104: -2449027255902490188
+      EFECTS AND ORBS_105: -4246746170424080334
+      EFECTS AND ORBS_106: -170023225340616328
+      EFECTS AND ORBS_107: 5893743819773932074
+      EFECTS AND ORBS_108: 1066149625359068025
+      EFECTS AND ORBS_109: -5752717172931619991
+      EFECTS AND ORBS_11: -7382990187945362269
+      EFECTS AND ORBS_110: 968761186552693748
+      EFECTS AND ORBS_111: -595476324603229214
+      EFECTS AND ORBS_112: -4954608010911641099
+      EFECTS AND ORBS_113: -1951617362595451859
+      EFECTS AND ORBS_114: 3448650741622343758
+      EFECTS AND ORBS_115: -7462979761571156429
+      EFECTS AND ORBS_116: 157807598607448431
+      EFECTS AND ORBS_117: 4404259097868275698
+      EFECTS AND ORBS_118: 834523342137842010
+      EFECTS AND ORBS_119: 3660458486550955189
+      EFECTS AND ORBS_12: 5038957263560972505
+      EFECTS AND ORBS_120: -8033084404551959651
+      EFECTS AND ORBS_121: 8064114146805396121
+      EFECTS AND ORBS_13: -8115220693955385256
+      EFECTS AND ORBS_14: -5340280526749351285
+      EFECTS AND ORBS_15: 3784718707138569009
+      EFECTS AND ORBS_16: 8542087717608438456
+      EFECTS AND ORBS_17: -3462898141910460453
+      EFECTS AND ORBS_18: -2163072108340619175
+      EFECTS AND ORBS_19: -3295083585946582147
+      EFECTS AND ORBS_2: -4394068331423460072
+      EFECTS AND ORBS_20: 9209112385179525992
+      EFECTS AND ORBS_21: 3885799014648750999
+      EFECTS AND ORBS_22: 1239084152913423938
+      EFECTS AND ORBS_23: 8191211363906772021
+      EFECTS AND ORBS_24: -8087151100323056682
+      EFECTS AND ORBS_25: -2587001061138225526
+      EFECTS AND ORBS_26: 9048436518700858694
+      EFECTS AND ORBS_27: -4304413785800504484
+      EFECTS AND ORBS_28: 7649975701320932651
+      EFECTS AND ORBS_29: 8011024081072149579
+      EFECTS AND ORBS_3: -4359709213149437309
+      EFECTS AND ORBS_30: 1681103290020425010
+      EFECTS AND ORBS_31: 4264370245813182663
+      EFECTS AND ORBS_32: -2042912029592842163
+      EFECTS AND ORBS_33: 9112129311405467498
+      EFECTS AND ORBS_34: 1667905730238828419
+      EFECTS AND ORBS_35: 8556531361315953251
+      EFECTS AND ORBS_36: -1969483347508495225
+      EFECTS AND ORBS_37: -8214428714364836160
+      EFECTS AND ORBS_38: 1163403120618649911
+      EFECTS AND ORBS_39: -3629413362423071310
+      EFECTS AND ORBS_4: -5825296362910384085
+      EFECTS AND ORBS_40: -6314650107347403288
+      EFECTS AND ORBS_41: -5661294289507121311
+      EFECTS AND ORBS_42: -1089006123258592747
+      EFECTS AND ORBS_43: 2527728262751720052
+      EFECTS AND ORBS_44: 5524459095579274468
+      EFECTS AND ORBS_45: 3216457774828285644
+      EFECTS AND ORBS_46: -8536863251235082888
+      EFECTS AND ORBS_47: 239103092360845574
+      EFECTS AND ORBS_48: 7095356562680996268
+      EFECTS AND ORBS_49: 5274032601749876438
+      EFECTS AND ORBS_5: 5804500757304745546
+      EFECTS AND ORBS_50: -6282161963156640769
+      EFECTS AND ORBS_51: 2990427530097040690
+      EFECTS AND ORBS_52: 4982657583013503898
+      EFECTS AND ORBS_53: 5123715670319695471
+      EFECTS AND ORBS_54: 5200543549400081378
+      EFECTS AND ORBS_55: 6283260470217953906
+      EFECTS AND ORBS_56: 2596582207870173096
+      EFECTS AND ORBS_57: -8902332880908333652
+      EFECTS AND ORBS_58: -1077331078585886354
+      EFECTS AND ORBS_59: -4236213834983261532
+      EFECTS AND ORBS_6: 8112914273397371733
+      EFECTS AND ORBS_60: 3115953763228373865
+      EFECTS AND ORBS_61: 4845844947495141804
+      EFECTS AND ORBS_62: 8958520972231611810
+      EFECTS AND ORBS_63: -6433876725472980062
+      EFECTS AND ORBS_64: -4390783315207864323
+      EFECTS AND ORBS_65: -6589287893794913993
+      EFECTS AND ORBS_66: 870221564514635883
+      EFECTS AND ORBS_67: -987722668806506026
+      EFECTS AND ORBS_68: -3938236076287285271
+      EFECTS AND ORBS_69: -2563728650823067073
+      EFECTS AND ORBS_7: 1670052261327100879
+      EFECTS AND ORBS_70: 2724173399420351680
+      EFECTS AND ORBS_71: 5293413107558157819
+      EFECTS AND ORBS_72: 6792799050216756658
+      EFECTS AND ORBS_73: 3887865111103770778
+      EFECTS AND ORBS_74: -457226624623091582
+      EFECTS AND ORBS_75: -4230454825566868979
+      EFECTS AND ORBS_76: -144962356506445711
+      EFECTS AND ORBS_77: -9150527974076608960
+      EFECTS AND ORBS_78: -5513531238203847694
+      EFECTS AND ORBS_79: -4708466457898046290
+      EFECTS AND ORBS_8: 7343453927276941782
+      EFECTS AND ORBS_80: 884757274189435944
+      EFECTS AND ORBS_81: 8193316628625339164
+      EFECTS AND ORBS_82: 515510231859478701
+      EFECTS AND ORBS_83: 8457595018334725093
+      EFECTS AND ORBS_84: -8723283309239821608
+      EFECTS AND ORBS_85: 1293838621331729649
+      EFECTS AND ORBS_86: 4850868039133499588
+      EFECTS AND ORBS_87: -8957617477392143188
+      EFECTS AND ORBS_88: 8282858331476004572
+      EFECTS AND ORBS_89: -8774678734719285571
+      EFECTS AND ORBS_9: -4365873912349201785
+      EFECTS AND ORBS_90: 6984912200126924138
+      EFECTS AND ORBS_91: -7733965158651241363
+      EFECTS AND ORBS_92: 8781611293043690683
+      EFECTS AND ORBS_93: -572590683064193298
+      EFECTS AND ORBS_94: -5124213294488828592
+      EFECTS AND ORBS_95: -8395605666711948969
+      EFECTS AND ORBS_96: -296773238420464228
+      EFECTS AND ORBS_97: 8620164819046557384
+      EFECTS AND ORBS_98: -6459241341187693492
+      EFECTS AND ORBS_99: -3737342028846472024
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

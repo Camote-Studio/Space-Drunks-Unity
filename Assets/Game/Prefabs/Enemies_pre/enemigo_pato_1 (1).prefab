@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemigo_pato_1
   xpOrbPrefab: {fileID: 607480080286775630, guid: 4473cbd903356c54da2798e14b9bd1ed, type: 3}
-  cantidadOrbes: 15
+  cantidadOrbes: 20
   spriteMiraALaIzquierdaPorDefecto: 0
   vidaMaxima: 200
   enemyPoolTag: Quacko

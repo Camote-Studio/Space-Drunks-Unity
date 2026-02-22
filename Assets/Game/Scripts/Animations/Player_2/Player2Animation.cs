@@ -7,21 +7,26 @@ public class Player2Animation : MonoBehaviour
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private VidaJugador vidaJugador;
 
+    [Header("Sword")]
+    [SerializeField] private bool requireSwordEquippedToAttack = true;
+
     private int hashSpeed;
     private int hashHit;
     private int hashPunchAttack;
     private int hashBackAttack;
 
     private int hashSwordEquipped;
-    private int hashSwordAttack;
+    private int hashSwordStart;
 
     private int hashUltimate;
     private int hashUltiIni;
     private int hashUltimatePunch;
 
     private int hashIsMovingUp;
+    private int hashIsMovingDown;
 
     private bool combatLocked;
+    private Rigidbody2D rb;
 
     private void Reset()
     {
@@ -36,31 +41,22 @@ public class Player2Animation : MonoBehaviour
         if (movement == null) movement = GetComponent<PlayerMovement>();
         if (vidaJugador == null) vidaJugador = GetComponent<VidaJugador>();
 
+        rb = movement != null ? movement.GetComponent<Rigidbody2D>() : GetComponent<Rigidbody2D>();
+
         hashSpeed = Animator.StringToHash("Speed");
         hashHit = Animator.StringToHash("Hit");
         hashPunchAttack = Animator.StringToHash("PunchAttack");
         hashBackAttack = Animator.StringToHash("BackAttack");
 
         hashSwordEquipped = Animator.StringToHash("SwordEquipped");
-        hashSwordAttack = Animator.StringToHash("SwordAttack");
+        hashSwordStart = Animator.StringToHash("SwordStart");
 
         hashUltimate = Animator.StringToHash("Ultimate");
         hashUltiIni = Animator.StringToHash("UltiIni");
         hashUltimatePunch = Animator.StringToHash("UltimatePunch");
 
         hashIsMovingUp = Animator.StringToHash("IsMovingUp");
-    }
-
-    private void OnEnable()
-    {
-        if (vidaJugador != null)
-            vidaJugador.OnDamaged += OnDamaged;
-    }
-
-    private void OnDisable()
-    {
-        if (vidaJugador != null)
-            vidaJugador.OnDamaged -= OnDamaged;
+        hashIsMovingDown = Animator.StringToHash("IsMovingDown");
     }
 
     private void Update()
@@ -69,31 +65,31 @@ public class Player2Animation : MonoBehaviour
 
         if (combatLocked)
         {
+            animator.SetFloat(hashSpeed, 0f);
             animator.SetBool(hashIsMovingUp, false);
+            animator.SetBool(hashIsMovingDown, false);
+            return;
+        }
+
+        const float t = 0.1f;
+        Vector2 input = movement.MoveInput;
+
+        float ax = Mathf.Abs(input.x);
+
+        bool movingUp = input.y > t && ax < t;
+        bool movingDown = input.y < -t && ax < t;
+
+        animator.SetBool(hashIsMovingUp, movingUp);
+        animator.SetBool(hashIsMovingDown, movingDown);
+
+        if (movingUp || movingDown)
+        {
             animator.SetFloat(hashSpeed, 0f);
             return;
         }
 
-        Vector2 input = movement.MoveInput;
-
-        float hx = Mathf.Abs(input.x);
-        float vy = Mathf.Abs(input.y);
-
-        bool movingUp = vy > 0.1f && hx < 0.1f;
-
-        animator.SetBool(hashIsMovingUp, movingUp);
-
-        if (movingUp)
-            animator.SetFloat(hashSpeed, 0f);
-        else
-            animator.SetFloat(hashSpeed, Mathf.Abs(movement.GetComponent<Rigidbody2D>()?.linearVelocity.x ?? 0f));
-
-    }
-
-    private void OnDamaged(string tipoDanio)
-    {
-        if (animator == null) return;
-        animator.SetTrigger(hashHit);
+        float vx = rb != null ? Mathf.Abs(rb.linearVelocity.x) : ax;
+        animator.SetFloat(hashSpeed, vx);
     }
 
     public void SetCombatLocked(bool value)
@@ -105,55 +101,54 @@ public class Player2Animation : MonoBehaviour
 
     public void PlayPunchAttack()
     {
-        if (animator == null) return;
         if (combatLocked) return;
         animator.SetTrigger(hashPunchAttack);
     }
 
     public void PlayBackAttack()
     {
-        if (animator == null) return;
         if (combatLocked) return;
         animator.SetTrigger(hashBackAttack);
     }
 
     public void SetSwordEquipped(bool value)
     {
-        if (animator == null) return;
         animator.SetBool(hashSwordEquipped, value);
     }
 
     public void DoSwordAttack()
     {
-        if (animator == null) return;
-        animator.SetTrigger(hashSwordAttack);
+        if (combatLocked) return;
+
+        if (requireSwordEquippedToAttack &&
+            !animator.GetBool(hashSwordEquipped))
+            return;
+
+        animator.ResetTrigger(hashSwordStart);
+        animator.SetTrigger(hashSwordStart);
     }
 
     public void PlayUltimateStart()
     {
-        if (animator == null) return;
-
         combatLocked = true;
+
+        animator.SetFloat(hashSpeed, 0f);
         animator.SetBool(hashUltiIni, false);
         animator.SetTrigger(hashUltimate);
     }
 
     public void SetUltimateStateActive(bool active)
     {
-        if (animator == null) return;
         animator.SetBool(hashUltiIni, active);
     }
 
     public void PlayUltimatePunch()
     {
-        if (animator == null) return;
         animator.SetTrigger(hashUltimatePunch);
     }
 
     public void EndUltimate()
     {
-        if (animator == null) return;
-
         animator.SetBool(hashUltiIni, false);
         combatLocked = false;
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UltimateWeapon : WeaponBase
+public class UltimateWeapon : UltimateBase
 {
     [Header("Spawn Points")]
     [SerializeField] private Transform firePointSmall;
@@ -11,132 +11,146 @@ public class UltimateWeapon : WeaponBase
     [SerializeField] private GameObject bigBulletPrefab;
     [SerializeField] private GameObject finalBeamPrefab;
 
+    [Header("Anim")]
     [SerializeField] private PlayerAnimation playerAnimation;
 
     [Header("Pattern")]
     [SerializeField] private int totalShots = 120;
     [SerializeField] private int bigShotEvery = 6;
-    [SerializeField] private float coneY = 0.7f;
 
     [Header("Timing")]
-    [SerializeField] private float setupTime = 0.8f;
     [SerializeField] private float shotInterval = 0.025f;
     [SerializeField] private float endLag = 0.2f;
 
-    private bool active;
-    private bool shooting;
+    [Header("Presentation")]
+    [SerializeField] private float presentationTimeDefault = 0.7f;
+
+    [Header("Charge System")]
+    [SerializeField] private float maxCharge = 100f;
+    [SerializeField] private UltiBar ultiBar;
+
+    private float currentCharge;
 
     private int shotsFired;
     private float shotTimer;
-    private float setupTimer;
     private float endTimer;
+    private bool firedFinal;
 
-    private float lockedFacing;
-    private PlayerMovement movement;
-    private Rigidbody2D rb;
-
-    public override bool IsActive => active;
-
-    private void Awake()
+    protected override void Awake()
     {
-        movement = GetComponentInParent<PlayerMovement>();
-        rb = movement != null ? movement.GetComponent<Rigidbody2D>() : GetComponentInParent<Rigidbody2D>();
+        base.Awake();
 
         if (playerAnimation == null)
             playerAnimation = GetComponentInParent<PlayerAnimation>();
+
+        currentCharge = 0f;
+        UpdateBar();
     }
 
-    public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
+    public void AddCharge(float amount)
     {
-        if (!active)
-        {
-            if (fireDown)
-                Activate();
-            return;
-        }
+        if (amount <= 0f) return;
 
-        if (rb != null)
-            rb.linearVelocity = Vector2.zero;
+        currentCharge += amount;
+        currentCharge = Mathf.Clamp(currentCharge, 0f, maxCharge);
 
-        if (!shooting)
-        {
-            setupTimer -= Time.deltaTime;
-            if (setupTimer <= 0f)
-            {
-                shooting = true;
-                playerAnimation?.SetUltimateStateActive(true);
-            }
-            return;
-        }
-
-        if (shotsFired >= totalShots)
-        {
-            if (endTimer <= 0f)
-            {
-                FireFinalBeam();
-                endTimer = endLag;
-            }
-            else
-            {
-                endTimer -= Time.deltaTime;
-                if (endTimer <= 0f)
-                    End();
-            }
-            return;
-        }
-
-        if (shotTimer > 0f)
-        {
-            shotTimer -= Time.deltaTime;
-            return;
-        }
-
-        FireShot(shotsFired);
-        shotsFired++;
-        shotTimer = shotInterval;
+        UpdateBar();
     }
 
-    private void Activate()
+    public bool IsFull() => currentCharge >= maxCharge;
+
+    public bool TryActivateUltimate()
     {
-        active = true;
-        shooting = false;
+        if (!IsFull())
+            return false;
+
+        StartUltimate();
+        return true;
+    }
+
+    protected override void StartUltimate()
+    {
+        if (!IsFull())
+            return;
+
+        currentCharge = 0f;
+        UpdateBar();
+
+        presentationTime = presentationTimeDefault;
 
         shotsFired = 0;
         shotTimer = 0f;
         endTimer = 0f;
+        firedFinal = false;
 
-        setupTimer = setupTime;
+        base.StartUltimate();
+    }
 
-        lockedFacing = Mathf.Sign(movement != null && movement.FacingX != 0f ? movement.FacingX : 1f);
-
-        if (movement != null)
-            movement.enabled = false;
-
-        if (rb != null)
-            rb.linearVelocity = Vector2.zero;
-
+    protected override void OnUltimateStart()
+    {
         playerAnimation?.PlayUltimateStart();
     }
 
-    private void End()
+    protected override void OnUltimateExecuteStart()
     {
-        active = false;
-        shooting = false;
+        playerAnimation?.SetUltimateStateActive(true);
+    }
 
-        if (movement != null)
-            movement.enabled = true;
+    protected override void TickExecute()
+    {
+        if (shotsFired < totalShots)
+        {
+            if (shotTimer > 0f)
+            {
+                shotTimer -= Time.deltaTime;
+                return;
+            }
 
+            FireShot(shotsFired);
+            shotsFired++;
+            shotTimer = shotInterval;
+            return;
+        }
+
+        if (!firedFinal)
+        {
+            FireFinalBeam();
+            firedFinal = true;
+            endTimer = endLag;
+            return;
+        }
+
+        endTimer -= Time.deltaTime;
+        if (endTimer <= 0f)
+            EndUltimate();
+    }
+
+    protected override void OnUltimateEnd()
+    {
         playerAnimation?.EndUltimate();
+    }
+
+    private void UpdateBar()
+    {
+        if (ultiBar != null)
+            ultiBar.SetRaw(currentCharge, maxCharge);
+    }
+
+    private Vector3 GetMirroredSpawnPosition(Transform fp)
+    {
+        if (fp == null) return transform.position;
+
+        Transform root = transform;
+        Vector3 localOffset = root.InverseTransformPoint(fp.position);
+        localOffset.x *= lockedFacing;
+        return root.TransformPoint(localOffset);
     }
 
     private void FireShot(int index)
     {
         bool big = bigShotEvery > 0 && ((index + 1) % bigShotEvery == 0);
 
-        float t = totalShots <= 1 ? 0.5f : index / (float)(totalShots - 1);
-        float y = Mathf.Lerp(-coneY, coneY, t);
-
-        Vector2 dir = new Vector2(lockedFacing, y).normalized;
+        Vector2 dir = new Vector2(lockedFacing, 0f).normalized;
 
         Transform fp = big ? firePointBig : firePointSmall;
         GameObject prefab = big ? bigBulletPrefab : smallBulletPrefab;
@@ -144,10 +158,13 @@ public class UltimateWeapon : WeaponBase
         if (fp == null || prefab == null)
             return;
 
-        GameObject go = Instantiate(prefab, fp.position, Quaternion.identity);
+        Vector3 spawnPos = GetMirroredSpawnPosition(fp);
 
-        if (go.TryGetComponent(out Bullet b))
-            b.Initialize(dir, big);
+        GameObject go = Instantiate(prefab, spawnPos, Quaternion.identity);
+
+        MachineBullet b = go.GetComponentInChildren<MachineBullet>();
+        if (b != null)
+            b.Initialize(dir);
     }
 
     private void FireFinalBeam()
@@ -159,9 +176,12 @@ public class UltimateWeapon : WeaponBase
         if (fp == null)
             return;
 
-        GameObject go = Instantiate(finalBeamPrefab, fp.position, Quaternion.identity);
+        Vector3 spawnPos = GetMirroredSpawnPosition(fp);
 
-        if (go.TryGetComponent(out Bullet b))
-            b.Initialize(new Vector2(lockedFacing, 0f), true);
+        GameObject go = Instantiate(finalBeamPrefab, spawnPos, Quaternion.identity);
+
+        MachineBullet b = go.GetComponentInChildren<MachineBullet>();
+        if (b != null)
+            b.Initialize(new Vector2(lockedFacing, 0f));
     }
 }

@@ -2,9 +2,17 @@
 
 public class XPOrb : MonoBehaviour
 {
+    [Header("XP")]
     public float xpValue = 5f;
+
+    [Header("Ultimate Charge")]
+    public float ultiChargeValue = 5f;
+
+    [Header("Attraction")]
     public float attractDistance = 3f;
     public float attractSpeed = 6f;
+
+    [Header("Lifetime")]
     public float lifetime = 10f;
 
     private Transform player;
@@ -18,12 +26,12 @@ public class XPOrb : MonoBehaviour
         Destroy(gameObject, lifetime);
 
         Vector2 randomForce = new Vector2(Random.Range(-2f, 2f), Random.Range(1f, 3f));
-        rb.AddForce(randomForce, ForceMode2D.Impulse);
+        if (rb != null) rb.AddForce(randomForce, ForceMode2D.Impulse);
     }
 
     void Update()
     {
-        if (player == null) return;
+        if (player == null || rb == null) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
 
@@ -36,15 +44,18 @@ public class XPOrb : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            VidaJugador jugador = other.GetComponent<VidaJugador>();
-            if (jugador != null)
-            {
-                jugador.AgregarExperiencia((int)xpValue);
-            }
+        // ✅ Agarra el player desde el padre aunque el collider sea de un hijo
+        VidaJugador jugador = other.GetComponentInParent<VidaJugador>();
+        if (jugador == null) return;
 
-            Destroy(gameObject);
+        jugador.AgregarExperiencia((int)xpValue);
+
+        UltimateWeapon ult = jugador.GetComponentInChildren<UltimateWeapon>(true);
+        if (ult != null)
+        {
+            ult.AddCharge(ultiChargeValue);
         }
+
+        Destroy(gameObject);
     }
 }
