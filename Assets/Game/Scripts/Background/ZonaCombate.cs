@@ -13,9 +13,11 @@ public class ZonaCombate : MonoBehaviour
 
     [Header("Señal GO! y Tiempos")]
     public GameObject indicadorGo; 
-    public float velocidadParpadeo = 0.25f;
+    [Tooltip("Ajusta la Y para subirlo, o la X para moverlo a los lados")]
+    public Vector3 offsetGo = new Vector3(3.5f, 5.0f, 0f); // <-- AQUÍ CONTROLAS LA ALTURA
+    public float velocidadParpadeo = 0.3f;
     [Tooltip("Tiempo que tarda en abrirse la zona tras matar al último enemigo")]
-    public float tiempoEsperaApertura = 2f; // <-- NUEVA VARIABLE: 2 segundos de pausa
+    public float tiempoEsperaApertura = 3f; // <-- NUEVA VARIABLE: 2 segundos de pausa
 
     private bool zonaCompletada = false;
     private bool combateIniciado = false;
@@ -60,31 +62,51 @@ public class ZonaCombate : MonoBehaviour
     // ==========================================
     public void AlTerminarCombate()
     {   
-        Debug.Log("Combate Terminado: Iniciando pausa antes de abrir...");
+        Debug.Log("Combate Terminado: Mostrando GO! al instante...");
         zonaCompletada = true;
         
-        // Iniciamos la corrutina que cuenta los 2 segundos
-        StartCoroutine(SecuenciaApertura());
+        // Iniciamos la nueva secuencia
+        StartCoroutine(SecuenciaVictoria());
     }
 
-    IEnumerator SecuenciaApertura()
+    IEnumerator SecuenciaVictoria()
     {
-        // 3. APARECE EL LETRERO "GO!" Y EMPIEZA A PARPADEAR
+        // ==========================================
+        // PASO 1: APARECE EL "GO!" AL INSTANTE
+        // ==========================================
         if (indicadorGo != null)
         {
-            indicadorGo.SetActive(true);
-            StartCoroutine(ParpadearGo());
-        }
-        // 1. ESPERA DRAMÁTICA (2 segundos)
-        yield return new WaitForSeconds(tiempoEsperaApertura);
+            GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+            
+            if (jugador != null)
+            {
+                indicadorGo.transform.position = jugador.transform.position + offsetGo;
+            }
 
-        // 2. SE ABREN LAS PUERTAS Y SE LIBERA LA CÁMARA
+            // Encendemos el letrero. Su Animator empezará el loop automáticamente.
+            indicadorGo.SetActive(true);
+        }
+
+        // ==========================================
+        // PASO 2: EL TIEMPO QUE DURA LA ANIMACIÓN
+        // ==========================================
+        // Dejamos que el jugador vea el "GO!" haciendo su loop durante 2 segundos
+        yield return new WaitForSeconds(tiempoEsperaApertura); 
+
+        // ==========================================
+        // PASO 3: SE APAGA Y SE ABREN LAS PUERTAS
+        // ==========================================
+        if (indicadorGo != null)
+        {
+            indicadorGo.SetActive(false);
+        }
+
         camaraZona.Priority = 0;
         if(barreraSalida != null) barreraSalida.SetActive(false);
         if(barreraEntrada != null) barreraEntrada.SetActive(false);
-
-        indicadorGo.SetActive(false);
     }
+    
+    // (Hemos borrado la corrutina ParpadearGo porque ahora lo controlas tú con tu propia animación)
 
     // ==========================================
     // EFECTO VISUAL ARCADE

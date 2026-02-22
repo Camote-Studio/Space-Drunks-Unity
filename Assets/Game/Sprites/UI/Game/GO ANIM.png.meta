@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: a5440123367a0cf48961e5fd019661b2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6460569064162245760
+    second: GO ANIM_0
+  - first:
+      213: 7718832012855385214
+    second: GO ANIM_1
+  - first:
+      213: 7539934887346018975
+    second: GO ANIM_2
+  - first:
+      213: 5080487173553386461
+    second: GO ANIM_3
+  - first:
+      213: 3207633605302873561
+    second: GO ANIM_4
+  - first:
+      213: 3466616762695738527
+    second: GO ANIM_5
+  - first:
+      213: 2519004055631512744
+    second: GO ANIM_6
+  - first:
+      213: 9030728399947374455
+    second: GO ANIM_7
+  - first:
+      213: 4710353779779743945
+    second: GO ANIM_8
+  - first:
+      213: -2973621911451445372
+    second: GO ANIM_9
+  - first:
+      213: 5089630341479043676
+    second: GO ANIM_10
+  - first:
+      213: -2020268227219746824
+    second: GO ANIM_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GO ANIM_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 453
+        width: 542
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08cb444955d88a950800000000000000
+      internalID: 6460569064162245760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GO ANIM_3
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 453
+        width: 542
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3f391ba24818640800000000000000
+      internalID: 5080487173553386461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GO ANIM_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 39
+        width: 542
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a44fa3a7dc45f220800000000000000
+      internalID: 2519004055631512744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GO ANIM_9
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 39
+        width: 542
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4875e9f50a29bb6d0800000000000000
+      internalID: -2973621911451445372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c32e11a66e01ea94aa0b8712974fb172
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GO ANIM_0: 6460569064162245760
+      GO ANIM_1: 7718832012855385214
+      GO ANIM_10: 5089630341479043676
+      GO ANIM_11: -2020268227219746824
+      GO ANIM_2: 7539934887346018975
+      GO ANIM_3: 5080487173553386461
+      GO ANIM_4: 3207633605302873561
+      GO ANIM_5: 3466616762695738527
+      GO ANIM_6: 2519004055631512744
+      GO ANIM_7: 9030728399947374455
+      GO ANIM_8: 4710353779779743945
+      GO ANIM_9: -2973621911451445372
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
