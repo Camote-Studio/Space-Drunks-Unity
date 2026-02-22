@@ -71,7 +71,7 @@ MonoBehaviour:
   estaAtacando: 0
   velocidad: 3
   aceleracion: 8
-  balaPrefab: {fileID: 1880320973439676136, guid: 7202c5f8b804af04ca70eb1f7e98c1f4, type: 3}
+  balaPrefab: {fileID: 1880320973439676136, guid: 787c764b27183124592669f4389f1bbd, type: 3}
   velocidadBala: 8
   rangoDisparo: 6
   enfriamientoDisparo: 2
