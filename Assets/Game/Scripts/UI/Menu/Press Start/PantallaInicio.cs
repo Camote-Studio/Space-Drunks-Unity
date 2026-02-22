@@ -1,16 +1,21 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem; 
 using UnityEngine.InputSystem.Utilities;
 
 public class PantallaInicio : MonoBehaviour
 {
-    [Header("Configuración")]
+    [Header("Configuración de Escena")]
     [Tooltip("Escribe exactamente el nombre de tu escena del menú principal")]
     public string nombreEscenaMenu = "Menu";
 
-    // Guardamos la conexión del evento para poder "apagarla" al cambiar de escena
+    [Header("Configuración de Transición")]
+    [Tooltip("Elige el efecto visual para pasar al menú")]
+    public TransitionType tipoDeTransicion = TransitionType.Fade;
+
     private System.IDisposable escuchadorBotones;
+    
+    // Variable de seguridad para evitar que el jugador presione 5 botones a la vez y bugee la transición
+    private bool cambiandoDeEscena = false; 
 
     void Start()
     {
@@ -20,18 +25,28 @@ public class PantallaInicio : MonoBehaviour
 
     void CargarMenu()
     {
-        Debug.Log("¡Botón presionado! Viajando al menú...");
+        if (cambiandoDeEscena) return; // Evitamos múltiples llamadas
+        cambiandoDeEscena = true; // Bloqueamos futuras llamadas
         
-        // 1. Nos desconectamos del evento para evitar errores de memoria
+        Debug.Log("¡Botón presionado! Viajando al menú con transición...");
+        
+        // 1. Nos desconectamos del evento de los botones
         escuchadorBotones?.Dispose();
 
-        // 2. Cargamos la escena
-        SceneManager.LoadScene(nombreEscenaMenu);
+        // 2. Llamamos a tu Transition Manager
+        if (TransitionManager.Instance != null)
+        {
+            TransitionManager.Instance.LoadScene(nombreEscenaMenu, tipoDeTransicion);
+        }
+        else
+        {
+            Debug.LogError("No hay ningún TransitionManager en la escena. Asegúrate de poner tu prefab del TransitionManager aquí.");
+        }
     }
 
     private void OnDestroy()
     {
-        // Medida de seguridad extra por si el objeto se destruye de otra forma
+        // Medida de seguridad extra
         escuchadorBotones?.Dispose();
     }
 }

@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: 8aede4a528fdb9141886ef0ea92e4a72
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7222914209046456063
+    second: PAUSE MENU_0
+  - first:
+      213: 7870041502178904137
+    second: PAUSE MENU_1
+  - first:
+      213: 5952376621628375932
+    second: PAUSE MENU_2
+  - first:
+      213: 1773427175541350272
+    second: PAUSE MENU_3
+  - first:
+      213: 8768990411536194128
+    second: PAUSE MENU_4
+  - first:
+      213: -7657076550781852965
+    second: PAUSE MENU_5
+  - first:
+      213: -5556897617948262463
+    second: PAUSE MENU_6
+  - first:
+      213: -5942107645636541165
+    second: PAUSE MENU_7
+  - first:
+      213: -3932333111934677272
+    second: PAUSE MENU_8
+  - first:
+      213: -6954618402716938261
+    second: PAUSE MENU_9
+  - first:
+      213: 8226566931406172457
+    second: PAUSE MENU_10
+  - first:
+      213: -2485652276184174469
+    second: PAUSE MENU_11
+  - first:
+      213: -6758157514492369026
+    second: PAUSE MENU_12
+  - first:
+      213: 2258004705360722893
+    second: PAUSE MENU_13
+  - first:
+      213: -5485042537123574059
+    second: PAUSE MENU_14
+  - first:
+      213: -583072216889086859
+    second: PAUSE MENU_15
+  - first:
+      213: -4638587232337205715
+    second: PAUSE MENU_16
+  - first:
+      213: -4339982737989268478
+    second: PAUSE MENU_17
+  - first:
+      213: -4864894119996383862
+    second: PAUSE MENU_18
+  - first:
+      213: -1868176429534493265
+    second: PAUSE MENU_19
+  - first:
+      213: -6845498954263120208
+    second: PAUSE MENU_20
+  - first:
+      213: -4481462430420453586
+    second: PAUSE MENU_21
+  - first:
+      213: -4581744148878247458
+    second: PAUSE MENU_22
+  - first:
+      213: -7978850092192592270
+    second: PAUSE MENU_23
+  - first:
+      213: 638419578108798848
+    second: PAUSE MENU_24
+  - first:
+      213: -1097301323714380441
+    second: PAUSE MENU_25
+  - first:
+      213: 6114487350492545797
+    second: PAUSE MENU_26
+  - first:
+      213: -6340160169732649609
+    second: PAUSE MENU_27
+  - first:
+      213: 6404373219958723172
+    second: PAUSE MENU_28
+  - first:
+      213: 5309362447128331964
+    second: PAUSE MENU_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PAUSE MENU_2
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 819
+        width: 403
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73cf7510071b9250800000000000000
+      internalID: 5952376621628375932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE MENU_9
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 656
+        width: 534
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef89ade86b3c7f90800000000000000
+      internalID: -6954618402716938261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE MENU_16
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 470
+        width: 157
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26e0ec0d7d60afb0800000000000000
+      internalID: -4638587232337205715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE MENU_18
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 559
+        width: 303
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d9abbb29c6c7cb0800000000000000
+      internalID: -4864894119996383862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE MENU_28
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 0
+        width: 213
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4621aa00387e0e850800000000000000
+      internalID: 6404373219958723172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 25f77a4449c25ac4f9e147326e994108
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PAUSE MENU_0: -7222914209046456063
+      PAUSE MENU_1: 7870041502178904137
+      PAUSE MENU_10: 8226566931406172457
+      PAUSE MENU_11: -2485652276184174469
+      PAUSE MENU_12: -6758157514492369026
+      PAUSE MENU_13: 2258004705360722893
+      PAUSE MENU_14: -5485042537123574059
+      PAUSE MENU_15: -583072216889086859
+      PAUSE MENU_16: -4638587232337205715
+      PAUSE MENU_17: -4339982737989268478
+      PAUSE MENU_18: -4864894119996383862
+      PAUSE MENU_19: -1868176429534493265
+      PAUSE MENU_2: 5952376621628375932
+      PAUSE MENU_20: -6845498954263120208
+      PAUSE MENU_21: -4481462430420453586
+      PAUSE MENU_22: -4581744148878247458
+      PAUSE MENU_23: -7978850092192592270
+      PAUSE MENU_24: 638419578108798848
+      PAUSE MENU_25: -1097301323714380441
+      PAUSE MENU_26: 6114487350492545797
+      PAUSE MENU_27: -6340160169732649609
+      PAUSE MENU_28: 6404373219958723172
+      PAUSE MENU_29: 5309362447128331964
+      PAUSE MENU_3: 1773427175541350272
+      PAUSE MENU_4: 8768990411536194128
+      PAUSE MENU_5: -7657076550781852965
+      PAUSE MENU_6: -5556897617948262463
+      PAUSE MENU_7: -5942107645636541165
+      PAUSE MENU_8: -3932333111934677272
+      PAUSE MENU_9: -6954618402716938261
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

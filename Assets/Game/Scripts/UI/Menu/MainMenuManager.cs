@@ -56,7 +56,9 @@ public class MainMenuManager : MonoBehaviour
                 DebugMessage("Starting Story Mode...");
                 //Agregar logica para iniciar Story Mode
                 //OpenStoryMenu();
-                TransitionManager.Instance.LocalTransition(TransitionType.Fade, () => OpenStoryMenu());
+                //TransitionManager.Instance.LocalTransition(TransitionType.Fade, () => OpenStoryMenu());
+                //Con transición ir a la ecena _sceneToLoadAfterClickingPlay
+                TransitionManager.Instance.LocalTransition(TransitionType.Fade, () => PlayClicked());
                 break;
             case MainMenuButtons.VersuMode:
                 DebugMessage("Starting Versu Mode...");
@@ -78,7 +80,7 @@ public class MainMenuManager : MonoBehaviour
             case MainMenuButtons.Options:
                 DebugMessage("Opening Options...");
                 //Agregar logica para abrir Options
-                OpenOptionsMenu();
+                TransitionManager.Instance.LocalTransition(TransitionType.Fade, () => OpenOptionsMenu());
                 break;
             case MainMenuButtons.Quit:
                 QuitGame();
@@ -149,7 +151,8 @@ public class MainMenuManager : MonoBehaviour
         switch(buttonClicked)
         {
             case StoryButtons.back:
-                ReturnToMainMenu();
+                //Transición
+                TransitionManager.Instance.LocalTransition(TransitionType.Fade, () => ReturnToMainMenu());
                 break;
             case StoryButtons.newGame:
                 PlayClicked();
@@ -195,7 +198,7 @@ public class MainMenuManager : MonoBehaviour
         switch(buttonClicked)
         {
             case OptionsButtons.back:
-                ReturnToMainMenu();
+                TransitionManager.Instance.LocalTransition(TransitionType.Fade, () => ReturnToMainMenu());
                 break;
         }
     }
