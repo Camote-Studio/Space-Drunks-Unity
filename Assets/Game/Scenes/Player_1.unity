@@ -575,8 +575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 307.75, y: 70.81006}
-  m_SizeDelta: {x: 228.5115, y: 100}
+  m_AnchoredPosition: {x: 303.51898, y: 11.5093}
+  m_SizeDelta: {x: 236.9735, y: 236.6562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413146447
 MonoBehaviour:
@@ -599,13 +599,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 8042184755749224908, guid: 4fa4ee0b59b77e54a953a262f9fe95d7, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillMethod: 2
+  m_FillAmount: 0
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 3
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &413146448
@@ -910,6 +910,7 @@ GameObject:
   - component: {fileID: 664264049}
   - component: {fileID: 664264047}
   - component: {fileID: 664264050}
+  - component: {fileID: 664264051}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -930,8 +931,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2140426427}
-  - {fileID: 413146446}
   - {fileID: 871481550}
+  - {fileID: 413146446}
   - {fileID: 1415378924}
   - {fileID: 1127264271}
   - {fileID: 369576865}
@@ -979,6 +980,19 @@ MonoBehaviour:
   fill: {fileID: 871481552}
   smooth: 1
   smoothSpeed: 5
+--- !u!114 &664264051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664264045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05c95bf16ed3ad47b3684f0ccb687db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealBarUI
+  fill: {fileID: 413146447}
 --- !u!1001 &704064941
 PrefabInstance:
   m_ObjectHideFlags: 0
