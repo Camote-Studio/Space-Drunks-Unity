@@ -569,7 +569,6 @@ MonoBehaviour:
   - {fileID: 0}
   healBarUI: {fileID: 0}
   healMaxCharge: 100
-  healChargeActual: 0
   damageOnContact: 1
   contactDamage: 10
   contactCooldown: 0.35
