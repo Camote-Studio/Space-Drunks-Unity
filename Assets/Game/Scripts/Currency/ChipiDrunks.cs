@@ -19,33 +19,23 @@ public class ChipiDrunks : MonoBehaviour
     private void Start()
     {
         coinsDisplay = FindObjectOfType<SpriteNumberDisplay>();
-        Debug.Log($"[ChipiDrunks] START {name} trigger={GetComponent<Collider2D>().isTrigger}", this);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"[ChipiDrunks] OnTriggerEnter2D con: {other.name} tag={other.tag}", this);
-
-        // 1) Si el collider que entra ES el Player
-        VidaJugador jugador = other.GetComponent<VidaJugador>();
-
-        // 2) Si el collider es un hijo del Player (Hitbox/Body/etc.)
-        if (jugador == null)
-            jugador = other.GetComponentInParent<VidaJugador>();
-
-        if (jugador == null)
-        {
-            Debug.LogWarning("[ChipiDrunks] No encontré VidaJugador en el objeto que colisionó.", this);
-            return;
-        }
+        // Igual que XPOrb: agarra VidaJugador aunque el collider sea de un hijo
+        VidaJugador jugador = other.GetComponentInParent<VidaJugador>();
+        if (jugador == null) return;
 
         if (coinsDisplay != null)
             coinsDisplay.Add(value);
 
+        jugador.AgregarMonedas(value);
+
         float add = healChargePerCoin * value;
         jugador.AddHealCharge(add);
 
-        Debug.Log($"[ChipiDrunks] +HealCharge {add}. Heal01={jugador.HealCharge01}", this);
+        Debug.Log($"[ChipiDrunks] +HealCharge {add} (value={value}) Heal01={jugador.HealCharge01}", this);
 
         Destroy(gameObject);
     }

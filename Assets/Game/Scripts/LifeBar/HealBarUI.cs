@@ -15,11 +15,7 @@ public class HealBarUI : MonoBehaviour
 
     public void Set01(float value01)
     {
-        if (fill == null)
-        {
-            Debug.LogError($"[HealBarUI] Set01 pero Fill es NULL en {name}", this);
-            return;
-        }
+        if (fill == null) return;
 
         float v = Mathf.Clamp01(value01);
         fill.fillAmount = v;
