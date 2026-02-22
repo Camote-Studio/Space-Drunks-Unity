@@ -5972,6 +5972,7 @@ GameObject:
   - component: {fileID: 816107186}
   - component: {fileID: 816107188}
   - component: {fileID: 816107187}
+  - component: {fileID: 816107189}
   m_Layer: 0
   m_Name: trigger_zona2
   m_TagString: Untagged
@@ -6060,6 +6061,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 17.794712}
   m_EdgeRadius: 0
+--- !u!114 &816107189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816107185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 362012608}
+  muroDerecho: {fileID: 795511517}
 --- !u!1 &817721805
 GameObject:
   m_ObjectHideFlags: 0
@@ -6430,7 +6446,7 @@ RectTransform:
   m_Father: {fileID: 1499315810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7564,7 +7580,7 @@ RectTransform:
   m_Father: {fileID: 1853956615}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8685,7 +8701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1260208189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9558,6 +9574,7 @@ GameObject:
   - component: {fileID: 1421093905}
   - component: {fileID: 1421093907}
   - component: {fileID: 1421093906}
+  - component: {fileID: 1421093908}
   m_Layer: 0
   m_Name: trigger_zona3
   m_TagString: Untagged
@@ -9646,6 +9663,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 17.834274}
   m_EdgeRadius: 0
+--- !u!114 &1421093908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421093904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 2102188792}
+  muroDerecho: {fileID: 685250868}
 --- !u!1 &1424784052
 GameObject:
   m_ObjectHideFlags: 0
@@ -11105,7 +11137,7 @@ RectTransform:
   m_Father: {fileID: 1060999882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11299,6 +11331,7 @@ GameObject:
   - component: {fileID: 1719338785}
   - component: {fileID: 1719338787}
   - component: {fileID: 1719338786}
+  - component: {fileID: 1719338788}
   m_Layer: 0
   m_Name: trigger_zona1
   m_TagString: Untagged
@@ -11387,6 +11420,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 17.681738}
   m_EdgeRadius: 0
+--- !u!114 &1719338788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719338784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 0}
+  muroDerecho: {fileID: 0}
 --- !u!1 &1730558582
 GameObject:
   m_ObjectHideFlags: 0
@@ -12674,7 +12722,7 @@ RectTransform:
   m_Father: {fileID: 313021048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14211,6 +14259,7 @@ GameObject:
   - component: {fileID: 2071162562}
   - component: {fileID: 2071162564}
   - component: {fileID: 2071162563}
+  - component: {fileID: 2071162565}
   m_Layer: 0
   m_Name: trigger_zona4
   m_TagString: Untagged
@@ -14299,6 +14348,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8935547, y: 18.080887}
   m_EdgeRadius: 0
+--- !u!114 &2071162565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071162561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 1935449290}
+  muroDerecho: {fileID: 2092401144}
 --- !u!1001 &2074375156
 PrefabInstance:
   m_ObjectHideFlags: 0

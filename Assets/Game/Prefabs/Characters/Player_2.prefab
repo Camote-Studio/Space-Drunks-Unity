@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   playerIndex: 1
-  controlType: 2
+  controlType: 0
   gamepadIndex: 1
 --- !u!114 &5230806963665386850
 MonoBehaviour:

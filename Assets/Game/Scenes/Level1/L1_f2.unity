@@ -3625,6 +3625,7 @@ GameObject:
   - component: {fileID: 627801451}
   - component: {fileID: 627801453}
   - component: {fileID: 627801452}
+  - component: {fileID: 627801454}
   m_Layer: 0
   m_Name: trigger_zona4
   m_TagString: Untagged
@@ -3713,6 +3714,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8935547, y: 18.080887}
   m_EdgeRadius: 0
+--- !u!114 &627801454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627801450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 2119063000}
+  muroDerecho: {fileID: 466949984}
 --- !u!4 &630432232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4607731560703426475, guid: dfb0beb3667bef34ea3590839f8996de, type: 3}
@@ -6902,6 +6918,7 @@ GameObject:
   - component: {fileID: 1016180300}
   - component: {fileID: 1016180302}
   - component: {fileID: 1016180301}
+  - component: {fileID: 1016180303}
   m_Layer: 0
   m_Name: trigger_zona2
   m_TagString: Untagged
@@ -6990,6 +7007,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 17.794712}
   m_EdgeRadius: 0
+--- !u!114 &1016180303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016180299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 538586141}
+  muroDerecho: {fileID: 1394927248}
 --- !u!1001 &1019242617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9387,6 +9419,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 408950203988817705, guid: 766e91d5ffdc86543bc03bf7e8cadc44, type: 3}
+      propertyPath: controlType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1516105471445060695, guid: 766e91d5ffdc86543bc03bf7e8cadc44, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -9538,6 +9574,7 @@ GameObject:
   - component: {fileID: 1486369374}
   - component: {fileID: 1486369376}
   - component: {fileID: 1486369375}
+  - component: {fileID: 1486369377}
   m_Layer: 0
   m_Name: trigger_zona3
   m_TagString: Untagged
@@ -9626,6 +9663,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 17.834274}
   m_EdgeRadius: 0
+--- !u!114 &1486369377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486369373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 1844141288}
+  muroDerecho: {fileID: 930540926}
 --- !u!1001 &1487249194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11071,6 +11123,7 @@ GameObject:
   - component: {fileID: 1706631628}
   - component: {fileID: 1706631630}
   - component: {fileID: 1706631629}
+  - component: {fileID: 1706631631}
   m_Layer: 0
   m_Name: trigger_zona1
   m_TagString: Untagged
@@ -11159,6 +11212,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 17.681738}
   m_EdgeRadius: 0
+--- !u!114 &1706631631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706631627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407c38247b220ae4893ce6d817c87487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonaCombate1
+  jugadoresRequeridos: 2
+  muroIzquierdo: {fileID: 1147038542}
+  muroDerecho: {fileID: 1153771002}
 --- !u!1001 &1708162751
 PrefabInstance:
   m_ObjectHideFlags: 0
