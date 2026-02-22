@@ -29,12 +29,14 @@ public class VidaJugador : MonoBehaviour
     [SerializeField] private HealthBarUI barraVidaUI;
     [SerializeField] private GameObject[] corazones;
 
-    [Header("Heal Bar (Charge)")]
+    [Header("UI Heal (barra de heal)")]
     [SerializeField] private HealBarUI healBarUI;
-    [SerializeField] private float healMaxCharge = 100f;
-    [SerializeField] private float healChargeActual = 0f;
 
-    public float HealCharge01 => healMaxCharge <= 0f ? 0f : Mathf.Clamp01(healChargeActual / healMaxCharge);
+    [Header("Heal Charge Settings")]
+    [SerializeField] private float healMaxCharge = 100f;
+
+    private float healCharge = 0f;
+    public float HealCharge01 => healMaxCharge <= 0f ? 0f : Mathf.Clamp01(healCharge / healMaxCharge);
 
     [Header("Daño por contacto")]
     [SerializeField] private bool damageOnContact = true;
@@ -58,15 +60,41 @@ public class VidaJugador : MonoBehaviour
     private void Awake()
     {
         vidaActual = vidaMaxima;
+        healCharge = 0f;
 
         ActualizarUI();
         ActualizarBarraVida();
         ActualizarCorazones();
+        ActualizarHealBar();
+    }
+
+    // ===================== HEAL CHARGE =====================
+
+    public void AddHealCharge(float amount)
+    {
+        if (amount <= 0f) return;
+
+        healCharge += amount;
+        healCharge = Mathf.Clamp(healCharge, 0f, healMaxCharge);
+
+        Debug.Log($"[VidaJugador] AddHealCharge +{amount} => {healCharge}/{healMaxCharge} (01={HealCharge01})", this);
 
         ActualizarHealBar();
     }
 
-    // ── Daño ─────────────────────────────────────────────────────
+    public void ResetHealCharge()
+    {
+        healCharge = 0f;
+        ActualizarHealBar();
+    }
+
+    private void ActualizarHealBar()
+    {
+        if (healBarUI == null) return;
+        healBarUI.Set01(HealCharge01);
+    }
+
+    // ===================== DAÑO =====================
 
     public void RecibirDanio(float cantidad, string fuente = "")
     {
@@ -75,6 +103,7 @@ public class VidaJugador : MonoBehaviour
         if (playerMovement != null && playerMovement.IsJumping) return;
 
         vidaActual = Mathf.Clamp(vidaActual - cantidad, 0f, vidaMaxima);
+
         ActualizarBarraVida();
         ActualizarCorazones();
 
@@ -110,29 +139,7 @@ public class VidaJugador : MonoBehaviour
         enKnockdown = false;
     }
 
-    // ── Heal Charge (se llena con ChipiDrunks) ────────────────────
-
-    public void AddHealCharge(float amount)
-    {
-        if (amount <= 0f) return;
-
-        healChargeActual = Mathf.Clamp(healChargeActual + amount, 0f, healMaxCharge);
-        ActualizarHealBar();
-    }
-
-    public void ResetHealCharge()
-    {
-        healChargeActual = 0f;
-        ActualizarHealBar();
-    }
-
-    private void ActualizarHealBar()
-    {
-        if (healBarUI == null) return;
-        healBarUI.Set01(HealCharge01);
-    }
-
-    // ── Contacto con enemigos ─────────────────────────────────────
+    // ===================== CONTACTO ENEMIGOS =====================
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -169,7 +176,7 @@ public class VidaJugador : MonoBehaviour
         RecibirDanio(contactDamage, enemy.name);
     }
 
-    // ── Intocabilidad ─────────────────────────────────────────────
+    // ===================== INTOCABLE =====================
 
     public bool EsIntocable() => intocable;
 
@@ -186,7 +193,7 @@ public class VidaJugador : MonoBehaviour
         intocable = false;
     }
 
-    // ── Muerte ────────────────────────────────────────────────────
+    // ===================== MUERTE =====================
 
     private void Die()
     {
@@ -195,7 +202,7 @@ public class VidaJugador : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // ── Monedas ───────────────────────────────────────────────────
+    // ===================== MONEDAS =====================
 
     public void AgregarMonedas(int cantidad)
     {
@@ -209,7 +216,7 @@ public class VidaJugador : MonoBehaviour
             textoMonedas.text = monedas.ToString();
     }
 
-    // ── Experiencia ───────────────────────────────────────────────
+    // ===================== EXP =====================
 
     public void AgregarExperiencia(int cantidad)
     {
@@ -228,7 +235,7 @@ public class VidaJugador : MonoBehaviour
         Debug.Log("¡Subiste a nivel " + nivel + "!");
     }
 
-    // ── UI Vida ───────────────────────────────────────────────────
+    // ===================== UI VIDA =====================
 
     private void ActualizarBarraVida()
     {
