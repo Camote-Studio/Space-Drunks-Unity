@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Game/Scenes/UI/Start-menu.unity
+    guid: 1393b3f341aef864c980ee8d8ce6a54a
+  - enabled: 1
     path: Assets/Game/Scenes/UI/Menu.unity
     guid: 0f613d22902c644449b9de1e277a0a73
   - enabled: 1
@@ -17,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/UI/elegir_personajes.unity
     guid: 0deaa5493ae435f4cbef8b7e0002c47d
-  - enabled: 0
-    path: Assets/Game/Scenes/UI/tienda.unity
-    guid: d8090298eead2304a803d1733e7a8bd6
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
