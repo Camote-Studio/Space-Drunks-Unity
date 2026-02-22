@@ -1134,6 +1134,7 @@ MonoBehaviour:
   animator: {fileID: 1282942252}
   movement: {fileID: 84137364}
   vidaJugador: {fileID: 0}
+  requireSwordEquippedToAttack: 1
 --- !u!4 &88233315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 620158076480034870, guid: 3ab2fbf674e9e7243ae22e986f4ade00, type: 3}
