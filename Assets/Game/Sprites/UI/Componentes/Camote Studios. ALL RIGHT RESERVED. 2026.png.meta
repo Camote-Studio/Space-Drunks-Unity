@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: a9859a32ce1d07f47aa7c0b7ffdc86a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5491622725657185981
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_0
+  - first:
+      213: -3348027875484623087
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_1
+  - first:
+      213: -6287870752788500094
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_2
+  - first:
+      213: 2901834700568747519
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_3
+  - first:
+      213: 6218656003242727372
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_4
+  - first:
+      213: -5542782354449774105
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_5
+  - first:
+      213: 425099313507439464
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_6
+  - first:
+      213: 4306038511222934015
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_7
+  - first:
+      213: -7086944388355904290
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_8
+  - first:
+      213: -200036027146017397
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_9
+  - first:
+      213: 1362871027388183563
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_10
+  - first:
+      213: -5920513241026190338
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_11
+  - first:
+      213: 6961205316919551448
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_12
+  - first:
+      213: 3675930394931797778
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_13
+  - first:
+      213: -262311357621923012
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_14
+  - first:
+      213: 1217630003499372654
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_15
+  - first:
+      213: -6422950015560549615
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_16
+  - first:
+      213: -100284875912941663
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_17
+  - first:
+      213: -7453109624006784912
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_18
+  - first:
+      213: 575282742829832173
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_19
+  - first:
+      213: 7075311646734168599
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_20
+  - first:
+      213: 7581696347426659155
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_21
+  - first:
+      213: -339055384101177950
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_22
+  - first:
+      213: -630263047186339202
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_23
+  - first:
+      213: -3636204949391147838
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_24
+  - first:
+      213: 2056806449484459524
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_25
+  - first:
+      213: 8485148289775297643
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_26
+  - first:
+      213: 6374860003463929724
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_27
+  - first:
+      213: -3867250688369127911
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_28
+  - first:
+      213: 932634638796577126
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_29
+  - first:
+      213: -9137364508869031814
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_30
+  - first:
+      213: -7773171197278881341
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_31
+  - first:
+      213: -2240281383390102455
+    second: Camote Studios. ALL RIGHT RESERVED. 2026_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_0
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 2
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe424be5c9263c40800000000000000
+      internalID: 5491622725657185981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_1
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f12a7c26a6981d0800000000000000
+      internalID: -3348027875484623087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_2
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 2
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281397a6ddefcb8a0800000000000000
+      internalID: -6287870752788500094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_3
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 0
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd5d4c1943654820800000000000000
+      internalID: 2901834700568747519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_4
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc712a5efaa1d4650800000000000000
+      internalID: 6218656003242727372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_5
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 0
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9c7b7c0d41413b0800000000000000
+      internalID: -5542782354449774105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 2
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8639fd7c29146e500800000000000000
+      internalID: 425099313507439464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_7
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 1
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9489a263f12cb30800000000000000
+      internalID: 4306038511222934015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_8
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 2
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc291580ad16ad90800000000000000
+      internalID: -7086944388355904290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_9
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b856eab0b44593df0800000000000000
+      internalID: -200036027146017397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_10
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04f4268af3e9e210800000000000000
+      internalID: 1362871027388183563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_11
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 0
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef323a4539c16dda0800000000000000
+      internalID: -5920513241026190338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_12
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5ec8b8a5b2b9060800000000000000
+      internalID: 6961205316919551448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_13
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 2
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f98f0e737830330800000000000000
+      internalID: 3675930394931797778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_14
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c331564c5351c5cf0800000000000000
+      internalID: -262311357621923012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_15
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 2
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6010727904e5e010800000000000000
+      internalID: 1217630003499372654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_16
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 2
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b7c68bdf81dd6a0800000000000000
+      internalID: -6422950015560549615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_17
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 2
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af6ddacf67bb9ef0800000000000000
+      internalID: -100284875912941663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_18
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 3
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078c705094c319890800000000000000
+      internalID: -7453109624006784912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_19
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7d8cb4b90dbf700800000000000000
+      internalID: 575282742829832173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_20
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 3
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71236c2c47e803260800000000000000
+      internalID: 7075311646734168599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_21
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 2
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b1e3f88a8973960800000000000000
+      internalID: 7581696347426659155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_22
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 2
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5377facee6b4bf0800000000000000
+      internalID: -339055384101177950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_23
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a276d091bd047f0800000000000000
+      internalID: -630263047186339202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_24
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 2
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ccf50d2dda998dc0800000000000000
+      internalID: -3636204949391147838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_25
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 3
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ee041819e3b8c10800000000000000
+      internalID: 2056806449484459524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_26
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 2
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64e19ec96d41c570800000000000000
+      internalID: 8485148289775297643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_27
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 2
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f105fc56d087850800000000000000
+      internalID: 6374860003463929724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_28
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 2
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e8f5e0df3c45ac0800000000000000
+      internalID: -3867250688369127911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_29
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 3
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669d1be334261fc00800000000000000
+      internalID: 932634638796577126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_30
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 2
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a788999146f813180800000000000000
+      internalID: -9137364508869031814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_31
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 3
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9f4e7eaf5202490800000000000000
+      internalID: -7773171197278881341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camote Studios. ALL RIGHT RESERVED. 2026_32
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 2
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cbc1a83fbe8e0e0800000000000000
+      internalID: -2240281383390102455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Camote Studios. ALL RIGHT RESERVED. 2026_0: 5491622725657185981
+      Camote Studios. ALL RIGHT RESERVED. 2026_1: -3348027875484623087
+      Camote Studios. ALL RIGHT RESERVED. 2026_10: 1362871027388183563
+      Camote Studios. ALL RIGHT RESERVED. 2026_11: -5920513241026190338
+      Camote Studios. ALL RIGHT RESERVED. 2026_12: 6961205316919551448
+      Camote Studios. ALL RIGHT RESERVED. 2026_13: 3675930394931797778
+      Camote Studios. ALL RIGHT RESERVED. 2026_14: -262311357621923012
+      Camote Studios. ALL RIGHT RESERVED. 2026_15: 1217630003499372654
+      Camote Studios. ALL RIGHT RESERVED. 2026_16: -6422950015560549615
+      Camote Studios. ALL RIGHT RESERVED. 2026_17: -100284875912941663
+      Camote Studios. ALL RIGHT RESERVED. 2026_18: -7453109624006784912
+      Camote Studios. ALL RIGHT RESERVED. 2026_19: 575282742829832173
+      Camote Studios. ALL RIGHT RESERVED. 2026_2: -6287870752788500094
+      Camote Studios. ALL RIGHT RESERVED. 2026_20: 7075311646734168599
+      Camote Studios. ALL RIGHT RESERVED. 2026_21: 7581696347426659155
+      Camote Studios. ALL RIGHT RESERVED. 2026_22: -339055384101177950
+      Camote Studios. ALL RIGHT RESERVED. 2026_23: -630263047186339202
+      Camote Studios. ALL RIGHT RESERVED. 2026_24: -3636204949391147838
+      Camote Studios. ALL RIGHT RESERVED. 2026_25: 2056806449484459524
+      Camote Studios. ALL RIGHT RESERVED. 2026_26: 8485148289775297643
+      Camote Studios. ALL RIGHT RESERVED. 2026_27: 6374860003463929724
+      Camote Studios. ALL RIGHT RESERVED. 2026_28: -3867250688369127911
+      Camote Studios. ALL RIGHT RESERVED. 2026_29: 932634638796577126
+      Camote Studios. ALL RIGHT RESERVED. 2026_3: 2901834700568747519
+      Camote Studios. ALL RIGHT RESERVED. 2026_30: -9137364508869031814
+      Camote Studios. ALL RIGHT RESERVED. 2026_31: -7773171197278881341
+      Camote Studios. ALL RIGHT RESERVED. 2026_32: -2240281383390102455
+      Camote Studios. ALL RIGHT RESERVED. 2026_4: 6218656003242727372
+      Camote Studios. ALL RIGHT RESERVED. 2026_5: -5542782354449774105
+      Camote Studios. ALL RIGHT RESERVED. 2026_6: 425099313507439464
+      Camote Studios. ALL RIGHT RESERVED. 2026_7: 4306038511222934015
+      Camote Studios. ALL RIGHT RESERVED. 2026_8: -7086944388355904290
+      Camote Studios. ALL RIGHT RESERVED. 2026_9: -200036027146017397
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

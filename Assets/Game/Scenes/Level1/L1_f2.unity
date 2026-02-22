@@ -280,6 +280,10 @@ MonoBehaviour:
     prefab: {fileID: 1880320973439676136, guid: 7202c5f8b804af04ca70eb1f7e98c1f4, type: 3}
     size: 10
     expandable: 1
+  - tag: BigPat
+    prefab: {fileID: 5227122393974932566, guid: 1e888165442959d49a5db742d1edbaa0, type: 3}
+    size: 10
+    expandable: 1
 --- !u!4 &21939630
 Transform:
   m_ObjectHideFlags: 0
@@ -3482,7 +3486,7 @@ Transform:
   m_GameObject: {fileID: 573855217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.45, y: 0.69, z: 0}
+  m_LocalPosition: {x: 18.67, y: -6.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11611,14 +11615,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   oleadas:
-  - nombre: Quackos
+  - nombre: BigPats
     grupos:
-    - poolTag: Quacko
+    - poolTag: BigPat
       cantidad: 2
+      tasaAparicion: 1.5
+  - nombre: BigPats
+    grupos:
+    - poolTag: BigPat
+      cantidad: 3
       tasaAparicion: 1.5
   puntosDeSpawn:
   - {fileID: 333861899}
-  tiempoEntreOleadas: 5
+  - {fileID: 573855218}
+  tiempoEntreOleadas: 1
   tiempofinZona: 0.5
   oleadaActualIndex: 0
   enemigosVivos: 0
