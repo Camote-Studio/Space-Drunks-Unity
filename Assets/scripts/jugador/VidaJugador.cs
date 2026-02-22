@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System;
-using TMPro; // o UnityEngine.UI si usas Text normal
+using TMPro;
 
 public class VidaJugador : MonoBehaviour
 {
-    // ================== EXPERIENCIA ==================
     [Header("Experiencia")]
     [SerializeField] private int nivel = 1;
     [SerializeField] private int experienciaActual = 0;
@@ -16,98 +15,163 @@ public class VidaJugador : MonoBehaviour
 
     [Header("Referencias")]
     [SerializeField] private PlayerMovement playerMovement;
+
     public float VidaMaxima => vidaMaxima;
     public float VidaActual => vidaActual;
 
-    // ================== MONEDAS ==================
     [Header("Monedas")]
     [SerializeField] private int monedas = 0;
-
     [Tooltip("1 = Contador jugador 1 | 2 = Contador jugador 2")]
     public int idJugador = 1;
-
     [SerializeField] private TextMeshProUGUI textoMonedas;
-    // si usas Text normal cambia a: public Text textoMonedas;
 
+    [Header("UI Vida")]
     [SerializeField] private HealthBarUI barraVidaUI;
     [SerializeField] private GameObject[] corazones;
 
-    // ================== EVENTOS ==================
+    [Header("Heal Bar (Charge)")]
+    [SerializeField] private HealBarUI healBarUI;
+    [SerializeField] private float healMaxCharge = 100f;
+    [SerializeField] private float healChargeActual = 0f;
+
+    public float HealCharge01 => healMaxCharge <= 0f ? 0f : Mathf.Clamp01(healChargeActual / healMaxCharge);
+
+    [Header("Daño por contacto")]
+    [SerializeField] private bool damageOnContact = true;
+    [SerializeField] private float contactDamage = 10f;
+    [SerializeField] private float contactCooldown = 0.35f;
+
+    [Header("Knockdown (3 golpes seguidos)")]
+    [SerializeField] private int golpesParaDerribo = 3;
+    [SerializeField] private float ventanaComboSeg = 1.2f;
+
     public event Action<string> OnDamaged;
     public event Action OnDeath;
+    public event Action OnKnockdownStart;
 
     private bool intocable = false;
+    private float nextContactDamageTime = 0f;
+    private int golpesEnVentana = 0;
+    private float expiraVentanaEn = 0f;
+    private bool enKnockdown = false;
 
     private void Awake()
     {
         vidaActual = vidaMaxima;
+
         ActualizarUI();
         ActualizarBarraVida();
         ActualizarCorazones();
+
+        ActualizarHealBar();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            RecibirDanio(10);
-            Debug.Log("Presiona");
-        }
-    }
-
-    // ================== VIDA ==================
+    // ── Daño ─────────────────────────────────────────────────────
 
     public void RecibirDanio(float cantidad, string fuente = "")
     {
-        if (EsIntocable()) return;
+        if (intocable) return;
+        if (enKnockdown) return;
         if (playerMovement != null && playerMovement.IsJumping) return;
 
         vidaActual = Mathf.Clamp(vidaActual - cantidad, 0f, vidaMaxima);
         ActualizarBarraVida();
         ActualizarCorazones();
+
         OnDamaged?.Invoke(fuente);
+        RegistrarGolpeParaCombo();
 
-        if (vidaActual <= 0f)
-            Die();
+        if (vidaActual <= 0f) Die();
     }
 
-    private void ActualizarBarraVida()
+    public void RecibirDaño(float cantidad) => RecibirDanio(cantidad);
+
+    private void RegistrarGolpeParaCombo()
     {
-        float v = vidaActual / vidaMaxima;
-        Debug.Log("Update barra a: " + v);
-        barraVidaUI.Set01(v);
-    }
+        float now = Time.time;
 
-    private void ActualizarCorazones()
-    {
-        float porcentaje = vidaActual / vidaMaxima;
+        if (now > expiraVentanaEn)
+            golpesEnVentana = 0;
 
-        int corazonesActivos = 0;
+        golpesEnVentana++;
+        expiraVentanaEn = now + ventanaComboSeg;
 
-        if (porcentaje > 0.66f)
-            corazonesActivos = 3;
-        else if (porcentaje > 0.33f)
-            corazonesActivos = 2;
-        else if (porcentaje > 0f)
-            corazonesActivos = 1;
-        else
-            corazonesActivos = 0;
-
-        for (int i = 0; i < corazones.Length; i++)
+        if (golpesEnVentana >= golpesParaDerribo)
         {
-            corazones[i].SetActive(i < corazonesActivos);
+            golpesEnVentana = 0;
+            expiraVentanaEn = 0f;
+            enKnockdown = true;
+            OnKnockdownStart?.Invoke();
         }
     }
 
-    public void RecibirDaño(float cantidad)
+    public void FinishKnockdown()
     {
-        RecibirDanio(cantidad);
+        enKnockdown = false;
     }
 
-    public bool EsIntocable()
+    // ── Heal Charge (se llena con ChipiDrunks) ────────────────────
+
+    public void AddHealCharge(float amount)
     {
-        return intocable;
+        if (amount <= 0f) return;
+
+        healChargeActual = Mathf.Clamp(healChargeActual + amount, 0f, healMaxCharge);
+        ActualizarHealBar();
     }
+
+    public void ResetHealCharge()
+    {
+        healChargeActual = 0f;
+        ActualizarHealBar();
+    }
+
+    private void ActualizarHealBar()
+    {
+        if (healBarUI == null) return;
+        healBarUI.Set01(HealCharge01);
+    }
+
+    // ── Contacto con enemigos ─────────────────────────────────────
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!damageOnContact) return;
+        TryDamageFromEnemy(other);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (!damageOnContact) return;
+        TryDamageFromEnemy(other);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (!damageOnContact) return;
+        TryDamageFromEnemy(other.collider);
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (!damageOnContact) return;
+        TryDamageFromEnemy(other.collider);
+    }
+
+    private void TryDamageFromEnemy(Collider2D other)
+    {
+        if (Time.time < nextContactDamageTime) return;
+
+        var enemy = other.GetComponentInParent<enemigo_base>();
+        if (enemy == null) return;
+
+        nextContactDamageTime = Time.time + contactCooldown;
+        RecibirDanio(contactDamage, enemy.name);
+    }
+
+    // ── Intocabilidad ─────────────────────────────────────────────
+
+    public bool EsIntocable() => intocable;
 
     public void ActivarIntocable(float duracion)
     {
@@ -122,6 +186,8 @@ public class VidaJugador : MonoBehaviour
         intocable = false;
     }
 
+    // ── Muerte ────────────────────────────────────────────────────
+
     private void Die()
     {
         Debug.Log($"Player {idJugador} dead");
@@ -129,7 +195,7 @@ public class VidaJugador : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // ================== MONEDAS ==================
+    // ── Monedas ───────────────────────────────────────────────────
 
     public void AgregarMonedas(int cantidad)
     {
@@ -143,10 +209,11 @@ public class VidaJugador : MonoBehaviour
             textoMonedas.text = monedas.ToString();
     }
 
+    // ── Experiencia ───────────────────────────────────────────────
+
     public void AgregarExperiencia(int cantidad)
     {
         experienciaActual += cantidad;
-
         while (experienciaActual >= experienciaParaSubir)
         {
             experienciaActual -= experienciaParaSubir;
@@ -154,14 +221,30 @@ public class VidaJugador : MonoBehaviour
         }
     }
 
-
     private void SubirNivel()
     {
         nivel++;
-        experienciaParaSubir += 10; // Escalado simple
-
+        experienciaParaSubir += 10;
         Debug.Log("¡Subiste a nivel " + nivel + "!");
     }
 
+    // ── UI Vida ───────────────────────────────────────────────────
 
+    private void ActualizarBarraVida()
+    {
+        if (barraVidaUI == null) return;
+        barraVidaUI.Set01(vidaActual / vidaMaxima);
+    }
+
+    private void ActualizarCorazones()
+    {
+        if (corazones == null) return;
+
+        float pct = vidaActual / vidaMaxima;
+        int activos = pct > 0.66f ? 3 : pct > 0.33f ? 2 : pct > 0f ? 1 : 0;
+
+        for (int i = 0; i < corazones.Length; i++)
+            if (corazones[i] != null)
+                corazones[i].SetActive(i < activos);
+    }
 }

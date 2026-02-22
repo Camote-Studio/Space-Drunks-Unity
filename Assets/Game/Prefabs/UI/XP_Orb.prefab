@@ -85,8 +85,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4840735777579599281, guid: 80031de1acfe0c741910db928dc90b87, type: 3}
-  m_Color: {r: 0.26641792, g: 0.735849, b: 0.114542544, a: 1}
+  m_Sprite: {fileID: 834523342137842010, guid: a8414b239e4a5ac419fe80afbc60464f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::monedas
   xpValue: 5
+  ultiChargeValue: 5
   attractDistance: 3
   attractSpeed: 6
   lifetime: 10

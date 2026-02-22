@@ -17,8 +17,8 @@ public class SwordWeapon : WeaponBase
     [SerializeField] private float swingCooldown = 0.35f;
     [SerializeField] private float hitboxActiveTime = 0.12f;
 
-    [Header("Bloqueo de otros ataques (Attack 1 / Attack 2)")]
-    [SerializeField] private WeaponBase[] weaponsToBlock; // arrastra aquí Attack1Idle, Attack1Move, Attack2, etc.
+    [Header("Bloqueo de otras armas")]
+    [SerializeField] private WeaponBase[] weaponsToBlock;
 
     private bool isEquipped;
     private float cooldownUntil;
@@ -31,45 +31,19 @@ public class SwordWeapon : WeaponBase
 
     private void Awake()
     {
-        player2Anim = GetComponentInParent<Player2Animation>();
+        player2Anim = GetComponentInParent<Player2Animation>(true);
 
         SetVisual(false);
         SetHitbox(false);
 
-        // por si quedaba sucio
         player2Anim?.SetSwordEquipped(false);
         player2Anim?.SetCombatLocked(false);
-
-        // por si el play mode quedó raro
-        BlockOtherWeapons(false);
-    }
-
-    public override void OnSelected()
-    {
-        SetVisual(isEquipped);
-        SetHitbox(false);
-    }
-
-    public override void OnDeselected()
-    {
-        ForceStopSword();
-    }
-
-    private void OnDisable()
-    {
-        ForceStopSword();
-    }
-
-    private void OnDestroy()
-    {
-        ForceStopSword();
     }
 
     public override void Tick(bool fireDown, bool fireHeld, bool fireUp)
     {
         if (!fireDown) return;
 
-        // 1) Si NO está equipada: activar (si no está en cooldown)
         if (!isEquipped)
         {
             if (Time.time < cooldownUntil) return;
@@ -77,10 +51,10 @@ public class SwordWeapon : WeaponBase
             return;
         }
 
-        // 2) Si YA está equipada: atacar (cooldown de swing)
         if (Time.time < swingUntil) return;
         swingUntil = Time.time + swingCooldown;
 
+        player2Anim?.SetCombatLocked(false);
         player2Anim?.DoSwordAttack();
 
         if (hitboxRoutine != null) StopCoroutine(hitboxRoutine);
@@ -92,17 +66,12 @@ public class SwordWeapon : WeaponBase
         isEquipped = true;
         swingUntil = 0f;
 
-        // Bloquea otros ataques (Attack1/2) SIN tocar PlayerMovement
         BlockOtherWeapons(true);
 
-        // (Opcional) También bloquea triggers de animaciones normales si ya lo estabas usando
-        player2Anim?.SetCombatLocked(true);
-
-        // entra a SwordIdle
+        player2Anim?.SetCombatLocked(false);
         player2Anim?.SetSwordEquipped(true);
 
         SetVisual(true);
-        SetHitbox(false);
 
         if (durationRoutine != null) StopCoroutine(durationRoutine);
         durationRoutine = StartCoroutine(SwordDurationRoutine());
@@ -117,10 +86,7 @@ public class SwordWeapon : WeaponBase
     private IEnumerator HitboxWindow()
     {
         SetHitbox(true);
-        Physics2D.SyncTransforms();
-
         yield return new WaitForSeconds(hitboxActiveTime);
-
         SetHitbox(false);
         hitboxRoutine = null;
     }
@@ -135,59 +101,27 @@ public class SwordWeapon : WeaponBase
         player2Anim?.SetSwordEquipped(false);
         player2Anim?.SetCombatLocked(false);
 
-        // Desbloquea otros ataques
         BlockOtherWeapons(false);
 
         cooldownUntil = Time.time + swordAttackCooldown;
-
-        if (durationRoutine != null) StopCoroutine(durationRoutine);
-        durationRoutine = null;
-
-        if (hitboxRoutine != null) StopCoroutine(hitboxRoutine);
-        hitboxRoutine = null;
-    }
-
-    private void ForceStopSword()
-    {
-        // corta coroutines
-        if (durationRoutine != null) StopCoroutine(durationRoutine);
-        durationRoutine = null;
-
-        if (hitboxRoutine != null) StopCoroutine(hitboxRoutine);
-        hitboxRoutine = null;
-
-        isEquipped = false;
-
-        SetHitbox(false);
-        SetVisual(false);
-
-        player2Anim?.SetSwordEquipped(false);
-        player2Anim?.SetCombatLocked(false);
-
-        // IMPORTANTE: si se desactiva el objeto/script, desbloquea igual
-        BlockOtherWeapons(false);
     }
 
     private void BlockOtherWeapons(bool block)
     {
         if (weaponsToBlock == null) return;
 
-        for (int i = 0; i < weaponsToBlock.Length; i++)
+        foreach (var w in weaponsToBlock)
         {
-            var w = weaponsToBlock[i];
-            if (w == null) continue;
-            if (w == this) continue;
+            if (w == null || w == this) continue;
 
             if (block)
             {
-                // apaga visual/hitbox del arma antes de deshabilitarla (si lo implementa)
                 w.OnDeselected();
                 w.enabled = false;
             }
             else
             {
                 w.enabled = true;
-                // NO llamo OnSelected() porque PlayerWeapon decide cuál está activo visualmente
             }
         }
     }
