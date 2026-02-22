@@ -1,6 +1,8 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+
 
 public class VidaJugador : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class VidaJugador : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] private PlayerMovement playerMovement;
 
+
+    [Header("Game Over")]
+    [SerializeField] private string youLoseSceneName = "YouLose";
     public float VidaMaxima => vidaMaxima;
     public float VidaActual => vidaActual;
 
@@ -199,7 +204,8 @@ public class VidaJugador : MonoBehaviour
     {
         Debug.Log($"Player {idJugador} dead");
         OnDeath?.Invoke();
-        Destroy(gameObject);
+
+        SceneManager.LoadScene(youLoseSceneName);
     }
 
     // ===================== MONEDAS =====================
