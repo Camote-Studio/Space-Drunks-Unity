@@ -2938,6 +2938,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 664264050}
     - target: {fileID: 9031100662077153165, guid: 766e91d5ffdc86543bc03bf7e8cadc44, type: 3}
+      propertyPath: healBarUI
+      value: 
+      objectReference: {fileID: 664264051}
+    - target: {fileID: 9031100662077153165, guid: 766e91d5ffdc86543bc03bf7e8cadc44, type: 3}
       propertyPath: barraVidaUI
       value: 
       objectReference: {fileID: 664264047}
