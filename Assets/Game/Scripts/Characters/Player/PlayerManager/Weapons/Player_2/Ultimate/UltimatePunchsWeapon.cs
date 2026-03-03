@@ -22,6 +22,12 @@ public class UltimatePunchsWeapon : UltimateBase
     [SerializeField] private Player2Animation playerAnim;
     [SerializeField] private WeaponPlayer2Animation weaponAnim;
 
+    [Header("Charge System")]
+    [SerializeField] private float maxCharge = 100f;
+    [SerializeField] private UltiBar ultiBar;
+
+    private float currentCharge;
+
     private float punchTimer;
     private float betweenTimer;
     private float executeTimer;
@@ -37,10 +43,40 @@ public class UltimatePunchsWeapon : UltimateBase
 
         if (punchHitbox != null)
             punchHitbox.SetActive(false);
+
+        currentCharge = 0f;
+        UpdateBar();
+    }
+
+    public void AddCharge(float amount)
+    {
+        if (amount <= 0f) return;
+
+        currentCharge += amount;
+        currentCharge = Mathf.Clamp(currentCharge, 0f, maxCharge);
+
+        UpdateBar();
+    }
+
+    public bool IsFull() => currentCharge >= maxCharge;
+
+    public bool TryActivateUltimate()
+    {
+        if (!IsFull())
+            return false;
+
+        StartUltimate();
+        return true;
     }
 
     protected override void StartUltimate()
     {
+        if (!IsFull())
+            return;
+
+        currentCharge = 0f;
+        UpdateBar();
+
         presentationTime = presentationTimeDefault;
 
         punchTimer = 0f;
@@ -129,5 +165,11 @@ public class UltimatePunchsWeapon : UltimateBase
             punchHitbox.SetActive(false);
 
         playerAnim?.EndUltimate();
+    }
+
+    private void UpdateBar()
+    {
+        if (ultiBar != null)
+            ultiBar.SetRaw(currentCharge, maxCharge);
     }
 }

@@ -22,6 +22,14 @@ public class PropItems : MonoBehaviour
     [SerializeField] private PropsAnimation propsAnim;
     [SerializeField] private float breakDelay = 0.25f;
 
+    [Header("Shake Config")]
+    [SerializeField] private float shakeDuration = 0.15f;
+    [SerializeField] private float shakeAmount = 0.08f;
+    [SerializeField] private float shakeSpeed = 40f;
+
+    private Vector3 originalPosition;
+    private Coroutine shakeRoutine;
+
     [Header("Drop: ChipiDrunks")]
     [SerializeField] private ChipiDrunks chipiDrunksPrefab;
     [SerializeField] private int chipidrunkCount = 5;
@@ -42,6 +50,7 @@ public class PropItems : MonoBehaviour
     private void Awake()
     {
         hitsLeft = hitsToBreak;
+        originalPosition = transform.localPosition;
 
         if (propsAnim == null) propsAnim = GetComponent<PropsAnimation>();
         if (propsAnim == null) propsAnim = GetComponentInChildren<PropsAnimation>();
@@ -56,10 +65,36 @@ public class PropItems : MonoBehaviour
         if (broken) return;
 
         hitsLeft -= amount;
+
         propsAnim?.PlayHit();
+        StartShake();
 
         if (hitsLeft <= 0)
             StartCoroutine(BreakRoutine());
+    }
+
+    private void StartShake()
+    {
+        if (shakeRoutine != null)
+            StopCoroutine(shakeRoutine);
+
+        shakeRoutine = StartCoroutine(ShakeRoutine());
+    }
+
+    private IEnumerator ShakeRoutine()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < shakeDuration)
+        {
+            float x = Mathf.Sin(elapsed * shakeSpeed) * shakeAmount;
+            transform.localPosition = originalPosition + new Vector3(x, 0f, 0f);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localPosition = originalPosition;
     }
 
     private IEnumerator BreakRoutine()
@@ -111,6 +146,7 @@ public class PropItems : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         if (!esSaltable) return;
+
         Gizmos.color = Color.cyan;
         Vector3 center = transform.position + Vector3.up * landingOffsetY;
         Gizmos.DrawWireCube(center, new Vector3(1f, landingRangeY, 0f));

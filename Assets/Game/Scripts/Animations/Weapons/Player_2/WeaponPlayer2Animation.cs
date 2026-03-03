@@ -4,61 +4,65 @@ public class WeaponPlayer2Animation : MonoBehaviour
 {
     [Header("Refs")]
     [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer playerSprite;
 
-    private int hashPunchRight;
-    private int hashPunchMiddle;
-    private int hashPunchLeft;
+    [Header("Trigger Names")]
+    [SerializeField] private string triggerPunchRight = "RightAttack";
+    [SerializeField] private string triggerPunchMiddle = "UpAttack";
+    [SerializeField] private string triggerPunchLeft = "LeftAttack";
 
     private void Reset()
     {
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>(true);
+        playerSprite = GetComponentInParent<SpriteRenderer>();
     }
 
     private void Awake()
     {
         if (animator == null)
-            animator = GetComponentInChildren<Animator>();
+            animator = GetComponentInChildren<Animator>(true);
 
-        hashPunchRight = Animator.StringToHash("RightAttack");
-        hashPunchMiddle = Animator.StringToHash("UpAttack");
-        hashPunchLeft = Animator.StringToHash("LeftAttack");
+        if (playerSprite == null)
+            playerSprite = GetComponentInParent<SpriteRenderer>();
+    }
+
+    private void LateUpdate()
+    {
+        if (playerSprite == null) return;
+
+        // Flip completo del arma (visual + colliders)
+        var scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * (playerSprite.flipX ? -1f : 1f);
+        transform.localScale = scale;
     }
 
     public void PlayPunchRight()
     {
         if (animator == null) return;
-        animator.SetTrigger(hashPunchRight);
+        animator.SetTrigger(triggerPunchRight);
     }
 
     public void PlayPunchMiddle()
     {
         if (animator == null) return;
-        animator.SetTrigger(hashPunchMiddle);
+        animator.SetTrigger(triggerPunchMiddle);
     }
 
     public void PlayPunchLeft()
     {
         if (animator == null) return;
-        animator.SetTrigger(hashPunchLeft);
+        animator.SetTrigger(triggerPunchLeft);
     }
 
     public void PlayUltimatePunch(int index)
     {
-        if (animator == null) return;
-
         int pattern = index % 3;
 
         switch (pattern)
         {
-            case 0:
-                animator.SetTrigger(hashPunchRight);
-                break;
-            case 1:
-                animator.SetTrigger(hashPunchMiddle);
-                break;
-            default:
-                animator.SetTrigger(hashPunchLeft);
-                break;
+            case 0: animator.SetTrigger(triggerPunchRight); break;
+            case 1: animator.SetTrigger(triggerPunchMiddle); break;
+            default: animator.SetTrigger(triggerPunchLeft); break;
         }
     }
 }
