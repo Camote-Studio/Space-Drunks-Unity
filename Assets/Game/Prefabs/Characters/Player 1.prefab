@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   playerIndex: 0
-  controlType: 1
+  controlType: 0
   gamepadIndex: 0
 --- !u!114 &4073736611581585094
 MonoBehaviour:
@@ -559,6 +559,7 @@ MonoBehaviour:
   vidaMaxima: 500
   vidaActual: 0
   playerMovement: {fileID: 0}
+  youLoseSceneName: YouLose
   monedas: 0
   idJugador: 1
   textoMonedas: {fileID: 0}
@@ -569,7 +570,6 @@ MonoBehaviour:
   - {fileID: 0}
   healBarUI: {fileID: 0}
   healMaxCharge: 100
-  healChargeActual: 0
   damageOnContact: 1
   contactDamage: 10
   contactCooldown: 0.35
@@ -590,8 +590,8 @@ MonoBehaviour:
   animator: {fileID: 6136975906622865659}
   skins:
   - {fileID: 9100000, guid: ee430003cc8833240876b456e446a99a, type: 2}
-  - {fileID: 9100000, guid: 20eb1fd0910d26849849dd67069fd09c, type: 2}
-  - {fileID: 9100000, guid: 063bbf3c9faa6d1499736bddfab75cf2, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   defaultSkinIndex: 0
 --- !u!1 &2289727116112963541
 GameObject:

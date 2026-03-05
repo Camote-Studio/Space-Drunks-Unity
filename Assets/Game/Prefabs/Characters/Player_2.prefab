@@ -1095,6 +1095,7 @@ GameObject:
   - component: {fileID: 5230806963665386850}
   - component: {fileID: 6525337283520936367}
   - component: {fileID: 3745306196065069588}
+  - component: {fileID: 2330713992251278541}
   m_Layer: 6
   m_Name: Player_2
   m_TagString: Player
@@ -1233,7 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   playerIndex: 1
-  controlType: 2
+  controlType: 0
   gamepadIndex: 1
 --- !u!114 &5230806963665386850
 MonoBehaviour:
@@ -1282,6 +1283,38 @@ MonoBehaviour:
   animator: {fileID: 4416814109258373477}
   movement: {fileID: 7322952900861754347}
   vidaJugador: {fileID: 0}
+  requireSwordEquippedToAttack: 1
+--- !u!114 &2330713992251278541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899350578413936226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b9eb007d2b8cb4c993c382d7a20cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaJugador
+  nivel: 1
+  experienciaActual: 0
+  experienciaParaSubir: 20
+  vidaMaxima: 100
+  vidaActual: 0
+  playerMovement: {fileID: 0}
+  youLoseSceneName: YouLose
+  monedas: 0
+  idJugador: 1
+  textoMonedas: {fileID: 0}
+  barraVidaUI: {fileID: 0}
+  corazones: []
+  healBarUI: {fileID: 0}
+  healMaxCharge: 100
+  damageOnContact: 1
+  contactDamage: 10
+  contactCooldown: 0.35
+  golpesParaDerribo: 3
+  ventanaComboSeg: 1.2
 --- !u!1 &5932975364966275459
 GameObject:
   m_ObjectHideFlags: 0
