@@ -63,7 +63,6 @@
         public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
         {
             // Si no ves este mensaje, el WaveManager NO está llamando a esta función.
-            Debug.Log($"[PoolManager] Solicitud de spawn: '{tag}'");
 
 
             if (!poolDictionary.ContainsKey(tag))

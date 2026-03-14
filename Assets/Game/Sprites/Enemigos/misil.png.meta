@@ -1,0 +1,8151 @@
+fileFormatVersion: 2
+guid: a25b35b897f843f4692c641208058eb1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1529717818848428729
+    second: misil_0
+  - first:
+      213: -8456010341357571711
+    second: misil_1
+  - first:
+      213: -3088129495323079947
+    second: misil_2
+  - first:
+      213: -5970054360700053077
+    second: misil_3
+  - first:
+      213: 3084974201067595920
+    second: misil_4
+  - first:
+      213: 932885318138767503
+    second: misil_5
+  - first:
+      213: -3741853366785010391
+    second: misil_6
+  - first:
+      213: 3983754795411929992
+    second: misil_7
+  - first:
+      213: -6359694761583920205
+    second: misil_8
+  - first:
+      213: 9116449742452640807
+    second: misil_9
+  - first:
+      213: -1722993729319609563
+    second: misil_10
+  - first:
+      213: 5806689616454106306
+    second: misil_11
+  - first:
+      213: 8144158849376999354
+    second: misil_12
+  - first:
+      213: 1966029611891508916
+    second: misil_13
+  - first:
+      213: -2898129488225623543
+    second: misil_14
+  - first:
+      213: -9052643518605508901
+    second: misil_15
+  - first:
+      213: 7756716490749751654
+    second: misil_16
+  - first:
+      213: 6643956963628457727
+    second: misil_17
+  - first:
+      213: 8161574141425816846
+    second: misil_18
+  - first:
+      213: -7368229329275352082
+    second: misil_19
+  - first:
+      213: 862038544863065080
+    second: misil_20
+  - first:
+      213: 1137120615402461403
+    second: misil_21
+  - first:
+      213: 7111537623721475843
+    second: misil_22
+  - first:
+      213: 81448324455175079
+    second: misil_23
+  - first:
+      213: 8947830444272226523
+    second: misil_24
+  - first:
+      213: 2616393274012702914
+    second: misil_25
+  - first:
+      213: 4081435340023988898
+    second: misil_26
+  - first:
+      213: -8548452932268854442
+    second: misil_27
+  - first:
+      213: 7360810351182973853
+    second: misil_28
+  - first:
+      213: -3473062506195445284
+    second: misil_29
+  - first:
+      213: 5560837514255298968
+    second: misil_30
+  - first:
+      213: -689012312958238770
+    second: misil_31
+  - first:
+      213: -8245068211054190314
+    second: misil_32
+  - first:
+      213: 596195385197372195
+    second: misil_33
+  - first:
+      213: 3761207772564355937
+    second: misil_34
+  - first:
+      213: 2654507329592755398
+    second: misil_35
+  - first:
+      213: -739861694893966843
+    second: misil_36
+  - first:
+      213: -8227909524501808411
+    second: misil_37
+  - first:
+      213: -239301787274395787
+    second: misil_38
+  - first:
+      213: -6132499899227167433
+    second: misil_39
+  - first:
+      213: 7005386850637529193
+    second: misil_40
+  - first:
+      213: 8931139143226200549
+    second: misil_41
+  - first:
+      213: -6996002815417020121
+    second: misil_42
+  - first:
+      213: -2229062867898471146
+    second: misil_43
+  - first:
+      213: 1533684779229810532
+    second: misil_44
+  - first:
+      213: -4224598030257434795
+    second: misil_45
+  - first:
+      213: 2270775865714662973
+    second: misil_46
+  - first:
+      213: 1561732158208375366
+    second: misil_47
+  - first:
+      213: 7136790125187628663
+    second: misil_48
+  - first:
+      213: 9072420106802442289
+    second: misil_49
+  - first:
+      213: -303733557921786567
+    second: misil_50
+  - first:
+      213: -1485819862991255162
+    second: misil_51
+  - first:
+      213: 6467928489032754611
+    second: misil_52
+  - first:
+      213: 4116234334470224335
+    second: misil_53
+  - first:
+      213: 3350333450495200706
+    second: misil_54
+  - first:
+      213: 7638594243353347637
+    second: misil_55
+  - first:
+      213: 5607679386889780398
+    second: misil_56
+  - first:
+      213: -3620906474875455752
+    second: misil_57
+  - first:
+      213: -4840242096229541417
+    second: misil_58
+  - first:
+      213: 6873532127171970113
+    second: misil_59
+  - first:
+      213: -784931236300885612
+    second: misil_60
+  - first:
+      213: 1513783949144318576
+    second: misil_61
+  - first:
+      213: 6172041420308161949
+    second: misil_62
+  - first:
+      213: 84136965851460991
+    second: misil_63
+  - first:
+      213: 6063570417136854166
+    second: misil_64
+  - first:
+      213: 3390486163679922672
+    second: misil_65
+  - first:
+      213: 6667876559441871669
+    second: misil_66
+  - first:
+      213: 4730516330172028094
+    second: misil_67
+  - first:
+      213: 6211301130307829094
+    second: misil_68
+  - first:
+      213: 8546451830357391523
+    second: misil_69
+  - first:
+      213: 4986907815901384122
+    second: misil_70
+  - first:
+      213: -2720962301190323919
+    second: misil_71
+  - first:
+      213: -5453765676620396226
+    second: misil_72
+  - first:
+      213: -5777395602029984808
+    second: misil_73
+  - first:
+      213: 50488778730621959
+    second: misil_74
+  - first:
+      213: 926516218181701778
+    second: misil_75
+  - first:
+      213: -4150296288975575290
+    second: misil_76
+  - first:
+      213: 197987234731153542
+    second: misil_77
+  - first:
+      213: -4765071853596464576
+    second: misil_78
+  - first:
+      213: -1333289653693171678
+    second: misil_79
+  - first:
+      213: 7424303658624789728
+    second: misil_80
+  - first:
+      213: 7367203838116979286
+    second: misil_81
+  - first:
+      213: 4652915942087453813
+    second: misil_82
+  - first:
+      213: 7093874138377068330
+    second: misil_83
+  - first:
+      213: 2454335341343635751
+    second: misil_84
+  - first:
+      213: 5249270565410317318
+    second: misil_85
+  - first:
+      213: -8506153233484850236
+    second: misil_86
+  - first:
+      213: -6746959817047761683
+    second: misil_87
+  - first:
+      213: 2454534502074789728
+    second: misil_88
+  - first:
+      213: 6537918097893935924
+    second: misil_89
+  - first:
+      213: 4688130676791333809
+    second: misil_90
+  - first:
+      213: -117318012186793203
+    second: misil_91
+  - first:
+      213: 6665276819973058854
+    second: misil_92
+  - first:
+      213: 2856468766853785117
+    second: misil_93
+  - first:
+      213: 7917104456344881794
+    second: misil_94
+  - first:
+      213: 6122717188862437491
+    second: misil_95
+  - first:
+      213: -7687504278381121301
+    second: misil_96
+  - first:
+      213: -1525777783349557851
+    second: misil_97
+  - first:
+      213: -274428133500941349
+    second: misil_98
+  - first:
+      213: 358247748903054941
+    second: misil_99
+  - first:
+      213: -4425838953918946389
+    second: misil_100
+  - first:
+      213: 8773734513363611039
+    second: misil_101
+  - first:
+      213: 4025974449128804634
+    second: misil_102
+  - first:
+      213: -3790928650275138015
+    second: misil_103
+  - first:
+      213: -6484612527346832257
+    second: misil_104
+  - first:
+      213: 4151496452875203708
+    second: misil_105
+  - first:
+      213: -8924777520550011280
+    second: misil_106
+  - first:
+      213: -8544599487739803758
+    second: misil_107
+  - first:
+      213: -5621626173622031594
+    second: misil_108
+  - first:
+      213: 5960985801239654749
+    second: misil_109
+  - first:
+      213: 8128695897860897381
+    second: misil_110
+  - first:
+      213: -1552215969537717628
+    second: misil_111
+  - first:
+      213: 8845576662790844793
+    second: misil_112
+  - first:
+      213: -2589030136659841862
+    second: misil_113
+  - first:
+      213: 6370486499155991157
+    second: misil_114
+  - first:
+      213: 6347215798223825148
+    second: misil_115
+  - first:
+      213: -5108568887234501274
+    second: misil_116
+  - first:
+      213: 6814099934078149008
+    second: misil_117
+  - first:
+      213: -5244156603591249065
+    second: misil_118
+  - first:
+      213: 8955606285252104511
+    second: misil_119
+  - first:
+      213: -5173946294218444783
+    second: misil_120
+  - first:
+      213: -7072705464243527976
+    second: misil_121
+  - first:
+      213: 7335473138552736476
+    second: misil_122
+  - first:
+      213: -3006482740960553848
+    second: misil_123
+  - first:
+      213: 8770794990050362252
+    second: misil_124
+  - first:
+      213: 3589921335577543915
+    second: misil_125
+  - first:
+      213: -805694801804436698
+    second: misil_126
+  - first:
+      213: 1545551354611988432
+    second: misil_127
+  - first:
+      213: -520655478434070884
+    second: misil_128
+  - first:
+      213: -1197481490897872822
+    second: misil_129
+  - first:
+      213: 8977755615203970611
+    second: misil_130
+  - first:
+      213: -7368767483426194189
+    second: misil_131
+  - first:
+      213: -7592961278843937304
+    second: misil_132
+  - first:
+      213: -4687393542914143641
+    second: misil_133
+  - first:
+      213: -3231443593561317953
+    second: misil_134
+  - first:
+      213: 6468551550510922531
+    second: misil_135
+  - first:
+      213: 4631990310916850710
+    second: misil_136
+  - first:
+      213: -2213112536410549747
+    second: misil_137
+  - first:
+      213: 4083246019608586706
+    second: misil_138
+  - first:
+      213: 4923177042496980758
+    second: misil_139
+  - first:
+      213: 6660508689523180893
+    second: misil_140
+  - first:
+      213: -2051753845414005272
+    second: misil_141
+  - first:
+      213: 1542407338808941464
+    second: misil_142
+  - first:
+      213: 8690107997509268371
+    second: misil_143
+  - first:
+      213: -1782201246788426902
+    second: misil_144
+  - first:
+      213: -5899854869206225361
+    second: misil_145
+  - first:
+      213: 2251712025751715491
+    second: misil_146
+  - first:
+      213: 6478328330170415646
+    second: misil_147
+  - first:
+      213: 1305558124418951358
+    second: misil_148
+  - first:
+      213: -8694616536121259622
+    second: misil_149
+  - first:
+      213: 4304637426409504462
+    second: misil_150
+  - first:
+      213: -4387354593881702937
+    second: misil_151
+  - first:
+      213: 8959241788386432174
+    second: misil_152
+  - first:
+      213: 8026405337365491682
+    second: misil_153
+  - first:
+      213: -2627969810770568686
+    second: misil_154
+  - first:
+      213: -2259568187335079182
+    second: misil_155
+  - first:
+      213: 2443887367634025474
+    second: misil_156
+  - first:
+      213: -5335705695872663524
+    second: misil_157
+  - first:
+      213: -2719507591908952633
+    second: misil_158
+  - first:
+      213: -5373411133629029
+    second: misil_159
+  - first:
+      213: -2828770689934425938
+    second: misil_160
+  - first:
+      213: -2693693720735585180
+    second: misil_161
+  - first:
+      213: -8673308269083995670
+    second: misil_162
+  - first:
+      213: -3154919597145320996
+    second: misil_163
+  - first:
+      213: 5284101376850110619
+    second: misil_164
+  - first:
+      213: -4262391990678699758
+    second: misil_165
+  - first:
+      213: 6465446972374733818
+    second: misil_166
+  - first:
+      213: -5399624073558451216
+    second: misil_167
+  - first:
+      213: -8666693698472123585
+    second: misil_168
+  - first:
+      213: -4152778432556498918
+    second: misil_169
+  - first:
+      213: -9140833084713037559
+    second: misil_170
+  - first:
+      213: -6096255983383596829
+    second: misil_171
+  - first:
+      213: 5015059943352923950
+    second: misil_172
+  - first:
+      213: -8380803010319222271
+    second: misil_173
+  - first:
+      213: -1575916468402662074
+    second: misil_174
+  - first:
+      213: -5518197019512413340
+    second: misil_175
+  - first:
+      213: 7720653105130351048
+    second: misil_176
+  - first:
+      213: -6341368790233688531
+    second: misil_177
+  - first:
+      213: -1790669043458618482
+    second: misil_178
+  - first:
+      213: -2773135315154156387
+    second: misil_179
+  - first:
+      213: 5994408655113364119
+    second: misil_180
+  - first:
+      213: 5911764158300992134
+    second: misil_181
+  - first:
+      213: -5072897591756409809
+    second: misil_182
+  - first:
+      213: 1701252033024080132
+    second: misil_183
+  - first:
+      213: 4722533613353968437
+    second: misil_184
+  - first:
+      213: -7085365208221541393
+    second: misil_185
+  - first:
+      213: -9082327086884599332
+    second: misil_186
+  - first:
+      213: 3911799953831368887
+    second: misil_187
+  - first:
+      213: 2366662856393715458
+    second: misil_188
+  - first:
+      213: 7511896498470225920
+    second: misil_189
+  - first:
+      213: 4672448537491961830
+    second: misil_190
+  - first:
+      213: 8301400718648721744
+    second: misil_191
+  - first:
+      213: -1758201670328896636
+    second: misil_192
+  - first:
+      213: -5233847477067597542
+    second: misil_193
+  - first:
+      213: -8278728821710787548
+    second: misil_194
+  - first:
+      213: -1467421160858566061
+    second: misil_195
+  - first:
+      213: 5491713902086755778
+    second: misil_196
+  - first:
+      213: 2656947582534273493
+    second: misil_197
+  - first:
+      213: 8140224134731091824
+    second: misil_198
+  - first:
+      213: 3432866297357229935
+    second: misil_199
+  - first:
+      213: -5621088412857521794
+    second: misil_200
+  - first:
+      213: 7317468023488199953
+    second: misil_201
+  - first:
+      213: 2000086397353542454
+    second: misil_202
+  - first:
+      213: -2830786861829034399
+    second: misil_203
+  - first:
+      213: -3655533075141739749
+    second: misil_204
+  - first:
+      213: 6076866279508518941
+    second: misil_205
+  - first:
+      213: -136690934873683209
+    second: misil_206
+  - first:
+      213: -8063506084246324006
+    second: misil_207
+  - first:
+      213: -1211514853124650096
+    second: misil_208
+  - first:
+      213: 6392733259518220598
+    second: misil_209
+  - first:
+      213: 4023207497521747341
+    second: misil_210
+  - first:
+      213: 7811203892111177240
+    second: misil_211
+  - first:
+      213: 1623099315450289988
+    second: misil_212
+  - first:
+      213: 8281692860035194777
+    second: misil_213
+  - first:
+      213: 6874665384420409913
+    second: misil_214
+  - first:
+      213: -3616130338162879731
+    second: misil_215
+  - first:
+      213: 2045681777480943216
+    second: misil_216
+  - first:
+      213: -5583762877580271932
+    second: misil_217
+  - first:
+      213: -5210856452428554502
+    second: misil_218
+  - first:
+      213: -8463027151488169458
+    second: misil_219
+  - first:
+      213: -4987755942351066382
+    second: misil_220
+  - first:
+      213: -1533451781261548675
+    second: misil_221
+  - first:
+      213: -8151510962288826045
+    second: misil_222
+  - first:
+      213: -345346054491000598
+    second: misil_223
+  - first:
+      213: -1132366402579333647
+    second: misil_224
+  - first:
+      213: -3328363095487179504
+    second: misil_225
+  - first:
+      213: -333171685902446889
+    second: misil_226
+  - first:
+      213: 2208530403966458888
+    second: misil_227
+  - first:
+      213: -2725103605829333490
+    second: misil_228
+  - first:
+      213: -7371017990878609674
+    second: misil_229
+  - first:
+      213: 3835976501282431012
+    second: misil_230
+  - first:
+      213: 7074175424610903965
+    second: misil_231
+  - first:
+      213: 171162429919012612
+    second: misil_232
+  - first:
+      213: -2633153616719454567
+    second: misil_233
+  - first:
+      213: -3460568656130709477
+    second: misil_234
+  - first:
+      213: 3622792213924165337
+    second: misil_235
+  - first:
+      213: 8773432866383217875
+    second: misil_236
+  - first:
+      213: -6509301732739668961
+    second: misil_237
+  - first:
+      213: 475598846978692971
+    second: misil_238
+  - first:
+      213: -8398008710687112556
+    second: misil_239
+  - first:
+      213: -4785682944996043379
+    second: misil_240
+  - first:
+      213: 6330106622909172393
+    second: misil_241
+  - first:
+      213: -5592879160032653406
+    second: misil_242
+  - first:
+      213: 3550333645742944553
+    second: misil_243
+  - first:
+      213: -7957516850466165898
+    second: misil_244
+  - first:
+      213: -1428254281854161322
+    second: misil_245
+  - first:
+      213: 3188150521903313296
+    second: misil_246
+  - first:
+      213: -2308241396779432502
+    second: misil_247
+  - first:
+      213: 6507942344977826787
+    second: misil_248
+  - first:
+      213: 5872209741657108406
+    second: misil_249
+  - first:
+      213: -1704889475095623528
+    second: misil_250
+  - first:
+      213: -6790333987569099216
+    second: misil_251
+  - first:
+      213: 7894192851610391804
+    second: misil_252
+  - first:
+      213: -1388114218575476352
+    second: misil_253
+  - first:
+      213: 2322912198397372
+    second: misil_254
+  - first:
+      213: -5830940112550260476
+    second: misil_255
+  - first:
+      213: 8558601134297777017
+    second: misil_256
+  - first:
+      213: 988402808501065618
+    second: misil_257
+  - first:
+      213: 5691992923202064829
+    second: misil_258
+  - first:
+      213: -5493093477719241236
+    second: misil_259
+  - first:
+      213: -5098777996572199475
+    second: misil_260
+  - first:
+      213: 1607856162122211417
+    second: misil_261
+  - first:
+      213: 7453223843250237312
+    second: misil_262
+  - first:
+      213: -6956118901526806035
+    second: misil_263
+  - first:
+      213: 2598917831369644166
+    second: misil_264
+  - first:
+      213: -3888280131889680147
+    second: misil_265
+  - first:
+      213: -3977581992017267811
+    second: misil_266
+  - first:
+      213: 7576862529596687582
+    second: misil_267
+  - first:
+      213: 5464231699145307659
+    second: misil_268
+  - first:
+      213: -2326991707973974387
+    second: misil_269
+  - first:
+      213: -785268800277502477
+    second: misil_270
+  - first:
+      213: 7412780231530277307
+    second: misil_271
+  - first:
+      213: 6555552403293993367
+    second: misil_272
+  - first:
+      213: -4864682575293803187
+    second: misil_273
+  - first:
+      213: -25779200659402574
+    second: misil_274
+  - first:
+      213: 9121283533361060558
+    second: misil_275
+  - first:
+      213: 6873130867412564659
+    second: misil_276
+  - first:
+      213: -7310413227996521231
+    second: misil_277
+  - first:
+      213: 1219586676292076843
+    second: misil_278
+  - first:
+      213: -4668501777140362327
+    second: misil_279
+  - first:
+      213: 1111594386014118522
+    second: misil_280
+  - first:
+      213: 559151652298273961
+    second: misil_281
+  - first:
+      213: -8959208666326212360
+    second: misil_282
+  - first:
+      213: -7550229235500523863
+    second: misil_283
+  - first:
+      213: -8634502948808940287
+    second: misil_284
+  - first:
+      213: 564715645775170515
+    second: misil_285
+  - first:
+      213: -8010134651437535793
+    second: misil_286
+  - first:
+      213: -5141633589762009079
+    second: misil_287
+  - first:
+      213: -2956292392386619094
+    second: misil_288
+  - first:
+      213: 4229542634121387138
+    second: misil_289
+  - first:
+      213: 4882681512461720997
+    second: misil_290
+  - first:
+      213: 3704890837352714619
+    second: misil_291
+  - first:
+      213: 4597671867751536728
+    second: misil_292
+  - first:
+      213: 1290829712235085978
+    second: misil_293
+  - first:
+      213: 160367648003016034
+    second: misil_294
+  - first:
+      213: 2691843306548338926
+    second: misil_295
+  - first:
+      213: -8045151331051015864
+    second: misil_296
+  - first:
+      213: -8572751224163612793
+    second: misil_297
+  - first:
+      213: 5913162073370363558
+    second: misil_298
+  - first:
+      213: 3943501899267916507
+    second: misil_299
+  - first:
+      213: 343807592991953781
+    second: misil_300
+  - first:
+      213: -2427193673425084414
+    second: misil_301
+  - first:
+      213: -6721183556719948458
+    second: misil_302
+  - first:
+      213: 2725414566278543509
+    second: misil_303
+  - first:
+      213: 2101258350736274461
+    second: misil_304
+  - first:
+      213: 9145454040206019037
+    second: misil_305
+  - first:
+      213: -4280275826832461966
+    second: misil_306
+  - first:
+      213: -4769103550620184845
+    second: misil_307
+  - first:
+      213: 7721804772956153985
+    second: misil_308
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: misil_0
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 17122
+        width: 386
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2cb0f5046aa3510800000000000000
+      internalID: 1529717818848428729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_1
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 17122
+        width: 387
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1813a5a756736aa80800000000000000
+      internalID: -8456010341357571711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_2
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 17122
+        width: 388
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa8cdae592c425d0800000000000000
+      internalID: -3088129495323079947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_3
+      rect:
+        serializedVersion: 2
+        x: 2642
+        y: 17122
+        width: 388
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba993bc803b162da0800000000000000
+      internalID: -5970054360700053077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_4
+      rect:
+        serializedVersion: 2
+        x: 3442
+        y: 17122
+        width: 388
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098e0e3e0b700da20800000000000000
+      internalID: 3084974201067595920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 16672
+        width: 387
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88a6d3114642fc00800000000000000
+      internalID: 932885318138767503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_6
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 16672
+        width: 387
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9251e272034421cc0800000000000000
+      internalID: -3741853366785010391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_7
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 16672
+        width: 387
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b79cc21e3294730800000000000000
+      internalID: 3983754795411929992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_8
+      rect:
+        serializedVersion: 2
+        x: 2642
+        y: 16672
+        width: 387
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbb0e73f43ddb7a0800000000000000
+      internalID: -6359694761583920205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_9
+      rect:
+        serializedVersion: 2
+        x: 3442
+        y: 16672
+        width: 388
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c479f5db2248e70800000000000000
+      internalID: 9116449742452640807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 16222
+        width: 388
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bddadf452b618e0800000000000000
+      internalID: -1722993729319609563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_11
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 16222
+        width: 387
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc32b5e071859050800000000000000
+      internalID: 5806689616454106306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_12
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 16222
+        width: 386
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7587be25dd50170800000000000000
+      internalID: 8144158849376999354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_13
+      rect:
+        serializedVersion: 2
+        x: 2643
+        y: 16222
+        width: 386
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b641baf38db84b10800000000000000
+      internalID: 1966029611891508916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_14
+      rect:
+        serializedVersion: 2
+        x: 3443
+        y: 16222
+        width: 386
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9022a3dd596c7c7d0800000000000000
+      internalID: -2898129488225623543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_15
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 15772
+        width: 387
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdeb64bceac8e5280800000000000000
+      internalID: -9052643518605508901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_16
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 15772
+        width: 387
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661bd8e2d8465ab60800000000000000
+      internalID: 7756716490749751654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_17
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 15772
+        width: 387
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe9e0048a3143c50800000000000000
+      internalID: 6643956963628457727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_18
+      rect:
+        serializedVersion: 2
+        x: 2642
+        y: 15772
+        width: 388
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0513b3907cb34170800000000000000
+      internalID: 8161574141425816846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_19
+      rect:
+        serializedVersion: 2
+        x: 3441
+        y: 15772
+        width: 388
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb8deca67aceb990800000000000000
+      internalID: -7368229329275352082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_20
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 15322
+        width: 387
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3f1414d7396fb00800000000000000
+      internalID: 862038544863065080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_21
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 15322
+        width: 386
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd856dbcc2dd7cf00800000000000000
+      internalID: 1137120615402461403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_22
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 15322
+        width: 385
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f7ebc4ac141b260800000000000000
+      internalID: 7111537623721475843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_23
+      rect:
+        serializedVersion: 2
+        x: 2633
+        y: 15322
+        width: 382
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a393bec1dc512100800000000000000
+      internalID: 81448324455175079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_24
+      rect:
+        serializedVersion: 2
+        x: 3430
+        y: 15322
+        width: 382
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd09545a1641d2c70800000000000000
+      internalID: 8947830444272226523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_25
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 14872
+        width: 383
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c89f3a02db4f4420800000000000000
+      internalID: 2616393274012702914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_26
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 14872
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a20bdf31db24a830800000000000000
+      internalID: 4081435340023988898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_27
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 14872
+        width: 383
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653f7f8895bcd5980800000000000000
+      internalID: -8548452932268854442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_28
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 14872
+        width: 384
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b8741e30ad62660800000000000000
+      internalID: 7360810351182973853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_29
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 14872
+        width: 384
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd91e7b3d043dcfc0800000000000000
+      internalID: -3473062506195445284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_30
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 14422
+        width: 384
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8917ad2b1401c2d40800000000000000
+      internalID: 5560837514255298968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_31
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 14422
+        width: 385
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecff040b3f22076f0800000000000000
+      internalID: -689012312958238770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_32
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 14422
+        width: 385
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 611ef337522a39d80800000000000000
+      internalID: -8245068211054190314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_33
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 14422
+        width: 384
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323aa674b8c164800800000000000000
+      internalID: 596195385197372195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_34
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 14422
+        width: 384
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bf22a9a8e723430800000000000000
+      internalID: 3761207772564355937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_35
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 13972
+        width: 384
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c40c022a54b6d420800000000000000
+      internalID: 2654507329592755398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_36
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 13971
+        width: 385
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a3dec55bb7bb5f0800000000000000
+      internalID: -739861694893966843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_37
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 13973
+        width: 383
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea340c71e790dd80800000000000000
+      internalID: -8227909524501808411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_38
+      rect:
+        serializedVersion: 2
+        x: 2626
+        y: 13972
+        width: 384
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fb467da44ddacf0800000000000000
+      internalID: -239301787274395787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_39
+      rect:
+        serializedVersion: 2
+        x: 3396
+        y: 13949
+        width: 450
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735227145dbf4eaa0800000000000000
+      internalID: -6132499899227167433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_40
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 13499
+        width: 472
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960417a7932283160800000000000000
+      internalID: 7005386850637529193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_41
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 13505
+        width: 454
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e195974bb7c1fb70800000000000000
+      internalID: 8931139143226200549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_42
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 13499
+        width: 522
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7219f6b718439ee90800000000000000
+      internalID: -6996002815417020121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_43
+      rect:
+        serializedVersion: 2
+        x: 2589
+        y: 13728
+        width: 64
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61de5e8b127c011e0800000000000000
+      internalID: -2229062867898471146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_44
+      rect:
+        serializedVersion: 2
+        x: 2627
+        y: 13499
+        width: 468
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f8a6f4e2eb84510800000000000000
+      internalID: 1533684779229810532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_45
+      rect:
+        serializedVersion: 2
+        x: 3385
+        y: 13738
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55fc0bf69763f55c0800000000000000
+      internalID: -4224598030257434795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_46
+      rect:
+        serializedVersion: 2
+        x: 3419
+        y: 13499
+        width: 414
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ed3786e9a638f10800000000000000
+      internalID: 2270775865714662973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_47
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 13678
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a705c9f136ca510800000000000000
+      internalID: 1561732158208375366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_48
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 13674
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ef2587ec8fa0360800000000000000
+      internalID: 7136790125187628663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_49
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 13605
+        width: 88
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1303217f406b7ed70800000000000000
+      internalID: 9072420106802442289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_50
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 13635
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935d4b530fbe8cbf0800000000000000
+      internalID: -303733557921786567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_51
+      rect:
+        serializedVersion: 2
+        x: 3371
+        y: 13611
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689cf22f4be416be0800000000000000
+      internalID: -1485819862991255162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_52
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 13049
+        width: 418
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b52d6531b2b2c950800000000000000
+      internalID: 6467928489032754611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_53
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 13460
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc93d56815dcf1930800000000000000
+      internalID: 4116234334470224335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_54
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 13476
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd00ebb586ce7e20800000000000000
+      internalID: 3350333450495200706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_55
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 13474
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5368b6a4efcb10a60800000000000000
+      internalID: 7638594243353347637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_56
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 13478
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac78dd01ba72dd40800000000000000
+      internalID: 5607679386889780398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_57
+      rect:
+        serializedVersion: 2
+        x: 2761
+        y: 13475
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6f228deb4ffbdc0800000000000000
+      internalID: -3620906474875455752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_58
+      rect:
+        serializedVersion: 2
+        x: 2766
+        y: 13480
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9985b457104dcb0800000000000000
+      internalID: -4840242096229541417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_59
+      rect:
+        serializedVersion: 2
+        x: 3337
+        y: 13049
+        width: 612
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14402585d01b36f50800000000000000
+      internalID: 6873532127171970113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_60
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 13288
+        width: 40
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4917d27033d5b15f0800000000000000
+      internalID: -784931236300885612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_61
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 13296
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0726f6b3b7a020510800000000000000
+      internalID: 1513783949144318576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_62
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 13049
+        width: 498
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95277c88fe77a550800000000000000
+      internalID: 6172041420308161949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_63
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 13297
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f753e0aef1aea2100800000000000000
+      internalID: 84136965851460991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_64
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 13049
+        width: 519
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69462001b21262450800000000000000
+      internalID: 6063570417136854166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_65
+      rect:
+        serializedVersion: 2
+        x: 2533
+        y: 13298
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9c40ac33d6d0f20800000000000000
+      internalID: 3390486163679922672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_66
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 13049
+        width: 520
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533cfa3276e098c50800000000000000
+      internalID: 6667876559441871669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_67
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 13161
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb49618f98b26a140800000000000000
+      internalID: 4730516330172028094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_68
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 13149
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66dfaf81879f23650800000000000000
+      internalID: 6211301130307829094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_69
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 13146
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8707e98a81b9670800000000000000
+      internalID: 8546451830357391523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_70
+      rect:
+        serializedVersion: 2
+        x: 2531
+        y: 13146
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abdcb6e9c3e053540800000000000000
+      internalID: 4986907815901384122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_71
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 13143
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131425e04333d3ad0800000000000000
+      internalID: -2720962301190323919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_72
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 13139
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39c2dc23055054b0800000000000000
+      internalID: -5453765676620396226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_73
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 12599
+        width: 641
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d349165f4192dfa0800000000000000
+      internalID: -5777395602029984808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_74
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 12599
+        width: 460
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70cc169d64f53b000800000000000000
+      internalID: 50488778730621959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_75
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 12996
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290db5f6795abdc00800000000000000
+      internalID: 926516218181701778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_76
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 13003
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6072dfea38f2766c0800000000000000
+      internalID: -4150296288975575290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_77
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 13001
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688563c47546fb200800000000000000
+      internalID: 197987234731153542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_78
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 12977
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04aab2545601fddb0800000000000000
+      internalID: -4765071853596464576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_79
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 12599
+        width: 460
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2283ae0cf143f7de0800000000000000
+      internalID: -1333289653693171678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_80
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 12996
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eca6f487dc680760800000000000000
+      internalID: 7424303658624789728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_81
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 13003
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6526bde8bd09d3660800000000000000
+      internalID: 7367203838116979286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_82
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 13001
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57cefd9a56a729040800000000000000
+      internalID: 4652915942087453813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_83
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 12977
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f9b43a1f0827260800000000000000
+      internalID: 7093874138377068330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_84
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 12622
+        width: 382
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72979744dfc8f0220800000000000000
+      internalID: 2454335341343635751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_85
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 12622
+        width: 382
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604223574c729d840800000000000000
+      internalID: 5249270565410317318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_86
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 12912
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb5811a3b214f980800000000000000
+      internalID: -8506153233484850236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_87
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 12912
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec98071bcbfd52a0800000000000000
+      internalID: -6746959817047761683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_88
+      rect:
+        serializedVersion: 2
+        x: 2602
+        y: 12759
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06fab1dff12401220800000000000000
+      internalID: 2454534502074789728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_89
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 12760
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43bc093eed95bba50800000000000000
+      internalID: 6537918097893935924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_90
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 12734
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b352c203069f0140800000000000000
+      internalID: 4688130676791333809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_91
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 12734
+        width: 55
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0be9d5b3e33f5ef0800000000000000
+      internalID: -117318012186793203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_92
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 12639
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621b32024f1df7c50800000000000000
+      internalID: 6665276819973058854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_93
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 12639
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d166150953734a720800000000000000
+      internalID: 2856468766853785117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_94
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 12172
+        width: 382
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a49127e843fdd60800000000000000
+      internalID: 7917104456344881794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_95
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 12172
+        width: 382
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378e25ef7d248f450800000000000000
+      internalID: 6122717188862437491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_96
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 12172
+        width: 382
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be03cc5c69f705590800000000000000
+      internalID: -7687504278381121301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_97
+      rect:
+        serializedVersion: 2
+        x: 2630
+        y: 12172
+        width: 380
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a54441a03953dae0800000000000000
+      internalID: -1525777783349557851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_98
+      rect:
+        serializedVersion: 2
+        x: 3433
+        y: 12172
+        width: 381
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb8d4a0119013cf0800000000000000
+      internalID: -274428133500941349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_99
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 11761
+        width: 376
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e23f6fd60c8f400800000000000000
+      internalID: 358247748903054941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_100
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 11762
+        width: 374
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba32396abe24492c0800000000000000
+      internalID: -4425838953918946389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_101
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 11761
+        width: 374
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d6f9efd0192c970800000000000000
+      internalID: 8773734513363611039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_102
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 11760
+        width: 374
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a111f135e622fd730800000000000000
+      internalID: 4025974449128804634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_103
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 11722
+        width: 375
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126df7f4a7ae36bc0800000000000000
+      internalID: -3790928650275138015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_104
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 11722
+        width: 272
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ca17963470206a0800000000000000
+      internalID: -6484612527346832257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_105
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 11722
+        width: 270
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74bbef37041d9930800000000000000
+      internalID: 4151496452875203708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_106
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 11722
+        width: 269
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e993c6122d42480800000000000000
+      internalID: -8924777520550011280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_107
+      rect:
+        serializedVersion: 2
+        x: 2768
+        y: 11722
+        width: 268
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297c841890c7b6980800000000000000
+      internalID: -8544599487739803758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_108
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 11272
+        width: 377
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b683d97c8fbf1b0800000000000000
+      internalID: -5621626173622031594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_109
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 11272
+        width: 381
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51790ae00da9b250800000000000000
+      internalID: 5960985801239654749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_110
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 11299
+        width: 407
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a7c27f9ddeec070800000000000000
+      internalID: 8128695897860897381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_111
+      rect:
+        serializedVersion: 2
+        x: 2775
+        y: 11302
+        width: 426
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a0409bccb657ae0800000000000000
+      internalID: -1552215969537717628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_112
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 11301
+        width: 450
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9713223eb1dc1ca70800000000000000
+      internalID: 8845576662790844793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_113
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 10851
+        width: 480
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abceb97decae11cd0800000000000000
+      internalID: -2589030136659841862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_114
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 10852
+        width: 511
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a5d9cf7b3886850800000000000000
+      internalID: 6370486499155991157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_115
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 10852
+        width: 543
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8e0e5b327d51850800000000000000
+      internalID: 6347215798223825148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_116
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 10852
+        width: 570
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66566c5d9a7ba19b0800000000000000
+      internalID: -5108568887234501274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_117
+      rect:
+        serializedVersion: 2
+        x: 3407
+        y: 10851
+        width: 593
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091adb299cb809e50800000000000000
+      internalID: 6814099934078149008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_118
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 10400
+        width: 609
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753bc609a530937b0800000000000000
+      internalID: -5244156603591249065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_119
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 10400
+        width: 616
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3115b4b774b84c70800000000000000
+      internalID: 8955606285252104511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_120
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 10400
+        width: 615
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110392612437238b0800000000000000
+      internalID: -5173946294218444783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_121
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 10400
+        width: 615
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dedcc26ad3b8dd90800000000000000
+      internalID: -7072705464243527976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_122
+      rect:
+        serializedVersion: 2
+        x: 3386
+        y: 10400
+        width: 614
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda0bda54f5dcc560800000000000000
+      internalID: 7335473138552736476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_123
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 9950
+        width: 614
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88414b940e3d646d0800000000000000
+      internalID: -3006482740960553848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_124
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 9950
+        width: 614
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c834ab3e29f18b970800000000000000
+      internalID: 8770794990050362252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_125
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 9950
+        width: 379
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be402ba3f66f1d130800000000000000
+      internalID: 3589921335577543915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_126
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 10209
+        width: 282
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b5115b8d891d4f0800000000000000
+      internalID: -805694801804436698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_127
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 9973
+        width: 346
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d775c1b4c6e27510800000000000000
+      internalID: 1545551354611988432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_128
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 9958
+        width: 690
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e7395d99246c8f0800000000000000
+      internalID: -520655478434070884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_129
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 10168
+        width: 56
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a485de5bde0b16fe0800000000000000
+      internalID: -1197481490897872822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_130
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 10074
+        width: 73
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e40847a25679c70800000000000000
+      internalID: 8977755615203970611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_131
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 9975
+        width: 200
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcbee5e301ecb990800000000000000
+      internalID: -7368767483426194189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_132
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 9508
+        width: 684
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed163532f160a690800000000000000
+      internalID: -7592961278843937304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_133
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 9510
+        width: 720
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a8428586803feb0800000000000000
+      internalID: -4687393542914143641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_134
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 9508
+        width: 734
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbdd01e2c2b9723d0800000000000000
+      internalID: -3231443593561317953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_135
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 9495
+        width: 726
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b71830d59e4c950800000000000000
+      internalID: 6468551550510922531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_136
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 9499
+        width: 740
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614004d75a2284040800000000000000
+      internalID: 4631990310916850710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_137
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 9058
+        width: 716
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02194bafd17941e0800000000000000
+      internalID: -2213112536410549747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_138
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 9361
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d92c41fe9a9aa830800000000000000
+      internalID: 4083246019608586706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_139
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 9058
+        width: 728
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6170460af63a25440800000000000000
+      internalID: 4923177042496980758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_140
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 9382
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d558e6e3d51ee6c50800000000000000
+      internalID: 6660508689523180893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_141
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 9367
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e57e8d8fb4b683e0800000000000000
+      internalID: -2051753845414005272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_142
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 9057
+        width: 712
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b99a87d4bb76510800000000000000
+      internalID: 1542407338808941464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_143
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 9058
+        width: 707
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393325b7e27799870800000000000000
+      internalID: 8690107997509268371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_144
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 9060
+        width: 722
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63eae698695447e0800000000000000
+      internalID: -1782201246788426902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_145
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 9040
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2eaa9651418f1ea0800000000000000
+      internalID: -5899854869206225361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_146
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 9057
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aef7674820bf3f10800000000000000
+      internalID: 2251712025751715491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_147
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 9053
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a382aea45a7e950800000000000000
+      internalID: 6478328330170415646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_148
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 8609
+        width: 700
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8ed9f62364e1210800000000000000
+      internalID: 1305558124418951358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_149
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 8608
+        width: 707
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9941429354865780800000000000000
+      internalID: -8694616536121259622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_150
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 8589
+        width: 730
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece7dffaee42dbb30800000000000000
+      internalID: 4304637426409504462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_151
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 8583
+        width: 712
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7edb008fd3cfc13c0800000000000000
+      internalID: -4387354593881702937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_152
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 8579
+        width: 720
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4db9d30fe955c70800000000000000
+      internalID: 8959241788386432174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_153
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 8494
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef28fce025836f60800000000000000
+      internalID: 8026405337365491682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8145
+        width: 712
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ad1947163978bd0800000000000000
+      internalID: -2627969810770568686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_155
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 8153
+        width: 724
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa8e1094b664a0e0800000000000000
+      internalID: -2259568187335079182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_156
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 8134
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20cf3e2dc9e6ae120800000000000000
+      internalID: 2443887367634025474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_157
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 8133
+        width: 687
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c104b7b70f3c3f5b0800000000000000
+      internalID: -5335705695872663524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_158
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 8158
+        width: 707
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5f944f04e524ad0800000000000000
+      internalID: -2719507591908952633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_159
+      rect:
+        serializedVersion: 2
+        x: 3211
+        y: 8158
+        width: 720
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9dd52a39e8eceff0800000000000000
+      internalID: -5373411133629029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7708
+        width: 711
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea00c638b003eb8d0800000000000000
+      internalID: -2828770689934425938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_161
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 7708
+        width: 710
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46cead135d31e9ad0800000000000000
+      internalID: -2693693720735585180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_162
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 7708
+        width: 721
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae15ac9151832a780800000000000000
+      internalID: -8673308269083995670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_163
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 7702
+        width: 723
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd11c3587597734d0800000000000000
+      internalID: -3154919597145320996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_164
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 7678
+        width: 728
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98ad44b436e45940800000000000000
+      internalID: 5284101376850110619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_165
+      rect:
+        serializedVersion: 2
+        x: 3561
+        y: 8023
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 211402e4111f8d4c0800000000000000
+      internalID: -4262391990678699758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_166
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 7695
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af3558614c1e9b950800000000000000
+      internalID: 6465446972374733818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_167
+      rect:
+        serializedVersion: 2
+        x: 2937
+        y: 7683
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb96e6738ea015b0800000000000000
+      internalID: -5399624073558451216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_168
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 7258
+        width: 734
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33e375dff7b9b780800000000000000
+      internalID: -8666693698472123585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_169
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 7586
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a100198940e5e56c0800000000000000
+      internalID: -4152778432556498918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7226
+        width: 719
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9019a8a5dbc352180800000000000000
+      internalID: -9140833084713037559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_171
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 7259
+        width: 704
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e032928b7fb56ba0800000000000000
+      internalID: -6096255983383596829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_172
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 7249
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2777d29272199540800000000000000
+      internalID: 5015059943352923950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_173
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 7260
+        width: 686
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10af565c01861bb80800000000000000
+      internalID: -8380803010319222271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_174
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 7226
+        width: 710
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645db215258312ae0800000000000000
+      internalID: -1575916468402662074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_175
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 7209
+        width: 14
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463e7532c0d6b63b0800000000000000
+      internalID: -5518197019512413340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6808
+        width: 727
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9af45e715452b60800000000000000
+      internalID: 7720653105130351048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_177
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 6807
+        width: 714
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d265f5ceeaeeef7a0800000000000000
+      internalID: -6341368790233688531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_178
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 7117
+        width: 11
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b4c5a0ef34627e0800000000000000
+      internalID: -1790669043458618482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_179
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 7111
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d944522af18d389d0800000000000000
+      internalID: -2773135315154156387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_180
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 7137
+        width: 8
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7922f8e79ea603350800000000000000
+      internalID: 5994408655113364119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_181
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 6779
+        width: 11
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682ba6b1e2eca0250800000000000000
+      internalID: 5911764158300992134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_182
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 6806
+        width: 726
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24bc6584827999b0800000000000000
+      internalID: -5072897591756409809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_183
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 6790
+        width: 707
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409bfcdd5bf0c9710800000000000000
+      internalID: 1701252033024080132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_184
+      rect:
+        serializedVersion: 2
+        x: 3217
+        y: 6808
+        width: 716
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5332ecfdc4fc98140800000000000000
+      internalID: 4722533613353968437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_185
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 6758
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb1b0c02e9bbad90800000000000000
+      internalID: -7085365208221541393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_186
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 6762
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9c55c72a715f180800000000000000
+      internalID: -9082327086884599332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_187
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6359
+        width: 728
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b812881551894630800000000000000
+      internalID: 3911799953831368887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_188
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 6359
+        width: 703
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f657a245318d020800000000000000
+      internalID: 2366662856393715458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_189
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 6359
+        width: 703
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00881dcc01e9f3860800000000000000
+      internalID: 7511896498470225920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_190
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 6354
+        width: 694
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7708c603fd7d040800000000000000
+      internalID: 4672448537491961830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_191
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 6344
+        width: 736
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051ca3d88ff743370800000000000000
+      internalID: 8301400718648721744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_192
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5886
+        width: 703
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4833c8c65ec9997e0800000000000000
+      internalID: -1758201670328896636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_193
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 6223
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19bfc02373ad57b0800000000000000
+      internalID: -5233847477067597542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_194
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5892
+        width: 710
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ce32ecffb0c1d80800000000000000
+      internalID: -8278728821710787548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_195
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 5908
+        width: 718
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 352422b9a3ca2abe0800000000000000
+      internalID: -1467421160858566061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_196
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 5909
+        width: 706
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c594f592bc763c40800000000000000
+      internalID: 5491713902086755778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_197
+      rect:
+        serializedVersion: 2
+        x: 3227
+        y: 5901
+        width: 680
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9c9cbcfbf5fd420800000000000000
+      internalID: 2656947582534273493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_198
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 5783
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f45b6c8b2e7f070800000000000000
+      internalID: 8140224134731091824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_199
+      rect:
+        serializedVersion: 2
+        x: 2929
+        y: 5804
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f536795bdf3af20800000000000000
+      internalID: 3432866297357229935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5449
+        width: 717
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79209cced1edf1b0800000000000000
+      internalID: -5621088412857521794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_201
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 5766
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d3b43d56edc8560800000000000000
+      internalID: 7317468023488199953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_202
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 5456
+        width: 750
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63349524bfbb1cb10800000000000000
+      internalID: 2000086397353542454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_203
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 5459
+        width: 728
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e66d9e85607b8d0800000000000000
+      internalID: -2830786861829034399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_204
+      rect:
+        serializedVersion: 2
+        x: 2999
+        y: 5783
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b3c773900f44dc0800000000000000
+      internalID: -3655533075141739749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_205
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 5460
+        width: 694
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18a7a14fad555450800000000000000
+      internalID: 6076866279508518941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_206
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5458
+        width: 730
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa86d6a1506a1ef0800000000000000
+      internalID: -136690934873683209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_207
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 5443
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcfb4c40fba81090800000000000000
+      internalID: -8063506084246324006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_208
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 5424
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b4563f8a5df2fe0800000000000000
+      internalID: -1211514853124650096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_209
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 5010
+        width: 720
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6399865870d87b850800000000000000
+      internalID: 6392733259518220598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_210
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 5320
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85d87337ed45d730800000000000000
+      internalID: 4023207497521747341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_211
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5009
+        width: 734
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8167f69ed88f66c60800000000000000
+      internalID: 7811203892111177240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_212
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 5008
+        width: 722
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f18945a38668610800000000000000
+      internalID: 1623099315450289988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_213
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 5008
+        width: 712
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f594527cb7ee270800000000000000
+      internalID: 8281692860035194777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_214
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 5324
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9328d0c5eb7b76f50800000000000000
+      internalID: 6874665384420409913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_215
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 5000
+        width: 694
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03d944dd9ce0ddc0800000000000000
+      internalID: -3616130338162879731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_216
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4525
+        width: 726
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076cd36fcb8b36c10800000000000000
+      internalID: 2045681777480943216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_217
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 4559
+        width: 728
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce90d33f3d7282b0800000000000000
+      internalID: -5583762877580271932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_218
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 4901
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe91713aa15fa7b0800000000000000
+      internalID: -5210856452428554502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_219
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 4558
+        width: 712
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0acf0f05a94d8a80800000000000000
+      internalID: -8463027151488169458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_220
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 4558
+        width: 712
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa22dd856ee7cab0800000000000000
+      internalID: -4987755942351066382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_221
+      rect:
+        serializedVersion: 2
+        x: 3213
+        y: 4560
+        width: 714
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7327b1cab518bae0800000000000000
+      internalID: -1533451781261548675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_222
+      rect:
+        serializedVersion: 2
+        x: 3885
+        y: 4552
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3496216e7f300ee80800000000000000
+      internalID: -8151510962288826045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_223
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 4517
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae03b79d795153bf0800000000000000
+      internalID: -345346054491000598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_224
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 4109
+        width: 705
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdfba2a1c60940f0800000000000000
+      internalID: -1132366402579333647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_225
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 4093
+        width: 716
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01597f926674fc1d0800000000000000
+      internalID: -3328363095487179504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_226
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 4073
+        width: 720
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de019ced16506bf0800000000000000
+      internalID: -333171685902446889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_227
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 4108
+        width: 714
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c121c73b646ae10800000000000000
+      internalID: 2208530403966458888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_228
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 4091
+        width: 726
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e086e65bc7e2ad0800000000000000
+      internalID: -2725103605829333490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_229
+      rect:
+        serializedVersion: 2
+        x: 2865
+        y: 4079
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6febaacc032e4b990800000000000000
+      internalID: -7371017990878609674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_230
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 4057
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4206fa5dd402c3530800000000000000
+      internalID: 3835976501282431012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_231
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 3658
+        width: 694
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d972bbe61158c2260800000000000000
+      internalID: 7074175424610903965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_232
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 3658
+        width: 718
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407273ab257106200800000000000000
+      internalID: 171162429919012612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_233
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 3978
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ed6649cb8257bd0800000000000000
+      internalID: -2633153616719454567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_234
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 3659
+        width: 701
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b186a72642799ffc0800000000000000
+      internalID: -3460568656130709477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_235
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 3967
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6300ef25eb64230800000000000000
+      internalID: 3622792213924165337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_236
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 3658
+        width: 722
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4428555be71c970800000000000000
+      internalID: 8773432866383217875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_237
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 3657
+        width: 749
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14a734df805aa5a0800000000000000
+      internalID: -6509301732739668961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_238
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 3626
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6710c9a1aaa99600800000000000000
+      internalID: 475598846978692971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_239
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 3640
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492cbda7297447b80800000000000000
+      internalID: -8398008710687112556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_240
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3208
+        width: 714
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d859dd797b6d59db0800000000000000
+      internalID: -4785682944996043379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_241
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 3204
+        width: 714
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa49d86f6e09d750800000000000000
+      internalID: 6330106622909172393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_242
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 3207
+        width: 738
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af819a490a1262b0800000000000000
+      internalID: -5592879160032653406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_243
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 3208
+        width: 706
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92130ace3a1554130800000000000000
+      internalID: 3550333645742944553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_244
+      rect:
+        serializedVersion: 2
+        x: 2845
+        y: 3521
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b67c1d598319190800000000000000
+      internalID: -7957516850466165898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_245
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 3191
+        width: 714
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ee6214c42dd2ce0800000000000000
+      internalID: -1428254281854161322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_246
+      rect:
+        serializedVersion: 2
+        x: 3795
+        y: 3518
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091f58412069e3c20800000000000000
+      internalID: 3188150521903313296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_247
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 3358
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac54c11edaa77ffd0800000000000000
+      internalID: -2308241396779432502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_248
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 3359
+        width: 40
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3402b051bd05a50800000000000000
+      internalID: 6507942344977826787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_249
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 3174
+        width: 14
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf6f02d5a74e7150800000000000000
+      internalID: 5872209741657108406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_250
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 3164
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8988f972e040758e0800000000000000
+      internalID: -1704889475095623528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_251
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 3164
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e9eac0733e3c1a0800000000000000
+      internalID: -6790333987569099216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_252
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 2758
+        width: 700
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf45aa4c29ecd8d60800000000000000
+      internalID: 7894192851610391804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_253
+      rect:
+        serializedVersion: 2
+        x: 2907
+        y: 3088
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089c326097d6cbce0800000000000000
+      internalID: -1388114218575476352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_254
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2759
+        width: 733
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd0e642da0480000800000000000000
+      internalID: 2322912198397372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_255
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 2760
+        width: 722
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4019ddc7cd6541fa0800000000000000
+      internalID: -5830940112550260476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_256
+      rect:
+        serializedVersion: 2
+        x: 2188
+        y: 2754
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9730310e26246c670800000000000000
+      internalID: 8558601134297777017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_257
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 2757
+        width: 712
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29754b71e1387bd00800000000000000
+      internalID: 988402808501065618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_258
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 2742
+        width: 726
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db11f7bf7650efe40800000000000000
+      internalID: 5691992923202064829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_259
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 2734
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced878ee59c94c3b0800000000000000
+      internalID: -5493093477719241236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_260
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2265
+        width: 719
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc57cb53d608d39b0800000000000000
+      internalID: -5098777996572199475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_261
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 2309
+        width: 707
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950a73129a0405610800000000000000
+      internalID: 1607856162122211417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_262
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 2308
+        width: 736
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fe668b89b2f6760800000000000000
+      internalID: 7453223843250237312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_263
+      rect:
+        serializedVersion: 2
+        x: 2097
+        y: 2626
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de14d13d6b6e67f90800000000000000
+      internalID: -6956118901526806035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_264
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 2308
+        width: 728
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688573b7ff5311420800000000000000
+      internalID: 2598917831369644166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_265
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 2295
+        width: 727
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0b18f22dd0a0ac0800000000000000
+      internalID: -3888280131889680147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_266
+      rect:
+        serializedVersion: 2
+        x: 2097
+        y: 2302
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93f1dc904accc8c0800000000000000
+      internalID: -3977581992017267811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_267
+      rect:
+        serializedVersion: 2
+        x: 3093
+        y: 2295
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed40494a35c662960800000000000000
+      internalID: 7576862529596687582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_268
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 2249
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b063cf597c9d4db40800000000000000
+      internalID: 5464231699145307659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_269
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1838
+        width: 701
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d868eeade5dd4bfd0800000000000000
+      internalID: -2326991707973974387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_270
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1811
+        width: 681
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5234acf2a2a15f0800000000000000
+      internalID: -785268800277502477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_271
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1858
+        width: 724
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb96662985c7fd660800000000000000
+      internalID: 7412780231530277307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_272
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1858
+        width: 715
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799fbc09d200afa50800000000000000
+      internalID: 6555552403293993367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_273
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1841
+        width: 733
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d459492d8fc2d7cb0800000000000000
+      internalID: -4864682575293803187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_274
+      rect:
+        serializedVersion: 2
+        x: 3793
+        y: 2161
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b05a1e14f964aff0800000000000000
+      internalID: -25779200659402574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_275
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 1842
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca1b950c0f459e70800000000000000
+      internalID: 9121283533361060558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_276
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1410
+        width: 714
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3baf5e6cb14426f50800000000000000
+      internalID: 6873130867412564659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_277
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1409
+        width: 682
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc53ffb6e13c8a90800000000000000
+      internalID: -7310413227996521231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_278
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1408
+        width: 712
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b254035de97dce010800000000000000
+      internalID: 1219586676292076843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_279
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1408
+        width: 710
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3d4445e56263fb0800000000000000
+      internalID: -4668501777140362327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_280
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1386
+        width: 724
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72a0b0643d2d6f00800000000000000
+      internalID: 1111594386014118522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_281
+      rect:
+        serializedVersion: 2
+        x: 3707
+        y: 1709
+        width: 15
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4bfca177182c700800000000000000
+      internalID: 559151652298273961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_282
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1386
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f066079f2f7aa380800000000000000
+      internalID: -8959208666326212360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_283
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1387
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aed83d5382383790800000000000000
+      internalID: -7550229235500523863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_284
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 959
+        width: 722
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1052e2cc0551c2880800000000000000
+      internalID: -8634502948808940287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_285
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 959
+        width: 689
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbc88943e546d700800000000000000
+      internalID: 564715645775170515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_286
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1280
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcda40a59f846d090800000000000000
+      internalID: -8010134651437535793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_287
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 958
+        width: 705
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908d40ddd7f35a8b0800000000000000
+      internalID: -5141633589762009079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_288
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 1269
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a291b937bb329f6d0800000000000000
+      internalID: -2956292392386619094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_289
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 1249
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cdc2ddd9a52ba30800000000000000
+      internalID: 4229542634121387138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_290
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 927
+        width: 717
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5add5ad47f4c2c340800000000000000
+      internalID: 4882681512461720997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_291
+      rect:
+        serializedVersion: 2
+        x: 2987
+        y: 1273
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b711204569a6a6330800000000000000
+      internalID: 3704890837352714619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_292
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 956
+        width: 730
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858132744363ecf30800000000000000
+      internalID: 4597671867751536728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_293
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 916
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90ca4fb8c2f9e110800000000000000
+      internalID: 1290829712235085978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_294
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 934
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2654fa4b68db93200800000000000000
+      internalID: 160367648003016034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_295
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 915
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0a3dda9395b5520800000000000000
+      internalID: 2691843306548338926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_296
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 913
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841717c4d71e95090800000000000000
+      internalID: -8045151331051015864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_297
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 508
+        width: 718
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787cee79e28770980800000000000000
+      internalID: -8572751224163612793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_298
+      rect:
+        serializedVersion: 2
+        x: 2899
+        y: 830
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a68d829395cf0250800000000000000
+      internalID: 5913162073370363558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_299
+      rect:
+        serializedVersion: 2
+        x: 3700
+        y: 854
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd241f475122ab630800000000000000
+      internalID: 3943501899267916507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_300
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 508
+        width: 730
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5731e5b2f2375c400800000000000000
+      internalID: 343807592991953781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_301
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 508
+        width: 692
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2002c6eb630e05ed0800000000000000
+      internalID: -2427193673425084414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_302
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 508
+        width: 728
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65dc28f5a2f89b2a0800000000000000
+      internalID: -6721183556719948458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_303
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 508
+        width: 730
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59835b0bb1e92d520800000000000000
+      internalID: 2725414566278543509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_304
+      rect:
+        serializedVersion: 2
+        x: 3733
+        y: 493
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1475f8465b292d10800000000000000
+      internalID: 2101258350736274461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_305
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 713
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd90420befd2bee70800000000000000
+      internalID: 9145454040206019037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_306
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 30
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27fa5f830d76994c0800000000000000
+      internalID: -4280275826832461966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_307
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 56
+        width: 704
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3feca38a69db0ddb0800000000000000
+      internalID: -4769103550620184845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: misil_308
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 26
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188a7f4778c592b60800000000000000
+      internalID: 7721804772956153985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      misil_0: 1529717818848428729
+      misil_1: -8456010341357571711
+      misil_10: -1722993729319609563
+      misil_100: -4425838953918946389
+      misil_101: 8773734513363611039
+      misil_102: 4025974449128804634
+      misil_103: -3790928650275138015
+      misil_104: -6484612527346832257
+      misil_105: 4151496452875203708
+      misil_106: -8924777520550011280
+      misil_107: -8544599487739803758
+      misil_108: -5621626173622031594
+      misil_109: 5960985801239654749
+      misil_11: 5806689616454106306
+      misil_110: 8128695897860897381
+      misil_111: -1552215969537717628
+      misil_112: 8845576662790844793
+      misil_113: -2589030136659841862
+      misil_114: 6370486499155991157
+      misil_115: 6347215798223825148
+      misil_116: -5108568887234501274
+      misil_117: 6814099934078149008
+      misil_118: -5244156603591249065
+      misil_119: 8955606285252104511
+      misil_12: 8144158849376999354
+      misil_120: -5173946294218444783
+      misil_121: -7072705464243527976
+      misil_122: 7335473138552736476
+      misil_123: -3006482740960553848
+      misil_124: 8770794990050362252
+      misil_125: 3589921335577543915
+      misil_126: -805694801804436698
+      misil_127: 1545551354611988432
+      misil_128: -520655478434070884
+      misil_129: -1197481490897872822
+      misil_13: 1966029611891508916
+      misil_130: 8977755615203970611
+      misil_131: -7368767483426194189
+      misil_132: -7592961278843937304
+      misil_133: -4687393542914143641
+      misil_134: -3231443593561317953
+      misil_135: 6468551550510922531
+      misil_136: 4631990310916850710
+      misil_137: -2213112536410549747
+      misil_138: 4083246019608586706
+      misil_139: 4923177042496980758
+      misil_14: -2898129488225623543
+      misil_140: 6660508689523180893
+      misil_141: -2051753845414005272
+      misil_142: 1542407338808941464
+      misil_143: 8690107997509268371
+      misil_144: -1782201246788426902
+      misil_145: -5899854869206225361
+      misil_146: 2251712025751715491
+      misil_147: 6478328330170415646
+      misil_148: 1305558124418951358
+      misil_149: -8694616536121259622
+      misil_15: -9052643518605508901
+      misil_150: 4304637426409504462
+      misil_151: -4387354593881702937
+      misil_152: 8959241788386432174
+      misil_153: 8026405337365491682
+      misil_154: -2627969810770568686
+      misil_155: -2259568187335079182
+      misil_156: 2443887367634025474
+      misil_157: -5335705695872663524
+      misil_158: -2719507591908952633
+      misil_159: -5373411133629029
+      misil_16: 7756716490749751654
+      misil_160: -2828770689934425938
+      misil_161: -2693693720735585180
+      misil_162: -8673308269083995670
+      misil_163: -3154919597145320996
+      misil_164: 5284101376850110619
+      misil_165: -4262391990678699758
+      misil_166: 6465446972374733818
+      misil_167: -5399624073558451216
+      misil_168: -8666693698472123585
+      misil_169: -4152778432556498918
+      misil_17: 6643956963628457727
+      misil_170: -9140833084713037559
+      misil_171: -6096255983383596829
+      misil_172: 5015059943352923950
+      misil_173: -8380803010319222271
+      misil_174: -1575916468402662074
+      misil_175: -5518197019512413340
+      misil_176: 7720653105130351048
+      misil_177: -6341368790233688531
+      misil_178: -1790669043458618482
+      misil_179: -2773135315154156387
+      misil_18: 8161574141425816846
+      misil_180: 5994408655113364119
+      misil_181: 5911764158300992134
+      misil_182: -5072897591756409809
+      misil_183: 1701252033024080132
+      misil_184: 4722533613353968437
+      misil_185: -7085365208221541393
+      misil_186: -9082327086884599332
+      misil_187: 3911799953831368887
+      misil_188: 2366662856393715458
+      misil_189: 7511896498470225920
+      misil_19: -7368229329275352082
+      misil_190: 4672448537491961830
+      misil_191: 8301400718648721744
+      misil_192: -1758201670328896636
+      misil_193: -5233847477067597542
+      misil_194: -8278728821710787548
+      misil_195: -1467421160858566061
+      misil_196: 5491713902086755778
+      misil_197: 2656947582534273493
+      misil_198: 8140224134731091824
+      misil_199: 3432866297357229935
+      misil_2: -3088129495323079947
+      misil_20: 862038544863065080
+      misil_200: -5621088412857521794
+      misil_201: 7317468023488199953
+      misil_202: 2000086397353542454
+      misil_203: -2830786861829034399
+      misil_204: -3655533075141739749
+      misil_205: 6076866279508518941
+      misil_206: -136690934873683209
+      misil_207: -8063506084246324006
+      misil_208: -1211514853124650096
+      misil_209: 6392733259518220598
+      misil_21: 1137120615402461403
+      misil_210: 4023207497521747341
+      misil_211: 7811203892111177240
+      misil_212: 1623099315450289988
+      misil_213: 8281692860035194777
+      misil_214: 6874665384420409913
+      misil_215: -3616130338162879731
+      misil_216: 2045681777480943216
+      misil_217: -5583762877580271932
+      misil_218: -5210856452428554502
+      misil_219: -8463027151488169458
+      misil_22: 7111537623721475843
+      misil_220: -4987755942351066382
+      misil_221: -1533451781261548675
+      misil_222: -8151510962288826045
+      misil_223: -345346054491000598
+      misil_224: -1132366402579333647
+      misil_225: -3328363095487179504
+      misil_226: -333171685902446889
+      misil_227: 2208530403966458888
+      misil_228: -2725103605829333490
+      misil_229: -7371017990878609674
+      misil_23: 81448324455175079
+      misil_230: 3835976501282431012
+      misil_231: 7074175424610903965
+      misil_232: 171162429919012612
+      misil_233: -2633153616719454567
+      misil_234: -3460568656130709477
+      misil_235: 3622792213924165337
+      misil_236: 8773432866383217875
+      misil_237: -6509301732739668961
+      misil_238: 475598846978692971
+      misil_239: -8398008710687112556
+      misil_24: 8947830444272226523
+      misil_240: -4785682944996043379
+      misil_241: 6330106622909172393
+      misil_242: -5592879160032653406
+      misil_243: 3550333645742944553
+      misil_244: -7957516850466165898
+      misil_245: -1428254281854161322
+      misil_246: 3188150521903313296
+      misil_247: -2308241396779432502
+      misil_248: 6507942344977826787
+      misil_249: 5872209741657108406
+      misil_25: 2616393274012702914
+      misil_250: -1704889475095623528
+      misil_251: -6790333987569099216
+      misil_252: 7894192851610391804
+      misil_253: -1388114218575476352
+      misil_254: 2322912198397372
+      misil_255: -5830940112550260476
+      misil_256: 8558601134297777017
+      misil_257: 988402808501065618
+      misil_258: 5691992923202064829
+      misil_259: -5493093477719241236
+      misil_26: 4081435340023988898
+      misil_260: -5098777996572199475
+      misil_261: 1607856162122211417
+      misil_262: 7453223843250237312
+      misil_263: -6956118901526806035
+      misil_264: 2598917831369644166
+      misil_265: -3888280131889680147
+      misil_266: -3977581992017267811
+      misil_267: 7576862529596687582
+      misil_268: 5464231699145307659
+      misil_269: -2326991707973974387
+      misil_27: -8548452932268854442
+      misil_270: -785268800277502477
+      misil_271: 7412780231530277307
+      misil_272: 6555552403293993367
+      misil_273: -4864682575293803187
+      misil_274: -25779200659402574
+      misil_275: 9121283533361060558
+      misil_276: 6873130867412564659
+      misil_277: -7310413227996521231
+      misil_278: 1219586676292076843
+      misil_279: -4668501777140362327
+      misil_28: 7360810351182973853
+      misil_280: 1111594386014118522
+      misil_281: 559151652298273961
+      misil_282: -8959208666326212360
+      misil_283: -7550229235500523863
+      misil_284: -8634502948808940287
+      misil_285: 564715645775170515
+      misil_286: -8010134651437535793
+      misil_287: -5141633589762009079
+      misil_288: -2956292392386619094
+      misil_289: 4229542634121387138
+      misil_29: -3473062506195445284
+      misil_290: 4882681512461720997
+      misil_291: 3704890837352714619
+      misil_292: 4597671867751536728
+      misil_293: 1290829712235085978
+      misil_294: 160367648003016034
+      misil_295: 2691843306548338926
+      misil_296: -8045151331051015864
+      misil_297: -8572751224163612793
+      misil_298: 5913162073370363558
+      misil_299: 3943501899267916507
+      misil_3: -5970054360700053077
+      misil_30: 5560837514255298968
+      misil_300: 343807592991953781
+      misil_301: -2427193673425084414
+      misil_302: -6721183556719948458
+      misil_303: 2725414566278543509
+      misil_304: 2101258350736274461
+      misil_305: 9145454040206019037
+      misil_306: -4280275826832461966
+      misil_307: -4769103550620184845
+      misil_308: 7721804772956153985
+      misil_31: -689012312958238770
+      misil_32: -8245068211054190314
+      misil_33: 596195385197372195
+      misil_34: 3761207772564355937
+      misil_35: 2654507329592755398
+      misil_36: -739861694893966843
+      misil_37: -8227909524501808411
+      misil_38: -239301787274395787
+      misil_39: -6132499899227167433
+      misil_4: 3084974201067595920
+      misil_40: 7005386850637529193
+      misil_41: 8931139143226200549
+      misil_42: -6996002815417020121
+      misil_43: -2229062867898471146
+      misil_44: 1533684779229810532
+      misil_45: -4224598030257434795
+      misil_46: 2270775865714662973
+      misil_47: 1561732158208375366
+      misil_48: 7136790125187628663
+      misil_49: 9072420106802442289
+      misil_5: 932885318138767503
+      misil_50: -303733557921786567
+      misil_51: -1485819862991255162
+      misil_52: 6467928489032754611
+      misil_53: 4116234334470224335
+      misil_54: 3350333450495200706
+      misil_55: 7638594243353347637
+      misil_56: 5607679386889780398
+      misil_57: -3620906474875455752
+      misil_58: -4840242096229541417
+      misil_59: 6873532127171970113
+      misil_6: -3741853366785010391
+      misil_60: -784931236300885612
+      misil_61: 1513783949144318576
+      misil_62: 6172041420308161949
+      misil_63: 84136965851460991
+      misil_64: 6063570417136854166
+      misil_65: 3390486163679922672
+      misil_66: 6667876559441871669
+      misil_67: 4730516330172028094
+      misil_68: 6211301130307829094
+      misil_69: 8546451830357391523
+      misil_7: 3983754795411929992
+      misil_70: 4986907815901384122
+      misil_71: -2720962301190323919
+      misil_72: -5453765676620396226
+      misil_73: -5777395602029984808
+      misil_74: 50488778730621959
+      misil_75: 926516218181701778
+      misil_76: -4150296288975575290
+      misil_77: 197987234731153542
+      misil_78: -4765071853596464576
+      misil_79: -1333289653693171678
+      misil_8: -6359694761583920205
+      misil_80: 7424303658624789728
+      misil_81: 7367203838116979286
+      misil_82: 4652915942087453813
+      misil_83: 7093874138377068330
+      misil_84: 2454335341343635751
+      misil_85: 5249270565410317318
+      misil_86: -8506153233484850236
+      misil_87: -6746959817047761683
+      misil_88: 2454534502074789728
+      misil_89: 6537918097893935924
+      misil_9: 9116449742452640807
+      misil_90: 4688130676791333809
+      misil_91: -117318012186793203
+      misil_92: 6665276819973058854
+      misil_93: 2856468766853785117
+      misil_94: 7917104456344881794
+      misil_95: 6122717188862437491
+      misil_96: -7687504278381121301
+      misil_97: -1525777783349557851
+      misil_98: -274428133500941349
+      misil_99: 358247748903054941
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,5915 @@
+fileFormatVersion: 2
+guid: f6b82f872ba503144a87830049a46662
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8326172958151952395
+    second: armadillo_0
+  - first:
+      213: 514656175866334182
+    second: armadillo_1
+  - first:
+      213: 6477845986814217903
+    second: armadillo_2
+  - first:
+      213: 350590358083549532
+    second: armadillo_3
+  - first:
+      213: -1148374250472237440
+    second: armadillo_4
+  - first:
+      213: 125826295178042315
+    second: armadillo_5
+  - first:
+      213: -7627275540002066420
+    second: armadillo_6
+  - first:
+      213: -946671351667078161
+    second: armadillo_7
+  - first:
+      213: 7212761468803570307
+    second: armadillo_8
+  - first:
+      213: 2863604615978154414
+    second: armadillo_9
+  - first:
+      213: 42293529710493020
+    second: armadillo_10
+  - first:
+      213: -3106220586800671024
+    second: armadillo_11
+  - first:
+      213: 5935520459535002756
+    second: armadillo_12
+  - first:
+      213: -6963997716028566342
+    second: armadillo_13
+  - first:
+      213: -7416729688597702252
+    second: armadillo_14
+  - first:
+      213: 2442733011359989173
+    second: armadillo_15
+  - first:
+      213: -322745535552453524
+    second: armadillo_16
+  - first:
+      213: -1149362754486313923
+    second: armadillo_17
+  - first:
+      213: -2638144952038316852
+    second: armadillo_18
+  - first:
+      213: -3246497876184104713
+    second: armadillo_19
+  - first:
+      213: 7445052615705402661
+    second: armadillo_20
+  - first:
+      213: -5971521425624338134
+    second: armadillo_21
+  - first:
+      213: -7201711499160338181
+    second: armadillo_22
+  - first:
+      213: 5073564306214373845
+    second: armadillo_23
+  - first:
+      213: 3077807987606944512
+    second: armadillo_24
+  - first:
+      213: 1378803628899789135
+    second: armadillo_25
+  - first:
+      213: -4462863592736249581
+    second: armadillo_26
+  - first:
+      213: -7704420683501963056
+    second: armadillo_27
+  - first:
+      213: -2808430479613499582
+    second: armadillo_28
+  - first:
+      213: -834404180583257855
+    second: armadillo_29
+  - first:
+      213: 1297593433181103599
+    second: armadillo_30
+  - first:
+      213: -391322391760377795
+    second: armadillo_31
+  - first:
+      213: -6778479830708738694
+    second: armadillo_32
+  - first:
+      213: 736247754921785743
+    second: armadillo_33
+  - first:
+      213: -2200490001617135174
+    second: armadillo_34
+  - first:
+      213: -6345242631075021414
+    second: armadillo_35
+  - first:
+      213: -731044592044159477
+    second: armadillo_36
+  - first:
+      213: 2698047180426479771
+    second: armadillo_37
+  - first:
+      213: 9218201131347713143
+    second: armadillo_38
+  - first:
+      213: 1889582634763182281
+    second: armadillo_39
+  - first:
+      213: -9125760904639406849
+    second: armadillo_40
+  - first:
+      213: -7770706155017531131
+    second: armadillo_41
+  - first:
+      213: -921328162469875212
+    second: armadillo_42
+  - first:
+      213: 8047702107256263851
+    second: armadillo_43
+  - first:
+      213: 2828539035982745221
+    second: armadillo_44
+  - first:
+      213: -8182617086951613054
+    second: armadillo_45
+  - first:
+      213: -6769729167916175826
+    second: armadillo_46
+  - first:
+      213: 6896723609096797686
+    second: armadillo_47
+  - first:
+      213: -1967878579600456507
+    second: armadillo_48
+  - first:
+      213: -6161291123312856221
+    second: armadillo_49
+  - first:
+      213: -1660613980365136672
+    second: armadillo_50
+  - first:
+      213: -1534369689399427972
+    second: armadillo_51
+  - first:
+      213: 7301400589959045660
+    second: armadillo_52
+  - first:
+      213: 6179382309012636316
+    second: armadillo_53
+  - first:
+      213: 6033648444560727142
+    second: armadillo_54
+  - first:
+      213: -4537578692288727250
+    second: armadillo_55
+  - first:
+      213: -192364865770168389
+    second: armadillo_56
+  - first:
+      213: -1575599284771412904
+    second: armadillo_57
+  - first:
+      213: 1625280450674760379
+    second: armadillo_58
+  - first:
+      213: 1074744310951237742
+    second: armadillo_59
+  - first:
+      213: 3638084502147956961
+    second: armadillo_60
+  - first:
+      213: -5046096457768147574
+    second: armadillo_61
+  - first:
+      213: 2833951485827442838
+    second: armadillo_62
+  - first:
+      213: 8496795991698347973
+    second: armadillo_63
+  - first:
+      213: -3330926807399547272
+    second: armadillo_64
+  - first:
+      213: -6232142690222118197
+    second: armadillo_65
+  - first:
+      213: 3335557453802641088
+    second: armadillo_66
+  - first:
+      213: -9018702010508123312
+    second: armadillo_67
+  - first:
+      213: -8249637735097283428
+    second: armadillo_68
+  - first:
+      213: -3554966787938379655
+    second: armadillo_69
+  - first:
+      213: 187254036310296100
+    second: armadillo_70
+  - first:
+      213: 5732201538654908138
+    second: armadillo_71
+  - first:
+      213: 5853582138533318393
+    second: armadillo_72
+  - first:
+      213: 623512633537139775
+    second: armadillo_73
+  - first:
+      213: -6632417222849121017
+    second: armadillo_74
+  - first:
+      213: 3821445763031770101
+    second: armadillo_75
+  - first:
+      213: 3101577465176977690
+    second: armadillo_76
+  - first:
+      213: 4936652088981059183
+    second: armadillo_77
+  - first:
+      213: -6516366025196376941
+    second: armadillo_78
+  - first:
+      213: -7888101222433245829
+    second: armadillo_79
+  - first:
+      213: 5436763505124650025
+    second: armadillo_80
+  - first:
+      213: 9129009132327422324
+    second: armadillo_81
+  - first:
+      213: -5421233568642287277
+    second: armadillo_82
+  - first:
+      213: 2967598772744143848
+    second: armadillo_83
+  - first:
+      213: -1637115476889509991
+    second: armadillo_84
+  - first:
+      213: -7461103492726980653
+    second: armadillo_85
+  - first:
+      213: 2628353420795808300
+    second: armadillo_86
+  - first:
+      213: -5398721506446490680
+    second: armadillo_87
+  - first:
+      213: -5190708390933539896
+    second: armadillo_88
+  - first:
+      213: -6856417013038011731
+    second: armadillo_89
+  - first:
+      213: -8891427073619278825
+    second: armadillo_90
+  - first:
+      213: 1218891864320067350
+    second: armadillo_91
+  - first:
+      213: 4741281141624182236
+    second: armadillo_92
+  - first:
+      213: 8821470515462745476
+    second: armadillo_93
+  - first:
+      213: -9142052831442085266
+    second: armadillo_94
+  - first:
+      213: 5773214847890677707
+    second: armadillo_95
+  - first:
+      213: 6995664185725229222
+    second: armadillo_96
+  - first:
+      213: 7306125600099404944
+    second: armadillo_97
+  - first:
+      213: 3305247736068502718
+    second: armadillo_98
+  - first:
+      213: 3954637427303757115
+    second: armadillo_99
+  - first:
+      213: 6057008521699718782
+    second: armadillo_100
+  - first:
+      213: -1927649203091013743
+    second: armadillo_101
+  - first:
+      213: -8152786097723159356
+    second: armadillo_102
+  - first:
+      213: 1171050302313615897
+    second: armadillo_103
+  - first:
+      213: 5956088266926432065
+    second: armadillo_104
+  - first:
+      213: -8785204749311033496
+    second: armadillo_105
+  - first:
+      213: -5445809906992143134
+    second: armadillo_106
+  - first:
+      213: -2847820811704802635
+    second: armadillo_107
+  - first:
+      213: -3295919075205875006
+    second: armadillo_108
+  - first:
+      213: -7190610034566843970
+    second: armadillo_109
+  - first:
+      213: -4570421808789262097
+    second: armadillo_110
+  - first:
+      213: -5289315323688559529
+    second: armadillo_111
+  - first:
+      213: -3113687082768885151
+    second: armadillo_112
+  - first:
+      213: -8964702132630894525
+    second: armadillo_113
+  - first:
+      213: -678208170585459527
+    second: armadillo_114
+  - first:
+      213: 2606447027857614518
+    second: armadillo_115
+  - first:
+      213: -3648686591327230017
+    second: armadillo_116
+  - first:
+      213: 6899596452061168165
+    second: armadillo_117
+  - first:
+      213: 4179377098668980786
+    second: armadillo_118
+  - first:
+      213: -7421017050772605457
+    second: armadillo_119
+  - first:
+      213: 6823011047904278758
+    second: armadillo_120
+  - first:
+      213: -5669841561737556426
+    second: armadillo_121
+  - first:
+      213: 5439910235007401114
+    second: armadillo_122
+  - first:
+      213: -6716928211092959380
+    second: armadillo_123
+  - first:
+      213: 2151377955225182032
+    second: armadillo_124
+  - first:
+      213: 7236068257985752486
+    second: armadillo_125
+  - first:
+      213: -7718309615870402239
+    second: armadillo_126
+  - first:
+      213: 2131399557831242222
+    second: armadillo_127
+  - first:
+      213: 193217102290575123
+    second: armadillo_128
+  - first:
+      213: 5013641158428661950
+    second: armadillo_129
+  - first:
+      213: 603073803692693203
+    second: armadillo_130
+  - first:
+      213: -7434350132642739095
+    second: armadillo_131
+  - first:
+      213: 2338203500251146753
+    second: armadillo_132
+  - first:
+      213: -8815849188872742475
+    second: armadillo_133
+  - first:
+      213: 9008610518209575924
+    second: armadillo_134
+  - first:
+      213: 203336124918417926
+    second: armadillo_135
+  - first:
+      213: 6007300526037240189
+    second: armadillo_136
+  - first:
+      213: -1731954369209572436
+    second: armadillo_137
+  - first:
+      213: 548289948510242376
+    second: armadillo_138
+  - first:
+      213: -311089382755725243
+    second: armadillo_139
+  - first:
+      213: 2806537306176053075
+    second: armadillo_140
+  - first:
+      213: 5236631832372565673
+    second: armadillo_141
+  - first:
+      213: 2916704567214559229
+    second: armadillo_142
+  - first:
+      213: -3090149456384973751
+    second: armadillo_143
+  - first:
+      213: 4882264023151044262
+    second: armadillo_144
+  - first:
+      213: 4811366858878140167
+    second: armadillo_145
+  - first:
+      213: -4623621232220307352
+    second: armadillo_146
+  - first:
+      213: -677797520597516574
+    second: armadillo_147
+  - first:
+      213: 1281658711690231997
+    second: armadillo_148
+  - first:
+      213: -6062533081042695178
+    second: armadillo_149
+  - first:
+      213: 4485357571974779002
+    second: armadillo_150
+  - first:
+      213: 1744236505760230561
+    second: armadillo_151
+  - first:
+      213: -3627076656000302574
+    second: armadillo_152
+  - first:
+      213: -8329705315508986520
+    second: armadillo_153
+  - first:
+      213: -9108156319935402843
+    second: armadillo_154
+  - first:
+      213: -3789825770675729177
+    second: armadillo_155
+  - first:
+      213: -2814795270120606094
+    second: armadillo_156
+  - first:
+      213: 8947258117716525190
+    second: armadillo_157
+  - first:
+      213: -5588828975254240307
+    second: armadillo_158
+  - first:
+      213: 4369623605121241550
+    second: armadillo_159
+  - first:
+      213: 6475186515699044715
+    second: armadillo_160
+  - first:
+      213: 3250865064982260505
+    second: armadillo_161
+  - first:
+      213: -2844237778766342124
+    second: armadillo_162
+  - first:
+      213: 1359735115563546022
+    second: armadillo_163
+  - first:
+      213: 6311069565981409504
+    second: armadillo_164
+  - first:
+      213: 9020979337133569673
+    second: armadillo_165
+  - first:
+      213: -6118648746177141831
+    second: armadillo_166
+  - first:
+      213: 3150150576552868759
+    second: armadillo_167
+  - first:
+      213: 8457895822354686403
+    second: armadillo_168
+  - first:
+      213: -105193524290572234
+    second: armadillo_169
+  - first:
+      213: -6391094079345796569
+    second: armadillo_170
+  - first:
+      213: 8144009268494750042
+    second: armadillo_171
+  - first:
+      213: 4530398933165638693
+    second: armadillo_172
+  - first:
+      213: 7594320572222236738
+    second: armadillo_173
+  - first:
+      213: -555912624098427552
+    second: armadillo_174
+  - first:
+      213: 1122357565751173926
+    second: armadillo_175
+  - first:
+      213: 5598870091639897447
+    second: armadillo_176
+  - first:
+      213: -8357721442662949223
+    second: armadillo_177
+  - first:
+      213: -6766276604641885862
+    second: armadillo_178
+  - first:
+      213: -1668691255521280701
+    second: armadillo_179
+  - first:
+      213: 8184448569713029170
+    second: armadillo_180
+  - first:
+      213: -72918555557643106
+    second: armadillo_181
+  - first:
+      213: -5042126855441452675
+    second: armadillo_182
+  - first:
+      213: -8110868614655377139
+    second: armadillo_183
+  - first:
+      213: 4936347474052572528
+    second: armadillo_184
+  - first:
+      213: 6266608539225217345
+    second: armadillo_185
+  - first:
+      213: -4113186129887108968
+    second: armadillo_186
+  - first:
+      213: -9078635611577219940
+    second: armadillo_187
+  - first:
+      213: 6705713655375880487
+    second: armadillo_188
+  - first:
+      213: -1228432261150425516
+    second: armadillo_189
+  - first:
+      213: 5094490344978382019
+    second: armadillo_190
+  - first:
+      213: -1632062736570138370
+    second: armadillo_191
+  - first:
+      213: 3595648600452568950
+    second: armadillo_192
+  - first:
+      213: 836859480732774005
+    second: armadillo_193
+  - first:
+      213: 7139670218442687528
+    second: armadillo_194
+  - first:
+      213: 5015774066425772262
+    second: armadillo_195
+  - first:
+      213: -6638681512930612852
+    second: armadillo_196
+  - first:
+      213: -8718715194055013206
+    second: armadillo_197
+  - first:
+      213: -6052043697731258994
+    second: armadillo_198
+  - first:
+      213: -4307471344731250820
+    second: armadillo_199
+  - first:
+      213: 5672312566532595806
+    second: armadillo_200
+  - first:
+      213: 7591801915891669489
+    second: armadillo_201
+  - first:
+      213: 6518307649064310172
+    second: armadillo_202
+  - first:
+      213: 5603180045946856768
+    second: armadillo_203
+  - first:
+      213: -1257646362005178787
+    second: armadillo_204
+  - first:
+      213: -1173166557491085688
+    second: armadillo_205
+  - first:
+      213: 2338630092136410294
+    second: armadillo_206
+  - first:
+      213: -6578767550976601821
+    second: armadillo_207
+  - first:
+      213: 8261168587171330982
+    second: armadillo_208
+  - first:
+      213: 5252644649658644972
+    second: armadillo_209
+  - first:
+      213: -3384885743606886604
+    second: armadillo_210
+  - first:
+      213: 970819211534338793
+    second: armadillo_211
+  - first:
+      213: 3821214853209951592
+    second: armadillo_212
+  - first:
+      213: 8130332828212983914
+    second: armadillo_213
+  - first:
+      213: -2079957017275640144
+    second: armadillo_214
+  - first:
+      213: 1241522911945786337
+    second: armadillo_215
+  - first:
+      213: 8399522508171262475
+    second: armadillo_216
+  - first:
+      213: -315523969213680038
+    second: armadillo_217
+  - first:
+      213: -8540753156690084546
+    second: armadillo_218
+  - first:
+      213: -1149269461871921991
+    second: armadillo_219
+  - first:
+      213: -652348645567049202
+    second: armadillo_220
+  - first:
+      213: -7312452591735514832
+    second: armadillo_221
+  - first:
+      213: 5373117930746864174
+    second: armadillo_222
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: armadillo_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 17149
+        width: 592
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7b3eafecd737c80800000000000000
+      internalID: -8326172958151952395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_1
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 17148
+        width: 628
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb49ffa01d642700800000000000000
+      internalID: 514656175866334182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_2
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 17148
+        width: 628
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae40c99a9ee5e950800000000000000
+      internalID: 6477845986814217903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_3
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 17203
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c593f3bb21c8dd400800000000000000
+      internalID: 350590358083549532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_4
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 17148
+        width: 586
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086956b14b72010f0800000000000000
+      internalID: -1148374250472237440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_5
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 17147
+        width: 595
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb9d7b49560fb100800000000000000
+      internalID: 125826295178042315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_6
+      rect:
+        serializedVersion: 2
+        x: 3248
+        y: 17203
+        width: 38
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00b622be49762690800000000000000
+      internalID: -7627275540002066420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_7
+      rect:
+        serializedVersion: 2
+        x: 3267
+        y: 17207
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb48dcdb6fbcd2f0800000000000000
+      internalID: -946671351667078161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_8
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 17170
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a59ad4750e81460800000000000000
+      internalID: 7212761468803570307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_9
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 17168
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9fb88e9319db720800000000000000
+      internalID: 2863604615978154414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 16738
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5df0bebdb1469000800000000000000
+      internalID: 42293529710493020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 16692
+        width: 637
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d69db175dc74e4d0800000000000000
+      internalID: -3106220586800671024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_12
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 16697
+        width: 638
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ca5a309643f5250800000000000000
+      internalID: 5935520459535002756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_13
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 16697
+        width: 631
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab45c7f59f8ea5f90800000000000000
+      internalID: -6963997716028566342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_14
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 16741
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4995a0cc4ab721990800000000000000
+      internalID: -7416729688597702252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_15
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 16697
+        width: 640
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd7b3f4bb456e120800000000000000
+      internalID: 2442733011359989173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_16
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 16691
+        width: 643
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c648d8835a0658bf0800000000000000
+      internalID: -322745535552453524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16241
+        width: 642
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c57c41aa4ac00f0800000000000000
+      internalID: -1149362754486313923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 16267
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc424c3c42d636bd0800000000000000
+      internalID: -2638144952038316852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_19
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 16247
+        width: 622
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f08cfdd16f12f2d0800000000000000
+      internalID: -3246497876184104713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_20
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 16247
+        width: 635
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d963d88e3225760800000000000000
+      internalID: 7445052615705402661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_21
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 16239
+        width: 645
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21f601e6e4e02da0800000000000000
+      internalID: -5971521425624338134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_22
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 16239
+        width: 646
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0c3bd3c816e0c90800000000000000
+      internalID: -7201711499160338181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15791
+        width: 645
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d942090bdbe86640800000000000000
+      internalID: 5073564306214373845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_24
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 15797
+        width: 644
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bfb2cce0296ba20800000000000000
+      internalID: 3077807987606944512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_25
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 15797
+        width: 615
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f496793689e722310800000000000000
+      internalID: 1378803628899789135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_26
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 15791
+        width: 646
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319aee92539b012c0800000000000000
+      internalID: -4462863592736249581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_27
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 15791
+        width: 645
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d871b74536641590800000000000000
+      internalID: -7704420683501963056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15342
+        width: 643
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247e146cb537609d0800000000000000
+      internalID: -2808430479613499582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_29
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 15348
+        width: 644
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109eb3191d99b64f0800000000000000
+      internalID: -834404180583257855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_30
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 15349
+        width: 643
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5a3af3a5af10210800000000000000
+      internalID: 1297593433181103599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_31
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 15349
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d386776ab5eb19af0800000000000000
+      internalID: -391322391760377795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_32
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 15347
+        width: 642
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75a47502800ee1a0800000000000000
+      internalID: -6778479830708738694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_33
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 14902
+        width: 624
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89bacaae6da73a00800000000000000
+      internalID: 736247754921785743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_34
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 14957
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9dfc1900a4671e0800000000000000
+      internalID: -2200490001617135174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_35
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 14903
+        width: 639
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9dbb11127b21f7a0800000000000000
+      internalID: -6345242631075021414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_36
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 14952
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ecc3811decad5f0800000000000000
+      internalID: -731044592044159477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_37
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 14904
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b988090ad93617520800000000000000
+      internalID: 2698047180426479771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_38
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 14906
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c951eb611adef70800000000000000
+      internalID: 9218201131347713143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_39
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 14907
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c06ec61565293a10800000000000000
+      internalID: 1889582634763182281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14458
+        width: 640
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc12ddbec8ca5180800000000000000
+      internalID: -9125760904639406849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_41
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 14459
+        width: 641
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5011d384ce7e82490800000000000000
+      internalID: -7770706155017531131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_42
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 14486
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f17b6aeae8c633f0800000000000000
+      internalID: -921328162469875212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_43
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 14460
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba41c219d6e2faf60800000000000000
+      internalID: 8047702107256263851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_44
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 14462
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ec319544df04720800000000000000
+      internalID: 2828539035982745221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_45
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 14463
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d153fdc11817e80800000000000000
+      internalID: -8182617086951613054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14014
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e61c870371d02a0800000000000000
+      internalID: -6769729167916175826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_47
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 14015
+        width: 643
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdb342059516bf50800000000000000
+      internalID: 6896723609096797686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_48
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 14016
+        width: 643
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c480ddabd0b0b4e0800000000000000
+      internalID: -1967878579600456507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_49
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 14017
+        width: 643
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3637b250e52be7aa0800000000000000
+      internalID: -6161291123312856221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_50
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 14018
+        width: 643
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecd947126054f8e0800000000000000
+      internalID: -1660613980365136672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13569
+        width: 643
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c783d95e2d4bae0800000000000000
+      internalID: -1534369689399427972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_52
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 13569
+        width: 630
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12265fe629c35560800000000000000
+      internalID: 7301400589959045660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_53
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 13635
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c920804687391c550800000000000000
+      internalID: 6179382309012636316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_54
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 13632
+        width: 36
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c51adea43dbb350800000000000000
+      internalID: 6033648444560727142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_55
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 13570
+        width: 628
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27bfb178384701c0800000000000000
+      internalID: -4537578692288727250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_56
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 13570
+        width: 645
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfd08c7c25945df0800000000000000
+      internalID: -192364865770168389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_57
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 13570
+        width: 645
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85427d26cc8522ae0800000000000000
+      internalID: -1575599284771412904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_58
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 13614
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba1bd275f72e8610800000000000000
+      internalID: 1625280450674760379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13120
+        width: 644
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68de9ea1424aee00800000000000000
+      internalID: 1074744310951237742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_60
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 13120
+        width: 646
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0026d44921d7230800000000000000
+      internalID: 3638084502147956961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_61
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 13119
+        width: 646
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a856f5cc10aa8f9b0800000000000000
+      internalID: -5046096457768147574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_62
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 13119
+        width: 646
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6986f678cd7345720800000000000000
+      internalID: 2833951485827442838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_63
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 13118
+        width: 647
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7942ebfeeaae570800000000000000
+      internalID: 8496795991698347973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_64
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 12668
+        width: 620
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ebf1877bb26c1d0800000000000000
+      internalID: -3330926807399547272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_65
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 12667
+        width: 644
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca63c71e3bf289a0800000000000000
+      internalID: -6232142690222118197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_66
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 12666
+        width: 646
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c610d9e4d74a4e20800000000000000
+      internalID: 3335557453802641088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_67
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 12665
+        width: 645
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053ef88fd4227d280800000000000000
+      internalID: -9018702010508123312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_68
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 12665
+        width: 644
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c4ed93036638d80800000000000000
+      internalID: -8249637735097283428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_69
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 12214
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9781f989a883aaec0800000000000000
+      internalID: -3554966787938379655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_70
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 12213
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426880dcd82499200800000000000000
+      internalID: 187254036310296100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_71
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 12212
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee297ccdeedc8f40800000000000000
+      internalID: 5732201538654908138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_72
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 12211
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe89def0f91c3150800000000000000
+      internalID: 5853582138533318393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_73
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 12210
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3413facf6927a800800000000000000
+      internalID: 623512633537139775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_74
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 11759
+        width: 620
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70535e50dabe4f3a0800000000000000
+      internalID: -6632417222849121017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_75
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 11758
+        width: 645
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f32ee1bca0880530800000000000000
+      internalID: 3821445763031770101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_76
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 11757
+        width: 647
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11fa3f85440b0b20800000000000000
+      internalID: 3101577465176977690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_77
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 11756
+        width: 648
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66f76f5be2828440800000000000000
+      internalID: 4936652088981059183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_78
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 11755
+        width: 649
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ceeb110a73195a0800000000000000
+      internalID: -6516366025196376941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_79
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 11305
+        width: 618
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75ba8c2bb5d78290800000000000000
+      internalID: -7888101222433245829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_80
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 11304
+        width: 649
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c23ca4a93437b40800000000000000
+      internalID: 5436763505124650025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_81
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 11302
+        width: 650
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4794ca33071c0be70800000000000000
+      internalID: 9129009132327422324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_82
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 11302
+        width: 650
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35937a0dac8e3c4b0800000000000000
+      internalID: -5421233568642287277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_83
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 11301
+        width: 649
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3cc4d5c570f2920800000000000000
+      internalID: 2967598772744143848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10851
+        width: 648
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fd4b7c52cc749e0800000000000000
+      internalID: -1637115476889509991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_85
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 10846
+        width: 647
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dff49b67e5d47890800000000000000
+      internalID: -7461103492726980653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_86
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 10845
+        width: 645
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a87b6b289c97420800000000000000
+      internalID: 2628353420795808300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_87
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 10846
+        width: 644
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3cefeb463e315b0800000000000000
+      internalID: -5398721506446490680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_88
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 10849
+        width: 643
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c354c15836e6f7b0800000000000000
+      internalID: -5190708390933539896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10398
+        width: 641
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daaace1bd0d19d0a0800000000000000
+      internalID: -6856417013038011731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_90
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 10393
+        width: 642
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714c1a27f2e4b9480800000000000000
+      internalID: -8891427073619278825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_91
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 10389
+        width: 643
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617496051bf5ae010800000000000000
+      internalID: 1218891864320067350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_92
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 10391
+        width: 643
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd594c2f31a6cc140800000000000000
+      internalID: 4741281141624182236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_93
+      rect:
+        serializedVersion: 2
+        x: 3218
+        y: 10398
+        width: 624
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d2db612b82c6a70800000000000000
+      internalID: 8821470515462745476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9948
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a5a00f267e02180800000000000000
+      internalID: -9142052831442085266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_95
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 9939
+        width: 644
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfd88cf0549e1050800000000000000
+      internalID: 5773214847890677707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_96
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 9939
+        width: 644
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a813162387951160800000000000000
+      internalID: 6995664185725229222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_97
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 9945
+        width: 640
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c00561682946560800000000000000
+      internalID: 7306125600099404944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_98
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 9947
+        width: 622
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4f603dd499edd20800000000000000
+      internalID: 3305247736068502718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9495
+        width: 645
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35b7ed99c1b1e630800000000000000
+      internalID: 3954637427303757115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_100
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 9489
+        width: 646
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76fc69b821de0450800000000000000
+      internalID: 6057008521699718782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_101
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 9489
+        width: 647
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ff13e434d9f35e0800000000000000
+      internalID: -1927649203091013743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_102
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 9495
+        width: 647
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccc77b4d3c7bde80800000000000000
+      internalID: -8152786097723159356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_103
+      rect:
+        serializedVersion: 2
+        x: 3221
+        y: 9498
+        width: 625
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9125483ab08604010800000000000000
+      internalID: 1171050302313615897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_104
+      rect:
+        serializedVersion: 2
+        x: 3227
+        y: 9546
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f9509d8b648a250800000000000000
+      internalID: 5956088266926432065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_105
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 9495
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fbd3693dea41680800000000000000
+      internalID: -8785204749311033496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_106
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 9495
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e42e632eb89c64b0800000000000000
+      internalID: -5445809906992143134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_107
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 9493
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2ee566f028a78d0800000000000000
+      internalID: -2847820811704802635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9048
+        width: 647
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca7be9401b8242d0800000000000000
+      internalID: -3295919075205875006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_109
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 9048
+        width: 647
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1b8436542d53c90800000000000000
+      internalID: -7190610034566843970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_110
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 9050
+        width: 647
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0fa6d74999290c0800000000000000
+      internalID: -4570421808789262097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_111
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 9053
+        width: 646
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c5382bcb39896b0800000000000000
+      internalID: -5289315323688559529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_112
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 9054
+        width: 645
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a96d16816f9c4d0800000000000000
+      internalID: -3113687082768885151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_113
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8605
+        width: 644
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348495b48eaf69380800000000000000
+      internalID: -8964702132630894525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_114
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 8606
+        width: 644
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b47c7c13458696f0800000000000000
+      internalID: -678208170585459527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_115
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 8607
+        width: 643
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6635523c5fb2420800000000000000
+      internalID: 2606447027857614518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_116
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 8609
+        width: 642
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7a53370e24d5dc0800000000000000
+      internalID: -3648686591327230017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_117
+      rect:
+        serializedVersion: 2
+        x: 3233
+        y: 8610
+        width: 607
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522c6a2ea6a40cf50800000000000000
+      internalID: 6899596452061168165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8195
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a3194f351200a30800000000000000
+      internalID: 4179377098668980786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_119
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 8161
+        width: 636
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5f4908f40430990800000000000000
+      internalID: -7421017050772605457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_120
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 8162
+        width: 639
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e876e0f56430be50800000000000000
+      internalID: 6823011047904278758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_121
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 8163
+        width: 640
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e03e3c32da051b0800000000000000
+      internalID: -5669841561737556426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_122
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 8164
+        width: 640
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9cb0af69817e7b40800000000000000
+      internalID: 5439910235007401114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_123
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 8165
+        width: 640
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f010c316da8c2a0800000000000000
+      internalID: -6716928211092959380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7774
+        width: 46
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f9dce0ada3bdd10800000000000000
+      internalID: 2151377955225182032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_125
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 7781
+        width: 44
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad68b70ebdab6460800000000000000
+      internalID: 7236068257985752486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_126
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 7716
+        width: 609
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14120973c4e03e490800000000000000
+      internalID: -7718309615870402239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_127
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 7717
+        width: 641
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1b4feea90449d10800000000000000
+      internalID: 2131399557831242222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_128
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 7718
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f5f8a4ee17ea200800000000000000
+      internalID: 193217102290575123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_129
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 7719
+        width: 643
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb81b67f118049540800000000000000
+      internalID: 5013641158428661950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_130
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 7720
+        width: 645
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d65272ed6c8e5800800000000000000
+      internalID: 603073803692693203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_131
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7753
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c83f771f1e3d890800000000000000
+      internalID: -7434350132642739095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7270
+        width: 644
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a6b05f1b7f27020800000000000000
+      internalID: 2338203500251146753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_133
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 7271
+        width: 647
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b913dffedfc7a580800000000000000
+      internalID: -8815849188872742475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_134
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 7271
+        width: 646
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fbbab16983050d70800000000000000
+      internalID: 9008610518209575924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_135
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 7271
+        width: 647
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a44c7d02562d200800000000000000
+      internalID: 203336124918417926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_136
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 7270
+        width: 647
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79877910083e5350800000000000000
+      internalID: 6007300526037240189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_137
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 7338
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3e3107dacd6f7e0800000000000000
+      internalID: -1731954369209572436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_138
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 7314
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 846cede9dcaeb9700800000000000000
+      internalID: 548289948510242376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_139
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6820
+        width: 646
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5401377cad9ceabf0800000000000000
+      internalID: -311089382755725243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_140
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 6819
+        width: 647
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f518f6fc2d2f620800000000000000
+      internalID: 2806537306176053075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_141
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 6819
+        width: 631
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6d11c18e04ca840800000000000000
+      internalID: 5236631832372565673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_142
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 6818
+        width: 647
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff459bb9573a7820800000000000000
+      internalID: 2916704567214559229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_143
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 6817
+        width: 647
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 944ae4511759d15d0800000000000000
+      internalID: -3090149456384973751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6366
+        width: 645
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6669ff24941c340800000000000000
+      internalID: 4882264023151044262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_145
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 6365
+        width: 645
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fb48b9aa865c240800000000000000
+      internalID: 4811366858878140167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_146
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 6364
+        width: 623
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8600e8d7cf895dfb0800000000000000
+      internalID: -4623621232220307352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_147
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 6364
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eef4230fbaf796f0800000000000000
+      internalID: -677797520597516574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_148
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 6363
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0c499cecd59c110800000000000000
+      internalID: 1281658711690231997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_149
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5912
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb4561984e8ddba0800000000000000
+      internalID: -6062533081042695178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_150
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5911
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a705a2082f03f3e30800000000000000
+      internalID: 4485357571974779002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_151
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5963
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac6b125cd5c43810800000000000000
+      internalID: 1744236505760230561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_152
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 5909
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2128df99ff80aadc0800000000000000
+      internalID: -3627076656000302574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_153
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 5908
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d5761f521f66c80800000000000000
+      internalID: -8329705315508986520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_154
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 5907
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac65878514599180800000000000000
+      internalID: -9108156319935402843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_155
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 5945
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec804a7a85d76bc0800000000000000
+      internalID: -3789825770675729177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_156
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 5934
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276f2018d96dfe8d0800000000000000
+      internalID: -2814795270120606094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_157
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 5932
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680493c7adb0b2c70800000000000000
+      internalID: 8947258117716525190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_158
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5456
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc38f8b68ad7072b0800000000000000
+      internalID: -5588828975254240307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_159
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 5455
+        width: 637
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1d961848504ac30800000000000000
+      internalID: 4369623605121241550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_160
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 5454
+        width: 625
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6114aa34db7cd950800000000000000
+      internalID: 6475186515699044715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_161
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 5453
+        width: 644
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91baef28d846d1d20800000000000000
+      internalID: 3250865064982260505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_162
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 5452
+        width: 644
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 418d2e34fcc3788d0800000000000000
+      internalID: -2844237778766342124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_163
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5001
+        width: 644
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a53ac722efbed210800000000000000
+      internalID: 1359735115563546022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_164
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5000
+        width: 645
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0c911355c659750800000000000000
+      internalID: 6311069565981409504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_165
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 5000
+        width: 645
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9863cf379e4f03d70800000000000000
+      internalID: 9020979337133569673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_166
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 4991
+        width: 645
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3e8b22261361ba0800000000000000
+      internalID: -6118648746177141831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_167
+      rect:
+        serializedVersion: 2
+        x: 2452
+        y: 4995
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bfc68524597bb20800000000000000
+      internalID: 3150150576552868759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_168
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 4998
+        width: 630
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c126b6407b706570800000000000000
+      internalID: 8457895822354686403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_169
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 4548
+        width: 636
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6303df70c074a8ef0800000000000000
+      internalID: -105193524290572234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_170
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 4545
+        width: 646
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72add7adbc54e47a0800000000000000
+      internalID: -6391094079345796569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_171
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 4544
+        width: 645
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a515e18e745550170800000000000000
+      internalID: 8144009268494750042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_172
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 4548
+        width: 640
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524852e93d53fde30800000000000000
+      internalID: 4530398933165638693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_173
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 4548
+        width: 640
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2486fb1f252746960800000000000000
+      internalID: 7594320572222236738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_174
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4089
+        width: 644
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d357ae9600948f0800000000000000
+      internalID: -555912624098427552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_175
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 4091
+        width: 644
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6232291724a639f00800000000000000
+      internalID: 1122357565751173926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_176
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 4089
+        width: 644
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d31cb2fae23bd40800000000000000
+      internalID: 5598870091639897447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_177
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 4097
+        width: 643
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ed86601a8630c80800000000000000
+      internalID: -8357721442662949223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_178
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 4097
+        width: 633
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51c840074b5912a0800000000000000
+      internalID: -6766276604641885862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_179
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 4151
+        width: 33
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d7adae42e97d8e0800000000000000
+      internalID: -1668691255521280701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3637
+        width: 644
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230f2307c90059170800000000000000
+      internalID: 8184448569713029170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_181
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 3643
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9cb376c5f0fcfef0800000000000000
+      internalID: -72918555557643106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_182
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 3637
+        width: 645
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7174fcd654c60ab0800000000000000
+      internalID: -5042126855441452675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_183
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 3647
+        width: 641
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d010a9bd7f7607f80800000000000000
+      internalID: -8110868614655377139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_184
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 3645
+        width: 644
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075ecceafdd618440800000000000000
+      internalID: 4936347474052572528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_185
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 3643
+        width: 647
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149d2f6b34777f650800000000000000
+      internalID: 6266608539225217345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_186
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3193
+        width: 646
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890e309e1070be6c0800000000000000
+      internalID: -4113186129887108968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_187
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 3191
+        width: 647
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c948abe0305320280800000000000000
+      internalID: -9078635611577219940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_188
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 3191
+        width: 647
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7216a2a8a0b7f0d50800000000000000
+      internalID: 6705713655375880487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_189
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 3197
+        width: 623
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ebf73fd5bb3fee0800000000000000
+      internalID: -1228432261150425516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_190
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 3187
+        width: 647
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ccf71c1af343b640800000000000000
+      internalID: 5094490344978382019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_191
+      rect:
+        serializedVersion: 2
+        x: 3257
+        y: 3193
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0c59f869fb959e0800000000000000
+      internalID: -1632062736570138370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_192
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2735
+        width: 646
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6771b1ff95f46e130800000000000000
+      internalID: 3595648600452568950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_193
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 2739
+        width: 646
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57eaefb834f1d9b00800000000000000
+      internalID: 836859480732774005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_194
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 2747
+        width: 640
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82446bf6c34351360800000000000000
+      internalID: 7139670218442687528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_195
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 2747
+        width: 645
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8bcee40fb9b9540800000000000000
+      internalID: 5015774066425772262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_196
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 2737
+        width: 644
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8961d4565aaed3a0800000000000000
+      internalID: -6638681512930612852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_197
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2289
+        width: 1442
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaccc8889b6e00780800000000000000
+      internalID: -8718715194055013206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_198
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 2289
+        width: 643
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85369f6252d20ca0800000000000000
+      internalID: -6052043697731258994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_199
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 2291
+        width: 643
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f9e1942a9c834c0800000000000000
+      internalID: -4307471344731250820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_200
+      rect:
+        serializedVersion: 2
+        x: 3205
+        y: 2297
+        width: 637
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50e82fd93a18be40800000000000000
+      internalID: 5672312566532595806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_201
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1850
+        width: 626
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f95ad19e9f7b5960800000000000000
+      internalID: 7591801915891669489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_202
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1850
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c959037754ea57a50800000000000000
+      internalID: 6518307649064310172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_203
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1845
+        width: 642
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045283b909e72cd40800000000000000
+      internalID: 5603180045946856768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_204
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1847
+        width: 642
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d567e9b0c41fb8ee0800000000000000
+      internalID: -1257646362005178787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_205
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1854
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e306e4b3318bfe0800000000000000
+      internalID: -1173166557491085688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_206
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1405
+        width: 638
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc64de9dab747020800000000000000
+      internalID: 2338630092136410294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_207
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1406
+        width: 639
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3215c28a4c583b4a0800000000000000
+      internalID: -6578767550976601821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_208
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1408
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab76fb7f0195a270800000000000000
+      internalID: 8261168587171330982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_209
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1409
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9724aaa7425e840800000000000000
+      internalID: 5252644649658644972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_210
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1410
+        width: 641
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f070f99587601d0800000000000000
+      internalID: -3384885743606886604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_211
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 961
+        width: 640
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea01a4edea097d00800000000000000
+      internalID: 970819211534338793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_212
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 962
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d8600d9aea70530800000000000000
+      internalID: 3821214853209951592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_213
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 963
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68f45381aeb4d070800000000000000
+      internalID: 8130332828212983914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_214
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 964
+        width: 642
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b65435ec128223e0800000000000000
+      internalID: -2079957017275640144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_215
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 966
+        width: 642
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e38903b286ca3110800000000000000
+      internalID: 1241522911945786337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_216
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 517
+        width: 642
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a3276f739119470800000000000000
+      internalID: 8399522508171262475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_217
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 517
+        width: 643
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56b5e82f980f9bf0800000000000000
+      internalID: -315523969213680038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_218
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 518
+        width: 634
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3df03d3146297980800000000000000
+      internalID: -8540753156690084546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_219
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 519
+        width: 644
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b47be57389fc00f0800000000000000
+      internalID: -1149269461871921991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_220
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 519
+        width: 645
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e02d447fc5462f6f0800000000000000
+      internalID: -652348645567049202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_221
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 69
+        width: 641
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03958b06c13f48a90800000000000000
+      internalID: -7312452591735514832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armadillo_222
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 69
+        width: 642
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22e27e3a46219a40800000000000000
+      internalID: 5373117930746864174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      armadillo_0: -8326172958151952395
+      armadillo_1: 514656175866334182
+      armadillo_10: 42293529710493020
+      armadillo_100: 6057008521699718782
+      armadillo_101: -1927649203091013743
+      armadillo_102: -8152786097723159356
+      armadillo_103: 1171050302313615897
+      armadillo_104: 5956088266926432065
+      armadillo_105: -8785204749311033496
+      armadillo_106: -5445809906992143134
+      armadillo_107: -2847820811704802635
+      armadillo_108: -3295919075205875006
+      armadillo_109: -7190610034566843970
+      armadillo_11: -3106220586800671024
+      armadillo_110: -4570421808789262097
+      armadillo_111: -5289315323688559529
+      armadillo_112: -3113687082768885151
+      armadillo_113: -8964702132630894525
+      armadillo_114: -678208170585459527
+      armadillo_115: 2606447027857614518
+      armadillo_116: -3648686591327230017
+      armadillo_117: 6899596452061168165
+      armadillo_118: 4179377098668980786
+      armadillo_119: -7421017050772605457
+      armadillo_12: 5935520459535002756
+      armadillo_120: 6823011047904278758
+      armadillo_121: -5669841561737556426
+      armadillo_122: 5439910235007401114
+      armadillo_123: -6716928211092959380
+      armadillo_124: 2151377955225182032
+      armadillo_125: 7236068257985752486
+      armadillo_126: -7718309615870402239
+      armadillo_127: 2131399557831242222
+      armadillo_128: 193217102290575123
+      armadillo_129: 5013641158428661950
+      armadillo_13: -6963997716028566342
+      armadillo_130: 603073803692693203
+      armadillo_131: -7434350132642739095
+      armadillo_132: 2338203500251146753
+      armadillo_133: -8815849188872742475
+      armadillo_134: 9008610518209575924
+      armadillo_135: 203336124918417926
+      armadillo_136: 6007300526037240189
+      armadillo_137: -1731954369209572436
+      armadillo_138: 548289948510242376
+      armadillo_139: -311089382755725243
+      armadillo_14: -7416729688597702252
+      armadillo_140: 2806537306176053075
+      armadillo_141: 5236631832372565673
+      armadillo_142: 2916704567214559229
+      armadillo_143: -3090149456384973751
+      armadillo_144: 4882264023151044262
+      armadillo_145: 4811366858878140167
+      armadillo_146: -4623621232220307352
+      armadillo_147: -677797520597516574
+      armadillo_148: 1281658711690231997
+      armadillo_149: -6062533081042695178
+      armadillo_15: 2442733011359989173
+      armadillo_150: 4485357571974779002
+      armadillo_151: 1744236505760230561
+      armadillo_152: -3627076656000302574
+      armadillo_153: -8329705315508986520
+      armadillo_154: -9108156319935402843
+      armadillo_155: -3789825770675729177
+      armadillo_156: -2814795270120606094
+      armadillo_157: 8947258117716525190
+      armadillo_158: -5588828975254240307
+      armadillo_159: 4369623605121241550
+      armadillo_16: -322745535552453524
+      armadillo_160: 6475186515699044715
+      armadillo_161: 3250865064982260505
+      armadillo_162: -2844237778766342124
+      armadillo_163: 1359735115563546022
+      armadillo_164: 6311069565981409504
+      armadillo_165: 9020979337133569673
+      armadillo_166: -6118648746177141831
+      armadillo_167: 3150150576552868759
+      armadillo_168: 8457895822354686403
+      armadillo_169: -105193524290572234
+      armadillo_17: -1149362754486313923
+      armadillo_170: -6391094079345796569
+      armadillo_171: 8144009268494750042
+      armadillo_172: 4530398933165638693
+      armadillo_173: 7594320572222236738
+      armadillo_174: -555912624098427552
+      armadillo_175: 1122357565751173926
+      armadillo_176: 5598870091639897447
+      armadillo_177: -8357721442662949223
+      armadillo_178: -6766276604641885862
+      armadillo_179: -1668691255521280701
+      armadillo_18: -2638144952038316852
+      armadillo_180: 8184448569713029170
+      armadillo_181: -72918555557643106
+      armadillo_182: -5042126855441452675
+      armadillo_183: -8110868614655377139
+      armadillo_184: 4936347474052572528
+      armadillo_185: 6266608539225217345
+      armadillo_186: -4113186129887108968
+      armadillo_187: -9078635611577219940
+      armadillo_188: 6705713655375880487
+      armadillo_189: -1228432261150425516
+      armadillo_19: -3246497876184104713
+      armadillo_190: 5094490344978382019
+      armadillo_191: -1632062736570138370
+      armadillo_192: 3595648600452568950
+      armadillo_193: 836859480732774005
+      armadillo_194: 7139670218442687528
+      armadillo_195: 5015774066425772262
+      armadillo_196: -6638681512930612852
+      armadillo_197: -8718715194055013206
+      armadillo_198: -6052043697731258994
+      armadillo_199: -4307471344731250820
+      armadillo_2: 6477845986814217903
+      armadillo_20: 7445052615705402661
+      armadillo_200: 5672312566532595806
+      armadillo_201: 7591801915891669489
+      armadillo_202: 6518307649064310172
+      armadillo_203: 5603180045946856768
+      armadillo_204: -1257646362005178787
+      armadillo_205: -1173166557491085688
+      armadillo_206: 2338630092136410294
+      armadillo_207: -6578767550976601821
+      armadillo_208: 8261168587171330982
+      armadillo_209: 5252644649658644972
+      armadillo_21: -5971521425624338134
+      armadillo_210: -3384885743606886604
+      armadillo_211: 970819211534338793
+      armadillo_212: 3821214853209951592
+      armadillo_213: 8130332828212983914
+      armadillo_214: -2079957017275640144
+      armadillo_215: 1241522911945786337
+      armadillo_216: 8399522508171262475
+      armadillo_217: -315523969213680038
+      armadillo_218: -8540753156690084546
+      armadillo_219: -1149269461871921991
+      armadillo_22: -7201711499160338181
+      armadillo_220: -652348645567049202
+      armadillo_221: -7312452591735514832
+      armadillo_222: 5373117930746864174
+      armadillo_23: 5073564306214373845
+      armadillo_24: 3077807987606944512
+      armadillo_25: 1378803628899789135
+      armadillo_26: -4462863592736249581
+      armadillo_27: -7704420683501963056
+      armadillo_28: -2808430479613499582
+      armadillo_29: -834404180583257855
+      armadillo_3: 350590358083549532
+      armadillo_30: 1297593433181103599
+      armadillo_31: -391322391760377795
+      armadillo_32: -6778479830708738694
+      armadillo_33: 736247754921785743
+      armadillo_34: -2200490001617135174
+      armadillo_35: -6345242631075021414
+      armadillo_36: -731044592044159477
+      armadillo_37: 2698047180426479771
+      armadillo_38: 9218201131347713143
+      armadillo_39: 1889582634763182281
+      armadillo_4: -1148374250472237440
+      armadillo_40: -9125760904639406849
+      armadillo_41: -7770706155017531131
+      armadillo_42: -921328162469875212
+      armadillo_43: 8047702107256263851
+      armadillo_44: 2828539035982745221
+      armadillo_45: -8182617086951613054
+      armadillo_46: -6769729167916175826
+      armadillo_47: 6896723609096797686
+      armadillo_48: -1967878579600456507
+      armadillo_49: -6161291123312856221
+      armadillo_5: 125826295178042315
+      armadillo_50: -1660613980365136672
+      armadillo_51: -1534369689399427972
+      armadillo_52: 7301400589959045660
+      armadillo_53: 6179382309012636316
+      armadillo_54: 6033648444560727142
+      armadillo_55: -4537578692288727250
+      armadillo_56: -192364865770168389
+      armadillo_57: -1575599284771412904
+      armadillo_58: 1625280450674760379
+      armadillo_59: 1074744310951237742
+      armadillo_6: -7627275540002066420
+      armadillo_60: 3638084502147956961
+      armadillo_61: -5046096457768147574
+      armadillo_62: 2833951485827442838
+      armadillo_63: 8496795991698347973
+      armadillo_64: -3330926807399547272
+      armadillo_65: -6232142690222118197
+      armadillo_66: 3335557453802641088
+      armadillo_67: -9018702010508123312
+      armadillo_68: -8249637735097283428
+      armadillo_69: -3554966787938379655
+      armadillo_7: -946671351667078161
+      armadillo_70: 187254036310296100
+      armadillo_71: 5732201538654908138
+      armadillo_72: 5853582138533318393
+      armadillo_73: 623512633537139775
+      armadillo_74: -6632417222849121017
+      armadillo_75: 3821445763031770101
+      armadillo_76: 3101577465176977690
+      armadillo_77: 4936652088981059183
+      armadillo_78: -6516366025196376941
+      armadillo_79: -7888101222433245829
+      armadillo_8: 7212761468803570307
+      armadillo_80: 5436763505124650025
+      armadillo_81: 9129009132327422324
+      armadillo_82: -5421233568642287277
+      armadillo_83: 2967598772744143848
+      armadillo_84: -1637115476889509991
+      armadillo_85: -7461103492726980653
+      armadillo_86: 2628353420795808300
+      armadillo_87: -5398721506446490680
+      armadillo_88: -5190708390933539896
+      armadillo_89: -6856417013038011731
+      armadillo_9: 2863604615978154414
+      armadillo_90: -8891427073619278825
+      armadillo_91: 1218891864320067350
+      armadillo_92: 4741281141624182236
+      armadillo_93: 8821470515462745476
+      armadillo_94: -9142052831442085266
+      armadillo_95: 5773214847890677707
+      armadillo_96: 6995664185725229222
+      armadillo_97: 7306125600099404944
+      armadillo_98: 3305247736068502718
+      armadillo_99: 3954637427303757115
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

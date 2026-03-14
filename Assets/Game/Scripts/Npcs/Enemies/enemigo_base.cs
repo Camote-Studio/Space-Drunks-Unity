@@ -5,7 +5,7 @@ using System;
 
 public abstract class enemigo_base : MonoBehaviour, IPoolable
 {
-
+    Vector3 escalaOriginal;
     //EVENTO GLOBAL: script pueden suscribirse para saber cuando un enemigo muere
     public static event Action OnAnyEnemyDeath;
     [Header("XP Drop")]
@@ -47,6 +47,7 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
     protected virtual void Awake()
     {
+        escalaOriginal = transform.localScale;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         col = GetComponent<Collider2D>();
@@ -241,24 +242,18 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
     protected virtual void MoverHaciaObjetivo()
     {
-        if (agent != null && objetivo == null) return;
+        // Si no hay NavMeshAgent o no hay objetivo, no hacemos nada
+        if (agent == null || objetivo == null)
+            return;
 
-        if (agent.isOnNavMesh)
+        // Si el agente está activo y sobre el NavMesh
+        if (agent.enabled && agent.isOnNavMesh)
         {
             if (Vector3.Distance(transform.position, objetivo.position) > 0.3f)
             {
-                // Esta sola línea hace todo el Pathfinding (A*)
                 agent.SetDestination(objetivo.position);
             }
         }
-        // else
-        // {
-        //     NavMeshHit hit;
-        //     if (NavMesh.SamplePosition(transform.position, out hit, 1.0f, NavMesh.AllAreas))
-        //     {
-        //         agent.Warp(transform.position);
-        //     }
-        // }
     }
 
     protected virtual void OrientarHaciaObjetivo()
@@ -272,7 +267,7 @@ public abstract class enemigo_base : MonoBehaviour, IPoolable
 
                 float newEscalaX = spriteMiraALaIzquierdaPorDefecto ? (jugadorALaDerecha ? -1f : 1f) : (jugadorALaDerecha ? 1f : -1f);
                 // Aplicamos a la escala del objeto (o del hijo que tiene el sprite)
-                transform.localScale = new Vector3(newEscalaX, 1f, 1f);
+                transform.localScale = new Vector3(newEscalaX * escalaOriginal.x, escalaOriginal.y, escalaOriginal.z);
             }
         }
     }
